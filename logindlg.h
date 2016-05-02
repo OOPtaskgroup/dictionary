@@ -2,6 +2,7 @@
 #define LOGINDLG_H
 
 #include <QDialog>
+#include "controller.h"
 
 namespace Ui {
 class LoginDlg;
@@ -13,15 +14,18 @@ class LoginDlg : public QDialog
 
 public:
     explicit LoginDlg(QWidget *parent = 0);
+    explicit LoginDlg(Controller *controller, QWidget *parent = 0);
     ~LoginDlg();
 
 private slots:
-    void on_pushButton_clicked();
 
     void on_loginBtn_clicked();
 
+    void on_regBtn_clicked();
+
 private:
     Ui::LoginDlg *ui;
+    Controller *controller;
 };
 
 #endif // LOGINDLG_H
