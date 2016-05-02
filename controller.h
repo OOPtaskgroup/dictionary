@@ -15,8 +15,8 @@ class Controller
 private:
     UserController* userController;
 public:
-    void Login(std::string ID, std::string passwd);
-    void Logout();
+    bool Login(std::string ID, std::string passwd);
+    bool Logout();
     UserData* userRegister(std::string ID, std::string passwd);
     UserData* getActiveUser();
 private:
@@ -24,7 +24,7 @@ private:
     std::vector< std::pair<WordData*,int> > nowRecitingWords;
 public:
     WordData* findWord(std::string word);
-    std::vector<WordData*> getRecitingWords();
+    std::vector< std::pair<WordData*,int> > getRecitingWords();
     void answerAccepted( std::pair<WordData*,int>* item);
     void answerWrong( std::pair<WordData*,int>* item);
     void reLearn(WordData* item);
@@ -34,11 +34,11 @@ public:
     int getLearningWordCount();
 
 private:
-    Configuration config;
+    Configuration* config;
 public:
     const Configuration& getConfig()const;
 
-    void modifyConfig(Configuration* newConfig);
+    void modifyConfig(const Configuration& newConfig);
 
 
 public:
