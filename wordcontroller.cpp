@@ -16,7 +16,7 @@ WordController :: ~WordController()
     Logging log("WordController :: ~WordController",false);
 
 }
-std::vector<WordData*> WordController :: wordCollect(int num)
+std::vector<WordData*> WordController :: randomWordCollect(int num)
 {
     Logging log("WordController :: wordCollect",true);
     int noLearned = (int)(num * __newPart);
@@ -84,6 +84,33 @@ void WordController :: reLearn (WordData* item)
 
 std::vector<WordData*> WordController :: getWord(int type)
 {
+    Logging log("WordController :: getWord",true);
     dataBase.select(type);
+    std::vector<WordData*> toReturn = dataBase.getAll();
+    log << "INFO get " << toReturn.size() << " words." << std::endl;
+    return toReturn;
+}
 
+std::vector<WordData*> WordController :: getMasteredWord()
+{
+    return getWord(2);
+}
+
+std::vector<WordData*> WordController :: getLearningWord()
+{
+    return getWord(1);
+}
+
+std::vector<WordData*> WordController :: findWord(std::string prefix)
+{
+    Logging log("WordController :: findWord",true);
+    dataBase.select(-1);
+    std::vector<WordData*> toReturn;
+    for(auto i = dataBase.begin(); i != dataBase.end(); i++)
+    if (__comparePrefix(i->content()->Name(),prefix))
+    {
+        log << "INFO find word " << i->content()->Name() << std::endl;
+        toReturn.pushback(i->content());
+    }
+    return toReturn;
 }

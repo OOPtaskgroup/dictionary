@@ -13,10 +13,11 @@ public:
     WordController(const DataBase* base);
     ~WordController();
 
-    std::vector<WordData*> wordCollect(int num);
+    std::vector<WordData*> randomWordCollect(int num);
     void answerAccepted(WordData* item);
     void answerWrong(WordData* item);
     void reLearn(WordData* item);
+    std::vector<WordData*> findWord(std::string prefix);
 
     std::vector<WordData*> getMasteredWord();
     std::vector<WordData*> getLearningWord();
