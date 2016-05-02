@@ -27,9 +27,9 @@ bool Controller :: Login (std::string ID, std::string passwd)
     Logging log("Controller :: Login",true);
     UserData* toLogin = userController.checkIn(ID,passwd);
     if(!toLogin) return false;
-    DataBase* words = new DataBase("userdatas/"+ID+".words");
+    DataBase* words = new DataBase("userdatas/"+ID+"/words.txt");
     wordController = new WordController(words);
-    config = new Configuration("userdatas/"+ID+".config");
+    config = new Configuration("userdatas/"+ID+"/config");
     return true;
 }
 
@@ -83,6 +83,41 @@ void Controller :: answerWrong( std::pair<WordData*,int> &item)
     wordController->answerWrong(item->first);
 }
 
+void Controller :: reLearn(WordData* item)
+{
+    wordController->reLearn(item);
+}
 
+std::vector<WordData*>& Controller :: getMasteredWord()
+{
+    return wordController->getMasteredWord();
+}
+
+std::vector<WordData*>& Controller :: getLearingWord()
+{
+    return wordController->getLearningWord();
+}
+
+int Controller :: getMasteredWordCount()
+{
+    return wordController->getMasteredWordCount();
+}
+
+int Controller :: getLearningWordCount()
+{
+    return wordController->getLearningWordCount();
+}
+
+const Configuration& Controller :: getConfig() const
+{
+    if(!config) throw (std::string)("302 Error : no config while getConfig().");
+    return *config;
+}
+
+void Controller :: modifyConfig(const Congiguration& newConfig)
+{
+    if(!config) throw (std::string)("302 Error : no config while getConfig()");
+    *config = newConfig;
+}
 
 
