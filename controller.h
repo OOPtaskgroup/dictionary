@@ -24,9 +24,9 @@ private:
     std::vector< std::pair<WordData*,int> > nowRecitingWords;
 public:
     WordData* findWord(std::string word);
-    std::vector< std::pair<WordData*,int> > getRecitingWords();
-    void answerAccepted( std::pair<WordData*,int>* item);
-    void answerWrong( std::pair<WordData*,int>* item);
+    std::vector< std::pair<WordData*,int> >& getRecitingWords();
+    void answerAccepted( std::pair<WordData*,int> &item);
+    void answerWrong( std::pair<WordData*,int> &item);
     void reLearn(WordData* item);
     std::vector<WordData*> getMasteredWord();
     std::vector<WordData*> getLearningWord();

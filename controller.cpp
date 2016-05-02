@@ -55,21 +55,33 @@ UserData* Controller :: getActiveUser()
 WordData* Controller :: findWord(std::string word)
 {
     auto gotWords = wordController->findWord(word);
-    if(gotWords.size()!=0)return gotWords[0];
+    if(gotWords.size() != 0)return gotWords[0];
     else return NULL;
 }
 
-std::vector<WordData*> getRecitingWords()
+std::vector< std::pair<WordData*,int> >& getRecitingWords()
 {
-    if(nowRecitingWords.size()==0)
+    if(nowRecitingWords.size() == 0)
     {
         auto gotWords = wordController->randomWordCollect(config->NumberPerDay());
-        for(i : gotWords)
+        for(auto i : gotWords)
             nowRecitingWords.push_back( std::make_pair( *i, 0 ) );
     }
     return nowRecitingWords;
 }
 
+void Controller :: answerAccepted( std::pair<WordData*,int> &item)
+{
+    item->second ++;
+    if(item.second == 1)
+        wordController->answerAccepted(item->first);
+}
+
+void Controller :: answerWrong( std::pair<WordData*,int> &item)
+{
+    item->second = -1;
+    wordController->answerWrong(item->first);
+}
 
 
 
