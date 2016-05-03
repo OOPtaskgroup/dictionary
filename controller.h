@@ -6,7 +6,8 @@
 #include "wordcontroller.h"
 #include "usercontroller.h"
 #include "configuration.h"
-#include "data.h"
+#include "worddata.h"
+#include "userdata.h"
 #include "database.h"
 
 
@@ -15,8 +16,8 @@ class Controller
 private:
     UserController* userController;
 public:
-    bool Login(std::string ID, std::string passwd);
-    bool Logout();
+    void Login(std::string ID, std::string passwd);
+    void Logout();
     UserData* userRegister(std::string ID, std::string passwd);
     UserData* getActiveUser();
 private:
@@ -37,8 +38,8 @@ private:
     Configuration* config;
 public:
     const Configuration& getConfig()const;
-
     void modifyConfig(const Configuration& newConfig);
+    void modifyConfig(const int& dif, const int&num);
 
 
 public:
@@ -46,8 +47,9 @@ public:
     ~Controller ();
 
 private:
-    template< typename T >
-    void write(const std::string fileName, T item);
+    void reWriteRecitingWords();
+    void reWriteUserConfig();
+    void getTodayWords();
 }
 
 #endif
