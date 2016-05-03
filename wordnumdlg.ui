@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>WordNumDlg</class>
+ <widget class="QDialog" name="WordNumDlg">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="formLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>110</y>
+     <width>281</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>请选择每日学习词量：</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QComboBox" name="comboBox">
+      <property name="currentText">
+       <string>30</string>
+      </property>
+      <property name="currentIndex">
+       <number>5</number>
+      </property>
+      <property name="insertPolicy">
+       <enum>QComboBox::InsertAlphabetically</enum>
+      </property>
+      <item>
+       <property name="text">
+        <string>5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>15</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>20</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>25</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>35</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>40</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>45</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>50</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>55</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>60</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>65</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>70</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>75</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>80</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>85</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>90</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>95</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>100</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>200</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>确   定</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
