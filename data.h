@@ -12,8 +12,10 @@ class Data
 public:
     const std::string& Name()const;
     const int& Type()const;
+    const std::string& ContentFile()const;
     void setName(const std::string& toName);
     void setType(const int& toType);
+    void setContentFile(const std::string& toFile);
 
     Data(const std::string& name);
     virtual ~Data()=0;
