@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 #include "logging.h"
 #include "database.h"
-#include "data.h"
+#include "worddata.h"
 #include "wordcontroller.h"
 #include "consts.h"
 
@@ -113,4 +113,15 @@ std::vector<WordData*> WordController :: findWord(std::string prefix)
         toReturn.pushback(i->content());
     }
     return toReturn;
+}
+
+int getMasteredWordCount()
+{
+    dataBase.select(2);
+    return dataBase.size();
+}
+int getLearningWordCount()
+{
+    dataBase.select(1);
+    return dataBase.size();
 }

@@ -39,3 +39,13 @@ void Configuration :: modify(const int& dif, const int& num)
     difficulty = dif;
     dailyNumber = num;
 }
+
+const int& Configuration :: DailyNumber()
+{
+    return dailyNumber;
+}
+
+const int& Configuration :: Difficulty()
+{
+    return difficulty;
+}

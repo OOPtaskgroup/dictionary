@@ -21,6 +21,8 @@ public:
 
     std::vector<WordData*>& getMasteredWord();
     std::vector<WordData*>& getLearningWord();
+    int getMasteredWordCount();
+    int getLearningWordCount();
 private:
     std::vector<WordData*>& getWord(int type);
 }
