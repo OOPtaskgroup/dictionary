@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ReciteWindow</class>
+ <widget class="QMainWindow" name="ReciteWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>471</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="wordLabel">
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="chnLabel">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>翻  译：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QTextBrowser" name="exampleBrowser"/>
+     </item>
+     <item row="4" column="0">
+      <widget class="QTextBrowser" name="engBrowser"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="exampleLabel">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>例  句：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="engLabel">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>英 文 解 释：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QTextBrowser" name="chnBrowser"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>360</y>
+      <width>171</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="cantRecBtn">
+       <property name="text">
+        <string>没 印 象</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="knownBtn">
+       <property name="text">
+        <string>我 知 道 了</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="returnBtn">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>520</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>返  回</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

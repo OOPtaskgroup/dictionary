@@ -22,7 +22,13 @@ SOURCES += main.cpp\
     usercontroller.cpp \
     wordcontroller.cpp \
     regdlg.cpp \
-    wordnumdlg.cpp
+    configdlg.cpp \
+    configuration.cpp \
+    data.cpp \
+    exception.cpp \
+    userdata.cpp \
+    worddata.cpp \
+    recitewindow.cpp
 
 HEADERS  += mainwindow.h \
     consts.h \
@@ -33,12 +39,22 @@ HEADERS  += mainwindow.h \
     usercontroller.h \
     wordcontroller.h \
     regdlg.h \
-    wordnumdlg.h
+    configdlg.h \
+    configuration.h \
+    data.h \
+    exception.h \
+    exceptions.h \
+    nosuchfileexception.h \
+    outofrangeexception.h \
+    userdata.h \
+    worddata.h \
+    recitewindow.h
 
 FORMS    += mainwindow.ui \
     logindlg.ui \
     regdlg.ui \
-    wordnumdlg.ui
+    configdlg.ui \
+    recitewindow.ui
 
 DISTFILES += \
     .gitignore \

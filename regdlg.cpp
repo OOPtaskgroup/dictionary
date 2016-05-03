@@ -1,5 +1,5 @@
 #include "regdlg.h"
-#include "wordnumdlg.h"
+#include "configdlg.h"
 #include "ui_regdlg.h"
 #include "controller.h"
 #include <QMessageBox>
@@ -69,7 +69,7 @@ void RegDlg::on_regBtn_clicked()
         warningBox.exec();
         return;
     }
-    WordNumDlg wordNumDlg;
-    wordNumDlg.exec();
+    ConfigDlg configDlg(controller, this);
+    configDlg.exec();
     accept();
 }
