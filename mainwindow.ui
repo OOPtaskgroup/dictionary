@@ -17,8 +17,8 @@
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>30</y>
+      <x>50</x>
+      <y>140</y>
       <width>171</width>
       <height>221</height>
      </rect>
@@ -101,19 +101,6 @@ p, li { white-space: pre-wrap; }
        </property>
       </widget>
      </item>
-     <item row="0" column="0">
-      <widget class="QLineEdit" name="wordEdit">
-       <property name="styleSheet">
-        <string notr="true">background-color: rgba(255, 255, 255, 120);</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="placeholderText">
-        <string>请输入待查询的单词</string>
-       </property>
-      </widget>
-     </item>
     </layout>
    </widget>
    <widget class="QFrame" name="frame">
@@ -134,18 +121,15 @@ p, li { white-space: pre-wrap; }
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-<<<<<<< HEAD
-    <zorder>gridLayoutWidget</zorder>
     <zorder>verticalLayoutWidget</zorder>
-    <zorder>username</zorder>
-    <zorder>username</zorder>
+    <zorder>verticalLayoutWidget</zorder>
    </widget>
    <widget class="QLabel" name="username">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>50</y>
-      <width>291</width>
+      <width>271</width>
       <height>31</height>
      </rect>
     </property>
@@ -175,10 +159,11 @@ p, li { white-space: pre-wrap; }
     </property>
    </widget>
    <zorder>frame</zorder>
+   <zorder>username</zorder>
+   <zorder>logoutBtn</zorder>
    <zorder>verticalLayoutWidget</zorder>
    <zorder>textBrowser</zorder>
    <zorder>gridLayoutWidget</zorder>
-<<<<<<< HEAD
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
