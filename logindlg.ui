@@ -13,52 +13,6 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>60</y>
-     <width>72</width>
-     <height>15</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>用户名：</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="usrEdit">
-   <property name="geometry">
-    <rect>
-     <x>200</x>
-     <y>60</y>
-     <width>113</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="pwdEdit">
-   <property name="geometry">
-    <rect>
-     <x>200</x>
-     <y>120</y>
-     <width>113</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>120</y>
-     <width>72</width>
-     <height>15</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>密  码：</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="regBtn">
    <property name="geometry">
     <rect>
@@ -69,7 +23,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>注册</string>
+    <string>注  册</string>
    </property>
   </widget>
   <widget class="QWidget" name="horizontalLayoutWidget">
@@ -84,20 +38,117 @@
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <widget class="QPushButton" name="loginBtn">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
       <property name="text">
-       <string>登录</string>
+       <string>登  录</string>
       </property>
      </widget>
     </item>
     <item>
      <widget class="QPushButton" name="exitBtn">
       <property name="text">
-       <string>退出</string>
+       <string>退  出</string>
       </property>
      </widget>
     </item>
    </layout>
   </widget>
+  <widget class="QWidget" name="formLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>80</y>
+     <width>291</width>
+     <height>114</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout">
+    <property name="horizontalSpacing">
+     <number>10</number>
+    </property>
+    <property name="verticalSpacing">
+     <number>20</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>用  户  名：</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="usrEdit">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 120);</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>  密  码：</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="pwdEdit">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 120);</string>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>401</width>
+     <height>341</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/image/img/login_background.jpeg);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>30</y>
+     <width>341</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Script MT Bold</family>
+     <pointsize>18</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>I Wanna Recite the Words!</string>
+   </property>
+  </widget>
+  <zorder>frame</zorder>
+  <zorder>regBtn</zorder>
+  <zorder>horizontalLayoutWidget</zorder>
+  <zorder>formLayoutWidget</zorder>
+  <zorder>label_3</zorder>
  </widget>
  <resources/>
  <connections>
