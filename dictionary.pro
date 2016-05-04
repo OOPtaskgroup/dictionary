@@ -48,7 +48,9 @@ HEADERS  += mainwindow.h \
     outofrangeexception.h \
     userdata.h \
     worddata.h \
-    recitewindow.h
+    recitewindow.h \
+    itemalreadyexistexception.h \
+    itemnotfoundexception.h
 
 FORMS    += mainwindow.ui \
     logindlg.ui \
@@ -61,3 +63,6 @@ DISTFILES += \
     dictionary.pro.user \
     LICENSE \
     README.md
+
+RESOURCES += \
+    image.qrc
