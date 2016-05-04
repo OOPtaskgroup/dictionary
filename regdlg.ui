@@ -32,22 +32,33 @@
     <item row="0" column="0">
      <widget class="QLabel" name="label_2">
       <property name="text">
-       <string>用户名：</string>
+       <string>用 户 名：</string>
       </property>
      </widget>
     </item>
     <item row="0" column="1">
-     <widget class="QLineEdit" name="usrEdit"/>
+     <widget class="QLineEdit" name="usrEdit">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 120);</string>
+      </property>
+     </widget>
     </item>
     <item row="1" column="0">
      <widget class="QLabel" name="label">
       <property name="text">
-       <string>密  码：</string>
+       <string>密    码：</string>
       </property>
      </widget>
     </item>
     <item row="1" column="1">
-     <widget class="QLineEdit" name="pwdEdit"/>
+     <widget class="QLineEdit" name="pwdEdit">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 120);</string>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+     </widget>
     </item>
     <item row="2" column="0">
      <widget class="QLabel" name="label_3">
@@ -57,7 +68,14 @@
      </widget>
     </item>
     <item row="2" column="1">
-     <widget class="QLineEdit" name="pwdConfirmEdit"/>
+     <widget class="QLineEdit" name="pwdConfirmEdit">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 120);</string>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
@@ -90,6 +108,29 @@
     <string>取  消</string>
    </property>
   </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>401</width>
+     <height>331</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/image/img/login_background.jpeg);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <zorder>frame</zorder>
+  <zorder>formLayoutWidget</zorder>
+  <zorder>regBtn</zorder>
+  <zorder>cancelBtn</zorder>
  </widget>
  <resources/>
  <connections>

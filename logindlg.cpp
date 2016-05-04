@@ -3,6 +3,8 @@
 #include "ui_logindlg.h"
 #include "controller.h"
 #include <QMessageBox>
+#include "itemnotfoundexception.h"
+
 LoginDlg::LoginDlg(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::LoginDlg)
@@ -23,11 +25,12 @@ LoginDlg::~LoginDlg()
 
 void LoginDlg::on_loginBtn_clicked()
 {
-    if (Login(ui->usrEdit->text(), ui->pwdEdit->text()))
+    try
     {
+        Login(ui->usrEdit->text(), ui->pwdEdit->text());
         accept();
     }
-    else
+    catch(passwordNotCorrectException exce)
     {
         QMessageBox warningBox(QMessageBox::Warning, "出错啦！", "用户名或密码错误！");
         warningBox.setStandardButtons(QMessageBox::Retry);
@@ -35,6 +38,16 @@ void LoginDlg::on_loginBtn_clicked()
         warningBox.exec();
         ui->pwdEdit->clear();
         ui->pwdEdit->setFocus();
+    }
+    catch(ItemNotFoundException exce)
+    {
+        QMessageBox warningBox(QMessageBox::Warning, "出错啦！", "该用户不存在！");
+        warningBox.setStandardButtons(QMessageBox::Retry);
+        warningBox.setButtonText(QMessageBox::Retry, "重试");
+        warningBox.exec();
+        ui->usrEdit->clear();
+        ui->pwdEdit->clear();
+        ui->usrEdit->setFocus();
     }
 }
 
