@@ -28,8 +28,8 @@ Controller :: ~Controller ()
 void Controller :: Login (std::string ID, std::string passwd)
 {
     Logging log("Controller :: Login",true);
-    UserData* toLogin = userController.checkIn(ID,passwd);
-    if(!toLogin) throw ItemAlreadyExistException((std::string)"already loged in now.");
+    UserData* toLogin = userController->checkIn(ID,passwd);
+    userController->userLogin(toLogin);
     DataBase* words = new DataBase("userdatas/"+ID+"/words.txt");
     wordController = new WordController(words);
     config = new Configuration("userdatas/"+ID+"/config");
@@ -55,7 +55,7 @@ UserData* Controller :: getActiveUser()
 
 WordData* Controller :: findWord(std::string word)
 {
-    auto gotWords = wordController->findWord(word);
+    auto gotWords = wordController->findWord(word,config->Difficulty());
     if(gotWords.size() != 0)return gotWords[0];
     else return NULL;
 }
@@ -65,9 +65,12 @@ std::vector< std::pair<WordData*,int> >& getRecitingWords()
     if(nowRecitingWords.size() == 0)getTodayWords();
     if(nowRecitingWords.size() == 0)
     {
-        auto gotWords = wordController->randomWordCollect(config->DailyNumber());
+        auto gotWords = wordController->randomWordCollect(config->DailyNumber(),config->Difficulty());
         for(auto i : gotWords)
+        {
             nowRecitingWords.push_back( std::make_pair( *i, 0 ) );
+            i->setType(i->Type()%10 + 10);
+        }
     }
     reWriteRecitingWords();
     return nowRecitingWords;
@@ -95,22 +98,22 @@ void Controller :: reLearn(WordData* item)
 
 std::vector<WordData*>& Controller :: getMasteredWord()
 {
-    return wordController->getMasteredWord();
+    return wordController->getMasteredWord(config->Difficulty());
 }
 
 std::vector<WordData*>& Controller :: getLearingWord()
 {
-    return wordController->getLearningWord();
+    return wordController->getLearningWord(config->Difficulty());
 }
 
 int Controller :: getMasteredWordCount()
 {
-    return wordController->getMasteredWordCount();
+    return wordController->getMasteredWordCount(config->Difficulty());
 }
 
 int Controller :: getLearningWordCount()
 {
-    return wordController->getLearningWordCount();
+    return wordController->getLearningWordCount(config->Difficulty());
 }
 
 const Configuration& Controller :: getConfig() const
@@ -137,7 +140,7 @@ void reWriteRecitingWords()
     std::tm* now = std::localtime(std::time(0));
     output << (1900 + now->tm_year) << " " << (1 + now->tm_mon) << " " << (now->tm_mday) << std::endl;
     for(auto i : nowRecitingWords)
-        output << ((*i).first->Name()) << " " << (*i).second << std::endl;
+        output << ((*i).first->Name()) << (*i).second << std::endl;
 }
 
 void reWriteUserConfig()

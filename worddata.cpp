@@ -3,7 +3,7 @@
 #include "bits/stdc++.h"
 
 WordData :: WordData(const std::string name)
-    :Data(name)
+    :Data(name),times(0)
 {
     setContentFile("worddata/"+name+".information");
 }
@@ -29,4 +29,14 @@ std::vector<std::string> WordData :: getDetail()
         std::reverse(Return.begin(),Return.end());
         return Return;
     }
+}
+
+void WordData :: setTimes(const int x)
+{
+    times = x;
+}
+
+const int& WordData :: Times()
+{
+    return times;
 }

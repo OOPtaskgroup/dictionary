@@ -16,7 +16,7 @@ WordController :: ~WordController()
     Logging log("WordController :: ~WordController",false);
 
 }
-std::vector<WordData*> WordController :: randomWordCollect(int num)
+std::vector<WordData*> WordController :: randomWordCollect(int num, int difficulty)
 {
     Logging log("WordController :: wordCollect",true);
     int noLearned = (int)(num * __newPart);
@@ -24,7 +24,7 @@ std::vector<WordData*> WordController :: randomWordCollect(int num)
 
     vector<WordData*> toReturn;
 
-    dataBase.select(0);
+    dataBase.select(difficulty);
     for(int i = 1 ; i <= noLearned ; i++)
     {
         if(dataBase.empty())
@@ -37,12 +37,13 @@ std::vector<WordData*> WordController :: randomWordCollect(int num)
         log << "INFO added word " << now->Name() << "." <<std::endl;
     }
 
-    dataBase.select(1);
+    dataBase.select(difficulty+10);
     for(int i = 1 ; i <= Learned ; i++)
     {
         if(dataBase.empty())
         {
             log << "INFO database empty for learned words." << std::endl;
+            break;
         }
         WordData* now = dataBase.getRandom();
         toReturn.pushback( now );
@@ -61,7 +62,7 @@ void WordController :: answerAccepted (WordData* item)
         << item->Times() << " times now.";
     if( item->Times() >= __timesContiniouslyLimit)
     {
-        item->setType(2);
+        item->setType(20 + item->Type()%10);
         log << " now it will never appear ( unless reset ).";
     }
     log << std::endl;
@@ -78,7 +79,7 @@ void WordController :: reLearn (WordData* item)
 {
     Logging log("WordController :: reLearn",true);
     item ->setTimes(0);
-    item ->setType(1);
+    item ->setType(10 + item->Type()%10);
     log << "INFO now word " << item->Name() << " will appear again." << std::endl;
 }
 
@@ -91,14 +92,14 @@ std::vector<WordData*> WordController :: getWord(int type)
     return toReturn;
 }
 
-std::vector<WordData*> WordController :: getMasteredWord()
+std::vector<WordData*> WordController :: getMasteredWord(const int difficulty)
 {
-    return getWord(2);
+    return getWord(20 + difficulty);
 }
 
-std::vector<WordData*> WordController :: getLearningWord()
+std::vector<WordData*> WordController :: getLearningWord(const int difficulty)
 {
-    return getWord(1);
+    return getWord(10 + difficulty);
 }
 
 std::vector<WordData*> WordController :: findWord(std::string prefix)
@@ -115,13 +116,13 @@ std::vector<WordData*> WordController :: findWord(std::string prefix)
     return toReturn;
 }
 
-int getMasteredWordCount()
+int getMasteredWordCount(const int difficulty)
 {
-    dataBase.select(2);
+    dataBase.select(20 + difficulty);
     return dataBase.size();
 }
-int getLearningWordCount()
+int getLearningWordCount(const int difficulty)
 {
-    dataBase.select(1);
+    dataBase.select(10 + difficulty);
     return dataBase.size();
 }

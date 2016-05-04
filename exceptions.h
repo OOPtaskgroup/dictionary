@@ -5,5 +5,6 @@
 #include "outofrangeexception.h"
 #include "itemalreadyexistexception.h"
 #include "itemnotfoundexception.h"
+#include "passwordnotcorrectexception.h"
 
 #endif

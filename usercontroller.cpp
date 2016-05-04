@@ -2,6 +2,7 @@
 #include "logging.h"
 #include "database.h"
 #include "data.h"
+#include "exceptions.h"
 
 UserController :: UserController (const DataBase* base, const UserData* defaultUser)
     : dataBase(base),nowActiveUser(defaultUser)
@@ -28,7 +29,10 @@ void UserController :: userLogin(UserData* toLogin)
 {
     Logging log("UserController :: userLogin",true);
     if (nowActiveUser)
+    {
         log << "INFO already loged in." << std::endl;
+        throw ItemAlreadyExistException((std::string)"already loged in.");
+    }
     else
     {
         nowActiveUser = toLogin;
@@ -45,8 +49,10 @@ UserData* UserController :: checkIn(std::string ID, std::string passwd)
             log << "INFO catch user " << ID << "." <<std::endl;
             if( i->content()->Passwd() == passwd)
                 return i->content();
+            else
+                throw PasswordNotCorrectException((std::string),"password wrong!");
         }
-    return NULL;
+    throw ItemNotFoundException((std::string)"user not exist!");
 }
 
 UserData* iUserController :: userRegister(std::string ID, std::string passwd)
@@ -56,7 +62,7 @@ UserData* iUserController :: userRegister(std::string ID, std::string passwd)
         if( i->content->Name() == ID)
         {
             log << "INFO find user with same ID." << std::endl;
-            return NULL;
+            throw ItemAlreadyExistException((std::string)"user already exist!");
         }
     UserData* toReturn = new UserData (ID,passwd);
     dataBase.insert(toReturn);
