@@ -38,6 +38,9 @@
     </item>
     <item row="0" column="1">
      <widget class="QComboBox" name="diffBox">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
       <item>
        <property name="text">
         <string>1</string>
@@ -141,6 +144,28 @@
     <string>确  定</string>
    </property>
   </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>401</width>
+     <height>341</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/image/img/login_background.jpeg);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <zorder>frame</zorder>
+  <zorder>formLayoutWidget</zorder>
+  <zorder>pushButton</zorder>
  </widget>
  <resources/>
  <connections/>

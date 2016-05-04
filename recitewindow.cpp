@@ -34,38 +34,40 @@ bool ReciteWindow::showWord(std::pair<WordData *, int> &word)
     {
         if (word.second == 1)
             return false;
+        auto wordDetail = word.first->getDetail();
         ui->cantRecBtn->setText("没  印  象");
         ui->cantRecBtn->setEnabled(true);
         ui->cantRecBtn->setVisible(true);
         ui->wordLabel->setText(word.first->Name());
         ui->exampleBrowser->setVisible(false);
-        ui->exampleBrowser->setText("没有例句555...");
+        ui->exampleBrowser->setText(*wordDetail.begin() + "\n" + *(wordDetail.begin() + 1));
         ui->exampleLabel->setVisible(false);
-        ui->chnBrowser->setVisible(false);
-        ui->chnBrowser->setText("没有中文翻译555...");
-        ui->chnLabel->setVisible(false);
         ui->engBrowser->setVisible(false);
-        ui->engBrowser->setText("没有英文翻译555...");
+        ui->engBrowser->setText(*(wordDetail.begin() + 2));
         ui->engLabel->setVisible(false);
+        ui->chnBrowser->setVisible(false);
+        ui->chnBrowser->setText(*(wordDetail.begin() + 3));
+        ui->chnLabel->setVisible(false);
         status = Vocabulary;
         return true;
     }
     if (windowMode == LookUpMode)
     {
+        auto wordDetail = word.first->getDetail();
         ui->cantRecBtn->setEnabled(false);
         ui->cantRecBtn->setVisible(false);
         ui->knownBtn->setEnabled(false);
         ui->knownBtn->setVisible(false);
         ui->wordLabel->setText(word.first->Name());
         ui->exampleBrowser->setVisible(true);
-        ui->exampleBrowser->setText("没有例句555...");
+        ui->exampleBrowser->setText(*wordDetail.begin() + "\n" + *(wordDetail.begin() + 1));
         ui->exampleLabel->setVisible(true);
-        ui->chnBrowser->setVisible(true);
-        ui->chnBrowser->setText("没有中文翻译555...");
-        ui->chnLabel->setVisible(true);
         ui->engBrowser->setVisible(true);
-        ui->engBrowser->setText("没有英文翻译555...");
+        ui->engBrowser->setText(*(wordDetail.begin() + 2));
         ui->engLabel->setVisible(true);
+        ui->chnBrowser->setVisible(true);
+        ui->chnBrowser->setText(*(wordDetail.begin() + 3));
+        ui->chnLabel->setVisible(true);
         return true;
     }
 }

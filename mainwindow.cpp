@@ -3,6 +3,7 @@
 #include "configdlg.h"
 #include "recitewindow.h"
 #include <qmessagebox.h>
+#include <logindlg.h>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -53,4 +54,25 @@ void MainWindow::on_lookUpBtn_clicked()
         this->hide();
         reciteWindow.show();
     }
+}
+
+
+void MainWindow::on_logoutBtn_clicked()
+{
+    controller->Logout();
+    this->hide();
+    LoginDlg loginDlg(controller);
+    if (loginDlg.exec() == QDialog::Accepted)
+    {
+        this->show();
+    }
+    else
+        this->close();
+
+}
+
+void MainWindow::showEvent(QShowEvent * event)
+{
+    ui->username->setText(tr("»¶Ó­Äú£¡%1").arg(controller->getActiveUser()->Name()));
+    event->accept();
 }

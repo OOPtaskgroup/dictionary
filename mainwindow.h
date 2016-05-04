@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QShowEvent>
 #include "controller.h"
 
 namespace Ui {
@@ -24,9 +25,14 @@ private slots:
 
     void on_lookUpBtn_clicked();
 
+    void on_logoutBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
     Controller* controller;
+
+protected:
+    void showEvent(QShowEvent *event);
 };
 
 #endif // MAINWINDOW_H

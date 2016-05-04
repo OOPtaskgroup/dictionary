@@ -3,6 +3,7 @@
 #include "ui_regdlg.h"
 #include "controller.h"
 #include <QMessageBox>
+#include "itemalreadyexistexception.h"
 
 RegDlg::RegDlg(QWidget *parent) :
     QDialog(parent),
@@ -59,9 +60,12 @@ void RegDlg::on_regBtn_clicked()
 {
     try
     {
-        controller->userRegister();
+        controller->userRegister(ui->usrEdit->text().toStdString(), ui->pwdEdit->text().toStdString());
+        ConfigDlg configDlg(controller, this);
+        configDlg.exec();
+        accept();
     }
-    catch(RegException err)
+    catch(ItemAlreadyExistException exce)
     {
         QMessageBox warningBox(QMessageBox::Warning, "³ö´íÀ²£¡", err.info);
         warningBox.setStandardButtons(QMessageBox::Retry);
@@ -69,7 +73,4 @@ void RegDlg::on_regBtn_clicked()
         warningBox.exec();
         return;
     }
-    ConfigDlg configDlg(controller, this);
-    configDlg.exec();
-    accept();
 }
