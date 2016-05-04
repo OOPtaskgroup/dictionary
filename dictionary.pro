@@ -50,7 +50,8 @@ HEADERS  += mainwindow.h \
     worddata.h \
     recitewindow.h \
     itemalreadyexistexception.h \
-    itemnotfoundexception.h
+    itemnotfoundexception.h \
+    passwordnotcorrectexception.h
 
 FORMS    += mainwindow.ui \
     logindlg.ui \

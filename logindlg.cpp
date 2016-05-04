@@ -4,6 +4,7 @@
 #include "controller.h"
 #include <QMessageBox>
 #include "itemnotfoundexception.h"
+#include "passwordnotcorrectexception.h"
 
 LoginDlg::LoginDlg(QWidget *parent) :
     QDialog(parent),
@@ -30,7 +31,7 @@ void LoginDlg::on_loginBtn_clicked()
         Login(ui->usrEdit->text(), ui->pwdEdit->text());
         accept();
     }
-    catch(passwordNotCorrectException exce)
+    catch(PasswordNotCorrectException exce)
     {
         QMessageBox warningBox(QMessageBox::Warning, "出错啦！", "用户名或密码错误！");
         warningBox.setStandardButtons(QMessageBox::Retry);
