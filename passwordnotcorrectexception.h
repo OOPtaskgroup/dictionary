@@ -3,7 +3,7 @@
 
 #include "exception.h"
 
-class PassWordNotCorrectException:public Exception
+class PasswordNotCorrectException:public Exception
 {
 public:
     using Exception::Exception;
