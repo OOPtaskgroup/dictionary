@@ -3,5 +3,7 @@
 
 #include "nosuchfileexception.h"
 #include "outofrangeexception.h"
+#include "itemalreadyexistexception.h"
+#include "itemnotfoundexception.h"
 
 #endif

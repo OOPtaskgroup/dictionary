@@ -8,6 +8,7 @@ class WordData : public Data
 public:
     WordData(const std::string name);
     ~WordData();
+    std::vector<std::string> getDetail();
 };
 
 #endif
