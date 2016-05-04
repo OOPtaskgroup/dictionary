@@ -4,7 +4,7 @@
 #include <bits/stdc++.h>
 #include "logging.h"
 #include "database.h"
-#include "data.h"
+#include "worddata.h"
 
 class WordController : public DataController
 {
@@ -25,5 +25,5 @@ public:
     int getLearningWordCount();
 private:
     std::vector<WordData*>& getWord(int type);
-}
+};
 #endif

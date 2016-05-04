@@ -4,7 +4,7 @@
 #include <bits/stdc++.h>
 #include "logging.h"
 #include "database.h"
-#include "data.h"
+#include "userdata.h"
 
 class UserController : public DataController
 {
@@ -18,6 +18,6 @@ public:
     void userLogin(UserData* toLogin);
     UserData* checkIn(std::string ID, std::string passwd);
     UserData* userRegister(std::string ID, std::string passwd);
-}
+};
 
 #endif
