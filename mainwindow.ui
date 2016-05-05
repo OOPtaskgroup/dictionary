@@ -121,8 +121,6 @@ p, li { white-space: pre-wrap; }
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <zorder>verticalLayoutWidget</zorder>
-    <zorder>verticalLayoutWidget</zorder>
    </widget>
    <widget class="QLabel" name="username">
     <property name="geometry">
@@ -186,8 +184,8 @@ p, li { white-space: pre-wrap; }
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>166</x>
-     <y>250</y>
+     <x>167</x>
+     <y>354</y>
     </hint>
     <hint type="destinationlabel">
      <x>195</x>
