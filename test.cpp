@@ -1,15 +1,11 @@
 #include<bits/stdc++.h>
 #include"logging.h"
-void work()
-{
-    Logging log("work");
-//    log<<"ah"<<5<<std::endl;
-    log << "INFO value = 50" <<std::endl;
-}
+#include"controller.h"
 int main()
 {
-    Logging log("main");
-    //log<<67;
-    log << "INFO prepare to work." <<std::endl;
-    work();
+    Controller* controller = new Controller;
+    controller->Login((std::string)"keavil",(std::string)"123456");
+    controller->Logout();
+    controller->Login((std::string)"zhang",(std::string)"123456");
+    controller->Login((std::string)"keavil",(std::string)"234567");
 }

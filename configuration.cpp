@@ -40,12 +40,12 @@ void Configuration :: modify(const int& dif, const int& num)
     dailyNumber = num;
 }
 
-const int& Configuration :: DailyNumber()
+const int& Configuration :: DailyNumber()const
 {
     return dailyNumber;
 }
 
-const int& Configuration :: Difficulty()
+const int& Configuration :: Difficulty()const
 {
     return difficulty;
 }

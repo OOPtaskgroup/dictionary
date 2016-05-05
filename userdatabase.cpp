@@ -4,10 +4,10 @@
 UserDataBase::UserDataBase()
 {
 	std::ifstream fin("userdatas.txt");
-	char str1[15],str2[20];
+        std::string str1,str2;
 	while(fin>>str1>>str2)//>>userdatas.at(count)->password)
 	{
-		UserData* pt = new UserData(str1);
+		UserData* pt = new UserData(str1,str2);
 		userdatas.push_back(pt);
 		//pt->setPassword(str2); 
 	}
@@ -47,3 +47,17 @@ void UserDataBase::insert(UserData* ud)
 	fout.close();
 }
 
+UserDataBase :: ~UserDataBase()
+{
+
+}
+
+std::vector<UserData*>::iterator UserDataBase::begin()
+{
+    return userdatas.begin();
+}
+
+std::vector<UserData*>::iterator UserDataBase::end()
+{
+    return userdatas.end();
+}

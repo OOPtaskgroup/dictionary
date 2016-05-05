@@ -1,13 +1,9 @@
 #include <bits/stdc++.h>
-#include "logging.h"
-#include "database.h"
-#include "data.h"
 #include "exceptions.h"
-
-UserController :: UserController (const DataBase* base, const UserData* defaultUser)
-    : dataBase(base),nowActiveUser(defaultUser)
+#include "usercontroller.h"
+UserController :: UserController ()
 {
-
+    dataBase = new UserDataBase();
 }
 UserController :: ~UserController()
 {
@@ -43,28 +39,33 @@ void UserController :: userLogin(UserData* toLogin)
 UserData* UserController :: checkIn(std::string ID, std::string passwd)
 {
     Logging log("UserController :: checkIn",true);
-    for(auto i = dataBase.begin(); i != dataBase.end(); ++i)
-        if( i->content()->Name() == ID)
+    for(auto i = dataBase->begin(); i != dataBase->end(); ++i)
+        if( (*i)->Name() == ID)
         {
             log << "INFO catch user " << ID << "." <<std::endl;
-            if( i->content()->Passwd() == passwd)
-                return i->content();
+            if( (*i)->Password() == passwd)
+                return *i;
             else
-                throw PasswordNotCorrectException((std::string),"password wrong!");
+                throw PasswordNotCorrectException((std::string)"password wrong!");
         }
     throw ItemNotFoundException((std::string)"user not exist!");
 }
 
-UserData* iUserController :: userRegister(std::string ID, std::string passwd)
+UserData* UserController :: userRegister(std::string ID, std::string passwd)
 {
     Logging log("UserController :: userRegister",true);
-    for(auto i = dataBase.begin(); i != dataBase.end(); ++i)
-        if( i->content->Name() == ID)
+    for(auto i = dataBase->begin(); i != dataBase->end(); ++i)
+        if( (*i)->Name() == ID)
         {
             log << "INFO find user with same ID." << std::endl;
             throw ItemAlreadyExistException((std::string)"user already exist!");
         }
     UserData* toReturn = new UserData (ID,passwd);
-    dataBase.insert(toReturn);
+    dataBase->insert(toReturn);
     return toReturn;
+}
+
+UserData* UserController :: getActiveUser()
+{
+    return nowActiveUser;
 }

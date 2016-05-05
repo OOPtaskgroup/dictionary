@@ -16,10 +16,11 @@ public:
 	//WordData* findword();
 	void reciteNow();
 	void insert(WordData* wd);
-	WordData* begin();
-	WordData* end();
+        std::vector<WordData*>::iterator begin();
+        std::vector<WordData*>::iterator end();
 	WordData* getrandom();
 	void select(int type);
+        int size();
 };
 
 #endif

@@ -40,14 +40,14 @@ bool WordDataBase::isEmpty()
 	return worddatas.empty();
 }
 
-WordData* WordDataBase::begin()
+std::vector<WordData*>::iterator WordDataBase::begin()
 {
-	return *(worddatas.begin());
+	return worddatas.begin();
 }
 
-WordData* WordDataBase::end() 
+std::vector<WordData*>::iterator WordDataBase::end() 
 {
-	return *(worddatas.end());
+	return worddatas.end();
 }
 
 void WordDataBase::reciteNow()
@@ -92,4 +92,9 @@ void WordDataBase::select(int type)
 			worddatas.push_back(*iter);
 		}
 	}
+}
+
+int WordDataBase :: size()
+{
+    return worddatas.size();
 }

@@ -8,9 +8,8 @@
 
 class DataController
 {
-    DataBase* dataBase;
 public:
-    DataController(const DataBase* base);
+    DataController();
     virtual ~DataController()=0;
     
 };

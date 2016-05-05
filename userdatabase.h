@@ -15,6 +15,9 @@ public:
 	bool findUser(std::string str);
 	//virtual void throwout();
 	int userNumber();
+        std::vector<UserData*>::iterator begin();
+        std::vector<UserData*>::iterator end();
+
 };
 
 

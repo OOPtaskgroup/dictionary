@@ -1,20 +1,19 @@
 #include <bits/stdc++.h>
 #include "controller.h"
 #include "consts.h"
-#include "logging.h"
-#include "worddata.h"
-#include "userdata.h"
+#include "exceptions.h"
 
 Controller :: Controller (const std::string defaultUserFile)
 {
     Logging log("Controller :: Controller",true);
-    ifstream input(defaultUserFile);
+    userController = new UserController();
+    std::ifstream input(defaultUserFile);
     if(input.is_open())
     {
         std::string ID,passwd;
         input >> ID >> passwd;
-        if(Login(ID,passwd))
-            log << "INFO from file " << defaultUserFile << " find user " << ID << "." << std::endl;
+        Login(ID,passwd);
+        log << "INFO from file " << defaultUserFile << " find user " << ID << "." << std::endl;
     }
 }
 
@@ -30,8 +29,7 @@ void Controller :: Login (std::string ID, std::string passwd)
     Logging log("Controller :: Login",true);
     UserData* toLogin = userController->checkIn(ID,passwd);
     userController->userLogin(toLogin);
-    DataBase* words = new DataBase("userdatas/"+ID+"/words.txt");
-    wordController = new WordController(words);
+    wordController = new WordController();
     config = new Configuration("userdatas/"+ID+"/config");
 }
 
@@ -55,12 +53,12 @@ UserData* Controller :: getActiveUser()
 
 WordData* Controller :: findWord(std::string word)
 {
-    auto gotWords = wordController->findWord(word,config->Difficulty());
+    auto gotWords = wordController->findWord(word);
     if(gotWords.size() != 0)return gotWords[0];
-    else return NULL;
+    else return nullptr;
 }
 
-std::vector< std::pair<WordData*,int> >& getRecitingWords()
+std::vector< std::pair<WordData*,int> >& Controller :: getRecitingWords()
 {
     if(nowRecitingWords.size() == 0)getTodayWords();
     if(nowRecitingWords.size() == 0)
@@ -68,7 +66,7 @@ std::vector< std::pair<WordData*,int> >& getRecitingWords()
         auto gotWords = wordController->randomWordCollect(config->DailyNumber(),config->Difficulty());
         for(auto i : gotWords)
         {
-            nowRecitingWords.push_back( std::make_pair( *i, 0 ) );
+            nowRecitingWords.push_back( std::make_pair( i, 0 ) );
             i->setType(i->Type()%10 + 10);
         }
     }
@@ -78,16 +76,16 @@ std::vector< std::pair<WordData*,int> >& getRecitingWords()
 
 void Controller :: answerAccepted( std::pair<WordData*,int> &item)
 {
-    item->second ++;
+    item.second ++;
     if(item.second == 1)
-        wordController->answerAccepted(item->first);
+        wordController->answerAccepted(item.first);
     reWriteRecitingWords();
 }
 
 void Controller :: answerWrong( std::pair<WordData*,int> &item)
 {
-    item->second = -1;
-    wordController->answerWrong(item->first);
+    item.second = -1;
+    wordController->answerWrong(item.first);
     reWriteRecitingWords();
 }
 
@@ -96,12 +94,12 @@ void Controller :: reLearn(WordData* item)
     wordController->reLearn(item);
 }
 
-std::vector<WordData*>& Controller :: getMasteredWord()
+std::vector<WordData*> Controller :: getMasteredWord()
 {
     return wordController->getMasteredWord(config->Difficulty());
 }
 
-std::vector<WordData*>& Controller :: getLearingWord()
+std::vector<WordData*> Controller :: getLearningWord()
 {
     return wordController->getLearningWord(config->Difficulty());
 }
@@ -133,25 +131,27 @@ void Controller :: modifyConfig(const Configuration& newConfig)
     modifyConfig(newConfig.Difficulty(), newConfig.DailyNumber());
 }
 
-void reWriteRecitingWords()
+void Controller :: reWriteRecitingWords()
 {
     std::string fileName("userdata/" + userController->getActiveUser()->Name() + "/today.txt");
     std::ofstream output(fileName, std::ios_base::trunc);
-    std::tm* now = std::localtime(std::time(0));
+    std::time_t t = std::time(nullptr);
+    std::tm* now = std::localtime(&t);
     output << (1900 + now->tm_year) << " " << (1 + now->tm_mon) << " " << (now->tm_mday) << std::endl;
     for(auto i : nowRecitingWords)
-        output << ((*i).first->Name()) << (*i).second << std::endl;
+        output << (i.first->Name()) << i.second << std::endl;
 }
 
-void reWriteUserConfig()
+void Controller :: reWriteUserConfig()
 {
     std::string fileName("userdata/" + userController->getActiveUser()->Name() + "/config");
     std::ofstream output(fileName, std::ios_base::trunc);
     output << config->Difficulty() << " " << config->DailyNumber() << std::endl;
 }
-void getTodayWords()
+void Controller :: getTodayWords()
 {
-    std::tm* now = std::localtime(std::time(0));
+    std::time_t t = std::time(nullptr);
+    std::tm* now = std::localtime(&t);
     std::string fileName("userdata/" + userController->getActiveUser()->Name() + "/today.txt");
     std::ifstream input(fileName);
     if(!input)return;

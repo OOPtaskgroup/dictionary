@@ -12,8 +12,8 @@ public:
     void save(const std::string& fileName);
     void load(const std::string& fileName);
     void modify(const int& dif, const int&num);
-    const int& DailyNumber();
-    const int& Difficulty();
+    const int& DailyNumber()const;
+    const int& Difficulty()const;
 };
 
 #endif
