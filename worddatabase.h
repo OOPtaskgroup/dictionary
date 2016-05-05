@@ -15,9 +15,11 @@ public:
 	bool isempty();
 	//WordData* findword();
 	void recitenow();
+	void insert(WordData* wd);
 	WordData* begin();
 	WordData* end();
 	WordData* getrandom();
+	void select(int type);
 }
 
 #endif

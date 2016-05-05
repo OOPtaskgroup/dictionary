@@ -28,7 +28,7 @@ bool findword(std::string str)
 {
 	for(vector<WordData*>::iterator iter=worddatas.begin();iter!=worddatas.end();++iter)
 	{
-		if (worddatas.at(iter)->name==str)
+		if ((*iter)->Name()==str)
 		{
 			return true;
 		}
@@ -61,6 +61,17 @@ void worddatabase::recitenow()
 	fout.close;
 }
 
+void worddatabase::insert(WordData* ud)
+{
+	worddatas.push_back(ud);
+	std::ofstream fout("worddatas.txt");
+	for(vector<WordData*>::iterator iter=worddatas.begin();iter!=worddatas.end();++iter)
+	{
+		fout<<(*iter)->Name()<<"\n";
+	}
+	fout.close();
+}
+
 WordData* worddatabase::getrandom()
 {
 	srand((int)time(0))
@@ -77,7 +88,7 @@ void worddatabase::select(int type)
 	swap(worddatas,worddatal);
 	for(vector<WordData*>::iterator iter=worddatal.begin();iter!=worddatal.end();++iter)
 	{
-		if((*iter)->Type==type)
+		if((*iter)->Type()==type)
 		{
 			worddatas.push_back(worddatal);
 		}
