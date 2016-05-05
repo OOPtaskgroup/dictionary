@@ -5,7 +5,7 @@ userdatabase::userdatabase()
 {
 	std::ifstream fin("userdatas.txt")
 	int count=0;
-	while(fin>>userdatas.at(count)->name>>userdatas.at(count)->password)
+	while(fin>>userdatas.at(count)->Name())//>>userdatas.at(count)->password)
 	{
 		count++;
 	}
@@ -16,7 +16,7 @@ bool userdatabase::finduser(std::string str)
 {
 	for (vector<UserData*>::iterator iter=userdatas.begin();iter!=userdatas.end();++iter)
 	{
-		if(userdatas.at(iter)->name==str)
+		if(userdatas.at(iter)->Name()==str)
 		{
 			return true;
 		}
@@ -40,7 +40,7 @@ void userdatabase::insert(UserData* ud)
 	std::ofstream fout("userdatas.txt");
 	for(vector<UserData*>::iterator iter=userdatas.begin();iter!=userdatas.end();++iter)
 	{
-		fout<<(*iter)->name<<"\n"<<userdatas.at(iter)->password;
+		fout<<(*iter)->Name()<<"\n"//<<(*iter)->password;
 	}
 	fout.close();
 }
