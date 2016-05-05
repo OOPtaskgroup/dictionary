@@ -2,7 +2,7 @@
 #include"worddatabase.h"
 #define random(x) (rand()%x)
 
-worddatabase::worddatabase()
+WordDataBase::WordDataBase()
 {
 	std::ifstream fin[5];
 	fin[0].open("Easy.txt");fin[1].open("Normal.txt");fin[2].open("Hard.txt");fin[3].open("Lunatic.txt");fin[4].open("Extra.txt");
@@ -17,13 +17,13 @@ worddatabase::worddatabase()
 	}
 }
 
-std::vector <WordData*> worddatabase::getAll()
+std::vector <WordData*> WordDataBase::getAll()
 {
 	std::vector <WordData*> wd(worddatas);
 	return wd;
 }
 
-bool worddatabase::findword(std::string str)
+bool WordDataBase::FindWord(std::string str)
 {
 	for(std::vector<WordData*>::iterator iter=worddatas.begin();iter!=worddatas.end();++iter)
 	{
@@ -35,22 +35,22 @@ bool worddatabase::findword(std::string str)
 	return false;
 }
 
-bool worddatabase::isempty()
+bool WordDataBase::isEmpty()
 {
 	return worddatas.empty();
 }
 
-WordData* worddatabase::begin()
+WordData* WordDataBase::begin()
 {
 	return *(worddatas.begin());
 }
 
-WordData* worddatabase::end() 
+WordData* WordDataBase::end() 
 {
 	return *(worddatas.end());
 }
 
-void worddatabase::recitenow()
+void WordDataBase::reciteNow()
 {
 	std::ofstream fout("words.txt");
 	for(std::vector<WordData*>::iterator iter=worddatas.begin();iter!=worddatas.end();++iter)
@@ -60,7 +60,7 @@ void worddatabase::recitenow()
 	fout.close();
 }
 
-void worddatabase::insert(WordData* ud)
+void WordDataBase::insert(WordData* ud)
 {
 	worddatas.push_back(ud);
 	std::ofstream fout("worddatas.txt");
@@ -71,13 +71,13 @@ void worddatabase::insert(WordData* ud)
 	fout.close();
 }
 
-WordData* worddatabase::getrandom()
+WordData* WordDataBase::getrandom()
 {
 	srand((int)time(0));
 	return worddatas.at(random(worddatas.size()));
 }
 
-void worddatabase::select(int type)
+void WordDataBase::select(int type)
 {
 	if(!worddatal.empty())
 	{

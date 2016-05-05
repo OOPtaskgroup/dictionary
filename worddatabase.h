@@ -4,17 +4,17 @@
 #include"database.h"
 #include"worddata.h"
 
-class worddatabase : public DataBase
+class WordDataBase : public DataBase
 {
 	std :: vector <WordData*> worddatas,worddatal;
 public:
-	worddatabase();
-	~worddatabase();
+	WordDataBase();
+	~WordDataBase();
 	std::vector<WordData*> getAll();
-	bool findword(std::string str);
-	bool isempty();
+	bool FindWord(std::string str);
+	bool isEmpty();
 	//WordData* findword();
-	void recitenow();
+	void reciteNow();
 	void insert(WordData* wd);
 	WordData* begin();
 	WordData* end();
