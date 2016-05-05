@@ -4,17 +4,17 @@
 #include"database.h"
 #include"userdata.h"
 
-class userdatabase : public DataBase
+class UserDataBase : public DataBase
 {
 	std :: vector <UserData*> userdatas;
 public:
-	userdatabase();
-	~userdatabase();
+	UserDataBase();
+	~UserDataBase();
 	virtual void insert(UserData*);
 	virtual bool empty();
-	bool finduser(std::string str);
+	bool findUser(std::string str);
 	//virtual void throwout();
-	int usernumber();
+	int userNumber();
 };
 
 

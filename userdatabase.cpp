@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 #include"userdatabase.h"
 
-userdatabase::userdatabase()
+UserDataBase::UserDataBase()
 {
 	std::ifstream fin("userdatas.txt");
 	char str1[15],str2[20];
@@ -14,7 +14,7 @@ userdatabase::userdatabase()
 	fin.close();
 }
 
-bool userdatabase::finduser(std::string str)
+bool UserDataBase::findUser(std::string str)
 {
 	for (std::vector<UserData*>::iterator iter=userdatas.begin();iter!=userdatas.end();++iter)
 	{
@@ -26,17 +26,17 @@ bool userdatabase::finduser(std::string str)
 	return false;
 }
 
-bool userdatabase::empty()
+bool UserDataBase::empty()
 {
 	return userdatas.empty();
 }
 
-int userdatabase::usernumber()
+int UserDataBase::userNumber()
 {
 	return userdatas.size();
 }
 
-void userdatabase::insert(UserData* ud)
+void UserDataBase::insert(UserData* ud)
 {
 	userdatas.push_back(ud);
 	std::ofstream fout("userdatas.txt");
