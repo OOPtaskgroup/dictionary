@@ -15,7 +15,7 @@ public:
 	bool finduser(std::string str);
 	//virtual void throwout();
 	int usernumber();
-}
+};
 
 
 #endif
