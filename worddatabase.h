@@ -6,12 +6,12 @@
 
 class worddatabase : public DataBase
 {
-	std :: vector <WordData*> worddatas(10000),worddatal;
+	std :: vector <WordData*> worddatas,worddatal;
 public:
 	worddatabase();
 	~worddatabase();
 	std::vector<WordData*> getAll();
-	bool findword(std::sttring str);
+	bool findword(std::string str);
 	bool isempty();
 	//WordData* findword();
 	void recitenow();
@@ -20,6 +20,6 @@ public:
 	WordData* end();
 	WordData* getrandom();
 	void select(int type);
-}
+};
 
 #endif
