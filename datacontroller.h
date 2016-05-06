@@ -11,7 +11,6 @@ class DataController
 public:
     DataController();
     virtual ~DataController()=0;
-    
 };
 
 #endif

@@ -1,16 +1,27 @@
-#include <bits/stdc++.h>
 #include "wordcontroller.h"
-#include "consts.h"
 
-WordController :: WordController()
+WordController :: WordController(std::string ContentFile)
+    :contentFile(ContentFile)
 {
-    dataBase = new WordDataBase();
+    std::ifstream input(contentFile);
+    if(input)
+    {
+        input.close();
+        dataBase = new WordDataBase(contentFile);
+    }
+    else
+    {
+        dataBase = new WordDataBase();
+        dataBase->reWrite(contentFile);
+    }
     Logging log("WordController :: WordController",false);
 }
 
 WordController :: ~WordController()
 {
     Logging log("WordController :: ~WordController",false);
+    dataBase->reWrite(contentFile);
+    delete dataBase;
 
 }
 std::vector<WordData*> WordController :: randomWordCollect(int num, int difficulty)

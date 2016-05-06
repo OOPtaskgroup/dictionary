@@ -4,8 +4,10 @@
 int main()
 {
     Controller* controller = new Controller;
-    controller->Login((std::string)"keavil",(std::string)"123456");
+    controller->userRegister("keavil","123456");
+    controller->Login("keavil","123456");
     controller->Logout();
-    controller->Login((std::string)"zhang",(std::string)"123456");
-    controller->Login((std::string)"keavil",(std::string)"234567");
+    controller->userRegister("victorywys","233333");
+    controller->Login("victorywys","233333");
+    controller->Logout();
 }

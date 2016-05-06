@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <string>
+#include <bits/stdc++.h>
+#include "consts.h"
 
 class Logging
 {

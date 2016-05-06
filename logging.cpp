@@ -1,7 +1,4 @@
-#include <iostream>
-#include <fstream>
 #include "logging.h"
-#include "consts.h"
 int Logging::tabCounts = -1;
 
 std::ofstream Logging::output(__debugFileName == "EMPTY" ? "":__debugFileName);

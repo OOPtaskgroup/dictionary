@@ -9,12 +9,13 @@ class WordDataBase : public DataBase
 	std :: vector <WordData*> worddatas,worddatal;
 public:
 	WordDataBase();
+        WordDataBase(std::string fileName);
 	~WordDataBase();
 	std::vector<WordData*> getAll();
-	bool FindWord(std::string str);
+	WordData* FindWord(std::string str);
 	bool isEmpty();
 	//WordData* findword();
-	void reciteNow();
+	void reWrite(const std::string& fileName);
 	void insert(WordData* wd);
         std::vector<WordData*>::iterator begin();
         std::vector<WordData*>::iterator end();

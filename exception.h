@@ -2,13 +2,13 @@
 #define EXCEPTION_H
 
 #include <bits/stdc++.h>
-
+#include "logging.h"
 class Exception
 {
     std::string information;
 public:
     Exception(const std::string& inform);
-    virtual ~Exception()=0;
+    ~Exception();
     std::string getInformation()const;
 };
 #endif

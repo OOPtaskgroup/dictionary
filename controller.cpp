@@ -1,7 +1,4 @@
-#include <bits/stdc++.h>
 #include "controller.h"
-#include "consts.h"
-#include "exceptions.h"
 
 Controller :: Controller (const std::string defaultUserFile)
 {
@@ -29,7 +26,7 @@ void Controller :: Login (std::string ID, std::string passwd)
     Logging log("Controller :: Login",true);
     UserData* toLogin = userController->checkIn(ID,passwd);
     userController->userLogin(toLogin);
-    wordController = new WordController();
+    wordController = new WordController("userdatas/"+ID+"/words");
     config = new Configuration("userdatas/"+ID+"/config");
 }
 
