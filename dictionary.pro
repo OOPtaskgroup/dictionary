@@ -28,7 +28,9 @@ SOURCES += main.cpp\
     exception.cpp \
     userdata.cpp \
     worddata.cpp \
-    recitewindow.cpp
+    recitewindow.cpp \
+    userdatabase.cpp \
+    worddatabase.cpp
 
 HEADERS  += mainwindow.h \
     consts.h \
@@ -51,7 +53,10 @@ HEADERS  += mainwindow.h \
     recitewindow.h \
     itemalreadyexistexception.h \
     itemnotfoundexception.h \
-    passwordnotcorrectexception.h
+    passwordnotcorrectexception.h \
+    database.h \
+    userdatabase.h \
+    worddatabase.h
 
 FORMS    += mainwindow.ui \
     logindlg.ui \
@@ -63,7 +68,14 @@ DISTFILES += \
     .gitignore \
     dictionary.pro.user \
     LICENSE \
-    README.md
+    README.md \
+    Easy.txt \
+    Extra.txt \
+    Hard.txt \
+    Lunatic.txt \
+    Normal.txt
 
 RESOURCES += \
     image.qrc
+
+CONFIG += C++11

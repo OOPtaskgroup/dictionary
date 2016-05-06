@@ -13,10 +13,10 @@ LoginDlg::LoginDlg(QWidget *parent) :
     ui->setupUi(this);
 }
 
-LoginDlg::LoginDlg(QWidget *parent, Controller *controller) :
-    LoginDlg(parent),
-    controller(controller)
+LoginDlg::LoginDlg(Controller *controller, QWidget *parent) :
+    LoginDlg(parent)
 {
+    this->controller = controller;
 }
 
 LoginDlg::~LoginDlg()
@@ -28,7 +28,7 @@ void LoginDlg::on_loginBtn_clicked()
 {
     try
     {
-        Login(ui->usrEdit->text(), ui->pwdEdit->text());
+        controller->Login(ui->usrEdit->text().toStdString(), ui->pwdEdit->text().toStdString());
         accept();
     }
     catch(PasswordNotCorrectException exce)

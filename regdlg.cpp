@@ -12,11 +12,10 @@ RegDlg::RegDlg(QWidget *parent) :
     ui->setupUi(this);
 }
 
-RegDlg::RegDlg(QWidget *parent, Controller *controller) :
-    RegDlg(parent),
-    controller(controller)
+RegDlg::RegDlg(Controller *controller, QWidget *parent) :
+    RegDlg(parent)
 {
-
+    this->controller = controller;
 }
 
 RegDlg::~RegDlg()
@@ -33,13 +32,13 @@ bool RegDlg::checkInput()
     if (ui->pwdEdit->text() != ui->pwdConfirmEdit->text())
         return false;
     for (auto i : ui->usrEdit->text())
-        if (!(*i).isLetterOrNumber())
+        if (!i.isLetterOrNumber())
             return false;
     for (auto i : ui->pwdEdit->text())
-        if (!(*i).isLetterOrNumber())
+        if (!i.isLetterOrNumber())
             return false;
     for (auto i : ui->pwdConfirmEdit->text())
-        if (!(*i).isLetterOrNumber())
+        if (!i.isLetterOrNumber())
             return false;
     return true;
 }
@@ -67,7 +66,7 @@ void RegDlg::on_regBtn_clicked()
     }
     catch(ItemAlreadyExistException exce)
     {
-        QMessageBox warningBox(QMessageBox::Warning, "出错啦！", err.info);
+        QMessageBox warningBox(QMessageBox::Warning, "出错啦！", "用户已存在！");
         warningBox.setStandardButtons(QMessageBox::Retry);
         warningBox.setButtonText(QMessageBox::Retry, "重试");
         warningBox.exec();

@@ -38,7 +38,7 @@ private:
     explicit ReciteWindow(QWidget *parent = 0);
     explicit ReciteWindow(Controller *controller, QWidget *parent = 0);
     QString lookUpWord;
-    WordData* lookUpData;
+    std::pair<WordData*, int> lookUpData;
     std::pair<WordData*, int>& findNextWord();
     bool showWord(std::pair<WordData*, int>& word);
     void doRecite();
