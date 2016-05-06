@@ -1,4 +1,3 @@
-#include <bits/stdc++.h>
 #include "userdata.h"
 
 UserData :: UserData(const std::string& name, const std::string& password)

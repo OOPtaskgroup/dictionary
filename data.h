@@ -18,6 +18,7 @@ public:
     void setContentFile(const std::string& toFile);
 
     Data(const std::string& name);
+    Data(const std::string& name, const int type);
     virtual ~Data()=0;
 };
 

@@ -1,8 +1,18 @@
-#include <bits/stdc++.h>
 #include "data.h"
 
 Data :: Data(const std::string& name)
     :name(name),type(0)
+{
+
+}
+
+Data :: Data(const std::string& name, const int type)
+    :name(name),type(type)
+{
+    
+}
+
+Data :: ~Data()
 {
 
 }
@@ -25,4 +35,14 @@ void Data :: setName(const std::string& toName)
 void Data :: setType(const int& toType)
 {
     type = toType;
+}
+
+void Data :: setContentFile(const std::string& toFile)
+{
+    contentFile = toFile;
+}
+
+const std::string& Data :: ContentFile()const
+{
+    return contentFile;
 }

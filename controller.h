@@ -6,7 +6,8 @@
 #include "wordcontroller.h"
 #include "usercontroller.h"
 #include "configuration.h"
-
+#include "consts.h"
+#include "exceptions.h"
 
 class Controller
 {

@@ -1,4 +1,3 @@
-#include<bits/stdc++.h>
 #include"userdatabase.h"
 
 UserDataBase::UserDataBase()
@@ -42,7 +41,7 @@ void UserDataBase::insert(UserData* ud)
 	std::ofstream fout("userdatas.txt");
 	for(std::vector<UserData*>::iterator iter=userdatas.begin();iter!=userdatas.end();++iter)
 	{
-		fout<<(*iter)->Name()<<"\n";//<<(*iter)->password;
+		fout<<(*iter)->Name()<<" "<<(*iter)->Password()<<"\n";//<<(*iter)->password;
 	}
 	fout.close();
 }

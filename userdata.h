@@ -2,6 +2,7 @@
 #define USERDATA_H
 
 #include "data.h"
+#include <bits/stdc++.h>
 
 class UserData : public Data
 {

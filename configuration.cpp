@@ -1,12 +1,25 @@
-#include <bits/stdc++.h>
-#include "logging.h"
 #include "configuration.h"
-#include "exceptions.h"
-#include "consts.h"
 
 Configuration :: Configuration(const int& dif, const int& num)
 {
     modify(dif,num);
+}
+
+Configuration :: Configuration(const std::string& fileName)
+{
+    std::ifstream input(fileName);
+    if(input)
+    {
+        int dif,num;
+        input >> dif >> num;
+        modify(dif,num);
+    }
+    else
+    {
+        input.close();
+        modify(1,50);
+        save(fileName);
+    }
 }
 
 Configuration :: ~Configuration()
@@ -40,12 +53,12 @@ void Configuration :: modify(const int& dif, const int& num)
     dailyNumber = num;
 }
 
-const int& Configuration :: DailyNumber()const
+const int Configuration :: DailyNumber()const
 {
     return dailyNumber;
 }
 
-const int& Configuration :: Difficulty()const
+const int Configuration :: Difficulty()const
 {
     return difficulty;
 }

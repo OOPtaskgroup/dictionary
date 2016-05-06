@@ -6,12 +6,14 @@
 #include "worddatabase.h"
 #include "worddata.h"
 #include "datacontroller.h"
+#include "consts.h"
 
 class WordController : public DataController
 {
     WordDataBase* dataBase;
+    std::string contentFile;
 public:
-    WordController();
+    WordController(std::string ContentFile);
     ~WordController();
 
     std::vector<WordData*> randomWordCollect(int num,int difficulty);

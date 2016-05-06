@@ -1,9 +1,7 @@
-#include <bits/stdc++.h>
 #include "worddata.h"
-#include "bits/stdc++.h"
 
-WordData :: WordData(const std::string name)
-    :Data(name),times(0)
+WordData :: WordData(const std::string name,const int type)
+    :Data(name,type),times(0)
 {
     setContentFile("worddata/"+name+".information");
 }

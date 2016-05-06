@@ -1,4 +1,3 @@
-#include<bits/stdc++.h>
 #include"worddatabase.h"
 #define random(x) (rand()%x)
 
@@ -11,10 +10,26 @@ WordDataBase::WordDataBase()
 		char str[30];
 		while (fin[i].getline(str,25))
 		{
-			WordData *pt = new WordData(str);
+			WordData *pt = new WordData(str,i+1);
 			worddatas.push_back(pt);
 		}
 	}
+}
+
+WordDataBase :: WordDataBase(std::string fileName)
+{
+    std::ifstream fin(fileName);
+    std::string str;int tp;
+    while(fin>>str>>tp)
+    {
+        WordData *pt = new WordData(str,tp);
+        worddatas.push_back(pt);
+    }
+}
+
+WordDataBase :: ~WordDataBase()
+{
+
 }
 
 std::vector <WordData*> WordDataBase::getAll()
@@ -23,16 +38,16 @@ std::vector <WordData*> WordDataBase::getAll()
 	return wd;
 }
 
-bool WordDataBase::FindWord(std::string str)
+WordData* WordDataBase::FindWord(std::string str)
 {
 	for(std::vector<WordData*>::iterator iter=worddatas.begin();iter!=worddatas.end();++iter)
 	{
 		if ((*iter)->Name()==str)
 		{
-			return true;
+			return *iter;
 		}
 	}
-	return false;
+	return nullptr;
 }
 
 bool WordDataBase::isEmpty()
@@ -50,9 +65,9 @@ std::vector<WordData*>::iterator WordDataBase::end()
 	return worddatas.end();
 }
 
-void WordDataBase::reciteNow()
+void WordDataBase::reWrite(const std::string& fileName)
 {
-	std::ofstream fout("words.txt");
+	std::ofstream fout(fileName);
 	for(std::vector<WordData*>::iterator iter=worddatas.begin();iter!=worddatas.end();++iter)
 	{
 		fout<<(*iter)->Name()<<" "<<(*iter)->Type()<<std::endl;
@@ -63,12 +78,6 @@ void WordDataBase::reciteNow()
 void WordDataBase::insert(WordData* ud)
 {
 	worddatas.push_back(ud);
-	std::ofstream fout("worddatas.txt");
-	for(std::vector<WordData*>::iterator iter=worddatas.begin();iter!=worddatas.end();++iter)
-	{
-		fout<<(*iter)->Name()<<"\n";
-	}
-	fout.close();
 }
 
 WordData* WordDataBase::getrandom()

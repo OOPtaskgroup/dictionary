@@ -1,5 +1,4 @@
 #include "exception.h"
-#include "logging.h"
 
 Exception :: Exception(const std::string& inform)
     :information(inform)
@@ -11,4 +10,9 @@ Exception :: Exception(const std::string& inform)
 std::string Exception :: getInformation()const
 {
     return information;
+}
+
+Exception :: ~Exception()
+{
+
 }

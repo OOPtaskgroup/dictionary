@@ -5,6 +5,8 @@
 #include "logging.h"
 #include "userdatabase.h"
 #include "userdata.h"
+#include "datacontroller.h"
+#include "exceptions.h"
 
 class UserController : public DataController
 {
