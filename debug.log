@@ -1,8 +1,21 @@
 Part "main" begin.
   Part "Controller :: Controller" begin.
-DataController :: DataController" begin.
-DataController :: DataController" end.
+    Part "UserDataBase :: UserDataBase" begin.
+    Part "UserDataBase :: UserDataBase" end.
   Part "Controller :: Controller" end.
+  Part "UserController :: userRegister" begin.
+    Part "UserDataBase :: save" begin.
+    INFO 1
+    INFO keavil
+    Part "UserDataBase :: save" end.
+  Part "UserController :: userRegister" end.
+  Part "UserController :: userRegister" begin.
+    Part "UserDataBase :: save" begin.
+    INFO 2
+    INFO keavil
+    INFO victorywys
+    Part "UserDataBase :: save" end.
+  Part "UserController :: userRegister" end.
   Part "Controller :: Login" begin.
     Part "UserController :: checkIn" begin.
     INFO catch user keavil.
@@ -10,13 +23,10 @@ DataController :: DataController" end.
     Part "UserController :: userLogin" begin.
     INFO login keavil ok.
     Part "UserController :: userLogin" end.
-DataController :: DataController" begin.
-DataController :: DataController" end.
-WordController :: WordController" begin.
-WordController :: WordController" end.
+    Part "WordController :: WordController" begin.
+    INFO 11285
+    Part "WordController :: WordController" end.
   Part "Controller :: Login" end.
-WordController :: ~WordController" begin.
-WordController :: ~WordController" end.
   Part "UserController :: userLogout" begin.
   INFO user keavil loged out.
   Part "UserController :: userLogout" end.
@@ -27,20 +37,11 @@ WordController :: ~WordController" end.
     Part "UserController :: userLogin" begin.
     INFO login victorywys ok.
     Part "UserController :: userLogin" end.
-DataController :: DataController" begin.
-DataController :: DataController" end.
-WordController :: WordController" begin.
-WordController :: WordController" end.
+    Part "WordController :: WordController" begin.
+    INFO 11285
+    Part "WordController :: WordController" end.
   Part "Controller :: Login" end.
-  Part "WordController :: findWord" begin.
-  INFO find word exist
-  Part "WordController :: findWord" end.
-  Part "WordController :: findWord" begin.
-  INFO find word include
-  Part "WordController :: findWord" end.
-WordController :: ~WordController" begin.
-WordController :: ~WordController" end.
-  Part "UserController :: userLogout" begin.
-  INFO user victorywys loged out.
-  Part "UserController :: userLogout" end.
-Part "main" end.
+  Part "UserController :: userModifyPassword" begin.
+  INFO 233333 -> 000000
+    Part "UserDataBase :: save" begin.
+    INFO 2

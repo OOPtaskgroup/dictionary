@@ -48,6 +48,11 @@ UserData* Controller :: getActiveUser()
     return userController->getActiveUser();
 }
 
+void Controller :: userModifyPassword(UserData* user, std::string passwd, std::string newPasswd)
+{
+    userController->userModifyPassword(user,passwd,newPasswd);
+}
+
 WordData* Controller :: findWord(std::string word)
 {
     return wordController->findWord(word);

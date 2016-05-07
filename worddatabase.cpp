@@ -11,7 +11,7 @@ WordDataBase::WordDataBase()
 		while (fin[i].getline(str,25))
 		{
 			WordData *pt = new WordData(str,i+1);
-			worddatas.push_back(pt);
+                        worddatal.push_back(pt);
 		}
 	}
 }

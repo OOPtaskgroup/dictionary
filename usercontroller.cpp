@@ -15,6 +15,7 @@ void UserController :: userLogout()
     if (nowActiveUser)
     {
         log << "INFO user " << nowActiveUser->Name() << " loged out." <<std::endl;
+        delete nowActiveUser;
         nowActiveUser = nullptr;
     }
     else log << "INFO no active user now. cannot logout." << std::endl;
@@ -68,4 +69,14 @@ UserData* UserController :: userRegister(std::string ID, std::string passwd)
 UserData* UserController :: getActiveUser()
 {
     return nowActiveUser;
+}
+
+void UserController :: userModifyPassword(UserData* user, std::string passwd, std::string newPasswd)
+{
+    Logging log("UserController :: userModifyPassword",true);
+    if(user->Password() != passwd)
+        throw PasswordNotCorrectException((std::string)"password wrong!");
+    user->setPassword(newPasswd);
+    log << "INFO " <<passwd << " -> " << newPasswd <<std::endl;
+    dataBase->save();
 }

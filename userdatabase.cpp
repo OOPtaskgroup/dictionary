@@ -2,13 +2,14 @@
 
 UserDataBase::UserDataBase()
 {
+        Logging log("UserDataBase :: UserDataBase",true);
 	std::ifstream fin("userdatas.txt");
         std::string str1,str2;
-	while(fin>>str1>>str2)//>>userdatas.at(count)->password)
+	while(fin>>str1>>str2)
 	{
 		UserData* pt = new UserData(str1,str2);
 		userdatas.push_back(pt);
-		//pt->setPassword(str2); 
+                log << "INFO " << pt->Name() << std::endl;
 	}
 	fin.close();
 }
@@ -35,15 +36,26 @@ int UserDataBase::userNumber()
 	return userdatas.size();
 }
 
-void UserDataBase::insert(UserData* ud)
+void UserDataBase::save()
 {
-	userdatas.push_back(ud);
+        Logging log("UserDataBase :: save",true);
 	std::ofstream fout("userdatas.txt");
+        log << "INFO " << userdatas.size() << std::endl;
+        std::cout << userdatas[0]<<std::endl;
 	for(std::vector<UserData*>::iterator iter=userdatas.begin();iter!=userdatas.end();++iter)
 	{
-		fout<<(*iter)->Name()<<" "<<(*iter)->Password()<<"\n";//<<(*iter)->password;
+                std::cout << (*iter)->Name() <<std::endl;
+		fout<<(*iter)->Name()<<" "<<(*iter)->Password()<< std::endl;
+                log<<"INFO "<<(*iter)->Name() << std::endl;
+                std::cout << (*iter)->Name() <<std::endl;
 	}
 	fout.close();
+}
+
+void UserDataBase::insert(UserData* ud)
+{
+    userdatas.push_back(ud);
+    save();
 }
 
 UserDataBase :: ~UserDataBase()

@@ -18,6 +18,7 @@ public:
     void Logout();
     UserData* userRegister(std::string ID, std::string passwd);
     UserData* getActiveUser();
+    void userModifyPassword(UserData* user, std::string passwd, std::string newPasswd);
 private:
     WordController* wordController;
     std::vector< std::pair<WordData*,int> > nowRecitingWords;

@@ -3,18 +3,22 @@
 WordController :: WordController(std::string ContentFile)
     :contentFile(ContentFile)
 {
+    Logging log("WordController :: WordController",true);
     std::ifstream input(contentFile);
     if(input)
     {
         input.close();
+        log << "INFO find file" << std::endl;
         dataBase = new WordDataBase(contentFile);
     }
     else
     {
+        input.close();
         dataBase = new WordDataBase();
         dataBase->reWrite(contentFile);
     }
-    Logging log("WordController :: WordController",false);
+    dataBase->select(0,100);
+    log << "INFO " << dataBase->size() << std::endl;
 }
 
 WordController :: ~WordController()
