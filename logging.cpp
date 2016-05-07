@@ -37,3 +37,5 @@ std::ofstream& Logging::operator << ( T x )
     }
     return output;
 }
+
+template std::ofstream& Logging::operator << ( std::string x);

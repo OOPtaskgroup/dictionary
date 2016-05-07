@@ -2,6 +2,7 @@
 UserController :: UserController ()
 {
     dataBase = new UserDataBase();
+    nowActiveUser = nullptr;
 }
 UserController :: ~UserController()
 {
@@ -14,7 +15,7 @@ void UserController :: userLogout()
     if (nowActiveUser)
     {
         log << "INFO user " << nowActiveUser->Name() << " loged out." <<std::endl;
-        nowActiveUser = NULL;
+        nowActiveUser = nullptr;
     }
     else log << "INFO no active user now. cannot logout." << std::endl;
 }
