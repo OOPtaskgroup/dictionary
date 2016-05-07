@@ -1,9 +1,8 @@
 #include "regdlg.h"
 #include "configdlg.h"
 #include "ui_regdlg.h"
-#include "controller.h"
-#include <QMessageBox>
-#include "itemalreadyexistexception.h"
+#include <QKeyEvent>
+#include <QTimer>
 
 RegDlg::RegDlg(QWidget *parent) :
     QDialog(parent),
@@ -43,7 +42,7 @@ bool RegDlg::checkInput()
     return true;
 }
 
-void RegDlg::keyPressEvent(QKeyEvent *)
+void RegDlg::setBtnStat()
 {
     if (checkInput())
     {
@@ -66,10 +65,25 @@ void RegDlg::on_regBtn_clicked()
     }
     catch(ItemAlreadyExistException exce)
     {
-        QMessageBox warningBox(QMessageBox::Warning, "出错啦！", "用户已存在！");
+        QMessageBox warningBox(QMessageBox::Warning, "鍑洪敊鍟︼紒", "鐢ㄦ埛宸插瓨鍦紒");
         warningBox.setStandardButtons(QMessageBox::Retry);
-        warningBox.setButtonText(QMessageBox::Retry, "重试");
+        warningBox.setButtonText(QMessageBox::Retry, "閲嶈瘯");
         warningBox.exec();
         return;
     }
+}
+
+void RegDlg::on_pwdConfirmEdit_textChanged(const QString &arg1)
+{
+    setBtnStat();
+}
+
+void RegDlg::on_pwdEdit_textChanged(const QString &arg1)
+{
+    setBtnStat();
+}
+
+void RegDlg::on_usrEdit_textChanged(const QString &arg1)
+{
+    setBtnStat();
 }

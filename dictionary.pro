@@ -18,7 +18,6 @@ SOURCES += main.cpp\
     datacontroller.cpp \
     logging.cpp \
     logindlg.cpp \
-    test.cpp \
     usercontroller.cpp \
     wordcontroller.cpp \
     regdlg.cpp \
@@ -30,7 +29,9 @@ SOURCES += main.cpp\
     worddata.cpp \
     recitewindow.cpp \
     userdatabase.cpp \
-    worddatabase.cpp
+    worddatabase.cpp \
+    consts.cpp \
+    database.cpp
 
 HEADERS  += mainwindow.h \
     consts.h \
@@ -73,7 +74,8 @@ DISTFILES += \
     Extra.txt \
     Hard.txt \
     Lunatic.txt \
-    Normal.txt
+    Normal.txt \
+    makefile
 
 RESOURCES += \
     image.qrc

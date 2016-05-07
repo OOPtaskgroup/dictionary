@@ -3,7 +3,7 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    Controller *controller;
+    Controller *controller = new Controller();
     MainWindow w(controller);
     LoginDlg loginDlg(controller);
     if (loginDlg.exec() == QDialog::Accepted)
