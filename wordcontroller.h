@@ -20,7 +20,7 @@ public:
     void answerAccepted(WordData* item);
     void answerWrong(WordData* item);
     void reLearn(WordData* item);
-    std::vector<WordData*> findWord(std::string prefix);
+    WordData* findWord(std::string prefix);
 
     std::vector<WordData*> getMasteredWord(const int difficulty);
     std::vector<WordData*> getLearningWord(const int difficulty);

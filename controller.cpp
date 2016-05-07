@@ -50,9 +50,7 @@ UserData* Controller :: getActiveUser()
 
 WordData* Controller :: findWord(std::string word)
 {
-    auto gotWords = wordController->findWord(word);
-    if(gotWords.size() != 0)return gotWords[0];
-    else return nullptr;
+    return wordController->findWord(word);
 }
 
 std::vector< std::pair<WordData*,int> >& Controller :: getRecitingWords()

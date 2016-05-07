@@ -21,6 +21,7 @@ public:
         std::vector<WordData*>::iterator end();
 	WordData* getrandom();
 	void select(int type);
+        void select(int typel,int typer);
         int size();
 };
 

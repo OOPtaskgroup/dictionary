@@ -110,18 +110,17 @@ std::vector<WordData*> WordController :: getLearningWord(const int difficulty)
     return getWord(10 + difficulty);
 }
 
-std::vector<WordData*> WordController :: findWord(std::string prefix)
+WordData* WordController :: findWord(std::string prefix)
 {
     Logging log("WordController :: findWord",true);
-    dataBase->select(-1);
-    std::vector<WordData*> toReturn;
+    dataBase->select(0,100);
     for(auto i = dataBase->begin(); i != dataBase->end(); i++)
     if ((*i)->Name() == prefix)
     {
         log << "INFO find word " << (*i)->Name() << std::endl;
-        toReturn.push_back(*i);
+        return *i;
     }
-    return toReturn;
+    return nullptr;
 }
 
 int WordController :: getMasteredWordCount(const int difficulty)

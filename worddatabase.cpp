@@ -23,7 +23,7 @@ WordDataBase :: WordDataBase(std::string fileName)
     while(fin>>str>>tp)
     {
         WordData *pt = new WordData(str,tp);
-        worddatas.push_back(pt);
+        worddatal.push_back(pt);
     }
 }
 
@@ -40,7 +40,7 @@ std::vector <WordData*> WordDataBase::getAll()
 
 WordData* WordDataBase::FindWord(std::string str)
 {
-	for(std::vector<WordData*>::iterator iter=worddatas.begin();iter!=worddatas.end();++iter)
+	for(std::vector<WordData*>::iterator iter=worddatal.begin();iter!=worddatal.end();++iter)
 	{
 		if ((*iter)->Name()==str)
 		{
@@ -68,7 +68,7 @@ std::vector<WordData*>::iterator WordDataBase::end()
 void WordDataBase::reWrite(const std::string& fileName)
 {
 	std::ofstream fout(fileName);
-	for(std::vector<WordData*>::iterator iter=worddatas.begin();iter!=worddatas.end();++iter)
+	for(std::vector<WordData*>::iterator iter=worddatal.begin();iter!=worddatal.end();++iter)
 	{
 		fout<<(*iter)->Name()<<" "<<(*iter)->Type()<<std::endl;
 	}
@@ -77,7 +77,7 @@ void WordDataBase::reWrite(const std::string& fileName)
 
 void WordDataBase::insert(WordData* ud)
 {
-	worddatas.push_back(ud);
+	worddatal.push_back(ud);
 }
 
 WordData* WordDataBase::getrandom()
@@ -86,21 +86,21 @@ WordData* WordDataBase::getrandom()
 	return worddatas.at(random(worddatas.size()));
 }
 
-void WordDataBase::select(int type)
+void WordDataBase::select(int typel, int typer)
 {
-	if(!worddatal.empty())
-	{
-		swap(worddatas,worddatal);
-		worddatal.clear();
-	}
-	swap(worddatas,worddatal);
+        worddatas.clear();
 	for(std::vector<WordData*>::iterator iter=worddatal.begin();iter!=worddatal.end();++iter)
 	{
-		if((*iter)->Type()==type)
+		if((*iter)->Type() >= typel && (*iter)->Type() <= typer)
 		{
 			worddatas.push_back(*iter);
 		}
 	}
+}
+
+void WordDataBase :: select(int type)
+{
+    select(type,type);
 }
 
 int WordDataBase :: size()
