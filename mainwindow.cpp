@@ -13,10 +13,9 @@ MainWindow::MainWindow(QWidget *parent) :
 }
 
 MainWindow::MainWindow(Controller *controller, QWidget *parent) :
-    MainWindow(parent),
-    controller(controller)
+    MainWindow(parent)
 {
-
+    this->controller = controller;
 }
 
 MainWindow::~MainWindow()
@@ -42,8 +41,8 @@ void MainWindow::on_lookUpBtn_clicked()
     if (controller->findWord(ui->wordEdit->text().toStdString()) == nullptr)
     {
         QMessageBox warningBox(QMessageBox::Warning, "警告", "抱歉，查不到您所需要的单词！");
-        warningBox.setStandardButtons(QMessageBox::Rejected);
-        warningBox.setButtonText(QMessageBox::Rejected, "返回");
+        warningBox.setStandardButtons(QMessageBox::Ok);
+        warningBox.setButtonText(QMessageBox::Ok, "返回");
         warningBox.exec();
         ui->wordEdit->clear();
         ui->wordEdit->setFocus();
@@ -73,6 +72,6 @@ void MainWindow::on_logoutBtn_clicked()
 
 void MainWindow::showEvent(QShowEvent * event)
 {
-    ui->username->setText(tr("欢迎您！%1").arg(controller->getActiveUser()->Name()));
+    ui->username->setText(tr("欢迎您！%1").arg(QString::fromStdString(controller->getActiveUser()->Name())));
     event->accept();
 }
