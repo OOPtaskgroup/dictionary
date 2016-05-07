@@ -2,8 +2,9 @@
 #define REGDLG_H
 
 #include <QDialog>
-#include <QKeyEvent>
 #include "controller.h"
+#include <QMessageBox>
+#include "exceptions.h"
 
 namespace Ui {
 class RegDlg;
@@ -22,12 +23,13 @@ private:
     Ui::RegDlg *ui;
     bool checkInput();
     Controller* controller;
-
-protected:
-    void keyPressEvent(QKeyEvent *);
+    void setBtnStat();
 
 private slots:
     void on_regBtn_clicked();
+    void on_pwdConfirmEdit_textChanged(const QString &arg1);
+    void on_pwdEdit_textChanged(const QString &arg1);
+    void on_usrEdit_textChanged(const QString &arg1);
 };
 
 #endif // REGDLG_H

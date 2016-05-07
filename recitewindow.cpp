@@ -35,7 +35,7 @@ bool ReciteWindow::showWord(std::pair<WordData *, int> &word)
         if (word.second == 1)
             return false;
         auto wordDetail = word.first->getDetail();
-        ui->cantRecBtn->setText("Ã»  Ó¡  Ïó");
+        ui->cantRecBtn->setText("æ²¡  å°  è±¡");
         ui->cantRecBtn->setEnabled(true);
         ui->cantRecBtn->setVisible(true);
         ui->wordLabel->setText(QString::fromStdString(word.first->Name()));
@@ -76,9 +76,9 @@ void ReciteWindow::doRecite()
 {
     if (!showWord(findNextWord()))
     {
-        QMessageBox infoBox(QMessageBox::Information, "ÌáÊ¾", "ÄúÒÑ±³ÍêÁË½ñÌìÒª±³µÄËùÓÐµ¥´Ê£¡");
+        QMessageBox infoBox(QMessageBox::Information, "æç¤º", "æ‚¨å·²èƒŒå®Œäº†ä»Šå¤©è¦èƒŒçš„æ‰€æœ‰å•è¯ï¼");
         infoBox.setStandardButtons(QMessageBox::Ok);
-        infoBox.setButtonText(QMessageBox::Ok, "ºÃµÄ");
+        infoBox.setButtonText(QMessageBox::Ok, "å¥½çš„");
         infoBox.exec();
         this->close();
     }
@@ -96,6 +96,7 @@ ReciteWindow::ReciteWindow(ReciteWindow::WindowMode windowMode, Controller *cont
     this->windowMode = windowMode;
     if (windowMode = ReciteMode)
     {
+        setWindowTitle("èƒŒå•è¯");
         doRecite();
     }
 }
@@ -108,6 +109,7 @@ ReciteWindow::ReciteWindow(ReciteWindow::WindowMode windowMode, Controller *cont
     lookUpData = std::make_pair(controller->findWord(word.toStdString()), -1);
     if (windowMode = LookUpMode)
     {
+        setWindowTitle(tr("%1").arg(lookUpWord));
         showWord(lookUpData);
     }
 }
@@ -156,7 +158,7 @@ void ReciteWindow::on_knownBtn_clicked()
         ui->engLabel->setVisible(true);
         ui->chnBrowser->setVisible(true);
         ui->chnLabel->setVisible(true);
-        ui->cantRecBtn->setText("¼Ç  ´í  ÁË");
+        ui->cantRecBtn->setText("è®°  é”™  äº†");
         status = ChineseAcc;
     }
     if (status == ChineseAcc)
