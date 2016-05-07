@@ -1,9 +1,8 @@
 #include "regdlg.h"
 #include "configdlg.h"
 #include "ui_regdlg.h"
-#include "controller.h"
-#include <QMessageBox>
-#include "itemalreadyexistexception.h"
+#include <QKeyEvent>
+#include <QTimer>
 
 RegDlg::RegDlg(QWidget *parent) :
     QDialog(parent),
@@ -12,11 +11,10 @@ RegDlg::RegDlg(QWidget *parent) :
     ui->setupUi(this);
 }
 
-RegDlg::RegDlg(QWidget *parent, Controller *controller) :
-    RegDlg(parent),
-    controller(controller)
+RegDlg::RegDlg(Controller *controller, QWidget *parent) :
+    RegDlg(parent)
 {
-
+    this->controller = controller;
 }
 
 RegDlg::~RegDlg()
@@ -33,18 +31,18 @@ bool RegDlg::checkInput()
     if (ui->pwdEdit->text() != ui->pwdConfirmEdit->text())
         return false;
     for (auto i : ui->usrEdit->text())
-        if (!(*i).isLetterOrNumber())
+        if (!i.isLetterOrNumber())
             return false;
     for (auto i : ui->pwdEdit->text())
-        if (!(*i).isLetterOrNumber())
+        if (!i.isLetterOrNumber())
             return false;
     for (auto i : ui->pwdConfirmEdit->text())
-        if (!(*i).isLetterOrNumber())
+        if (!i.isLetterOrNumber())
             return false;
     return true;
 }
 
-void RegDlg::keyPressEvent(QKeyEvent *)
+void RegDlg::setBtnStat()
 {
     if (checkInput())
     {
@@ -67,10 +65,25 @@ void RegDlg::on_regBtn_clicked()
     }
     catch(ItemAlreadyExistException exce)
     {
-        QMessageBox warningBox(QMessageBox::Warning, "≥ˆ¥Ì¿≤£°", err.info);
+        QMessageBox warningBox(QMessageBox::Warning, "Âá∫ÈîôÂï¶ÔºÅ", "Áî®Êà∑Â∑≤Â≠òÂú®ÔºÅ");
         warningBox.setStandardButtons(QMessageBox::Retry);
-        warningBox.setButtonText(QMessageBox::Retry, "÷ÿ ‘");
+        warningBox.setButtonText(QMessageBox::Retry, "ÈáçËØï");
         warningBox.exec();
         return;
     }
+}
+
+void RegDlg::on_pwdConfirmEdit_textChanged(const QString &arg1)
+{
+    setBtnStat();
+}
+
+void RegDlg::on_pwdEdit_textChanged(const QString &arg1)
+{
+    setBtnStat();
+}
+
+void RegDlg::on_usrEdit_textChanged(const QString &arg1)
+{
+    setBtnStat();
 }

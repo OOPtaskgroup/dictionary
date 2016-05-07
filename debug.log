@@ -1,0 +1,46 @@
+Part "main" begin.
+  Part "Controller :: Controller" begin.
+DataController :: DataController" begin.
+DataController :: DataController" end.
+  Part "Controller :: Controller" end.
+  Part "Controller :: Login" begin.
+    Part "UserController :: checkIn" begin.
+    INFO catch user keavil.
+    Part "UserController :: checkIn" end.
+    Part "UserController :: userLogin" begin.
+    INFO login keavil ok.
+    Part "UserController :: userLogin" end.
+DataController :: DataController" begin.
+DataController :: DataController" end.
+WordController :: WordController" begin.
+WordController :: WordController" end.
+  Part "Controller :: Login" end.
+WordController :: ~WordController" begin.
+WordController :: ~WordController" end.
+  Part "UserController :: userLogout" begin.
+  INFO user keavil loged out.
+  Part "UserController :: userLogout" end.
+  Part "Controller :: Login" begin.
+    Part "UserController :: checkIn" begin.
+    INFO catch user victorywys.
+    Part "UserController :: checkIn" end.
+    Part "UserController :: userLogin" begin.
+    INFO login victorywys ok.
+    Part "UserController :: userLogin" end.
+DataController :: DataController" begin.
+DataController :: DataController" end.
+WordController :: WordController" begin.
+WordController :: WordController" end.
+  Part "Controller :: Login" end.
+  Part "WordController :: findWord" begin.
+  INFO find word exist
+  Part "WordController :: findWord" end.
+  Part "WordController :: findWord" begin.
+  INFO find word include
+  Part "WordController :: findWord" end.
+WordController :: ~WordController" begin.
+WordController :: ~WordController" end.
+  Part "UserController :: userLogout" begin.
+  INFO user victorywys loged out.
+  Part "UserController :: userLogout" end.
+Part "main" end.

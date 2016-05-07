@@ -4,6 +4,10 @@
 #include <QMainWindow>
 #include <QShowEvent>
 #include "controller.h"
+#include "configdlg.h"
+#include "recitewindow.h"
+#include <qmessagebox.h>
+#include "logindlg.h"
 
 namespace Ui {
 class MainWindow;

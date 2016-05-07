@@ -1,23 +1,20 @@
-#include <iostream>
-#include <fstream>
 #include "logging.h"
-#include "consts.h"
 int Logging::tabCounts = -1;
 
-std::ofstream Logging::output(__debugFileName == "EMPTY" ? "":__debugFileName);
+std::ofstream Logging::output("debug.log");
 
 Logging::Logging (std::string name , bool needPrint)
 {
     tabCounts++;
-
+//    if(output)std::cout<<"open"<<std::endl;;
     partName = name;
     doPrint = needPrint;
-    *this << "Part \"" << partName << "\" begin.\n" ;
+    *this << "Part \"" << partName << "\" begin." << std::endl;
 }
 
 Logging::~Logging ()
 {
-    *this << "Part \"" << partName << "\" end.\n" ;
+    *this << "Part \"" << partName << "\" end." << std::endl;
 
     tabCounts--;
 }
@@ -40,6 +37,3 @@ std::ofstream& Logging::operator << ( T x )
     }
     return output;
 }
-//template std::ofstream& Logging::operator << <int> (int x);
-//template std::ofstream& Logging::operator << <std::string> (std::string x);
-

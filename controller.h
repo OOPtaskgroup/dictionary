@@ -6,10 +6,8 @@
 #include "wordcontroller.h"
 #include "usercontroller.h"
 #include "configuration.h"
-#include "worddata.h"
-#include "userdata.h"
-#include "database.h"
-
+#include "consts.h"
+#include "exceptions.h"
 
 class Controller
 {
@@ -29,8 +27,8 @@ public:
     void answerAccepted( std::pair<WordData*,int> &item);
     void answerWrong( std::pair<WordData*,int> &item);
     void reLearn(WordData* item);
-    std::vector<WordData*>& getMasteredWord();
-    std::vector<WordData*>& getLearningWord();
+    std::vector<WordData*> getMasteredWord();
+    std::vector<WordData*> getLearningWord();
     int getMasteredWordCount();
     int getLearningWordCount();
 
@@ -50,6 +48,6 @@ private:
     void reWriteRecitingWords();
     void reWriteUserConfig();
     void getTodayWords();
-}
+};
 
 #endif

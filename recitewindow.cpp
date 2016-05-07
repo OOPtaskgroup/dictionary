@@ -4,25 +4,25 @@
 
 ReciteWindow::ReciteWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::ReciteWindow)
+    ui(new Ui::ReciteWindow),
+    recitingWords(controller->getRecitingWords())
 {
     ui->setupUi(this);
 }
 
 ReciteWindow::ReciteWindow(Controller *controller, QWidget *parent) :
-    ReciteWindow(parent),
-    controller(controller)
+    ReciteWindow(parent)
 {
-
+    this->controller = controller;
 }
 
 std::pair<WordData*, int>& ReciteWindow::findNextWord()
 {
     for (auto i : recitingWords)
     {
-        if ((*i).second != 1)
+        if (i.second != 1)
         {
-            return (*i);
+            return i;
         }
     }
     return (*recitingWords.begin());
@@ -35,18 +35,18 @@ bool ReciteWindow::showWord(std::pair<WordData *, int> &word)
         if (word.second == 1)
             return false;
         auto wordDetail = word.first->getDetail();
-        ui->cantRecBtn->setText("Ã»  Ó¡  Ïó");
+        ui->cantRecBtn->setText("æ²¡  å°  è±¡");
         ui->cantRecBtn->setEnabled(true);
         ui->cantRecBtn->setVisible(true);
-        ui->wordLabel->setText(word.first->Name());
+        ui->wordLabel->setText(QString::fromStdString(word.first->Name()));
         ui->exampleBrowser->setVisible(false);
-        ui->exampleBrowser->setText(*wordDetail.begin() + "\n" + *(wordDetail.begin() + 1));
+        ui->exampleBrowser->setText(QString::fromStdString(*wordDetail.begin()) + "\n" + QString::fromStdString(*(wordDetail.begin() + 1)));
         ui->exampleLabel->setVisible(false);
         ui->engBrowser->setVisible(false);
-        ui->engBrowser->setText(*(wordDetail.begin() + 2));
+        ui->engBrowser->setText(QString::fromStdString(*(wordDetail.begin() + 2)));
         ui->engLabel->setVisible(false);
         ui->chnBrowser->setVisible(false);
-        ui->chnBrowser->setText(*(wordDetail.begin() + 3));
+        ui->chnBrowser->setText(QString::fromStdString(*(wordDetail.begin() + 3)));
         ui->chnLabel->setVisible(false);
         status = Vocabulary;
         return true;
@@ -58,15 +58,15 @@ bool ReciteWindow::showWord(std::pair<WordData *, int> &word)
         ui->cantRecBtn->setVisible(false);
         ui->knownBtn->setEnabled(false);
         ui->knownBtn->setVisible(false);
-        ui->wordLabel->setText(word.first->Name());
+        ui->wordLabel->setText(QString::fromStdString(word.first->Name()));
         ui->exampleBrowser->setVisible(true);
-        ui->exampleBrowser->setText(*wordDetail.begin() + "\n" + *(wordDetail.begin() + 1));
+        ui->exampleBrowser->setText(QString::fromStdString(*wordDetail.begin()) + "\n" + QString::fromStdString(*(wordDetail.begin() + 1)));
         ui->exampleLabel->setVisible(true);
         ui->engBrowser->setVisible(true);
-        ui->engBrowser->setText(*(wordDetail.begin() + 2));
+        ui->engBrowser->setText(QString::fromStdString(*(wordDetail.begin() + 2)));
         ui->engLabel->setVisible(true);
         ui->chnBrowser->setVisible(true);
-        ui->chnBrowser->setText(*(wordDetail.begin() + 3));
+        ui->chnBrowser->setText(QString::fromStdString(*(wordDetail.begin() + 3)));
         ui->chnLabel->setVisible(true);
         return true;
     }
@@ -76,9 +76,9 @@ void ReciteWindow::doRecite()
 {
     if (!showWord(findNextWord()))
     {
-        QMessageBox infoBox(QMessageBox::Information, "ÌáÊ¾", "ÄúÒÑ±³ÍêÁË½ñÌìÒª±³µÄËùÓÐµ¥´Ê£¡");
+        QMessageBox infoBox(QMessageBox::Information, "æç¤º", "æ‚¨å·²èƒŒå®Œäº†ä»Šå¤©è¦èƒŒçš„æ‰€æœ‰å•è¯ï¼");
         infoBox.setStandardButtons(QMessageBox::Ok);
-        infoBox.setButtonText(QMessageBox::Ok, "ºÃµÄ");
+        infoBox.setButtonText(QMessageBox::Ok, "å¥½çš„");
         infoBox.exec();
         this->close();
     }
@@ -91,29 +91,26 @@ void ReciteWindow::closeEvent(QCloseEvent *event)
 }
 
 ReciteWindow::ReciteWindow(ReciteWindow::WindowMode windowMode, Controller *controller, QWidget *parent) :
-    ReciteWindow(controller, parent),
-    windowMode(windowMode),
-    recitingWords(controller->getRecitingWords())
+    ReciteWindow(controller, parent)
 {
+    this->windowMode = windowMode;
     if (windowMode = ReciteMode)
     {
+        setWindowTitle("èƒŒå•è¯");
         doRecite();
     }
 }
 
 ReciteWindow::ReciteWindow(ReciteWindow::WindowMode windowMode, Controller *controller, QString word, QWidget *parent) :
-    ReciteWindow(controller, parent),
-    windowMode(windowMode),
-    lookUpWord(word),
-    lookUpData(controller->findWord(word.toStdString()))
+    ReciteWindow(controller, parent)
 {
+    this->windowMode = windowMode;
+    lookUpWord = word;
+    lookUpData = std::make_pair(controller->findWord(word.toStdString()), -1);
     if (windowMode = LookUpMode)
     {
-        ui->cantRecBtn->setVisible(false);
-        ui->cantRecBtn->setEnabled(false);
-        ui->knownBtn->setVisible(false);
-        ui->knownBtn->setEnabled(false);
-        showWord(std::make_pair(lookUpData, -1));
+        setWindowTitle(tr("%1").arg(lookUpWord));
+        showWord(lookUpData);
     }
 }
 
@@ -161,7 +158,7 @@ void ReciteWindow::on_knownBtn_clicked()
         ui->engLabel->setVisible(true);
         ui->chnBrowser->setVisible(true);
         ui->chnLabel->setVisible(true);
-        ui->cantRecBtn->setText("¼Ç  ´í  ÁË");
+        ui->cantRecBtn->setText("è®°  é”™  äº†");
         status = ChineseAcc;
     }
     if (status == ChineseAcc)

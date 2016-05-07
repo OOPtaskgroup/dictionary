@@ -7,8 +7,6 @@ class DataBase
 {
 	public:
 		~DataBase();
-		virtual void insert()=0;
-		virtual bool empty()=0;
 };
 
 #endif

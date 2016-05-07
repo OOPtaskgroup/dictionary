@@ -1,9 +1,5 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "configdlg.h"
-#include "recitewindow.h"
-#include <qmessagebox.h>
-#include <logindlg.h>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),

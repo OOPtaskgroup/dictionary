@@ -9,10 +9,9 @@ ConfigDlg::ConfigDlg(QWidget *parent) :
 }
 
 ConfigDlg::ConfigDlg(Controller *controller, QWidget *parent) :
-    ConfigDlg(parent),
-    controller(controller)
+    ConfigDlg(parent)
 {
-
+    this->controller = controller;
 }
 
 ConfigDlg::~ConfigDlg()

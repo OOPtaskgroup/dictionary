@@ -1,13 +1,12 @@
-#include<bits/stdc++.h>
 #include"userdatabase.h"
 
 UserDataBase::UserDataBase()
 {
 	std::ifstream fin("userdatas.txt");
-	char str1[15],str2[20];
+        std::string str1,str2;
 	while(fin>>str1>>str2)//>>userdatas.at(count)->password)
 	{
-		UserData* pt = new UserData(str1);
+		UserData* pt = new UserData(str1,str2);
 		userdatas.push_back(pt);
 		//pt->setPassword(str2); 
 	}
@@ -42,8 +41,22 @@ void UserDataBase::insert(UserData* ud)
 	std::ofstream fout("userdatas.txt");
 	for(std::vector<UserData*>::iterator iter=userdatas.begin();iter!=userdatas.end();++iter)
 	{
-		fout<<(*iter)->Name()<<"\n";//<<(*iter)->password;
+		fout<<(*iter)->Name()<<" "<<(*iter)->Password()<<"\n";//<<(*iter)->password;
 	}
 	fout.close();
 }
 
+UserDataBase :: ~UserDataBase()
+{
+
+}
+
+std::vector<UserData*>::iterator UserDataBase::begin()
+{
+    return userdatas.begin();
+}
+
+std::vector<UserData*>::iterator UserDataBase::end()
+{
+    return userdatas.end();
+}

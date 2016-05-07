@@ -1,15 +1,15 @@
 #include<bits/stdc++.h>
-#include"logging.h"
-void work()
-{
-    Logging log("work");
-//    log<<"ah"<<5<<std::endl;
-    log << "INFO value = 50" <<std::endl;
-}
+#include"controller.h"
 int main()
 {
-    Logging log("main");
-    //log<<67;
-    log << "INFO prepare to work." <<std::endl;
-    work();
+    Logging log("main",true);
+    Controller* controller = new Controller;
+    controller->Login("keavil","123456");
+    controller->Logout();
+    controller->Login("victorywys","233333");
+    WordData* x=controller->findWord("exist");
+    std::cout<<x->Name()<<" "<<x->Type()<< " " << x->ContentFile() <<std::endl;
+    x = controller -> findWord("include");
+    std::cout<<x->Name()<<" "<<x->Type()<< " " << x->ContentFile() << std::endl;
+    controller->Logout();
 }

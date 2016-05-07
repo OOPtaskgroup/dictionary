@@ -11,12 +11,13 @@ LoginDlg::LoginDlg(QWidget *parent) :
     ui(new Ui::LoginDlg)
 {
     ui->setupUi(this);
+    ui->loginBtn->setDefault(true);
 }
 
-LoginDlg::LoginDlg(QWidget *parent, Controller *controller) :
-    LoginDlg(parent),
-    controller(controller)
+LoginDlg::LoginDlg(Controller *controller, QWidget *parent) :
+    LoginDlg(parent)
 {
+    this->controller = controller;
 }
 
 LoginDlg::~LoginDlg()
@@ -28,23 +29,23 @@ void LoginDlg::on_loginBtn_clicked()
 {
     try
     {
-        Login(ui->usrEdit->text(), ui->pwdEdit->text());
+        controller->Login(ui->usrEdit->text().toStdString(), ui->pwdEdit->text().toStdString());
         accept();
     }
     catch(PasswordNotCorrectException exce)
     {
-        QMessageBox warningBox(QMessageBox::Warning, "³ö´íÀ²£¡", "ÓÃ»§Ãû»òÃÜÂë´íÎó£¡");
+        QMessageBox warningBox(QMessageBox::Warning, "å‡ºé”™å•¦ï¼", "ç”¨æˆ·åæˆ–å¯†ç é”™è¯¯ï¼");
         warningBox.setStandardButtons(QMessageBox::Retry);
-        warningBox.setButtonText(QMessageBox::Retry, "ÖØÊÔ");
+        warningBox.setButtonText(QMessageBox::Retry, "é‡è¯•");
         warningBox.exec();
         ui->pwdEdit->clear();
         ui->pwdEdit->setFocus();
     }
     catch(ItemNotFoundException exce)
     {
-        QMessageBox warningBox(QMessageBox::Warning, "³ö´íÀ²£¡", "¸ÃÓÃ»§²»´æÔÚ£¡");
+        QMessageBox warningBox(QMessageBox::Warning, "å‡ºé”™å•¦ï¼", "è¯¥ç”¨æˆ·ä¸å­˜åœ¨ï¼");
         warningBox.setStandardButtons(QMessageBox::Retry);
-        warningBox.setButtonText(QMessageBox::Retry, "ÖØÊÔ");
+        warningBox.setButtonText(QMessageBox::Retry, "é‡è¯•");
         warningBox.exec();
         ui->usrEdit->clear();
         ui->pwdEdit->clear();

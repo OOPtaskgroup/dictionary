@@ -1,19 +1,27 @@
-#include <bits/stdc++.h>
-#include "logging.h"
-#include "database.h"
-#include "worddata.h"
 #include "wordcontroller.h"
-#include "consts.h"
 
-WordController :: WordController(const DataBase* base)
-    :DataController(base)
+WordController :: WordController(std::string ContentFile)
+    :contentFile(ContentFile)
 {
+    std::ifstream input(contentFile);
+    if(input)
+    {
+        input.close();
+        dataBase = new WordDataBase(contentFile);
+    }
+    else
+    {
+        dataBase = new WordDataBase();
+        dataBase->reWrite(contentFile);
+    }
     Logging log("WordController :: WordController",false);
 }
 
 WordController :: ~WordController()
 {
     Logging log("WordController :: ~WordController",false);
+    dataBase->reWrite(contentFile);
+    delete dataBase;
 
 }
 std::vector<WordData*> WordController :: randomWordCollect(int num, int difficulty)
@@ -22,31 +30,31 @@ std::vector<WordData*> WordController :: randomWordCollect(int num, int difficul
     int noLearned = (int)(num * __newPart);
     int Learned = num -noLearned;
 
-    vector<WordData*> toReturn;
+    std::vector<WordData*> toReturn;
 
-    dataBase.select(difficulty);
+    dataBase->select(difficulty);
     for(int i = 1 ; i <= noLearned ; i++)
     {
-        if(dataBase.empty())
+        if(dataBase->isEmpty())
         {
             log << "INFO database empty for new words." << std::endl;
             break;
         }
-        WordData* now = dataBase.getRandom();
-        toReturn.pushback( now );
+        WordData* now = dataBase->getrandom();
+        toReturn.push_back( now );
         log << "INFO added word " << now->Name() << "." <<std::endl;
     }
 
-    dataBase.select(difficulty+10);
+    dataBase->select(difficulty+10);
     for(int i = 1 ; i <= Learned ; i++)
     {
-        if(dataBase.empty())
+        if(dataBase->isEmpty())
         {
             log << "INFO database empty for learned words." << std::endl;
             break;
         }
-        WordData* now = dataBase.getRandom();
-        toReturn.pushback( now );
+        WordData* now = dataBase->getrandom();
+        toReturn.push_back( now );
         log << "INFO added word " << now->Name() <<" , have answered correctly " 
             << now->Times() << " times continiously." << std::endl;
     }
@@ -65,7 +73,7 @@ void WordController :: answerAccepted (WordData* item)
         item->setType(20 + item->Type()%10);
         log << " now it will never appear ( unless reset ).";
     }
-    log << std::endl;
+    log << "" << std::endl;
 }
 
 void WordController :: answerWrong (WordData* item)
@@ -86,8 +94,8 @@ void WordController :: reLearn (WordData* item)
 std::vector<WordData*> WordController :: getWord(int type)
 {
     Logging log("WordController :: getWord",true);
-    dataBase.select(type);
-    std::vector<WordData*> toReturn = dataBase.getAll();
+    dataBase->select(type);
+    std::vector<WordData*> toReturn = dataBase->getAll();
     log << "INFO get " << toReturn.size() << " words." << std::endl;
     return toReturn;
 }
@@ -102,27 +110,26 @@ std::vector<WordData*> WordController :: getLearningWord(const int difficulty)
     return getWord(10 + difficulty);
 }
 
-std::vector<WordData*> WordController :: findWord(std::string prefix)
+WordData* WordController :: findWord(std::string prefix)
 {
     Logging log("WordController :: findWord",true);
-    dataBase.select(-1);
-    std::vector<WordData*> toReturn;
-    for(auto i = dataBase.begin(); i != dataBase.end(); i++)
-    if (__comparePrefix(i->content()->Name(),prefix))
+    dataBase->select(0,100);
+    for(auto i = dataBase->begin(); i != dataBase->end(); i++)
+    if ((*i)->Name() == prefix)
     {
-        log << "INFO find word " << i->content()->Name() << std::endl;
-        toReturn.pushback(i->content());
+        log << "INFO find word " << (*i)->Name() << std::endl;
+        return *i;
     }
-    return toReturn;
+    return nullptr;
 }
 
-int getMasteredWordCount(const int difficulty)
+int WordController :: getMasteredWordCount(const int difficulty)
 {
-    dataBase.select(20 + difficulty);
-    return dataBase.size();
+    dataBase->select(20 + difficulty);
+    return dataBase->size();
 }
-int getLearningWordCount(const int difficulty)
+int WordController :: getLearningWordCount(const int difficulty)
 {
-    dataBase.select(10 + difficulty);
-    return dataBase.size();
+    dataBase->select(10 + difficulty);
+    return dataBase->size();
 }
