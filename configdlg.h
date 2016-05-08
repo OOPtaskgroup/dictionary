@@ -3,6 +3,8 @@
 
 #include <QDialog>
 #include "controller.h"
+#include "pwdchangedlg.h"
+
 namespace Ui {
 class ConfigDlg;
 }
@@ -17,7 +19,9 @@ public:
     ~ConfigDlg();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_pwdChangeBtn_clicked();
+
+    void on_confirmBtn_clicked();
 
 private:
     Ui::ConfigDlg *ui;

@@ -12,6 +12,8 @@ ConfigDlg::ConfigDlg(Controller *controller, QWidget *parent) :
     ConfigDlg(parent)
 {
     this->controller = controller;
+    ui->diffBox->setCurrentText(QString::number(controller->getConfig().Difficulty()));
+    ui->wordsBox->setCurrentText(QString::number(controller->getConfig().DailyNumber()));
 }
 
 ConfigDlg::~ConfigDlg()
@@ -19,8 +21,15 @@ ConfigDlg::~ConfigDlg()
     delete ui;
 }
 
-void ConfigDlg::on_pushButton_clicked()
+void ConfigDlg::on_pwdChangeBtn_clicked()
 {
-    controller->modifyConfig(ui->diffBox->currentData().toInt(), ui->wordsBox->currentData().toInt());
+    PwdChangeDlg pwdChangeDlg(this);
+    pwdChangeDlg.exec();
+}
+
+void ConfigDlg::on_confirmBtn_clicked()
+{
+    controller->modifyConfig(ui->diffBox->currentText().toInt(), ui->wordsBox->currentText().toInt());
     accept();
 }
+

@@ -131,10 +131,10 @@
     </item>
    </layout>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="confirmBtn">
    <property name="geometry">
     <rect>
-     <x>160</x>
+     <x>230</x>
      <y>220</y>
      <width>93</width>
      <height>28</height>
@@ -162,10 +162,25 @@
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
+   <zorder>confirmBtn</zorder>
+  </widget>
+  <widget class="QPushButton" name="pwdChangeBtn">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>220</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>修 改 密 码</string>
+   </property>
   </widget>
   <zorder>frame</zorder>
   <zorder>formLayoutWidget</zorder>
-  <zorder>pushButton</zorder>
+  <zorder>confirmBtn</zorder>
+  <zorder>pwdChangeBtn</zorder>
  </widget>
  <resources/>
  <connections/>

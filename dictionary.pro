@@ -31,7 +31,9 @@ SOURCES += main.cpp\
     userdatabase.cpp \
     worddatabase.cpp \
     consts.cpp \
-    database.cpp
+    database.cpp \
+    lookupwindow.cpp \
+    pwdchangedlg.cpp
 
 HEADERS  += mainwindow.h \
     consts.h \
@@ -57,13 +59,17 @@ HEADERS  += mainwindow.h \
     passwordnotcorrectexception.h \
     database.h \
     userdatabase.h \
-    worddatabase.h
+    worddatabase.h \
+    lookupwindow.h \
+    pwdchangedlg.h
 
 FORMS    += mainwindow.ui \
     logindlg.ui \
     regdlg.ui \
     configdlg.ui \
-    recitewindow.ui
+    recitewindow.ui \
+    lookupwindow.ui \
+    pwdchangedlg.ui
 
 DISTFILES += \
     .gitignore \

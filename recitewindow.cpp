@@ -2,19 +2,6 @@
 #include "ui_recitewindow.h"
 #include <QMessageBox>
 
-ReciteWindow::ReciteWindow(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::ReciteWindow),
-    recitingWords(controller->getRecitingWords())
-{
-    ui->setupUi(this);
-}
-
-ReciteWindow::ReciteWindow(Controller *controller, QWidget *parent) :
-    ReciteWindow(parent)
-{
-    this->controller = controller;
-}
 
 std::pair<WordData*, int>& ReciteWindow::findNextWord()
 {
@@ -30,46 +17,24 @@ std::pair<WordData*, int>& ReciteWindow::findNextWord()
 
 bool ReciteWindow::showWord(std::pair<WordData *, int> &word)
 {
-    if (windowMode == ReciteMode)
-    {
-        if (word.second == 1)
-            return false;
-        auto wordDetail = word.first->getDetail();
-        ui->cantRecBtn->setText("没  印  象");
-        ui->cantRecBtn->setEnabled(true);
-        ui->cantRecBtn->setVisible(true);
-        ui->wordLabel->setText(QString::fromStdString(word.first->Name()));
-        ui->exampleBrowser->setVisible(false);
-        ui->exampleBrowser->setText(QString::fromStdString(*wordDetail.begin()) + "\n" + QString::fromStdString(*(wordDetail.begin() + 1)));
-        ui->exampleLabel->setVisible(false);
-        ui->engBrowser->setVisible(false);
-        ui->engBrowser->setText(QString::fromStdString(*(wordDetail.begin() + 2)));
-        ui->engLabel->setVisible(false);
-        ui->chnBrowser->setVisible(false);
-        ui->chnBrowser->setText(QString::fromStdString(*(wordDetail.begin() + 3)));
-        ui->chnLabel->setVisible(false);
-        status = Vocabulary;
-        return true;
-    }
-    if (windowMode == LookUpMode)
-    {
-        auto wordDetail = word.first->getDetail();
-        ui->cantRecBtn->setEnabled(false);
-        ui->cantRecBtn->setVisible(false);
-        ui->knownBtn->setEnabled(false);
-        ui->knownBtn->setVisible(false);
-        ui->wordLabel->setText(QString::fromStdString(word.first->Name()));
-        ui->exampleBrowser->setVisible(true);
-        ui->exampleBrowser->setText(QString::fromStdString(*wordDetail.begin()) + "\n" + QString::fromStdString(*(wordDetail.begin() + 1)));
-        ui->exampleLabel->setVisible(true);
-        ui->engBrowser->setVisible(true);
-        ui->engBrowser->setText(QString::fromStdString(*(wordDetail.begin() + 2)));
-        ui->engLabel->setVisible(true);
-        ui->chnBrowser->setVisible(true);
-        ui->chnBrowser->setText(QString::fromStdString(*(wordDetail.begin() + 3)));
-        ui->chnLabel->setVisible(true);
-        return true;
-    }
+    if (word.second == 1)
+        return false;
+    auto wordDetail = word.first->getDetail();
+    ui->cantRecBtn->setText("没  印  象");
+    ui->cantRecBtn->setEnabled(true);
+    ui->cantRecBtn->setVisible(true);
+    ui->wordLabel->setText(QString::fromStdString(word.first->Name()));
+    ui->exampleBrowser->setVisible(false);
+    ui->exampleBrowser->setText(QString::fromStdString(*wordDetail.begin()) + "\n" + QString::fromStdString(*(wordDetail.begin() + 1)));
+    ui->exampleLabel->setVisible(false);
+    ui->engBrowser->setVisible(false);
+    ui->engBrowser->setText(QString::fromStdString(*(wordDetail.begin() + 2)));
+    ui->engLabel->setVisible(false);
+    ui->chnBrowser->setVisible(false);
+    ui->chnBrowser->setText(QString::fromStdString(*(wordDetail.begin() + 3)));
+    ui->chnLabel->setVisible(false);
+    status = Vocabulary;
+    return true;
 }
 
 void ReciteWindow::doRecite()
@@ -90,28 +55,15 @@ void ReciteWindow::closeEvent(QCloseEvent *event)
     event->accept();
 }
 
-ReciteWindow::ReciteWindow(ReciteWindow::WindowMode windowMode, Controller *controller, QWidget *parent) :
-    ReciteWindow(controller, parent)
+ReciteWindow::ReciteWindow(Controller *controller, QWidget *parent) :
+    QMainWindow(parent),
+    ui(new Ui::ReciteWindow),
+    controller(controller),
+    recitingWords(controller->getRecitingWords())
 {
-    this->windowMode = windowMode;
-    if (windowMode == ReciteMode)
-    {
-        setWindowTitle("背单词");
-        doRecite();
-    }
-}
-
-ReciteWindow::ReciteWindow(ReciteWindow::WindowMode windowMode, Controller *controller, QString word, QWidget *parent) :
-    ReciteWindow(controller, parent)
-{
-    this->windowMode = windowMode;
-    lookUpWord = word;
-    lookUpData = std::make_pair(controller->findWord(word.toStdString()), -1);
-    if (windowMode == LookUpMode)
-    {
-        setWindowTitle(tr("%1").arg(lookUpWord));
-        showWord(lookUpData);
-    }
+    ui->setupUi(this);
+    setWindowTitle("背单词");
+    doRecite();
 }
 
 ReciteWindow::~ReciteWindow()

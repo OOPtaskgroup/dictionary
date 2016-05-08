@@ -6,6 +6,7 @@
 #include "controller.h"
 #include "configdlg.h"
 #include "recitewindow.h"
+#include "lookupwindow.h"
 #include <qmessagebox.h>
 #include "logindlg.h"
 
@@ -30,6 +31,8 @@ private slots:
     void on_lookUpBtn_clicked();
 
     void on_logoutBtn_clicked();
+
+    void on_wordEdit_returnPressed();
 
 private:
     Ui::MainWindow *ui;

@@ -12,7 +12,6 @@ class ReciteWindow;
 class ReciteWindow : public QMainWindow
 {
     Q_OBJECT
-    typedef int WindowMode;
     typedef int ReciteStatus;
     static const ReciteStatus Vocabulary = 1;
     static const ReciteStatus Example = 2;
@@ -21,10 +20,7 @@ class ReciteWindow : public QMainWindow
     static const ReciteStatus ChineseRej = 5;
 
 public:
-    static const WindowMode ReciteMode = 1;
-    static const WindowMode LookUpMode = 2;
-    explicit ReciteWindow(WindowMode windowMode, Controller *controller, QWidget *parent = 0);
-    explicit ReciteWindow(WindowMode windowMode, Controller *controller, QString word, QWidget *parent = 0);
+    explicit ReciteWindow(Controller *controller, QWidget *parent = 0);
     ~ReciteWindow();
 
 private slots:
@@ -35,17 +31,12 @@ private slots:
     void on_returnBtn_clicked();
 
 private:
-    explicit ReciteWindow(QWidget *parent = 0);
-    explicit ReciteWindow(Controller *controller, QWidget *parent = 0);
-    QString lookUpWord;
-    std::pair<WordData*, int> lookUpData;
+    void doRecite();
+    std::vector<std::pair<WordData *, int>>& recitingWords;
     std::pair<WordData*, int>& findNextWord();
     bool showWord(std::pair<WordData*, int>& word);
-    void doRecite();
     Ui::ReciteWindow *ui;
     Controller *controller;
-    std::vector< std::pair<WordData*,int> >& recitingWords;
-    WindowMode windowMode;
     ReciteStatus status;
 
 protected:
