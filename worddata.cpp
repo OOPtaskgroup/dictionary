@@ -3,7 +3,7 @@
 WordData :: WordData(const std::string name,const int type)
     :Data(name,type),times(0)
 {
-    setContentFile("worddata/"+name+".information");
+    setContentFile("worddata/"+name+".info");
 }
 
 WordData :: ~WordData()

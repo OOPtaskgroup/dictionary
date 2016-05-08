@@ -15,7 +15,6 @@ void UserController :: userLogout()
     if (nowActiveUser)
     {
         log << "INFO user " << nowActiveUser->Name() << " loged out." <<std::endl;
-        delete nowActiveUser;
         nowActiveUser = nullptr;
     }
     else log << "INFO no active user now. cannot logout." << std::endl;

@@ -24,7 +24,7 @@ Part "main" begin.
     INFO login keavil ok.
     Part "UserController :: userLogin" end.
     Part "WordController :: WordController" begin.
-    INFO 11285
+    INFO 13679
     Part "WordController :: WordController" end.
   Part "Controller :: Login" end.
   Part "UserController :: userLogout" begin.
@@ -38,10 +38,26 @@ Part "main" begin.
     INFO login victorywys ok.
     Part "UserController :: userLogin" end.
     Part "WordController :: WordController" begin.
-    INFO 11285
+    INFO 13679
     Part "WordController :: WordController" end.
   Part "Controller :: Login" end.
+  Part "WordController :: findWord" begin.
+  exist
+  INFO find word exist
+  Part "WordController :: findWord" end.
+  Part "WordController :: findWord" begin.
+  include
+  INFO find word include
+  Part "WordController :: findWord" end.
+  Part "UserController :: userLogout" begin.
+  INFO user victorywys loged out.
+  Part "UserController :: userLogout" end.
   Part "UserController :: userModifyPassword" begin.
   INFO 233333 -> 000000
     Part "UserDataBase :: save" begin.
     INFO 2
+    INFO keavil
+    INFO victorywys
+    Part "UserDataBase :: save" end.
+  Part "UserController :: userModifyPassword" end.
+Part "main" end.

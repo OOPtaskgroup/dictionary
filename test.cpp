@@ -9,10 +9,10 @@ int main()
     controller->Login("keavil","123456");
     controller->Logout();
     controller->Login("victorywys","233333");
-//    WordData* x=controller->findWord("exist");
-//    auto x = controller -> findWord("include");
+    auto x=controller->findWord("exist");
+    x = controller -> findWord("include");
     auto h = controller->getActiveUser();
-//    controller->Logout();
+    controller->Logout();
     controller->userModifyPassword(h,"233333","000000");
 
 }
