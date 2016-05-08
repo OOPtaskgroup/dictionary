@@ -27,9 +27,9 @@ void MainWindow::on_configBtn_clicked()
 
 void MainWindow::on_reciteBtn_clicked()
 {
-    ReciteWindow reciteWindow(ReciteWindow::ReciteMode, controller, this);
+    ReciteWindow * reciteWindow = ReciteWindow(ReciteWindow::ReciteMode, controller, this);
     this->hide();
-    reciteWindow.show();
+    reciteWindow->show();
 }
 
 void MainWindow::on_lookUpBtn_clicked()
@@ -45,9 +45,9 @@ void MainWindow::on_lookUpBtn_clicked()
     }
     else
     {
-        ReciteWindow reciteWindow(ReciteWindow::LookUpMode, controller, this);
+        ReciteWindow *reciteWindow = new ReciteWindow(ReciteWindow::LookUpMode, controller, ui->wordEdit->text(), this);
         this->hide();
-        reciteWindow.show();
+        reciteWindow->show();
     }
 }
 

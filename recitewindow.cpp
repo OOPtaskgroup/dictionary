@@ -94,7 +94,7 @@ ReciteWindow::ReciteWindow(ReciteWindow::WindowMode windowMode, Controller *cont
     ReciteWindow(controller, parent)
 {
     this->windowMode = windowMode;
-    if (windowMode = ReciteMode)
+    if (windowMode == ReciteMode)
     {
         setWindowTitle("背单词");
         doRecite();
@@ -107,7 +107,7 @@ ReciteWindow::ReciteWindow(ReciteWindow::WindowMode windowMode, Controller *cont
     this->windowMode = windowMode;
     lookUpWord = word;
     lookUpData = std::make_pair(controller->findWord(word.toStdString()), -1);
-    if (windowMode = LookUpMode)
+    if (windowMode == LookUpMode)
     {
         setWindowTitle(tr("%1").arg(lookUpWord));
         showWord(lookUpData);

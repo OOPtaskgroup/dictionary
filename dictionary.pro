@@ -75,7 +75,9 @@ DISTFILES += \
     Hard.txt \
     Lunatic.txt \
     Normal.txt \
-    makefile
+    makefile \
+    debug.log \
+    userdatas.txt
 
 RESOURCES += \
     image.qrc
