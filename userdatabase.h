@@ -3,6 +3,7 @@
 #include<bits/stdc++.h>
 #include"database.h"
 #include"userdata.h"
+#include "logging.h"
 
 class UserDataBase : public DataBase
 {
@@ -13,7 +14,7 @@ public:
 	virtual void insert(UserData*);
 	virtual bool empty();
 	bool findUser(std::string str);
-	//virtual void throwout();
+	void save();
 	int userNumber();
         std::vector<UserData*>::iterator begin();
         std::vector<UserData*>::iterator end();

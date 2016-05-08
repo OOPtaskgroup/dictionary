@@ -35,3 +35,6 @@ Makefile*
 
 # executable file
 *.exe
+
+# other files
+test

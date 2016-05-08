@@ -4,12 +4,15 @@ int main()
 {
     Logging log("main",true);
     Controller* controller = new Controller;
+    controller->userRegister("keavil","123456");
+    controller->userRegister("victorywys","233333");
     controller->Login("keavil","123456");
     controller->Logout();
     controller->Login("victorywys","233333");
-    WordData* x=controller->findWord("exist");
-    std::cout<<x->Name()<<" "<<x->Type()<< " " << x->ContentFile() <<std::endl;
+    auto x=controller->findWord("exist");
     x = controller -> findWord("include");
-    std::cout<<x->Name()<<" "<<x->Type()<< " " << x->ContentFile() << std::endl;
+    auto h = controller->getActiveUser();
     controller->Logout();
+    controller->userModifyPassword(h,"233333","000000");
+
 }

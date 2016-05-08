@@ -64,7 +64,7 @@ aggregate
 aggression
 agony
 aide
-ain't
+aint
 airlift
 airplane
 airway
@@ -295,13 +295,13 @@ boyfriend
 br
 brace
 brake
-brand-new
+brandnew
 brass
 breach
 break down
-break-in
-break-through
-break-up
+breakin
+breakthrough
+breakup
 breeze
 brew
 bribe
@@ -327,7 +327,7 @@ bud
 bug
 builder
 building society
-build-up
+buildup
 bulb
 bulk
 bull
@@ -464,7 +464,7 @@ clause
 clay
 cleaner
 cleanse
-clean-up
+cleanup
 clearing
 clerk
 click
@@ -504,7 +504,7 @@ columnist
 combined
 comeback
 comedian
-come-down
+comedown
 comet
 comic
 commemorate
@@ -655,7 +655,7 @@ crisp
 criterion
 crook
 cross
-cross-country
+crosscountry
 crossing
 crouch
 crowded
@@ -680,7 +680,7 @@ cushion
 custody
 custom
 customs
-cut-off
+cutoff
 cylinder
 cynical
 d
@@ -698,7 +698,7 @@ dart
 dash
 dawn
 daylight
-day-to-day
+daytoday
 deadly
 deaf
 dealings
@@ -706,7 +706,7 @@ debris
 dec
 decay
 decent
-decision-making
+decisionmaking
 decisive
 decoration
 decorative
@@ -1082,7 +1082,7 @@ fin
 finding
 finished
 fire
-first-class
+firstclass
 fisherman
 fishery
 fist
@@ -1108,7 +1108,7 @@ fm
 fog
 foil
 follower
-follow-up
+followup
 fond
 foolish
 footage
@@ -1165,7 +1165,7 @@ frontiers
 frown
 frozen
 ft
-full-time
+fulltime
 fundamentalism
 funeral
 fur
@@ -1220,13 +1220,13 @@ glue
 gm
 gmt
 gnp
-go-ahead
+goahead
 goalkeeper
 goat
 goddess
 gold medal
 goodbye
-good-looking
+goodlooking
 goodness
 goodwill
 goose
@@ -1277,7 +1277,7 @@ h
 habitat
 hack
 hail
-half-time
+halftime
 halfway
 halve
 ham
@@ -1289,7 +1289,7 @@ handicapped
 handsome
 handy
 harden
-hard-line
+hardline
 hardliner
 hardship
 hardware
@@ -1309,7 +1309,7 @@ hawk
 hazard
 head of state
 headache
-head-on
+headon
 heap
 heart attack
 heated
@@ -1573,7 +1573,7 @@ lamp
 landing
 landlord
 landmark
-large-scale
+largescale
 laser
 lash
 last
@@ -1589,8 +1589,8 @@ lb
 lead
 leaflet
 lecturer
-left-hand
-left-wing
+lefthand
+leftwing
 legacy
 legend
 legendary
@@ -1626,7 +1626,7 @@ limitation
 limp
 linen
 liner
-line-up
+lineup
 linger
 lining
 lion
@@ -1651,8 +1651,8 @@ logical
 logo
 lone
 long
-long-range
-long-standing
+longrange
+longstanding
 loom
 loop
 loosen
@@ -1741,7 +1741,7 @@ meter
 metropolitan
 microphone
 microwave
-middle-aged
+middleaged
 midlands
 midst
 mighty
@@ -1894,8 +1894,8 @@ olive
 olive oil
 olympic games
 omit
-one-off
-one-time
+oneoff
+onetime
 ongoing
 onion
 ooh
@@ -1976,7 +1976,7 @@ partial
 partially
 participant
 particle
-part-time
+parttime
 passing
 passionate
 passive
@@ -2127,12 +2127,12 @@ prescription
 present
 presentation
 preside
-president-elect
+presidentelect
 press conference
 prestige
 prestigious
 presume
-pre-tax
+pretax
 pretend
 prevail
 preview
@@ -2198,7 +2198,7 @@ purple
 purse
 pursuit
 put out
-put-down
+putdown
 putt
 puzzle
 q
@@ -2207,7 +2207,7 @@ qualification
 qualifier
 quantum
 quarrel
-quarter-final
+quarterfinal
 quarterly
 quartet
 query
@@ -2259,7 +2259,7 @@ recycle
 red cross
 redundancy
 redundant
-re-elect
+reelect
 referee
 reflection
 refreshing
@@ -2346,8 +2346,8 @@ ridiculous
 riding
 rifle
 rig
-right-hand
-right-on
+righthand
+righton
 rigid
 rigorous
 rip
@@ -2379,9 +2379,9 @@ rude
 rue
 rug
 ruler
-run-in
-runner-up
-run-up
+runin
+runnerup
+runup
 ruthless
 s
 sacred
@@ -2441,10 +2441,10 @@ seduce
 seldom
 selective
 selector
-self-esteem
+selfesteem
 selfish
 seller
-semi-final
+semifinal
 seminar
 sensation
 sense of humour
@@ -2495,7 +2495,7 @@ shuttle
 shy
 sic
 sickness
-side-effect
+sideeffect
 siege
 signature
 significance
@@ -2512,8 +2512,8 @@ sincere
 singing
 sinister
 sip
-sit-down
-sit-in
+sitdown
+sitin
 situated
 skate
 skeleton
@@ -2740,7 +2740,7 @@ task force
 taxation
 taxi
 taxpayer
-team-mate
+teammate
 tease
 teaspoon
 technician
@@ -2780,7 +2780,7 @@ thief
 thigh
 thoughtful
 thread
-three-quarters
+threequarters
 threshold
 thrift
 thrill
@@ -2823,7 +2823,7 @@ towel
 township
 toxic
 trade union
-trade-in
+tradein
 tragic
 trailer
 transcript
@@ -2858,7 +2858,7 @@ truce
 trumpet
 trunk
 trustee
-t-shirt
+tshirt
 tuck
 tues
 tug
@@ -2867,7 +2867,7 @@ tumour
 turmoil
 turnover
 tutor
-two-thirds
+twothirds
 typically
 tyre
 u
@@ -3024,7 +3024,7 @@ weed
 weep
 weird
 well
-well-being
+wellbeing
 whale
 wharf
 whatsoever

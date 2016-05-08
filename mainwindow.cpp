@@ -36,9 +36,9 @@ void MainWindow::on_lookUpBtn_clicked()
 {
     if (controller->findWord(ui->wordEdit->text().toStdString()) == nullptr)
     {
-        QMessageBox warningBox(QMessageBox::Warning, "è­¦å‘Š", "æŠ±æ­‰ï¼ŒæŸ¥ä¸åˆ°æ‚¨æ‰€éœ€è¦çš„å•è¯ï¼");
-        warningBox.setStandardButtons(QMessageBox::Retry);
-        warningBox.setButtonText(QMessageBox::Retry, "è¿”å›ž");
+        QMessageBox warningBox(QMessageBox::Warning, "¾¯¸æ", "±§Ç¸£¬²é²»µ½ÄúËùÐèÒªµÄµ¥´Ê£¡");
+        warningBox.setStandardButtons(QMessageBox::Ok);
+        warningBox.setButtonText(QMessageBox::Ok, "·µ»Ø");
         warningBox.exec();
         ui->wordEdit->clear();
         ui->wordEdit->setFocus();
@@ -68,6 +68,6 @@ void MainWindow::on_logoutBtn_clicked()
 
 void MainWindow::showEvent(QShowEvent * event)
 {
-    ui->username->setText(tr("æ¬¢è¿Žæ‚¨ï¼%1!").arg(QString::fromStdString(controller->getActiveUser()->Name())));
+    ui->username->setText(tr("»¶Ó­Äú£¡%1").arg(QString::fromStdString(controller->getActiveUser()->Name())));
     event->accept();
 }

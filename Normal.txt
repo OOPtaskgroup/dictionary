@@ -509,7 +509,7 @@ league
 leg
 legal
 length
-let's
+lets
 lie
 lift
 light
@@ -517,7 +517,7 @@ limit
 link
 listen
 loan
-long-term
+longterm
 lord
 loss
 lunch
@@ -568,7 +568,7 @@ movement
 movie
 murder
 museum
-muslim&
+muslim
 myself
 narrow
 nationalist
@@ -590,8 +590,8 @@ nobody
 none
 nor
 normal
-north-east
-north-west
+northeast
+northwest
 note
 notice
 novel
@@ -800,7 +800,7 @@ serve
 session
 settle
 settlement
-set-up
+setup
 seventeenth
 seventh
 seventieth
@@ -845,7 +845,7 @@ song
 sorry
 source
 southern
-south-west
+southwest
 space
 specific
 speech
@@ -919,8 +919,8 @@ territory
 theatre
 theory
 therefore
-they'd
-they've
+theyd
+theyve
 third
 thirteenth
 thirtieth
@@ -994,8 +994,8 @@ wednesday
 weekend
 weight
 welcome
-we'll
-weren't
+well
+werent
 whatever
 wild
 will

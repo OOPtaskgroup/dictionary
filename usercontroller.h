@@ -22,6 +22,7 @@ public:
     UserData* checkIn(std::string ID, std::string passwd);
     UserData* userRegister(std::string ID, std::string passwd);
     UserData* getActiveUser();
+    void userModifyPassword(UserData* user, std::string passwd, std::string newPasswd);
 };
 
 #endif

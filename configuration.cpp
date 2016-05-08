@@ -1,12 +1,8 @@
 #include "configuration.h"
 
-Configuration :: Configuration(const int& dif, const int& num)
-{
-    modify(dif,num);
-}
-
 Configuration :: Configuration(const std::string& fileName)
 {
+    contentFile = fileName;
     std::ifstream input(fileName);
     if(input)
     {
@@ -18,7 +14,7 @@ Configuration :: Configuration(const std::string& fileName)
     {
         input.close();
         modify(1,50);
-        save(fileName);
+        save();
     }
 }
 
@@ -27,21 +23,11 @@ Configuration :: ~Configuration()
 
 }
 
-void Configuration :: save(const std::string& fileName)
+void Configuration :: save()
 {
     std::ofstream output;
-    output.open(fileName,std::ios_base::trunc);
+    output.open(contentFile,std::ios_base::trunc);
     output << difficulty << std::endl << dailyNumber << std::endl;
-}
-
-void Configuration :: load(const std::string& fileName)
-{
-    std::ifstream input;
-    input.open(fileName);
-    if(!input)throw NoSuchFileException(fileName);
-    int dif,num;
-    input >> dif >> num;
-    modify(dif,num);
 }
 
 void Configuration :: modify(const int& dif, const int& num)
@@ -51,6 +37,7 @@ void Configuration :: modify(const int& dif, const int& num)
         throw OutOfRangeException((std::string)"dailyNumber out of range.");
     difficulty = dif;
     dailyNumber = num;
+    save();
 }
 
 const int Configuration :: DailyNumber()const

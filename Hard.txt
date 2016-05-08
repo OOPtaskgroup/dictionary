@@ -315,7 +315,7 @@ convict
 conviction
 convince
 cooking
-co-operate
+cooperate
 cope
 core
 corporate
@@ -595,7 +595,7 @@ heaven
 height
 helicopter
 hell
-he'll
+hell
 hello
 hero
 hi
@@ -671,7 +671,7 @@ involvement with
 iron
 islam
 islamic
-it'll
+itll
 jacket
 jail
 jazz
@@ -694,7 +694,7 @@ kiss
 knee
 knife
 knock
-know-how
+knowhow
 label
 laboratory
 lad
@@ -729,7 +729,7 @@ lip
 literary
 literature
 live
-live-in
+livein
 living
 load
 lobby
@@ -737,7 +737,7 @@ local authority
 location
 lock
 lonely
-long-time
+longtime
 loose
 lost
 loud
@@ -748,10 +748,10 @@ luck
 lucky
 luxury
 mad
-made-up
+madeup
 magic
 mail
-make-up
+makeup
 manner
 manufacture
 manufacturer
@@ -851,11 +851,11 @@ obtain
 occasional
 occupation
 ocean
-o'clock
+oclock
 offence
 offensive
 offering
-one's
+ones
 onto
 opening
 opera
@@ -923,7 +923,7 @@ pet
 phase
 philosophy
 phrase
-pick-up
+pickup
 pile
 pill
 pilot
@@ -1087,7 +1087,7 @@ rhythm
 rice
 rid
 rider
-right-wing
+rightwing
 ring
 riot
 roach
@@ -1103,7 +1103,7 @@ row
 rugby
 ruin
 ruling
-rumour/v
+rumour
 runner
 rural
 rush
@@ -1125,7 +1125,7 @@ scientific
 scream
 script
 seal
-secretary-general
+secretarygeneral
 segment
 seize
 select
@@ -1136,7 +1136,7 @@ sensible
 sensitive
 seriously
 servant
-set-to
+setto
 shade
 shadow
 shame
@@ -1153,8 +1153,8 @@ shopping
 shore
 shortage
 shortly
-short-term
-shouldn't
+shortterm
+shouldnt
 shut
 sick
 sigh
@@ -1176,7 +1176,7 @@ smell
 smooth
 snap
 snow
-so-called
+socalled
 soccer
 socialist
 software
@@ -1272,7 +1272,7 @@ tale
 tall
 tank
 tap
-teaching(pl)
+teaching
 tear
 technical
 teenager
@@ -1391,12 +1391,12 @@ wash
 watch
 weaken
 wealth
-we'd
+wed
 wedding
 weekly
 weigh
 welfare
-well-known
+wellknown
 wet
 wheel
 whenever

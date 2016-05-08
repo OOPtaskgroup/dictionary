@@ -3,18 +3,22 @@
 WordController :: WordController(std::string ContentFile)
     :contentFile(ContentFile)
 {
+    Logging log("WordController :: WordController",true);
     std::ifstream input(contentFile);
     if(input)
     {
         input.close();
+        log << "INFO find file" << std::endl;
         dataBase = new WordDataBase(contentFile);
     }
     else
     {
+        input.close();
         dataBase = new WordDataBase();
         dataBase->reWrite(contentFile);
     }
-    Logging log("WordController :: WordController",false);
+    dataBase->select(0,100);
+    log << "INFO " << dataBase->size() << std::endl;
 }
 
 WordController :: ~WordController()
@@ -113,6 +117,7 @@ std::vector<WordData*> WordController :: getLearningWord(const int difficulty)
 WordData* WordController :: findWord(std::string prefix)
 {
     Logging log("WordController :: findWord",true);
+    log << prefix << std::endl;
     dataBase->select(0,100);
     for(auto i = dataBase->begin(); i != dataBase->end(); i++)
     if ((*i)->Name() == prefix)

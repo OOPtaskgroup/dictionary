@@ -2,11 +2,11 @@
 int Logging::tabCounts = -1;
 
 std::ofstream Logging::output("debug.log");
+std::ofstream EMPTY;
 
 Logging::Logging (std::string name , bool needPrint)
 {
     tabCounts++;
-//    if(output)std::cout<<"open"<<std::endl;;
     partName = name;
     doPrint = needPrint;
     *this << "Part \"" << partName << "\" begin." << std::endl;
@@ -34,6 +34,9 @@ std::ofstream& Logging::operator << ( T x )
     {
         output<<newLine();
         output<<x;
+        return output;
     }
-    return output;
+    else return EMPTY;
 }
+
+template std::ofstream& Logging::operator << ( std::string x);

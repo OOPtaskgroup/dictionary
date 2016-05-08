@@ -7,11 +7,11 @@ WordDataBase::WordDataBase()
 	fin[0].open("Easy.txt");fin[1].open("Normal.txt");fin[2].open("Hard.txt");fin[3].open("Lunatic.txt");fin[4].open("Extra.txt");
 	for(int i=0;i<5;i++)
 	{
-		char str[30];
-		while (fin[i].getline(str,25))
+                std::string str;
+		while (std::getline(fin[i],str))
 		{
 			WordData *pt = new WordData(str,i+1);
-			worddatas.push_back(pt);
+                        worddatal.push_back(pt);
 		}
 	}
 }
@@ -20,8 +20,9 @@ WordDataBase :: WordDataBase(std::string fileName)
 {
     std::ifstream fin(fileName);
     std::string str;int tp;
-    while(fin>>str>>tp)
+    while(std::getline(fin,str))
     {
+        fin>>tp;
         WordData *pt = new WordData(str,tp);
         worddatal.push_back(pt);
     }
@@ -70,7 +71,7 @@ void WordDataBase::reWrite(const std::string& fileName)
 	std::ofstream fout(fileName);
 	for(std::vector<WordData*>::iterator iter=worddatal.begin();iter!=worddatal.end();++iter)
 	{
-		fout<<(*iter)->Name()<<" "<<(*iter)->Type()<<std::endl;
+		fout<<(*iter)->Name()<<std::endl<<(*iter)->Type()<<std::endl;
 	}
 	fout.close();
 }

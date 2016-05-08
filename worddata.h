@@ -3,6 +3,7 @@
 
 #include <bits/stdc++.h>
 #include "data.h"
+#include "logging.h"
 
 class WordData : public Data
 {
