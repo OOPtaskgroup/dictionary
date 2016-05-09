@@ -46,8 +46,7 @@ public:
     ~Controller ();
 
 private:
-    void reWriteRecitingWords();
-    void reWriteUserConfig();
+    void reWriteTodayWords();
     void getTodayWords();
 };
 

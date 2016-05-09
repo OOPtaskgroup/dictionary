@@ -9,10 +9,15 @@ int main()
     controller->Login("keavil","123456");
     controller->Logout();
     controller->Login("victorywys","233333");
-    auto x=controller->findWord("exist");
-    x = controller -> findWord("include");
-    auto h = controller->getActiveUser();
+    int dif = 3,num=50;
+    controller->modifyConfig(dif,num);
+    auto& x = controller->getRecitingWords();
+    for(auto i:x)std::cout<<i.first->Name()<<std::endl;
+    for(auto& i:x)
+    {
+        if(rand()&1)
+        controller->answerWrong(i);
+        else controller->answerAccepted(i);
+    }
     controller->Logout();
-    controller->userModifyPassword(h,"233333","000000");
-
 }

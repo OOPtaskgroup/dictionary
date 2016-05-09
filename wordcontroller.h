@@ -16,17 +16,19 @@ public:
     WordController(std::string ContentFile);
     ~WordController();
 
-    std::vector<WordData*> randomWordCollect(int num,int difficulty);
+    std::vector<WordData*> randomWordCollect(int num);
     void answerAccepted(WordData* item);
     void answerWrong(WordData* item);
     void reLearn(WordData* item);
     WordData* findWord(std::string prefix);
 
-    std::vector<WordData*> getMasteredWord(const int difficulty);
-    std::vector<WordData*> getLearningWord(const int difficulty);
-    int getMasteredWordCount(const int difficulty);
-    int getLearningWordCount(const int difficulty);
+    std::vector<WordData*> getMasteredWord();
+    std::vector<WordData*> getLearningWord();
+    int getMasteredWordCount();
+    int getLearningWordCount();
+    void modifyLearningDifficulty(const int dif);
 private:
     std::vector<WordData*> getWord(int type);
+    std::vector<WordData*> getWord(int typel,int typer);
 };
 #endif

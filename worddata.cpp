@@ -6,6 +6,12 @@ WordData :: WordData(const std::string name,const int type)
     setContentFile("worddata/"+name+".info");
 }
 
+WordData :: WordData(const std::string name,const int type,const int nowTimes)
+    :WordData(name,type)
+{
+    times = nowTimes;
+}
+
 WordData :: ~WordData()
 {
 
