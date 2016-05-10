@@ -1,12 +1,4 @@
 <RCC>
-    <qresource prefix="/image">
-        <file>img/login_background.jpeg</file>
-        <file>img/main_background.png</file>
-        <file>img/recite_background.jpg</file>
-        <file>buttons/btn_08.png</file>
-        <file>buttons/2-0btn_33.png</file>
-        <file>buttons/2-0btn_34.png</file>
-    </qresource>
     <qresource prefix="/buttons">
         <file>buttons/2-0btn_07.png</file>
         <file>buttons/2-0btn_09.png</file>
@@ -37,5 +29,6 @@
         <file>buttons/2-0btn_34.png</file>
         <file>buttons/2-0btn_35.png</file>
         <file>buttons/2-0btn_36.png</file>
+        <file>buttons/btn_08.png</file>
     </qresource>
 </RCC>

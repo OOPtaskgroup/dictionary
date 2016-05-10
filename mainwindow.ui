@@ -26,39 +26,6 @@
    <string>I Wanna Recite the Words</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QWidget" name="verticalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>70</x>
-      <y>140</y>
-      <width>171</width>
-      <height>221</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QPushButton" name="reciteBtn">
-       <property name="text">
-        <string>背  单  词</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="configBtn">
-       <property name="text">
-        <string>设  置</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="exitBtn">
-       <property name="text">
-        <string>退  出</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
    <widget class="QTextBrowser" name="textBrowser">
     <property name="geometry">
      <rect>
@@ -82,38 +49,6 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:9px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;I wanna recite the words!&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;这是一款非常厉害的背单词软件！ &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
-   </widget>
-   <widget class="QWidget" name="gridLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>360</y>
-      <width>271</width>
-      <height>80</height>
-     </rect>
-    </property>
-    <layout class="QGridLayout" name="gridLayout">
-     <item row="0" column="0">
-      <widget class="QLineEdit" name="wordEdit">
-       <property name="styleSheet">
-        <string notr="true">background-color: rgba(255, 255, 255, 120);</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="placeholderText">
-        <string>请输入待查询的单词</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QPushButton" name="lookUpBtn">
-       <property name="text">
-        <string>查  单  词</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
    </widget>
    <widget class="QFrame" name="frame">
     <property name="geometry">
@@ -161,7 +96,8 @@ p, li { white-space: pre-wrap; }
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(170, 0, 255);</string>
+     <string notr="true">color: rgb(170, 0, 255);
+</string>
     </property>
     <property name="text">
      <string>欢迎您！ 尊敬的用户！</string>
@@ -176,16 +112,105 @@ p, li { white-space: pre-wrap; }
       <height>28</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/image/buttons/btn_08.png);</string>
+    </property>
     <property name="text">
      <string>登 出</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="reciteBtn">
+    <property name="geometry">
+     <rect>
+      <x>71</x>
+      <y>171</y>
+      <width>181</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/image/buttons/btn_08.png);</string>
+    </property>
+    <property name="text">
+     <string>背  单  词</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="configBtn">
+    <property name="geometry">
+     <rect>
+      <x>71</x>
+      <y>236</y>
+      <width>181</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/image/buttons/btn_08.png);</string>
+    </property>
+    <property name="text">
+     <string>设  置</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="exitBtn">
+    <property name="geometry">
+     <rect>
+      <x>71</x>
+      <y>301</y>
+      <width>181</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/image/buttons/btn_08.png);</string>
+    </property>
+    <property name="text">
+     <string>退  出</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="wordEdit">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>384</y>
+      <width>169</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(201, 246, 255, 120);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="placeholderText">
+     <string>请输入待查询的单词</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="lookUpBtn">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>380</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/image/buttons/btn_08.png);</string>
+    </property>
+    <property name="text">
+     <string>查  单  词</string>
+    </property>
+   </widget>
    <zorder>frame</zorder>
-   <zorder>username</zorder>
+   <zorder>reciteBtn</zorder>
+   <zorder>configBtn</zorder>
+   <zorder>exitBtn</zorder>
+   <zorder>wordEdit</zorder>
+   <zorder>lookUpBtn</zorder>
    <zorder>logoutBtn</zorder>
-   <zorder>verticalLayoutWidget</zorder>
+   <zorder>username</zorder>
    <zorder>textBrowser</zorder>
-   <zorder>gridLayoutWidget</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

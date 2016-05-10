@@ -35,6 +35,9 @@
       <height>28</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/image/buttons/2-0btn_34.png);</string>
+    </property>
     <property name="text">
      <string>返  回</string>
     </property>
@@ -86,7 +89,7 @@
      <rect>
       <x>21</x>
       <y>11</y>
-      <width>162</width>
+      <width>371</width>
       <height>33</height>
      </rect>
     </property>
@@ -219,6 +222,9 @@ p, li { white-space: pre-wrap; }
       <height>28</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/image/buttons/2-0btn_34.png);</string>
+    </property>
     <property name="text">
      <string>没 印 象</string>
     </property>
@@ -231,6 +237,9 @@ p, li { white-space: pre-wrap; }
       <width>151</width>
       <height>28</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/image/buttons/2-0btn_34.png);</string>
     </property>
     <property name="text">
      <string>我 知 道 了</string>

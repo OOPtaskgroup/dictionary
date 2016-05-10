@@ -11,9 +11,12 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>修改密码</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="confirmBtn">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>80</x>
@@ -21,6 +24,9 @@
      <width>93</width>
      <height>28</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/image/buttons/2-0btn_33.png);</string>
    </property>
    <property name="text">
     <string>确  认</string>
@@ -50,9 +56,12 @@
      </widget>
     </item>
     <item row="0" column="1">
-     <widget class="QLineEdit" name="lineEdit">
+     <widget class="QLineEdit" name="oldPwdEdit">
       <property name="styleSheet">
        <string notr="true">background-color: rgba(255, 255, 255, 120);</string>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
       </property>
      </widget>
     </item>
@@ -64,9 +73,12 @@
      </widget>
     </item>
     <item row="1" column="1">
-     <widget class="QLineEdit" name="lineEdit_2">
+     <widget class="QLineEdit" name="newPwdEdit">
       <property name="styleSheet">
        <string notr="true">background-color: rgba(255, 255, 255, 120);</string>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
       </property>
      </widget>
     </item>
@@ -78,15 +90,18 @@
      </widget>
     </item>
     <item row="2" column="1">
-     <widget class="QLineEdit" name="lineEdit_3">
+     <widget class="QLineEdit" name="confirmNewPwdEdit">
       <property name="styleSheet">
        <string notr="true">background-color: rgba(255, 255, 255, 120);</string>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
       </property>
      </widget>
     </item>
    </layout>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="canceBtn">
    <property name="geometry">
     <rect>
      <x>220</x>
@@ -94,6 +109,9 @@
      <width>93</width>
      <height>28</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/image/buttons/2-0btn_33.png);</string>
    </property>
    <property name="text">
     <string>取  消</string>
@@ -117,17 +135,16 @@
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
-   <zorder>formLayoutWidget</zorder>
   </widget>
   <zorder>frame</zorder>
-  <zorder>pushButton</zorder>
+  <zorder>confirmBtn</zorder>
   <zorder>formLayoutWidget</zorder>
-  <zorder>pushButton_2</zorder>
+  <zorder>canceBtn</zorder>
  </widget>
  <resources/>
  <connections>
   <connection>
-   <sender>pushButton_2</sender>
+   <sender>canceBtn</sender>
    <signal>clicked()</signal>
    <receiver>PwdChangeDlg</receiver>
    <slot>close()</slot>

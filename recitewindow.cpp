@@ -17,6 +17,8 @@ std::pair<WordData*, int>& ReciteWindow::findNextWord()
 
 bool ReciteWindow::showWord(std::pair<WordData *, int> &word)
 {
+    Logging log("ReciteWindow :: showWord",true);
+    log << "INFO show word " << word.first->Name() << std::endl;
     if (word.second == 1)
         return false;
     auto wordDetail = word.first->getDetail();

@@ -5,10 +5,6 @@
 bool LookUpWindow::showWord(std::pair<WordData *, int> &word)
 {
     auto wordDetail = word.first->getDetail();
-    ui->cantRecBtn->setEnabled(false);
-    ui->cantRecBtn->setVisible(false);
-    ui->knownBtn->setEnabled(false);
-    ui->knownBtn->setVisible(false);
     ui->wordLabel->setText(QString::fromStdString(word.first->Name()));
     ui->exampleBrowser->setVisible(true);
     ui->exampleBrowser->setText(QString::fromStdString(*wordDetail.begin()) + "\n" + QString::fromStdString(*(wordDetail.begin() + 1)));
@@ -36,7 +32,8 @@ LookUpWindow::LookUpWindow(Controller *controller, QString word, QWidget *parent
     ui->setupUi(this);
     lookUpWord = word;
     lookUpData = std::make_pair(this->controller->findWord(word.toStdString()), -1);
-    setWindowTitle(tr("%1").arg(lookUpWord));
+    setWindowTitle(tr("查单词:%1").arg(lookUpWord));
+    ui->returnBtn->setDefault(true);
     showWord(lookUpData);
 }
 

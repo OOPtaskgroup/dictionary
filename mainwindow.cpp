@@ -55,6 +55,8 @@ void MainWindow::on_lookUpBtn_clicked()
         LookUpWindow *lookUpWindow = new LookUpWindow(controller, ui->wordEdit->text(), this);
         this->hide();
         lookUpWindow->show();
+        ui->wordEdit->clear();
+        ui->wordEdit->setFocus();
     }
 }
 

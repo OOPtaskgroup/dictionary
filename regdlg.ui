@@ -91,6 +91,9 @@
      <height>28</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/image/buttons/2-0btn_33.png);</string>
+   </property>
    <property name="text">
     <string>注  册</string>
    </property>
@@ -103,6 +106,9 @@
      <width>93</width>
      <height>28</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/image/buttons/2-0btn_33.png);</string>
    </property>
    <property name="text">
     <string>取  消</string>

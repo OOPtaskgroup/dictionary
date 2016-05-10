@@ -23,8 +23,9 @@ ConfigDlg::~ConfigDlg()
 
 void ConfigDlg::on_pwdChangeBtn_clicked()
 {
-    PwdChangeDlg pwdChangeDlg(this);
+    PwdChangeDlg pwdChangeDlg(controller, this);
     pwdChangeDlg.exec();
+    ui->confirmBtn->setDefault(true);
 }
 
 void ConfigDlg::on_confirmBtn_clicked()

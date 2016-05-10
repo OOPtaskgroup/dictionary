@@ -87,6 +87,7 @@ DISTFILES += \
     userdatas.txt
 
 RESOURCES += \
-    image.qrc
+    image.qrc \
+    buttons.qrc
 
 CONFIG += C++11

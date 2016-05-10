@@ -23,35 +23,12 @@
       <height>28</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/image/buttons/2-0btn_34.png);</string>
+    </property>
     <property name="text">
      <string>返  回</string>
     </property>
-   </widget>
-   <widget class="QWidget" name="verticalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>591</x>
-      <y>361</y>
-      <width>171</width>
-      <height>131</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QPushButton" name="cantRecBtn">
-       <property name="text">
-        <string>没 印 象</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="knownBtn">
-       <property name="text">
-        <string>我 知 道 了</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
    </widget>
    <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
@@ -181,7 +158,7 @@ p, li { white-space: pre-wrap; }
       <x>0</x>
       <y>0</y>
       <width>851</width>
-      <height>581</height>
+      <height>601</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -199,17 +176,6 @@ p, li { white-space: pre-wrap; }
    <zorder>verticalLayoutWidget</zorder>
    <zorder>gridLayoutWidget</zorder>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>848</width>
-     <height>26</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

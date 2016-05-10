@@ -20,7 +20,8 @@ WordData :: ~WordData()
 std::vector<std::string> WordData :: getDetail()
 {
     Logging log("WordData :: getDetail",true);
-    std::ifstream input(ContentFile());
+    log << "INFO getting word " << Name() << " detail" << std::endl;
+     std::ifstream input(ContentFile());
     std::vector<std::string> toReturn;
     std::string tmp;
     while(std::getline(input,tmp))
