@@ -12,7 +12,7 @@ public:
     WordData(const std::string name,const int type);
     WordData(const std::string name,const int type,const int nowTimes);
     ~WordData();
-    std::vector<std::string> getDetail();
+    //std::vector<std::string> getDetail();
     void setTimes(const int x);
     const int& Times();
 };

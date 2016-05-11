@@ -16,7 +16,7 @@ WordData :: ~WordData()
 {
 
 }
-
+/*
 std::vector<std::string> WordData :: getDetail()
 {
     Logging log("WordData :: getDetail",true);
@@ -39,7 +39,7 @@ std::vector<std::string> WordData :: getDetail()
     }
     return toReturn;
 }
-
+*/
 void WordData :: setTimes(const int x)
 {
     times = x;

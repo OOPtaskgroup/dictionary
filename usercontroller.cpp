@@ -60,7 +60,7 @@ UserData* UserController :: userRegister(std::string ID, std::string passwd)
             throw ItemAlreadyExistException((std::string)"user already exist!");
         }
     UserData* toReturn = new UserData (ID,passwd);
-    std::system(("mkdir userdatas/" + ID + "").c_str());
+    std::system(((std::string)"mkdir userdatas" + _SLASH + ID + "").c_str());
     dataBase->insert(toReturn);
     return toReturn;
 }

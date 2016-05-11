@@ -25,13 +25,17 @@ private:
 public:
     WordData* findWord(std::string word);
     std::vector< std::pair<WordData*,int> >& getRecitingWords();
+    std::vector< WordData* > getTestWords(int num);
     void answerAccepted( std::pair<WordData*,int> &item);
     void answerWrong( std::pair<WordData*,int> &item);
-    void reLearn(WordData* item);
+    void setLearn(WordData* item);
     std::vector<WordData*> getMasteredWord();
     std::vector<WordData*> getLearningWord();
     int getMasteredWordCount();
     int getLearningWordCount();
+    std::vector<std::string> getDetail(WordData* item);
+    bool isLearning(WordData* item);
+    bool isMastered(WordData* item);
 
 private:
     Configuration* config;
@@ -39,7 +43,7 @@ public:
     const Configuration& getConfig()const;
     void modifyConfig(const Configuration& newConfig);
     void modifyConfig(const int& dif, const int&num);
-
+    std::vector<std::string> getSearchHistory(UserData* user);
 
 public:
     Controller (const std::string defaultUserFile="EMPTY");

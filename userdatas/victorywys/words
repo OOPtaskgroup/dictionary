@@ -3553,7 +3553,7 @@ celebrate
 celebration
 13 0
 ceremony
-13 0
+23 0
 certain
 13 0
 chain
@@ -3735,7 +3735,7 @@ consequence
 considering
 13 0
 consist
-13 0
+23 1
 consistent
 13 0
 constitution
@@ -3743,7 +3743,7 @@ constitution
 construct
 13 0
 construction
-23 1
+13 0
 consult
 13 0
 consultant
@@ -4139,7 +4139,7 @@ extreme
 fabric
 13 0
 faction
-23 1
+13 0
 fade
 13 0
 fairly
@@ -4235,7 +4235,7 @@ fulfil
 fundamental
 13 0
 funny
-13 0
+23 0
 furniture
 13 0
 gallery
@@ -4739,7 +4739,7 @@ minor
 mirror
 13 0
 missile
-13 0
+23 1
 missing
 13 0
 mixed
@@ -4823,7 +4823,7 @@ newly
 nightmare
 13 0
 nod
-23 0
+13 0
 noise
 13 0
 normally
@@ -4911,7 +4911,7 @@ overnight
 overseas
 13 0
 overwhelming
-23 0
+13 0
 owe
 13 0
 ownership
@@ -4981,7 +4981,7 @@ permission
 permit
 13 0
 personality
-13 0
+23 1
 personally
 13 0
 personnel
@@ -5303,7 +5303,7 @@ retail
 retain
 13 0
 retire
-13 0
+23 0
 retirement
 13 0
 retreat
@@ -5367,7 +5367,7 @@ rural
 rush
 13 0
 sack
-23 0
+13 0
 sacrifice
 13 0
 sail
@@ -5411,7 +5411,7 @@ seize
 select
 13 0
 selection
-23 0
+13 0
 self
 13 0
 senator
@@ -5611,7 +5611,7 @@ stretch
 strict
 13 0
 striking
-23 1
+13 0
 string
 13 0
 strip
@@ -5783,7 +5783,7 @@ trail
 transform
 13 0
 transition
-13 0
+23 1
 trap
 13 0
 traveller
@@ -5851,7 +5851,7 @@ united
 unity
 13 0
 universe
-23 0
+13 0
 unknown
 13 0
 unlike
@@ -5865,7 +5865,7 @@ upset
 urban
 13 0
 urgent
-13 0
+23 0
 user
 13 0
 valley

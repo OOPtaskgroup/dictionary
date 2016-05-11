@@ -87,12 +87,22 @@ void WordController :: answerWrong (WordData* item)
     log << "INFO word " << item->Name() << "answered wrong." << std::endl;
 }
 
-void WordController :: reLearn (WordData* item)
+void WordController :: setLearn (WordData* item)
 {
     Logging log("WordController :: reLearn",true);
     item ->setTimes(0);
     item ->setType(20 + item->Type()%10);
-    log << "INFO now word " << item->Name() << " will appear again." << std::endl;
+    log << "INFO now word " << item->Name() << " will appear" << std::endl;
+}
+
+bool WordController :: isLearning (WordData* item)
+{
+    return (item->Type()/10 == 2);
+}
+
+bool WordController :: isMastered (WordData* item)
+{
+    return (item->Type()/10 == 3);
 }
 
 std::vector<WordData*> WordController :: getWord(int typel,int typer)
@@ -157,3 +167,27 @@ void WordController :: modifyLearningDifficulty(const int dif)
         (*i)->setType(dif+10);
     log << "INFO now " << dataBase->size() << " words waiting." << std::endl;
 }
+
+std::vector<std::string> WordController :: getDetail(WordData* item)
+{
+    Logging log("WordController :: getDetail",true);
+    log << "INFO getting word " << item->Name() << " detail" << std::endl;
+     std::ifstream input(item->ContentFile());
+    std::vector<std::string> toReturn;
+    std::string tmp;
+    while(std::getline(input,tmp))
+        toReturn.push_back(tmp);
+    log << "INFO get " << toReturn.size() << " lines of Detail." << std::endl;
+    while(toReturn.size()<4)
+    {
+        toReturn.insert(toReturn.begin(),"\n");
+    }
+    if(toReturn.size()>4)
+    {
+        std::random_shuffle(toReturn.begin(),toReturn.begin()+toReturn.size()-2);
+        std::vector<std::string> Return(toReturn.rbegin(),toReturn.rbegin()+4);
+        std::reverse(Return.begin(),Return.end());
+    }
+    return toReturn;
+}
+

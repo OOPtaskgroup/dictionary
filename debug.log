@@ -1,21 +1,10 @@
 Part "main" begin.
   Part "Controller :: Controller" begin.
     Part "UserDataBase :: UserDataBase" begin.
-    Part "UserDataBase :: UserDataBase" end.
-  Part "Controller :: Controller" end.
-  Part "UserController :: userRegister" begin.
-    Part "UserDataBase :: save" begin.
-    INFO 1
-    INFO keavil
-    Part "UserDataBase :: save" end.
-  Part "UserController :: userRegister" end.
-  Part "UserController :: userRegister" begin.
-    Part "UserDataBase :: save" begin.
-    INFO 2
     INFO keavil
     INFO victorywys
-    Part "UserDataBase :: save" end.
-  Part "UserController :: userRegister" end.
+    Part "UserDataBase :: UserDataBase" end.
+  Part "Controller :: Controller" end.
   Part "Controller :: Login" begin.
     Part "UserController :: checkIn" begin.
     INFO catch user keavil.
@@ -24,6 +13,7 @@ Part "main" begin.
     INFO login keavil ok.
     Part "UserController :: userLogin" end.
     Part "WordController :: WordController" begin.
+    INFO find file
     INFO 13679
     Part "WordController :: WordController" end.
   Part "Controller :: Login" end.
@@ -38,77 +28,22 @@ Part "main" begin.
     INFO login victorywys ok.
     Part "UserController :: userLogin" end.
     Part "WordController :: WordController" begin.
+    INFO find file
     INFO 13679
     Part "WordController :: WordController" end.
   Part "Controller :: Login" end.
-  Part "WordController :: modifyLearningDifficulty" begin.
-  INFO change difficulty to 3
-  INFO now 1427 words waiting.
-  Part "WordController :: modifyLearningDifficulty" end.
-  Part "Controller :: getTodayWords" begin.
-  Part "Controller :: getTodayWords" end.
-  Part "WordController :: wordCollect" begin.
-  INFO added word construction.
-  INFO added word faction.
-  INFO added word overwhelming.
-  INFO added word universe.
-  INFO added word nod.
-  INFO added word sack.
-  INFO added word striking.
-  INFO added word selection.
-  INFO database empty for learned words.
-  Part "WordController :: wordCollect" end.
-  Part "Controller :: reWriteTodayWords" begin.
-  INFO print today words to userdatas/victorywys/today
-  Part "Controller :: reWriteTodayWords" end.
-  Part "WordController :: answerAccepted" begin.
-  INFO word constructionanswered correctly, for 1 times now.  
-  Part "WordController :: answerAccepted" end.
-  Part "Controller :: reWriteTodayWords" begin.
-  INFO print today words to userdatas/victorywys/today
-  Part "Controller :: reWriteTodayWords" end.
-  Part "WordController :: answerAccepted" begin.
-  INFO word factionanswered correctly, for 1 times now.  
-  Part "WordController :: answerAccepted" end.
-  Part "Controller :: reWriteTodayWords" begin.
-  INFO print today words to userdatas/victorywys/today
-  Part "Controller :: reWriteTodayWords" end.
-  Part "WordController :: answerWrong" begin.
-  INFO word overwhelminganswered wrong.
-  Part "WordController :: answerWrong" end.
-  Part "Controller :: reWriteTodayWords" begin.
-  INFO print today words to userdatas/victorywys/today
-  Part "Controller :: reWriteTodayWords" end.
-  Part "WordController :: answerWrong" begin.
-  INFO word universeanswered wrong.
-  Part "WordController :: answerWrong" end.
-  Part "Controller :: reWriteTodayWords" begin.
-  INFO print today words to userdatas/victorywys/today
-  Part "Controller :: reWriteTodayWords" end.
-  Part "WordController :: answerWrong" begin.
-  INFO word nodanswered wrong.
-  Part "WordController :: answerWrong" end.
-  Part "Controller :: reWriteTodayWords" begin.
-  INFO print today words to userdatas/victorywys/today
-  Part "Controller :: reWriteTodayWords" end.
-  Part "WordController :: answerWrong" begin.
-  INFO word sackanswered wrong.
-  Part "WordController :: answerWrong" end.
-  Part "Controller :: reWriteTodayWords" begin.
-  INFO print today words to userdatas/victorywys/today
-  Part "Controller :: reWriteTodayWords" end.
-  Part "WordController :: answerAccepted" begin.
-  INFO word strikinganswered correctly, for 1 times now.  
-  Part "WordController :: answerAccepted" end.
-  Part "Controller :: reWriteTodayWords" begin.
-  INFO print today words to userdatas/victorywys/today
-  Part "Controller :: reWriteTodayWords" end.
-  Part "WordController :: answerWrong" begin.
-  INFO word selectionanswered wrong.
-  Part "WordController :: answerWrong" end.
-  Part "Controller :: reWriteTodayWords" begin.
-  INFO print today words to userdatas/victorywys/today
-  Part "Controller :: reWriteTodayWords" end.
+  Part "WordController :: findWord" begin.
+  INFO looking for word transition
+  INFO find word transition
+  Part "WordController :: findWord" end.
+  Part "WordController :: findWord" begin.
+  INFO looking for word across
+  INFO find word across
+  Part "WordController :: findWord" end.
+  Part "WordController :: findWord" begin.
+  INFO looking for word transition
+  INFO find word transition
+  Part "WordController :: findWord" end.
   Part "UserController :: userLogout" begin.
   INFO user victorywys loged out.
   Part "UserController :: userLogout" end.

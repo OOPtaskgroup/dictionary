@@ -26,8 +26,8 @@ void Controller :: Login (std::string ID, std::string passwd)
     Logging log("Controller :: Login",true);
     UserData* toLogin = userController->checkIn(ID,passwd);
     userController->userLogin(toLogin);
-    wordController = new WordController("userdatas/"+ID+"/words");
-    config = new Configuration("userdatas/"+ID+"/config");
+    wordController = new WordController("userdatas"+_SLASH+ID+_SLASH+"words");
+    config = new Configuration("userdatas"+_SLASH+ID+_SLASH+"config");
 }
 
 void Controller :: Logout()
@@ -56,6 +56,8 @@ void Controller :: userModifyPassword(UserData* user, std::string passwd, std::s
 
 WordData* Controller :: findWord(std::string word)
 {
+    std::ofstream output("userdatas" + _SLASH + getActiveUser()->Name() + _SLASH + "history.lis",std::ios::app);
+    output<<word<<std::endl;
     return wordController->findWord(word);
 }
 
@@ -75,6 +77,11 @@ std::vector< std::pair<WordData*,int> >& Controller :: getRecitingWords()
     return nowRecitingWords;
 }
 
+std::vector<WordData*>getTestWords(int num)
+{
+
+}
+
 void Controller :: answerAccepted( std::pair<WordData*,int> &item)
 {
     item.second ++;
@@ -90,9 +97,9 @@ void Controller :: answerWrong( std::pair<WordData*,int> &item)
     reWriteTodayWords();
 }
 
-void Controller :: reLearn(WordData* item)
+void Controller :: setLearn(WordData* item)
 {
-    wordController->reLearn(item);
+    wordController->setLearn(item);
 }
 
 std::vector<WordData*> Controller :: getMasteredWord()
@@ -113,6 +120,16 @@ int Controller :: getMasteredWordCount()
 int Controller :: getLearningWordCount()
 {
     return wordController->getLearningWordCount();
+}
+
+bool Controller :: isLearning (WordData* item)
+{
+    return wordController->isLearning(item);
+}
+
+bool Controller :: isMastered (WordData* item)
+{
+    return wordController->isMastered(item);
 }
 
 const Configuration& Controller :: getConfig() const
@@ -136,7 +153,7 @@ void Controller :: modifyConfig(const Configuration& newConfig)
 void Controller :: reWriteTodayWords()
 {
     Logging log("Controller :: reWriteTodayWords",true);
-    std::string fileName("userdatas/" + userController->getActiveUser()->Name() + "/today");
+    std::string fileName("userdatas" + _SLASH+userController->getActiveUser()->Name() +_SLASH+ "today");
     std::ofstream output(fileName, std::ios_base::trunc);
     std::time_t t = std::time(nullptr);
     std::tm* now = std::localtime(&t);
@@ -151,7 +168,7 @@ void Controller :: getTodayWords()
     Logging log("Controller :: getTodayWords",true);
     std::time_t t = std::time(nullptr);
     std::tm* now = std::localtime(&t);
-    std::string fileName("userdatas/" + userController->getActiveUser()->Name() + "/today");
+    std::string fileName("userdatas" +_SLASH+ userController->getActiveUser()->Name() +_SLASH +"today");
     std::ifstream input(fileName);
     if(!input)return;
     int year,month,day;
@@ -167,4 +184,19 @@ void Controller :: getTodayWords()
         nowRecitingWords.push_back( std::make_pair(findWord(name), type));
         std::getline(input,name);
     }
+}
+
+std::vector<std::string> Controller :: getDetail(WordData* item)
+{
+    return wordController->getDetail(item);
+}
+
+std::vector<std::string> Controller :: getSearchHistory(UserData* user)
+{
+    std::vector<std::string> toReturn;
+    std::ifstream input("userdatas" + _SLASH + user->Name() + _SLASH + "history.lis");
+    std::string line;
+    while(std::getline(input,line))
+        toReturn.push_back(line);
+    return toReturn;
 }

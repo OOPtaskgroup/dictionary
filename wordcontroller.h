@@ -19,7 +19,9 @@ public:
     std::vector<WordData*> randomWordCollect(int num);
     void answerAccepted(WordData* item);
     void answerWrong(WordData* item);
-    void reLearn(WordData* item);
+    void setLearn(WordData* item);
+    bool isLearning(WordData* item);
+    bool isMastered(WordData* item);
     WordData* findWord(std::string prefix);
 
     std::vector<WordData*> getMasteredWord();
@@ -27,6 +29,7 @@ public:
     int getMasteredWordCount();
     int getLearningWordCount();
     void modifyLearningDifficulty(const int dif);
+    std::vector<std::string> getDetail(WordData* item);
 private:
     std::vector<WordData*> getWord(int type);
     std::vector<WordData*> getWord(int typel,int typer);

@@ -1,6 +1,15 @@
 #ifndef USERCONTROLLER_H
 #define USERCONTROLLER_H
 
+#ifdef __linux__
+#define _SLASH (std::string)"/"
+#elif _WIN32
+#define _SLASH (std::string)"\\"
+#elif __APPLE__
+#define _SLASH (std::string)"/"
+#endif
+
+
 #include <bits/stdc++.h>
 #include "logging.h"
 #include "userdatabase.h"
