@@ -12,6 +12,7 @@ LoginDlg::LoginDlg(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->loginBtn->setDefault(true);
+    ui->usrEdit->setFocus();
 }
 
 LoginDlg::LoginDlg(Controller *controller, QWidget *parent) :

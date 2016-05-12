@@ -26,32 +26,6 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="verticalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>590</x>
-      <y>360</y>
-      <width>171</width>
-      <height>131</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QPushButton" name="cantRecBtn">
-       <property name="text">
-        <string>没 印 象</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="knownBtn">
-       <property name="text">
-        <string>我 知 道 了</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
    <widget class="QPushButton" name="returnBtn">
     <property name="geometry">
      <rect>
@@ -68,10 +42,10 @@
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>-1</x>
-      <y>-1</y>
+      <x>0</x>
+      <y>0</y>
       <width>851</width>
-      <height>581</height>
+      <height>601</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -236,9 +210,33 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;没有翻译……&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="cantRecBtn">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>390</y>
+      <width>151</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>没 印 象</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="knownBtn">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>450</y>
+      <width>151</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>我 知 道 了</string>
+    </property>
+   </widget>
    <zorder>frame</zorder>
-   <zorder>gridLayoutWidget</zorder>
-   <zorder>verticalLayoutWidget</zorder>
    <zorder>returnBtn</zorder>
    <zorder>chnLabel</zorder>
    <zorder>wordLabel</zorder>
@@ -247,16 +245,8 @@ p, li { white-space: pre-wrap; }
    <zorder>engLabel</zorder>
    <zorder>exampleBrowser</zorder>
    <zorder>chnBrowser</zorder>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>848</width>
-     <height>26</height>
-    </rect>
-   </property>
+   <zorder>knownBtn</zorder>
+   <zorder>cantRecBtn</zorder>
   </widget>
  </widget>
  <resources/>

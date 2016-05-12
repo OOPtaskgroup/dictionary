@@ -6,5 +6,6 @@
 #include "itemalreadyexistexception.h"
 #include "itemnotfoundexception.h"
 #include "passwordnotcorrectexception.h"
+#include "wordshavebeenrecitedexception.h"
 
 #endif

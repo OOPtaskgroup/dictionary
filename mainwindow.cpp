@@ -28,8 +28,15 @@ void MainWindow::on_configBtn_clicked()
 void MainWindow::on_reciteBtn_clicked()
 {
     ReciteWindow *reciteWindow = new ReciteWindow(controller, this);
-    this->hide();
-    reciteWindow->show();
+    try
+    {
+        reciteWindow->show();
+        this->hide();
+    }
+    catch (WordsHaveBeenRecitedException exce)
+    {
+        reciteWindow->close();
+    }
 }
 
 void MainWindow::on_lookUpBtn_clicked()

@@ -61,7 +61,8 @@ HEADERS  += mainwindow.h \
     userdatabase.h \
     worddatabase.h \
     lookupwindow.h \
-    pwdchangedlg.h
+    pwdchangedlg.h \
+    wordshavebeenrecitedexception.h
 
 FORMS    += mainwindow.ui \
     logindlg.ui \

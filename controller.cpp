@@ -36,6 +36,7 @@ void Controller :: Logout()
     if(config)delete config;
     if(wordController)delete wordController;
     userController->userLogout();
+    nowRecitingWords.clear();
 }
 
 UserData* Controller :: userRegister(std::string ID, std::string passwd)

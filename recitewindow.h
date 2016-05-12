@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "controller.h"
 #include <QCloseEvent>
+#include <QShowEvent>
 
 namespace Ui {
 class ReciteWindow;
@@ -31,7 +32,7 @@ private slots:
     void on_returnBtn_clicked();
 
 private:
-    void doRecite();
+    bool doRecite();
     std::vector<std::pair<WordData *, int>>& recitingWords;
     std::pair<WordData*, int>& findNextWord();
     bool showWord(std::pair<WordData*, int>& word);
@@ -41,6 +42,7 @@ private:
 
 protected:
     void closeEvent(QCloseEvent *event);
+    void showEvent(QShowEvent *event);
 };
 
 #endif // RECITEWINDOW_H

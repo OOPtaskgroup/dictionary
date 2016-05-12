@@ -5,7 +5,7 @@
 
 std::pair<WordData*, int>& ReciteWindow::findNextWord()
 {
-    for (auto i : recitingWords)
+    for (auto& i : recitingWords)
     {
         if (i.second != 1)
         {
@@ -37,22 +37,33 @@ bool ReciteWindow::showWord(std::pair<WordData *, int> &word)
     return true;
 }
 
-void ReciteWindow::doRecite()
+bool ReciteWindow::doRecite()
 {
+    std::random_shuffle(recitingWords.begin(), recitingWords.end());
     if (!showWord(findNextWord()))
     {
         QMessageBox infoBox(QMessageBox::Information, "提示", "您已背完了今天要背的所有单词！");
         infoBox.setStandardButtons(QMessageBox::Ok);
         infoBox.setButtonText(QMessageBox::Ok, "好的");
         infoBox.exec();
-        this->close();
+        this->parentWidget()->show();
+        return false;
     }
+    return true;
 }
 
 void ReciteWindow::closeEvent(QCloseEvent *event)
 {
     this->parentWidget()->show();
     event->accept();
+}
+
+void ReciteWindow::showEvent(QShowEvent *event)
+{
+    if (!doRecite())
+    {
+        throw WordsHaveBeenRecitedException("you have recited all the words");
+    }
 }
 
 ReciteWindow::ReciteWindow(Controller *controller, QWidget *parent) :
@@ -63,7 +74,6 @@ ReciteWindow::ReciteWindow(Controller *controller, QWidget *parent) :
 {
     ui->setupUi(this);
     setWindowTitle("背单词");
-    doRecite();
 }
 
 ReciteWindow::~ReciteWindow()
@@ -76,9 +86,12 @@ void ReciteWindow::on_cantRecBtn_clicked()
     if (status == ChineseAcc)
     {
         controller->answerAccepted(findNextWord());
-        doRecite();
+        if (!doRecite())
+        {
+            this->close();
+        };
     }
-    if (status == English)
+    else if (status == English)
     {
         ui->chnBrowser->setVisible(true);
         ui->chnLabel->setVisible(true);
@@ -86,13 +99,13 @@ void ReciteWindow::on_cantRecBtn_clicked()
         ui->cantRecBtn->setVisible(false);
         status = ChineseRej;
     }
-    if (status == Example)
+    else if (status == Example)
     {
         ui->engBrowser->setVisible(true);
         ui->engLabel->setVisible(true);
         status = English;
     }
-    if (status == Vocabulary)
+    else if (status == Vocabulary)
     {
         ui->exampleBrowser->setVisible(true);
         ui->exampleLabel->setVisible(true);
@@ -102,7 +115,7 @@ void ReciteWindow::on_cantRecBtn_clicked()
 
 void ReciteWindow::on_knownBtn_clicked()
 {
-    if (status == English || status == Example || status == Vocabulary)
+    if (status == Vocabulary)
     {
         ui->exampleBrowser->setVisible(true);
         ui->exampleLabel->setVisible(true);
@@ -113,20 +126,38 @@ void ReciteWindow::on_knownBtn_clicked()
         ui->cantRecBtn->setText("记  错  了");
         status = ChineseAcc;
     }
-    if (status == ChineseAcc)
+    else if (status == English || status == Example)
+    {
+        ui->exampleBrowser->setVisible(true);
+        ui->exampleLabel->setVisible(true);
+        ui->engBrowser->setVisible(true);
+        ui->engLabel->setVisible(true);
+        ui->chnBrowser->setVisible(true);
+        ui->chnLabel->setVisible(true);
+        ui->cantRecBtn->setEnabled(false);
+        ui->cantRecBtn->setVisible(false);
+        status = ChineseRej;
+    }
+    else if (status == ChineseAcc)
     {
         controller->answerAccepted(findNextWord());
-        doRecite();
+        if (!doRecite())
+        {
+            this->close();
+        }
+
     }
-    if (status == ChineseRej)
+    else if (status == ChineseRej)
     {
         controller->answerWrong(findNextWord());
-        doRecite();
+        if (!doRecite())
+        {
+            this->close();
+        }
     }
 }
 
 void ReciteWindow::on_returnBtn_clicked()
 {
-    this->parentWidget()->show();
     this->close();
 }
