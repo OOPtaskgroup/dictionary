@@ -21,7 +21,7 @@ bool ReciteWindow::showWord(std::pair<WordData *, int> &word)
     log << "INFO show word " << word.first->Name() << std::endl;
     if (word.second == 1)
         return false;
-    auto wordDetail = word.first->getDetail();
+    auto wordDetail = controller->getDetail(word.first);
     ui->cantRecBtn->setText("没  印  象");
     ui->cantRecBtn->setEnabled(true);
     ui->cantRecBtn->setVisible(true);

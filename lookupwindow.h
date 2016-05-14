@@ -20,13 +20,16 @@ public:
 private slots:
     void on_returnBtn_clicked();
 
+    void on_addBtn_clicked();
+
 private:
     explicit LookUpWindow(QWidget *parent = 0);
     QString lookUpWord;
-    std::pair<WordData*, int> lookUpData;
-    bool showWord(std::pair<WordData*, int>& word);
+    WordData* lookUpData;
+    bool showWord(WordData* word);
     Ui::LookUpWindow *ui;
     Controller *controller;
+    void setBtn();
 
 protected:
     void closeEvent(QCloseEvent *event);
