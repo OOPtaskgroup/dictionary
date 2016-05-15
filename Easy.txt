@@ -31,7 +31,6 @@ attempt
 authority
 available
 back
-bank
 base
 beat
 because
@@ -60,7 +59,6 @@ capital
 car
 care
 carry
-case
 cause
 central
 centre
@@ -70,7 +68,6 @@ change
 charge
 chief
 child
-city
 claim
 class
 clear
@@ -78,9 +75,7 @@ close
 club
 colour
 come
-coming
 committee
-common
 community
 company
 complete
@@ -94,7 +89,6 @@ cost
 council
 country
 course
-court
 cover
 create
 cup
@@ -139,7 +133,6 @@ eleven
 else
 end
 enough
-even
 event
 ever
 every
@@ -174,8 +167,6 @@ follow
 food
 foot
 force
-foreign
-form
 former
 forty
 four
@@ -193,7 +184,6 @@ get
 girl
 give
 go
-going
 good
 government
 great
@@ -203,7 +193,6 @@ ground
 group
 grow
 half
-hand
 happen
 hard
 head
@@ -213,8 +202,6 @@ help
 high
 history
 hit
-hold
-home
 hope
 hospital
 host
@@ -234,22 +221,17 @@ information
 interest
 international
 issue
-job
 join
-just
 keep
 kill
-kind
 know
 labour
 land
 large
-last
 late
 later
 laugh
 law
-lead
 leader
 learn
 least
@@ -267,7 +249,6 @@ list
 little
 live
 local
-long
 look
 lose
 lot
@@ -280,18 +261,14 @@ man
 market
 match
 matter
-mean
 meet
 meeting
 member
 middle
-might
 military
 million
 mind
-mine
 minister
-minute
 moment
 money
 month
@@ -311,7 +288,6 @@ need
 never
 new
 news
-nextad
 night
 nine
 nineteen
@@ -329,7 +305,6 @@ oil
 old
 operate
 operation
-order
 other
 outside
 own
@@ -347,7 +322,6 @@ percent
 perhaps
 person
 photo
-place
 plan
 plant
 play
@@ -397,7 +371,6 @@ report
 research
 result
 return
-right
 rise
 road
 role
@@ -405,12 +378,10 @@ room
 rule
 run
 sale
-samepro
 save
 say
 school
 season
-secondnum
 secretary
 security
 see
@@ -427,7 +398,6 @@ seventeen
 seventy
 several
 share
-short
 should
 show
 side
@@ -447,7 +417,6 @@ society
 something
 son
 sort
-sound
 south
 speak
 special
@@ -473,7 +442,6 @@ support
 sure
 surprise
 system
-take
 talk
 tax
 team
@@ -485,7 +453,6 @@ thing
 think
 thirteen
 thirty
-thispro
 those
 though
 thought
@@ -509,7 +476,6 @@ two
 understand
 union
 university
-use
 value
 very
 view
@@ -524,7 +490,6 @@ watch
 water
 way
 week
-wellint
 west
 what
 when
@@ -539,7 +504,6 @@ whose
 why
 wide
 wife
-will
 win
 within
 without
@@ -552,4 +516,3 @@ world
 write
 year
 yesterday
-young

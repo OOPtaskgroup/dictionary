@@ -2,7 +2,6 @@ ability
 above
 absolutely
 abuse
-accepted
 accuse
 achieve
 active
@@ -31,11 +30,17 @@ album
 allege
 ally
 alone
+alphabetically
 alternative
 amount
+amplification
 analyst
+anesthesiologist
 animal
 annual
+antibacterial
+anticoagulant
+antihistamine
 anyone
 anyway
 apart
@@ -44,29 +49,35 @@ appeal
 appearance
 apply
 approach
+appropriately
 approve
-april
+approximately
+approximation
 argue
 argument
-armed
 arrange
 arrest
 arrive
 article
 artist
 aspect
+assassination
 assess
 asset
 association
 assume
+atherosclerosis
 attend
 attention
 attitude
 attract
 audience
-august
 aunt
+authentication
+authenticator
 author
+authorization
+automatically
 average
 avoid
 award
@@ -74,14 +85,12 @@ aware
 baby
 bag
 balance
-ball
 ban
 band
 bar
 basic
 basis
 battle
-bear
 beautiful
 bed
 behaviour
@@ -126,8 +135,10 @@ cash
 cast
 catch
 cell
+cerebrospinal
 certain
 certainly
+certification
 chair
 chairman
 challenge
@@ -136,15 +147,16 @@ championship
 channel
 chapter
 character
+characteristic
 cheap
 check
 chemical
 choice
 choose
-christian
-christmas
 church
 circle
+circumference
+circumstances
 citizen
 city
 civil
@@ -163,29 +175,43 @@ comment
 commercial
 commission
 commit
+communication
 communist
+comparatively
+compatibility
 competition
 complain
 complex
+comprehensive
+computability
 computer
+concentration
 conduct
 confidence
 confirm
 conflict
+congratulation
+consciousness
 conservative
 considerable
+consolidation
 constant
 consumer
 contact
 contain
 contract
+controllability
+controversial
+conversational
 cook
 cool
 copy
 corner
 correct
 correspondent
-count
+corresponding
+counterbalance
+counterclockwise
 county
 couple
 cousin
@@ -197,9 +223,9 @@ crisis
 critic
 critical
 criticism
-cross
 crowd
 cry
+cryptographic
 culture
 currency
 customer
@@ -216,9 +242,9 @@ death
 debate
 debt
 decade
-december
 declare
 decline
+decompression
 deep
 defeat
 defence
@@ -230,6 +256,8 @@ deliver
 democracy
 democrat
 democratic
+demonstration
+demultiplexer
 deny
 depend
 deputy
@@ -242,15 +270,22 @@ determine
 diet
 difference
 difficulty
+dimensionality
 dinner
 direction
+disadvantageous
+disconnection
 discover
+discriminator
 discuss
 discussion
 disease
+disintegration
 dismiss
 display
 dispute
+dissatisfaction
+dissemination
 distance
 district
 divide
@@ -271,7 +306,6 @@ drop
 dry
 due
 duty
-earlier
 earn
 earth
 eastern
@@ -281,22 +315,25 @@ edge
 edition
 editor
 effective
+effectiveness
 egg
-eighteenth
 eighth
-eightieth
 elect
+electrocardiograph
 element
 eleventh
 emerge
 emergency
 employee
+encapsulation
 encourage
+encyclopaedia
 energy
 engine
 enjoy
 ensure
 enter
+entertainment
 entire
 entry
 environment
@@ -307,7 +344,7 @@ escape
 especially
 essential
 establish
-estate
+establishment
 estimate
 evening
 eventually
@@ -323,12 +360,15 @@ executive
 exercise
 exist
 expensive
+experimentation
 expert
 explain
+exponentiation
 export
 express
 extend
 extra
+extraordinary
 extremely
 facility
 factor
@@ -343,20 +383,18 @@ fashion
 fast
 fat
 favour
-favourite
 feature
-february
 federal
 fee
 feed
 feeling
 fellow
 female
+ferromagnetic
 festival
 field
 fifteenth
 fifth
-fiftieth
 file
 fill
 finally
@@ -364,9 +402,7 @@ finance
 fine
 finger
 finish
-fire
 fish
-fit
 flat
 flight
 floor
@@ -376,34 +412,35 @@ focus
 following
 football
 forget
+forgetfulness
 form
 formal
-fortieth
 forward
 found
-fourteenth
 fourth
+fragmentation
 freedom
 frequent
 fresh
-friday
 fruit
 fuel
 fully
 fun
 function
 gain
+gallium arsenide
 garden
 gas
+gastrointestinal
 gather
 gay
+generalization
 generally
 generation
 glass
 goal
 god
 gold
-gone
 goods
 governor
 grand
@@ -423,6 +460,7 @@ happy
 hardly
 heat
 heavy
+heterogeneous
 highly
 hold
 hole
@@ -435,6 +473,9 @@ housing
 huge
 hurt
 husband
+hydroelectric
+hyperinflation
+hypothecation
 ice
 ideal
 identify
@@ -444,20 +485,31 @@ image
 imagine
 immediate
 immediately
+immunoglobulin
 impact
+implementation
 import
 impose
+impossibility
 impossible
 improve
 incident
 income
+incompatibility
+inconsistency
+incorporation
 increasingly
 indeed
+independently
 indicate
 individual
 industrial
+industrialization
+ineffectiveness
+inexperienced
 inflation
 influence
+initialization
 injury
 inside
 insist
@@ -468,10 +520,15 @@ institute
 institution
 insurance
 intend
+interconnections
 interested
+internationalize
+interplanetary
 interview
+intracellular
 introduce
 investigate
+investigation
 investment
 investor
 invite
@@ -479,14 +536,14 @@ involve
 involved
 island
 item
-january
 joint
 journal
 journalist
 judge
-july
 jump
-june
+junior college
+junior high school
+jurisprudence
 justice
 key
 kick
@@ -495,11 +552,11 @@ king
 kitchen
 knowledge
 lack
+lackadaisical
 lady
+landing strip
 language
 largely
-lastad
-latest
 launch
 lawyer
 lay
@@ -509,113 +566,181 @@ league
 leg
 legal
 length
-lets
+Leonardo Da Vinci
+letter of credit
 lie
 lift
 light
 limit
+lingua franca
 link
 listen
 loan
-longterm
 lord
 loss
 lunch
+machiavellian
 machine
+machine language
+macroeconomic
+macroeconomics
+macromolecule
 magazine
+magnification
 mainly
 maintain
+maintainability
 majority
+Make hay while the sun shines
 maker
+maladjustment
 male
 manage
 management
 manager
+manufacturing
 march
 mark
 marriage
 marry
 mass
+mass production
+Massachusetts
 master
+master's degree
 material
+mathematically
+matter-of-fact
 may
 maybe
+meaningfulness
+meaninglessness
 means
 meanwhile
 measure
+mechanization
 media
 medical
+Mediterranean
+Mediterranean Sea
+medulla oblongata
 memory
 mention
+mercy killing
 message
 method
+microcomputer
+microeconomics
+microinstruction
+microprogramming
 mile
-millionth
 ministry
 minority
+misapprehension
+misappropriate
+miscegenation
+mischievousness
+miscommunication
+mismanagement
 miss
 mission
+Mississippi River
 mistake
 mix
 model
 modern
-monday
+Modern English
+modernization
+modularization
+modus operandi
+monarch butterfly
+Money isn't everything
+monochromatic
+morphogenesis
+morphological
 mortgage
+mortification
+most-favored-nation
+mother tongue
+mother-in-law
 motor
 mountain
+mountain range
+mountaineering
 mouth
 movement
 movie
+moving picture
+multicellular
+multicultural
+multidimensional
+multiplication
+multiprocessing
+multiprocessor
+multiprogramming
 murder
 museum
-muslim
 myself
+mystification
+nanotechnology
 narrow
+narrow-minded
+national income
 nationalist
 natural
+natural resource
+natural selection
 nature
 nearly
 necessary
+neck and neck
 negotiate
 negotiation
 neither
+nerve-racking
 network
 newspaper
 nice
+night blindness
 nineteenth
 ninetieth
 ninth
-no one
+nitrous oxide
 nobody
 none
 nor
 normal
+normalization
 northeast
 northwest
 note
 notice
 novel
-november
 nuclear
 object
+obstacle course
 obvious
 obviously
 occasion
 occupy
 occur
-october
 odd
 okay
+ophthalmology
 opinion
 opportunity
 opposition
+optical character reader
+optical fiber
 option
 order
 organization
+organizational
 organize
 original
 otherwise
 overall
+overproduction
 owner
 pack
 package
@@ -625,119 +750,242 @@ painting
 pair
 park
 parliament
+participation
 particular
+particularize
 particularly
 partner
+pasteurization
+patent office
+pathologically
+pathophysiology
 patient
 pattern
 payment
+percussionist
+peregrination
 perfect
 perform
+performability
 performance
+perfunctorily
 period
+periodic table
+perpendicular
 personal
+personalities
+personification
+perspicacious
+pharmacological
+pharmacopoeia
+philanthropic
+philanthropist
 phone
+photoconductive
+photoelectric
 photograph
+photorespiration
+photosynthesis
 physical
+Physical Education
+physiological
+physiological psychology
+physiologically
+physiotherapy
+phytoplankton
+Piccadilly Circus
 pick
 picture
 piece
 plane
+plate tectonics
 please
+plenipotentiary
+plotting board
+plug-compatible
 plus
+pocket calculator
+poikilothermic
+point of view
+police officer
+poliomyelitis
 politician
 politics
 poll
+polymerization
 poor
 popular
 population
 positive
 possibility
 possibly
-post
+postage stamp
+postal service
 potential
+pound sterling
 powerful
+practical joke
 practice
+Practice makes perfect
+praying mantis
+precautionary
+precious stone
+precipitation
+predestination
+predisposition
+predominantly
 prefer
+premeditation
+preoccupation
 prepare
 prepared
+preponderance
+prepossessing
 presence
-present
+presence of mind
+present perfect
+prestidigitation
+presupposition
+pretentiousness
+preternatural
 pretty
 prevent
 previous
+prime minister
+primogeniture
 prince
 princess
 principle
 print
+printed matter
 prison
 prisoner
 private
 prize
+probabilistic
+probability theory
+problematical
+procrastinate
+procrastination
 production
 professional
+professionally
 professor
 profit
+profit and loss
+profitability
+prognosticate
 program
 progress
+progressively
 project
+proliferation
 promise
+Promised Land
+promissory note
 promote
 proper
 property
+proportionally
+proportionately
 proposal
 propose
+proprietorship
 prospect
 protect
 protection
+protectionism
 protest
+Protestantism
 prove
+provincialism
+psychoanalyst
+psychological
+psychologically
+psychopathology
+psychosomatic
+psychotherapist
+public domain
+public housing
+public interest
+public prosecutor
 publish
+pulchritudinous
 pull
+punctuation mark
 purchase
 purpose
 push
+pusillanimous
+quadrilateral
+qualifications
 quality
 quarter
 queen
 quiet
+quotation mark
 quote
 radical
+radio frequency
+radioactivity
+radiochemistry
 rain
 range
 rapid
+ratiocination
+rationalization
 reaction
 reader
 ready
 reality
 realize
 rebel
+recalcitrance
 recall
 recently
 recession
+reciprocation
 recognize
 recommend
+recommendable
+recommendation
+reconciliation
+reconfiguration
+reconstructed
+reconstruction
+recrudescence
+rectification
 reduce
+reenforcement
 refer
 reflect
 reform
 refugee
 refuse
 regard
+regardless of
+regimentation
 region
 regional
+registered mail
 regular
+rehabilitation
+reimbursement
+reinforcement
 reject
 relation
 relationship
 relief
 religious
+relinquishment
 remove
+reorganization
 repeat
+repeatability
 replace
 reply
 reporter
-reporting
+reprehensible
 represent
 representative
 republic
@@ -748,41 +996,73 @@ reserve
 resident
 resolution
 resource
+resourcefulness
 respect
+respectability
 respond
 response
 responsibility
 responsible
 rest
 restaurant
+resuscitation
+resynchronization
+resynchronize
 reveal
+reverse discrimination
 review
+revitalization
+revolutionary
+revolving door
+rhetorical question
 rich
 ride
+ridiculousness
 right
+righteousness
 ring
+Rio de Janeiro
 risk
 rival
 river
+Robinson Crusoe
 rock
+rock 'n' roll
+rocking chair
+Rocky Mountains
 roll
-round
 route
 royal
+rule of thumb
 running
+running track
 sad
 safe
 safety
+salad dressing
+salivary gland
+Salt Lake City
+San Andreas fault
+San Francisco
+sanctimonious
 sanction
-saturday
+saponification
+satisfactorily
+savings account
 scale
+scarlet fever
 scene
 schedule
 scheme
+schoolmistress
 science
+scientifically
 scientist
 score
+Scotch whisky
+scrambled eggs
 screen
+screen memory
 sea
 search
 seat
@@ -790,13 +1070,48 @@ secret
 section
 sector
 secure
+sedimentation
 seed
-senior
+Seeing is believing
+self-assertion
+self-centered
+self-cleaning
+self-confidence
+self-conscious
+self-contained
+self-destruction
+self-determination
+self-directed
+self-discipline
+self-discovery
+self-explanatory
+self-expression
+self-fulfilling
+self-governing
+self-importance
+self-improvement
+self-knowledge
+self-medication
+self-possession
+self-realization
+self-reliance
+self-sacrifice
+self-satisfaction
+self-sufficient
+self-sustaining
+semiconscious
+senior high school
+sensationalism
 sentence
+sentimentalism
+sentimentality
+sentimentalize
+sentimentally
 separate
-september
+serial number
 series
 serve
+service charge
 session
 settle
 settlement
@@ -814,15 +1129,28 @@ sharp
 ship
 shock
 shoot
+shooting gallery
+shooting star
 shop
+shopping center
+short circuit
+short-circuit
 shot
 shoulder
+sidesplitting
 sight
+sign language
 significant
+significantly
 similar
 simple
+simple-minded
+simplification
 simply
+simultaneously
 sing
+single-handed
+sister-in-law
 site
 sixth
 sixtieth
@@ -830,11 +1158,15 @@ size
 skill
 skin
 sleep
+sleeplessness
 slightly
 slip
 slow
 smile
 smoke
+social climber
+social studies
+soda fountain
 soft
 soldier
 solution
@@ -842,99 +1174,182 @@ somebody
 someone
 sometimes
 song
+sophisticated
 sorry
 source
+South America
+southeast Asia
 southern
 southwest
 space
+special delivery
+specialization
 specific
+spectacularly
 speech
 speed
+speed-reading
+sphygmomanometer
 spirit
 split
 spokesman
+spontaneously
 sport
+sportsmanship
 spot
 spread
 spring
+springer spaniel
+spur-of-the-moment
 square
+stabilization
 stable
 stake
 standard
+standard-bearer
+standardization
+standing room
+starting line
 statement
+static electricity
 station
+station wagon
+statistically
 status
+steadfastness
+sterilization
 sterling
 stick
+stick-in-the-mud
+Still waters run deep
+stinging cell
+stock certificate
+stock company
+stock exchange
 stone
 store
-straightad
+straight face
+straightforwardness
 strange
+strangulation
 strategy
+stratification
+stratospheric
 strength
 stress
 strike
+strong-minded
 structure
 struggle
 studio
+studio apartment
 stuff
 style
+subconsciously
+subcontractor
 subject
+submicroscopic
+subordination
+suburbanization
 succeed
 success
 successful
 suddenly
 suffer
 suit
+summarization
 summer
 summit
-sun
-sunday
+superannuated
+superficially
+superhigh frequency
+supernumerary
+superorganism
+superstructure
 supply
 suppose
 supposed
-supreme
+supposititious
+Supreme Court
 surface
+surface tension
 surround
 survey
 survive
 suspect
+suspense account
+suspension bridge
+symmetrically
+sympathetically
+synchronization
+synchronously
+systematically
 table
+tablespoonful
+Take your time
 talent
 tape
+tape cartridge
 target
+target language
 task
 taste
+tatterdemalion
 tea
 teach
 tear
 technique
+technologically
 technology
+telecommunication
+telecommuting
+teleconference
+telemarketing
 telephone
+telephone book
+telephone booth
+telephotography
+teleprocessing
+teletypewriter
 television
+temperamental
+Ten Commandments
 tend
 tenth
+tergiversation
+terpsichorean
 terrible
 territory
+tetrahydrocannabinol
+Thank goodness!
+Thanksgiving Day
+That's for sure
+thaumaturgist
 theatre
+then and there
+theoretically
 theory
 therefore
-theyd
-theyve
+thermodynamics
+thermonuclear
+thermosetting
+thick-skinned
 third
 thirteenth
 thirtieth
+thoughtfulness
 threat
 threaten
+three-dimensional
 throughout
 throw
-thursday
+thunderstruck
 thus
+thyroid gland
+Tiananmen Square
 ticket
 tie
-tion
 title
-tomorrowad
 tonight
 touch
 tough
@@ -943,6 +1358,8 @@ track
 traditional
 train
 transfer
+transformation
+transliterate
 transport
 travel
 treat
@@ -950,23 +1367,27 @@ treatment
 treaty
 tree
 trial
-tripvt
 troop
 trouble
 trust
 truth
-tuesday
-tv
 twelfth
 twentieth
 type
+unconditionally
+unconsciousness
+understanding
+unforgettable
+unfortunately
+unidirectional
 unit
 unless
 unlikely
+unnecessarily
+unrestrainedly
 upon
 urge
 use
-used
 useful
 usual
 usually
@@ -982,6 +1403,7 @@ violence
 voice
 volume
 voter
+vulnerability
 warm
 warn
 waste
@@ -990,12 +1412,9 @@ weak
 weapon
 wear
 weather
-wednesday
 weekend
 weight
 welcome
-well
-werent
 whatever
 wild
 will
