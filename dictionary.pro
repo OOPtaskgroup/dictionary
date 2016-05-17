@@ -33,7 +33,9 @@ SOURCES += main.cpp\
     consts.cpp \
     database.cpp \
     lookupwindow.cpp \
-    pwdchangedlg.cpp
+    pwdchangedlg.cpp \
+    exmanagedlg.cpp \
+    addexdlg.cpp
 
 HEADERS  += mainwindow.h \
     consts.h \
@@ -62,7 +64,9 @@ HEADERS  += mainwindow.h \
     worddatabase.h \
     lookupwindow.h \
     pwdchangedlg.h \
-    wordshavebeenrecitedexception.h
+    wordshavebeenrecitedexception.h \
+    exmanagedlg.h \
+    addexdlg.h
 
 FORMS    += mainwindow.ui \
     logindlg.ui \
@@ -70,7 +74,9 @@ FORMS    += mainwindow.ui \
     configdlg.ui \
     recitewindow.ui \
     lookupwindow.ui \
-    pwdchangedlg.ui
+    pwdchangedlg.ui \
+    exmanagedlg.ui \
+    addexdlg.ui
 
 DISTFILES += \
     .gitignore \

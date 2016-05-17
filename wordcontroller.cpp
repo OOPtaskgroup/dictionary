@@ -168,15 +168,21 @@ void WordController :: modifyLearningDifficulty(const int dif)
     log << "INFO now " << dataBase->size() << " words waiting." << std::endl;
 }
 
+std::vector<std::string> WordController :: readDetail(std::string fileName)
+{
+   std::ifstream input(fileName);
+   std::vector<std::string> toReturn;
+   std::string tmp;
+   while(std::getline(input,tmp))
+       toReturn.push_back(tmp);
+   return toReturn;
+}
+
 std::vector<std::string> WordController :: getDetail(WordData* item)
 {
     Logging log("WordController :: getDetail",true);
     log << "INFO getting word " << item->Name() << " detail" << std::endl;
-     std::ifstream input(item->ContentFile());
-    std::vector<std::string> toReturn;
-    std::string tmp;
-    while(std::getline(input,tmp))
-        toReturn.push_back(tmp);
+    std::vector<std::string> toReturn = readDetail(item->ContentFile());
     log << "INFO get " << toReturn.size() << " lines of Detail." << std::endl;
     while(toReturn.size()<4)
     {
@@ -191,3 +197,35 @@ std::vector<std::string> WordController :: getDetail(WordData* item)
     return toReturn;
 }
 
+void WordController::addExample(WordData *word, std::string item)
+{
+    Logging log("WordController :: addExample",true);
+    log << "INFO inserting \"" << item << "\" to word " << word->Name() << std::endl;
+    auto detail = readDetail(word->ContentFile());
+    detail.insert(detail.begin(),item);
+    std::ofstream output(word->ContentFile());
+    for(auto i:detail)
+        output << i << std::endl;
+}
+
+void WordController :: delExample(WordData *word, std::string item)
+{
+    Logging log("WordController :: delExample",true);
+    log << "INFO deleting \"" << item << "\" in word " << word->Name() << std::endl;
+    auto detail = readDetail(word->ContentFile());
+    for(auto i = detail.begin(); i != detail.end(); ++i)
+        if(*i == item)
+        {
+            detail.erase(i);
+            break;
+        }
+    std::ofstream output(word->ContentFile());
+    for(auto i:detail)
+        output << i << std::endl;
+}
+
+std::vector<std::string> WordController::getExample(WordData *word)
+{
+    auto toReturn = readDetail(word->ContentFile());
+    return std::vector<std::string>(toReturn.begin(),toReturn.begin()+toReturn.size()-2);
+}

@@ -39,7 +39,7 @@ private:
     Controller* controller;
 
 protected:
-    void showEvent(QShowEvent *event);
+    void showEvent(QShowEvent *);
 };
 
 #endif // MAINWINDOW_H

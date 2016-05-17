@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "controller.h"
 #include <QCloseEvent>
+#include "exmanagedlg.h"
 
 namespace Ui {
 class LookUpWindow;
@@ -21,6 +22,8 @@ private slots:
     void on_returnBtn_clicked();
 
     void on_addBtn_clicked();
+
+    void on_manageBtn_clicked();
 
 private:
     explicit LookUpWindow(QWidget *parent = 0);

@@ -132,6 +132,21 @@ bool Controller :: isMastered (WordData* item)
     return wordController->isMastered(item);
 }
 
+void Controller::addExample(WordData* word, std::string item)
+{
+    wordController->addExample(word,item);
+}
+
+void Controller::delExample(WordData *word, std::string item)
+{
+    wordController->delExample(word,item);
+}
+
+std::vector<std::string> Controller::getExample(WordData *word)
+{
+    return wordController->getExample(word);
+}
+
 const Configuration& Controller :: getConfig() const
 {
     if(!config) throw ItemNotFoundException((std::string)"config does not exist");
@@ -200,3 +215,4 @@ std::vector<std::string> Controller :: getSearchHistory(UserData* user)
         toReturn.push_back(line);
     return toReturn;
 }
+

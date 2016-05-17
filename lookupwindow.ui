@@ -187,10 +187,27 @@ p, li { white-space: pre-wrap; }
      <string>PushButton</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="manageBtn">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>380</y>
+      <width>151</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/image/buttons/2-0btn_34.png);</string>
+    </property>
+    <property name="text">
+     <string>管 理 例 句</string>
+    </property>
+   </widget>
    <zorder>frame</zorder>
    <zorder>returnBtn</zorder>
    <zorder>gridLayoutWidget</zorder>
    <zorder>addBtn</zorder>
+   <zorder>manageBtn</zorder>
   </widget>
  </widget>
  <resources/>

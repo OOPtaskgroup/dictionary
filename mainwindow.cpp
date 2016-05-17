@@ -75,10 +75,9 @@ void MainWindow::on_logoutBtn_clicked()
 
 }
 
-void MainWindow::showEvent(QShowEvent * event)
+void MainWindow::showEvent(QShowEvent *)
 {
     ui->username->setText(tr("欢迎您！%1").arg(QString::fromStdString(controller->getActiveUser()->Name())));
-    event->accept();
 }
 
 void MainWindow::on_wordEdit_returnPressed()

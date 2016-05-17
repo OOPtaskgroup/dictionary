@@ -39,7 +39,7 @@ void LookUpWindow::setBtn()
 
 void LookUpWindow::closeEvent(QCloseEvent *event)
 {
-    this->parentWidget()->show();
+    parentWidget()->setVisible(true);
     event->accept();
 }
 
@@ -64,7 +64,6 @@ LookUpWindow::~LookUpWindow()
 
 void LookUpWindow::on_returnBtn_clicked()
 {
-    this->parentWidget()->show();
     this->close();
 }
 
@@ -72,4 +71,10 @@ void LookUpWindow::on_addBtn_clicked()
 {
     controller->setLearn(lookUpData);
     setBtn();
+}
+
+void LookUpWindow::on_manageBtn_clicked()
+{
+    ExManageDlg exManageDlg(controller, lookUpData, this);
+    exManageDlg.exec();
 }

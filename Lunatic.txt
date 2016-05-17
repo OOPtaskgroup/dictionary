@@ -1,6 +1,3 @@
-a level
-abbey
-abc
 aboard
 abolish
 abrupt
@@ -19,22 +16,16 @@ acclaim
 accommodate
 accommodation
 accomplish
-accomplished
 accordingly
-accountable
 accountant
 accounting
 accumulate
 accusation
-ace
 ache
 achievement
 acoustic
 acquaintance
-acquit
-acting
 acute
-ad
 adapt
 addict
 addiction
@@ -42,14 +33,11 @@ adhere
 administer
 administrative
 administrator
-admirable
-admiral
 admission
 adolescent
 adore
 adventure
 adverse
-advert
 advertisement
 advisory
 aeroplane
@@ -58,17 +46,11 @@ aesthetic
 affection
 affiliate
 affirm
-aftermath
 aged
 aggregate
 aggression
 agony
-aide
-aint
-airlift
 airplane
-airway
-albeit
 alcoholic
 alien
 alienate
@@ -84,26 +66,18 @@ amaze
 ambiguous
 ambitious
 ambulance
-ambush
 amend
 ammunition
-amnesty
 amongst
 ample
-amusing
-analyse
 ancestor
 anchor
 angel
-angler
-animated
 ankle
 anonymous
 antibiotic
 antibody
 anticipate
-anymore
-apartheid
 apologize
 apology
 appetite
@@ -112,7 +86,6 @@ applause
 appliance
 applicant
 approximate
-apr
 apt
 arch
 archaeology
@@ -135,84 +108,63 @@ ash
 ashamed
 asleep
 aspire
-ass
 assassinate
 assemble
 assert
 assign
 assignment
-assuming
 assurance
 assure
-asthma
 astonishing
 astronomer
 astronomy
 asylum
 athletic
-athletics
 atom
 atomic
-atrocity
 attached
-attacker
-attempted
 attendance
 attendant
 attraction
 attribute
 audio
 audit
-aug
 authentic
 authorize
-autobiography
 automobile
-autonomous
 avenue
 avert
-aviary
 aviation
 awake
 awkward
 axe
-b
 backward
 backwards
 bacon
 bacteria
 bail
 bait
-balanced
 balcony
 bald
 ballet
 balloon
 banana
 bang
-bank
 bankrupt
 bankruptcy
 banner
 bark
 barn
-barrack
 barricade
-barrister
 basement
-bash
 basin
 basket
 basketball
 bass
-bastard
 batch
 bathe
-batsman
-battalion
 batter
 battery
-battlefield
 beam
 beard
 beast
@@ -226,10 +178,8 @@ bench
 beneficial
 bent
 berry
-besiege
 betray
 bias
-bible
 bicycle
 bilateral
 bin
@@ -238,13 +188,9 @@ binding
 biography
 biological
 biology
-birdie
 biscuit
-bitch
 bizarre
-black and white
 blade
-bland
 blank
 blanket
 blaze
@@ -255,67 +201,38 @@ bless
 blessing
 blink
 bloc
-blockade
-bloke
 blonde
-blood pressure
 bloom
 blossom
 blunt
 blur
 boast
-boat people
-bob
-bodily
-bodyguard
-bog
-boiling
 bold
-bolster
 bolt
 bomber
 bonus
 booking
-booklet
 bored
 boring
-borough
 bounce
 boundary
-bout
-bow
 bowel
-bowler
 bowling
-box office
-boxer
 boxing
 boycott
-boyfriend
-br
 brace
 brake
-brandnew
 brass
 breach
-break down
-breakin
 breakthrough
-breakup
 breeze
 brew
 bribe
 brick
 bride
-briefing
 briefly
-brigade
 brink
 brisk
-brit
-briton
-broadcaster
-broadly
 brochure
 bronze
 bruise
@@ -326,8 +243,6 @@ bucket
 bud
 bug
 builder
-building society
-buildup
 bulb
 bulk
 bull
@@ -336,17 +251,13 @@ bulletin
 bully
 bump
 bundle
-bunker
 bureau
 bureaucracy
-bureaucrat
-burning
 bush
 bust
 butterfly
 buzz
 bypass
-c
 cab
 cabbage
 cabin
@@ -366,29 +277,19 @@ cannon
 canvas
 capability
 cape
-capital gains
 capitalism
-capitalist
-capt
 captive
-car park
 carbohydrate
-carbon dioxide
 cardinal
 cargo
-carnival
-carp
 carpet
 carriage
 carrot
 cart
-cartel
 cartoon
 carve
 case
-casino
 cassette
-caste
 casual
 catalogue
 catastrophe
@@ -396,30 +297,23 @@ cater
 cathedral
 cattle
 caution
-cavalry
 ceiling
-celebrated
 celebrity
 cement
 cemetery
 census
 cent
-central government
 ceramic
 cereal
 certainty
 certificate
-challenged
-challenging
 champagne
 chant
 chap
 chapel
 characterize
-charitable
 charm
 charming
-chartered
 cheat
 cheek
 cheerful
@@ -430,30 +324,20 @@ cheque
 cherry
 chess
 chew
-chick
-chief of staff
 chill
-chilli
 chin
 china
 choir
 choke
-cholesterol
 chord
 chorus
-christ
-christianity
 chronic
-chuck
 chunk
-cia
 circular
 circulate
 circulation
 circus
 civic
-civil rights
-civil servant
 civilization
 clamp
 clan
@@ -463,57 +347,36 @@ classroom
 clause
 clay
 cleaner
-cleanse
-cleanup
-clearing
 clerk
 click
 cliff
 climax
-climbing
-clinch
 cling
 clinical
 clip
 closed
-closure
 cloth
 clue
 cluster
 clutch
-cm
 coarse
 cocaine
 cock
-cockpit
 cocktail
-coffin
-coin
 coincide
 coincidence
-cola
-cold war
 collaboration
 collar
-collected
 collision
 colonial
 colony
-colourful
-columnist
-combined
-comeback
-comedian
-comedown
 comet
 comic
 commemorate
 commentary
 commitment
 commodity
-common sense
 commonwealth
-communal
 commute
 compact
 companion
@@ -522,12 +385,9 @@ comparative
 compassion
 compatible
 compel
-compelling
 compensate
 competent
-competing
 compile
-complacent
 complement
 complexity
 complication
@@ -535,34 +395,22 @@ compliment
 comply
 composer
 composite
-compost
 compound
 comprise
 compulsory
-computerize
-computing
-con
 conceal
 conceive
-concentrated
 conception
 concerning
-condom
 conductor
-confederation
 confess
-confession
 confidential
 confine
-confined
 conform
 confuse
-confused
-confusing
 confusion
 congratulate
 congress
-congressman
 conjunction
 connect
 connected
@@ -573,32 +421,24 @@ consensus
 consent
 consequently
 conservation
-conservative party
 conserve
 consideration
 console
 consolidate
-consortium
 conspiracy
-constable
-constituency
 constituent
 constitute
 constraint
 constructive
 consume
-consuming
 consumption
 container
 contaminate
 contemplate
 contempt
 contend
-contender
 content
 contention
-continental
-contingent
 continual
 continuous
 contractor
@@ -609,8 +449,6 @@ convenient
 conversion
 convertible
 convey
-convincing
-convoy
 coordinate
 cop
 copper
@@ -618,7 +456,6 @@ copyright
 cord
 corn
 corps
-corpse
 correction
 correspond
 correspondence
@@ -639,76 +476,56 @@ courtesy
 covering
 cowboy
 crack
-crackdown
 crane
-crap
 crawl
 creation
 creator
 creature
 credible
-credit card
 creditor
 creep
 cripple
 crisp
 criterion
-crook
 cross
-crosscountry
 crossing
 crouch
 crowded
-crown court
 crude
 cruel
 crumble
-crunch
 crush
 cube
-cult
 cultivate
 cupboard
 curb
-curfew
 curiosity
 curl
 curriculum
 curse
 curve
 cushion
-custody
 custom
 customs
 cutoff
 cylinder
 cynical
-d
-daddy
 dairy
 dam
-dame
 damn
-damned
 damp
-dancer
 daring
 darling
 dart
 dash
 dawn
 daylight
-daytoday
 deadly
 deaf
-dealings
 debris
-dec
 decay
 decent
-decisionmaking
 decisive
-decoration
 decorative
 decrease
 decree
@@ -722,10 +539,7 @@ deer
 default
 defect
 defendant
-defender
-defensive
 defiance
-defiant
 deficiency
 definite
 definitive
@@ -733,20 +547,15 @@ defy
 delicate
 delicious
 delightful
-demise
 denial
 denounce
 dense
 dental
 dentist
 depart
-department store
 depict
 deplete
 deploy
-deport
-depressed
-depressing
 deprive
 derive
 descend
@@ -755,12 +564,10 @@ desirable
 despair
 dessert
 destination
-destined
 destiny
 destructive
 detain
 detect
-detention
 deter
 deteriorate
 determination
@@ -771,7 +578,6 @@ developing
 devil
 devise
 devote
-devoted
 diabetes
 diagnose
 diagnosis
@@ -780,7 +586,6 @@ diameter
 diamond
 dictate
 dictator
-dictatorship
 dictionary
 diesel
 differ
@@ -794,12 +599,9 @@ dim
 dimension
 diminish
 dine
-dining room
-dinosaur
 dip
 diplomacy
 directive
-director general
 directory
 dirt
 disability
@@ -807,7 +609,6 @@ disabled
 disadvantage
 disagree
 disagreement
-disappointing
 disappointment
 disastrous
 disc
@@ -817,15 +618,12 @@ disciplinary
 disco
 discomfort
 discourage
-discredit
 discreet
 discretion
 discrimination
 disguise
 disgust
-disintegrate
 dislike
-dismantle
 dismay
 disorder
 dispatch
@@ -834,8 +632,6 @@ displace
 disposal
 dispose
 disrupt
-dissent
-dissident
 dissolve
 distant
 distinct
@@ -850,17 +646,13 @@ distributed
 distributor
 disturb
 disturbance
-disturbed
 ditch
 dive
 diverse
-diversify
 diversity
 divert
 divine
 dizzy
-dj
-dna
 dock
 doctrine
 documentary
@@ -876,18 +668,14 @@ dose
 dot
 doubtful
 down
-down stairs
-downing street
 downtown
 downwards
 dragon
 drastic
-draught
 drawer
 drawing
 dread
 dreadful
-dried
 drill
 drip
 drought
@@ -904,29 +692,20 @@ dwarf
 dye
 dying
 dynamic
-e
 eagle
-earliest
 earnest
 earthquake
-easter
 eccentric
 ecological
-ecu
-ed
-edged
 educate
 educated
 eel
 effectively
 efficiency
-eg
 ego
-eh
 elaborate
 elbow
 elder
-electorate
 electrical
 electron
 electronics
@@ -937,23 +716,18 @@ elite
 embargo
 embark
 embarrass
-embarrassed
 embarrassment
 embrace
-embryo
 emigrate
 emission
 emperor
-enact
 enclose
 encouragement
-encouraging
 endanger
 endeavour
 ending
 endless
 endorse
-endowment
 endure
 energetic
 enforce
@@ -965,20 +739,14 @@ enthusiastic
 entity
 entrepreneur
 envelope
-environmentalist
 envisage
-envoy
 envy
 enzyme
-epic
 epidemic
 episode
-equalize
 equation
 equip
 erect
-erode
-erotic
 erupt
 escalate
 escort
@@ -987,15 +755,10 @@ essence
 established
 estate
 esteem
-et al
 eternal
-ethic
-ethical
 evacuate
 evaluate
 eve
-even
-eventual
 everyday
 evident
 evidently
@@ -1031,14 +794,10 @@ explicit
 explosive
 expulsion
 exquisite
-ext
 extension
 external
 extract
-extradite
-extremist
 eyebrow
-f
 fabulous
 facial
 faculty
@@ -1057,16 +816,11 @@ fascist
 fashionable
 fatal
 fatigue
-fatty
-favourable
 fax
-fbi
 fearful
 feast
 feat
 feather
-feb
-fed up
 feedback
 feeder
 feminine
@@ -1078,11 +832,9 @@ fever
 fibre
 fiction
 filter
-fin
 finding
 finished
 fire
-firstclass
 fisherman
 fishery
 fist
@@ -1094,31 +846,22 @@ flank
 flap
 flare
 flesh
-flick
 fling
 flip
 flock
-flop
-flounder
 flour
 flourish
 fluid
 flush
-fm
 fog
 foil
 follower
-followup
 fond
 foolish
-footage
-footballer
 forbid
 forbidden
 forehead
 foreign
-foreign exchange
-foreign office
 foresee
 forever
 forge
@@ -1146,7 +889,6 @@ fragile
 fragment
 fragrance
 framework
-franc
 franchise
 frank
 frantic
@@ -1154,26 +896,18 @@ freak
 freely
 freight
 frequency
-fri
 fridge
 frighten
 fringe
-front line
-front page
 frontier
-frontiers
 frown
 frozen
-ft
-fulltime
-fundamentalism
 funeral
 fur
 furious
 furthermore
 fury
 fuss
-g
 galaxy
 gallon
 garage
@@ -1185,30 +919,20 @@ gasp
 gathering
 gauge
 gaze
-gb
-gdp
 gel
 gender
 generator
 genetics
 genius
-genre
 geographical
 geography
-georgian
-ghetto
 ghost
-gig
 giggle
-gilt
-girlfriend
-glamorous
 glamour
 glare
 gleam
 glimpse
 glitter
-global warming
 globe
 gloom
 gloomy
@@ -1217,29 +941,18 @@ glory
 glove
 glow
 glue
-gm
-gmt
-gnp
-goahead
-goalkeeper
 goat
 goddess
-gold medal
 goodbye
-goodlooking
 goodness
 goodwill
 goose
-gore
 gorgeous
-gospel
 gossip
 gown
-gp
 grace
 gram
 grammar
-grand prix
 grandchild
 grandfather
 grandmother
@@ -1250,8 +963,6 @@ grate
 grateful
 gravity
 graze
-great britain
-greater
 greenhouse
 greet
 grief
@@ -1262,22 +973,18 @@ grind
 groan
 groove
 grove
-grower
 guardian
 guidance
 guideline
 guild
 guilt
 gum
-gunman
 gut
 gym
 gypsy
-h
 habitat
 hack
 hail
-halftime
 halfway
 halve
 ham
@@ -1289,8 +996,6 @@ handicapped
 handsome
 handy
 harden
-hardline
-hardliner
 hardship
 hardware
 hardy
@@ -1307,14 +1012,10 @@ haunt
 haven
 hawk
 hazard
-head of state
 headache
-headon
 heap
-heart attack
 heated
 heating
-heavyweight
 hedge
 heel
 heighten
@@ -1333,29 +1034,16 @@ heroin
 heroine
 hers
 hesitate
-heterosexual
 hey
 hidden
-hiding
 hierarchy
-high court
-high school
-high street
-high tech
-higher education
 highway
 hike
-hindu
-hispanic
 historian
 hobby
-hockey
 holding
 hollow
-home office
-home secretary
 homeland
-honestly
 honesty
 honey
 hop
@@ -1370,14 +1058,11 @@ horrify
 hostel
 hostile
 hound
-house of commons
 hover
 howl
 hug
-huh
 hull
 hum
-human being
 humanitarian
 humanity
 humble
@@ -1385,19 +1070,13 @@ humiliation
 hunger
 hungry
 hunting
-hurdle
 hurl
 hurricane
 hurry
 hut
 hybrid
 hydrogen
-hype
-i
-ibid
-ice cream
 identical
-ideological
 ideology
 idiot
 idle
@@ -1405,10 +1084,8 @@ ie
 ignorant
 illusion
 imaginative
-imf
 immense
 imminent
-immune system
 impatient
 imperial
 implicit
@@ -1418,16 +1095,11 @@ impulse
 in
 inability
 inadequate
-inappropriate
 incentive
 incidentally
-income tax
 incorporate
-incumbent
 incur
 indicator
-indictment
-indie
 indirect
 indoor
 induce
@@ -1453,28 +1125,20 @@ injection
 injustice
 ink
 inland
-inmate
 inn
-inner city
-inning
-innings
 innocence
 innovation
-innovative
 input
 inquire
 insane
 insect
-insecure
 insert
 insider
 insight
-insistence
 instability
 installation
 instinct
 instinctive
-institutional
 instruction
 instructor
 insufficient
@@ -1486,7 +1150,6 @@ integrity
 intensify
 intensive
 intent
-inter
 interact
 intercourse
 interfere
@@ -1500,57 +1163,41 @@ intervene
 intimate
 intimidate
 intrigue
-intriguing
 introduction
 invade
 invariably
 invent
 invention
 inventory
-investigator
 invisible
 ironic
 irony
 irregular
-irrelevant
 irresistible
 irritate
 irritation
 isle
-isolated
 isolation
-itv
 ivory
-j
 jack
 jam
-jan
 jar
 jaw
 jealous
 jeans
 jerk
 jewel
-jewellery
 jingle
 jobless
-jockey
 jolly
 journalism
-jr
-ju
 judicial
-judiciary
-jul
 jumper
 junction
 jungle
 junk
-junk bond
 justification
-justified
 juvenile
-k
 keeper
 keyboard
 kidnap
@@ -1558,12 +1205,9 @@ kind
 kindly
 kingdom
 kit
-km
 knight
 knit
 knot
-kremlin
-l
 lab
 lace
 ladder
@@ -1572,15 +1216,12 @@ lamb
 lamp
 landing
 landlord
-landmark
-largescale
 laser
 lash
 last
 lasting
 lately
 lavish
-law and order
 lawmaker
 lawn
 lawsuit
@@ -1589,8 +1230,6 @@ lb
 lead
 leaflet
 lecturer
-lefthand
-leftwing
 legacy
 legend
 legendary
@@ -1600,16 +1239,11 @@ legitimate
 leisure
 lemon
 lengthy
-lesbian
 lesser
 lethal
-leverage
 levy
 liability
 liable
-libel
-liberal democrat
-liberalize
 license
 lid
 lieutenant
@@ -1639,31 +1273,22 @@ litre
 litter
 lively
 liver
-living room
 loaded
 locate
-locked
 locomotive
 lodge
 log
 logic
 logical
 logo
-lone
 long
-longrange
-longstanding
 loom
 loop
 loosen
-loot
 lorry
-loser
 lounge
-loving
 loyal
 loyalty
-lp
 lucrative
 lump
 lunchtime
@@ -1671,43 +1296,30 @@ lung
 lure
 lynch
 lyric
-m
 machine gun
 machinery
-made
-mafia
-maggot
 magical
 magistrate
 magnetic
 magnificent
 maid
-mail order
-main land
-main stream
 maintenance
 majesty
 making
-man date
-managing director
 manifest
 manifesto
 manipulate
 manoeuvre
-manor
 mansion
 manual
 manuscript
 mar
 marathon
 marble
-mare
 marginal
-market share
 marshal
 martial
 marvellous
-marxist
 massacre
 massage
 masterpiece
@@ -1725,10 +1337,8 @@ mediate
 medication
 medieval
 meditate
-mediterranean
 melody
 melt
-member of parliament
 memorable
 memorial
 menu
@@ -1741,15 +1351,12 @@ meter
 metropolitan
 microphone
 microwave
-middleaged
-midlands
 midst
 mighty
 migrant
 migrate
 militia
 millionaire
-min
 mine
 mineral
 miniature
@@ -1766,7 +1373,6 @@ mist
 mistaken
 mistress
 misunderstand
-mo
 moan
 mob
 mobilize
@@ -1796,7 +1402,6 @@ motive
 motorist
 motorway
 mould
-mounted
 mouse
 moving
 mud
@@ -1812,7 +1417,6 @@ mushroom
 mute
 mutter
 mysterious
-n
 nadir
 nail
 naive
@@ -1820,28 +1424,17 @@ naked
 namely
 nanny
 narrative
-nasa
 nasty
-national curriculum
 national park
 nationality
 nationwide
 necessity
 needle
 neglect
-neighbourhood
-neighbouring
 nest
 neutral
-new world
-new year
 newcomer
-news conference
-newsreel
-next door
-nhs
 nicely
-nick
 nickname
 nightclub
 nil
@@ -1859,21 +1452,17 @@ notably
 notebook
 noticeable
 notorious
-nov
 novelist
 novice
 nowadays
-number one
 nun
 nursery
 nurture
 nut
 nutrient
 nutrition
-o
 oak
 obey
-obituary
 objection
 obligation
 oblige
@@ -1882,29 +1471,18 @@ observation
 obsess
 obsession
 obstacle
-oct
 odds
 offend
 offender
 offset
 offshore
-old boy
-old fashioned
 olive
-olive oil
-olympic games
 omit
-oneoff
-onetime
 ongoing
 onion
-ooh
-op
-opec
 openly
 operational
 operative
-opinion poll
 optimism
 oral
 orbit
@@ -1946,18 +1524,12 @@ overturn
 overwhelm
 owl
 oxygen
-oz
 ozone
-p
 packaging
-packed
 packet
 packing
 pad
-pagan
-paid
 painter
-pal
 palm
 pants
 paperback
@@ -1970,14 +1542,10 @@ parcel
 pardon
 parish
 parking
-parsley
-parson
 partial
 partially
 participant
 particle
-parttime
-passing
 passionate
 passive
 passport
@@ -1993,9 +1561,7 @@ patrol
 patron
 pave
 pavement
-pc
 pea
-peacekeeping
 peach
 pearl
 peasant
@@ -2027,7 +1593,6 @@ pharmaceutical
 phenomenon
 philosopher
 philosophical
-phone call
 photographic
 photography
 physician
@@ -2055,23 +1620,17 @@ plague
 planner
 plantation
 playwright
-plc
-ple
 plea
 plead
 plight
 plough
 plug
-pm
-po box
 pointed
 poised
 poison
-police force
 police station
 polish
 polite
-poll tax
 pollute
 polytechnic
 pond
@@ -2094,12 +1653,10 @@ postcard
 poster
 postpone
 posture
-postwar
 potent
 potter
 powder
 power station
-pr
 practically
 practise
 practitioner
@@ -2127,12 +1684,10 @@ prescription
 present
 presentation
 preside
-presidentelect
 press conference
 prestige
 prestigious
 presume
-pretax
 pretend
 prevail
 preview
@@ -2142,7 +1697,6 @@ primary school
 primitive
 printer
 privacy
-private sector
 privilege
 privileged
 pro
@@ -2186,7 +1740,6 @@ psychotherapy
 public opinion
 public relations
 public school
-public sector
 publicize
 pudding
 pulse
@@ -2197,17 +1750,12 @@ purely
 purple
 purse
 pursuit
-put out
-putdown
 putt
 puzzle
-q
-qc
 qualification
 qualifier
 quantum
 quarrel
-quarterfinal
 quarterly
 quartet
 query
@@ -2215,14 +1763,12 @@ quest
 queue
 quit
 quota
-r
 rabbit
 racism
 rack
 radar
 radiation
 radioactive
-raf
 rag
 rainbow
 random
@@ -2235,13 +1781,9 @@ ratio
 rational
 rattle
 rave
-rc
-rd
 reactor
 readily
 real estate
-real life
-real world
 realistic
 realm
 reassure
@@ -2256,10 +1798,8 @@ reconcile
 recorder
 recreation
 recycle
-red cross
 redundancy
 redundant
-reelect
 referee
 reflection
 refreshing
@@ -2281,7 +1821,6 @@ reinforce
 relay
 relegate
 relentless
-reliant
 relieve
 relieved
 relish
@@ -2295,10 +1834,8 @@ render
 rental
 reopen
 reorganize
-rep
 repatriate
 repay
-repayment
 repeated
 replay
 reportedly
@@ -2315,7 +1852,6 @@ residential
 resigned
 resistant
 respectable
-respected
 respectively
 restless
 restoration
@@ -2329,11 +1865,9 @@ retaliate
 retired
 retort
 retrieve
-rev
 revealing
 revelation
 revenge
-reverend
 revise
 revival
 revive
@@ -2346,8 +1880,6 @@ ridiculous
 riding
 rifle
 rig
-righthand
-righton
 rigid
 rigorous
 rip
@@ -2362,15 +1894,12 @@ rob
 robust
 rod
 roller
-roman catholic
 romance
 rope
 rot
 rotten
-rouble
 round
 row
-royal family
 royalty
 rub
 rubber
@@ -2379,11 +1908,7 @@ rude
 rue
 rug
 ruler
-runin
-runnerup
-runup
 ruthless
-s
 sacred
 saddle
 safari
@@ -2423,7 +1948,6 @@ scholarship
 scoop
 scope
 scorer
-scots
 scramble
 scrap
 scrape
@@ -2433,7 +1957,6 @@ scrub
 scrutiny
 sculpture
 seasonal
-second world war
 secondary
 secondly
 secrecy
@@ -2441,18 +1964,13 @@ seduce
 seldom
 selective
 selector
-selfesteem
 selfish
 seller
-semifinal
 seminar
 sensation
-sense of humour
 sentiment
 sentimental
-sep
 separatist
-sept
 sequence
 sergeant
 serial
@@ -2465,11 +1983,9 @@ sexuality
 sexy
 shaft
 shallow
-shattered
 shave
 sheep
 sheer
-sheikh
 shelf
 shepherd
 sherry
@@ -2493,14 +2009,11 @@ shrug
 shuffle
 shuttle
 shy
-sic
 sickness
-sideeffect
 siege
 signature
 significance
 signing
-sikh
 silk
 silly
 similarity
@@ -2512,8 +2025,6 @@ sincere
 singing
 sinister
 sip
-sitdown
-sitin
 situated
 skate
 skeleton
@@ -2547,9 +2058,6 @@ soak
 soap
 soar
 sober
-social security
-social services
-social worker
 socialism
 socialize
 sociology
@@ -2723,7 +2231,6 @@ symphony
 syndicate
 syndrome
 systematic
-t
 tablespoon
 tablet
 tabloid
@@ -2731,12 +2238,10 @@ tack
 tactical
 tag
 tailor
-tampon
 tan
 tangle
 tanker
 tariff
-task force
 taxation
 taxi
 taxpayer
@@ -2752,7 +2257,6 @@ telescope
 televise
 temper
 temptation
-tempted
 tenant
 tender
 tense
@@ -2780,7 +2284,6 @@ thief
 thigh
 thoughtful
 thread
-threequarters
 threshold
 thrift
 thrill
@@ -2790,7 +2293,6 @@ throne
 thrust
 thumb
 thunder
-thurs
 tick
 tidy
 tighten
@@ -2800,7 +2302,6 @@ timber
 timetable
 timing
 tin
-titled
 tobacco
 toe
 toilet
@@ -2812,18 +2313,13 @@ tomato
 tongue
 tonne
 topic
-topical
-topple
 torch
 torment
 toss
 tourism
 tow
 towel
-township
 toxic
-trade union
-tradein
 tragic
 trailer
 transcript
@@ -2835,7 +2331,6 @@ transmission
 transmit
 transplant
 transportation
-trapped
 trauma
 tray
 tread
@@ -2846,44 +2341,30 @@ tribe
 tribunal
 tribute
 tricky
-trillion
 trim
-trio
 triple
-trophy
 tropical
-troubled
 trousers
 truce
 trumpet
 trunk
-trustee
-tshirt
 tuck
-tues
 tug
 tumble
-tumour
 turmoil
 turnover
 tutor
-twothirds
 typically
 tyre
-u
 ugly
-uh huh
 umbrella
-umpire
 unacceptable
 unanimous
 unaware
-unbeaten
 unbelievable
 uncertain
 uncertainty
 unchanged
-unclear
 uncomfortable
 unconditional
 unconscious
@@ -2893,11 +2374,8 @@ undergo
 underline
 underlying
 underneath
-understandable
 undertake
-underway
 underwrite
-undoubted
 uneasy
 unemployed
 unfold
@@ -2905,23 +2383,17 @@ unfortunate
 unification
 unify
 unite
-united kingdom
 universal
-unleash
 unnecessary
-unofficial
 unpleasant
-unpopular
 unprecedented
 unpredictable
 unrest
 unsuccessful
-unusually
 unveil
 unwanted
 unwilling
 up
-up to date
 update
 upgrade
 uphold
@@ -2936,7 +2408,6 @@ utility
 utilize
 utter
 utterly
-v
 vacation
 vaccine
 vacuum
@@ -2948,8 +2419,6 @@ vanish
 variable
 variation
 varied
-vat
-vatican
 vegetarian
 vein
 velvet
@@ -2960,24 +2429,17 @@ verse
 versus
 vertical
 vest
-vet
 veto
 viable
-vicar
 vicious
 victor
-victorian
-videotape
 viewer
 viewpoint
 vigorous
 villa
-villager
 vine
 vinegar
 vineyard
-vintage
-vinyl
 violin
 virgin
 virtual
@@ -2987,15 +2449,12 @@ visual
 visualize
 vivid
 vocal
-vocals
 vogue
 volatile
 volcano
 voucher
 vow
 voyage
-vs
-w
 wagon
 waist
 waiter
@@ -3007,24 +2466,19 @@ warehouse
 warfare
 warmth
 warrant
-warring
 warrior
-wartime
 wary
 wax
-way of life
 weakness
 wealthy
 weary
 weave
 wed
 wedge
-wee
 weed
 weep
 weird
 well
-wellbeing
 whale
 wharf
 whatsoever
@@ -3032,37 +2486,24 @@ wheat
 wheelchair
 whereby
 wherever
-whisk
 whisky
 whistle
-white paper
-whitehall
 whoever
 wholesale
 wholly
 wicked
 widen
 widow
-wig
 wilderness
 wildlife
-wildly
-winger
 wisdom
 wit
 witch
 withhold
 witty
-woo
-woodland
 wool
-workforce
-working class
-workplace
 workshop
 worm
-worrying
-worsen
 worship
 worthwhile
 worthy

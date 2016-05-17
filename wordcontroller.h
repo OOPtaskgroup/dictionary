@@ -30,8 +30,12 @@ public:
     int getLearningWordCount();
     void modifyLearningDifficulty(const int dif);
     std::vector<std::string> getDetail(WordData* item);
+    void addExample(WordData* word, std::string item);
+    void delExample(WordData* word, std::string item);
+    std::vector<std::string> getExample(WordData* word);
 private:
     std::vector<WordData*> getWord(int type);
     std::vector<WordData*> getWord(int typel,int typer);
+    std::vector<std::string> readDetail(std::string fileName);
 };
 #endif

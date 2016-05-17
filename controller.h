@@ -36,7 +36,9 @@ public:
     std::vector<std::string> getDetail(WordData* item);
     bool isLearning(WordData* item);
     bool isMastered(WordData* item);
-
+    void addExample(WordData* word, std::string item);
+    void delExample(WordData* word, std::string item);
+    std::vector<std::string> getExample(WordData* word);
 private:
     Configuration* config;
 public:

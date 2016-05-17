@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ExManageDlg</class>
+ <widget class="QDialog" name="ExManageDlg">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>552</width>
+    <height>347</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>552</width>
+    <height>347</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>552</width>
+    <height>347</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>管理例句</string>
+  </property>
+  <widget class="QListWidget" name="exList">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>30</y>
+     <width>361</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 180);</string>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="detailBrowser">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>200</y>
+     <width>361</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 180);</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="addBtn">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>50</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/image/buttons/2-0btn_26.png);</string>
+   </property>
+   <property name="text">
+    <string>添  加</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="delBtn">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>100</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/image/buttons/2-0btn_26.png);</string>
+   </property>
+   <property name="text">
+    <string>删  除</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="exitBtn">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>260</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/image/buttons/2-0btn_26.png);</string>
+   </property>
+   <property name="text">
+    <string>返  回</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>-40</x>
+     <y>0</y>
+     <width>601</width>
+     <height>351</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/image/img/manage_background.jpg);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <zorder>frame</zorder>
+  <zorder>exList</zorder>
+  <zorder>detailBrowser</zorder>
+  <zorder>addBtn</zorder>
+  <zorder>delBtn</zorder>
+  <zorder>exitBtn</zorder>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>exitBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>ExManageDlg</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>469</x>
+     <y>262</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>447</x>
+     <y>215</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
