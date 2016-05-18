@@ -40,3 +40,4 @@ std::ofstream& Logging::operator << ( T x )
 }
 
 template std::ofstream& Logging::operator << ( std::string x);
+template std::ofstream& Logging::operator << ( char const* x);

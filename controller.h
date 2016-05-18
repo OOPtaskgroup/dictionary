@@ -15,6 +15,7 @@ private:
     UserController* userController;
 public:
     void Login(std::string ID, std::string passwd);
+    void Login(UserData* user);
     void Logout();
     UserData* userRegister(std::string ID, std::string passwd);
     UserData* getActiveUser();

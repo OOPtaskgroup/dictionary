@@ -30,6 +30,13 @@ void Controller :: Login (std::string ID, std::string passwd)
     config = new Configuration("userdatas"+_SLASH+ID+_SLASH+"config");
 }
 
+void Controller :: Login (UserData* user)
+{
+    userController->userLogin(user);
+    wordController = new WordController("userdatas" + _SLASH+user->Name()+_SLASH+"words");
+    config = new Configuration("userdatas"+_SLASH+user->Name()+_SLASH+"config");
+}
+
 void Controller :: Logout()
 {
     if(!getActiveUser())throw ItemNotFoundException((std::string)"no user now.");
