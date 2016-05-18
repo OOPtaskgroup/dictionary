@@ -1,19 +1,25 @@
 #include "lookupwindow.h"
 #include "ui_lookupwindow.h"
-#include <QMessageBox>
+#include "exmanagedlg.h"
 
 bool LookUpWindow::showWord(WordData* word)
 {
     auto wordDetail = controller->getDetail(word);
     ui->wordLabel->setText(QString::fromStdString(word->Name()));
     ui->exampleBrowser->setVisible(true);
-    ui->exampleBrowser->setText(QString::fromStdString(*wordDetail.begin()) + "\n" + QString::fromStdString(*(wordDetail.begin() + 1)));
+    auto example = controller->getExample(lookUpData);
+    QString exampleText("");
+    for (auto i : example)
+    {
+        exampleText += QString::fromStdString(i) + "\n";
+    }
+    ui->exampleBrowser->setText(exampleText);
     ui->exampleLabel->setVisible(true);
     ui->engBrowser->setVisible(true);
-    ui->engBrowser->setText(QString::fromStdString(*(wordDetail.begin() + 2)));
+    ui->engBrowser->setText(QString::fromStdString(*(wordDetail.begin() + wordDetail.size() - 2)));
     ui->engLabel->setVisible(true);
     ui->chnBrowser->setVisible(true);
-    ui->chnBrowser->setText(QString::fromStdString(*(wordDetail.begin() + 3)));
+    ui->chnBrowser->setText(QString::fromStdString(*(wordDetail.begin() + wordDetail.size() - 1)));
     ui->chnLabel->setVisible(true);
     return true;
 }
@@ -35,6 +41,11 @@ void LookUpWindow::setBtn()
         ui->addBtn->setText("加 入 学 习");
         ui->addBtn->setEnabled(true);
     }
+}
+
+void LookUpWindow::refresh()
+{
+    showWord(lookUpData);
 }
 
 void LookUpWindow::closeEvent(QCloseEvent *event)
@@ -75,6 +86,9 @@ void LookUpWindow::on_addBtn_clicked()
 
 void LookUpWindow::on_manageBtn_clicked()
 {
-    ExManageDlg exManageDlg(controller, lookUpData, this);
-    exManageDlg.exec();
+    ExManageDlg* exManageDlg = new ExManageDlg(controller, lookUpData, this);
+    if (exManageDlg->exec() == QDialog::Accepted)
+    {
+        refresh();
+    }
 }

@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include "controller.h"
 #include <QCloseEvent>
-#include "exmanagedlg.h"
+#include <QMessageBox>
 
 namespace Ui {
 class LookUpWindow;
@@ -33,6 +33,7 @@ private:
     Ui::LookUpWindow *ui;
     Controller *controller;
     void setBtn();
+    void refresh();
 
 protected:
     void closeEvent(QCloseEvent *event);

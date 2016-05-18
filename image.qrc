@@ -6,8 +6,8 @@
         <file>buttons/btn_08.png</file>
         <file>buttons/2-0btn_33.png</file>
         <file>buttons/2-0btn_34.png</file>
-        <file>img/manage_background.jpg</file>
         <file>buttons/2-0btn_26.png</file>
+        <file>img/manage_background.jpg</file>
     </qresource>
     <qresource prefix="/buttons">
         <file>buttons/2-0btn_07.png</file>

@@ -29,6 +29,7 @@ private:
     Controller *controller;
     WordData *srcWord;
     void setItem();
+
 };
 
 #endif // EXMANAGEDLG_H

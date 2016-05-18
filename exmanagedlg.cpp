@@ -1,13 +1,13 @@
 #include "exmanagedlg.h"
 #include "ui_exmanagedlg.h"
 
-ExManageDlg::ExManageDlg(Controller *controller, WordData* word, QWidget *parent) :
+ExManageDlg::ExManageDlg(Controller* controller, WordData *word, QWidget *parent) :
     QDialog(parent),
-    controller(controller),
-    srcWord(word),
     ui(new Ui::ExManageDlg)
 {
     ui->setupUi(this);
+    this->controller = controller;
+    this->srcWord = word;
     setItem();
 }
 

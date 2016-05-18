@@ -141,7 +141,7 @@
    <sender>exitBtn</sender>
    <signal>clicked()</signal>
    <receiver>ExManageDlg</receiver>
-   <slot>close()</slot>
+   <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>469</x>
