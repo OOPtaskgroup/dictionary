@@ -34,10 +34,13 @@ private slots:
 
     void on_wordEdit_returnPressed();
 
+    void on_themeBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
     Controller* controller;
-
+    void setTheme(QString themeFile);
+    int theme;
 protected:
     void showEvent(QShowEvent *);
 };

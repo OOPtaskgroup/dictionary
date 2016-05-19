@@ -50,7 +50,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;这是一款非常厉害的背单词软件！ &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QFrame" name="frame">
+   <widget class="QFrame" name="bgImg">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -72,7 +72,7 @@ p, li { white-space: pre-wrap; }
      </size>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/image/img/main_background.png);</string>
+     <string notr="true"/>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -96,8 +96,7 @@ p, li { white-space: pre-wrap; }
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(170, 0, 255);
-</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>欢迎您！ 尊敬的用户！</string>
@@ -113,7 +112,7 @@ p, li { white-space: pre-wrap; }
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/image/buttons/btn_08.png);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>登 出</string>
@@ -129,7 +128,7 @@ p, li { white-space: pre-wrap; }
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/image/buttons/btn_08.png);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>背  单  词</string>
@@ -145,7 +144,7 @@ p, li { white-space: pre-wrap; }
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/image/buttons/btn_08.png);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>设  置</string>
@@ -161,7 +160,7 @@ p, li { white-space: pre-wrap; }
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/image/buttons/btn_08.png);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>退  出</string>
@@ -177,7 +176,7 @@ p, li { white-space: pre-wrap; }
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(201, 246, 255, 120);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string/>
@@ -196,13 +195,26 @@ p, li { white-space: pre-wrap; }
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/image/buttons/btn_08.png);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>查  单  词</string>
     </property>
    </widget>
-   <zorder>frame</zorder>
+   <widget class="QPushButton" name="themeBtn">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>440</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>换  肤</string>
+    </property>
+   </widget>
+   <zorder>bgImg</zorder>
    <zorder>reciteBtn</zorder>
    <zorder>configBtn</zorder>
    <zorder>exitBtn</zorder>
@@ -211,6 +223,7 @@ p, li { white-space: pre-wrap; }
    <zorder>logoutBtn</zorder>
    <zorder>username</zorder>
    <zorder>textBrowser</zorder>
+   <zorder>themeBtn</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

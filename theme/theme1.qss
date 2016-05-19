@@ -1,0 +1,15 @@
+QFrame#bgImg {
+    border-image: url(:/image/img/main_background.png);
+}
+
+QPushButton {
+    border-image: url(:/image/buttons/btn_08.png);
+}
+
+QLineEdit {
+    background-color: rgba(201, 246, 255, 120);
+}
+
+QLabel {
+    color: rgb(170, 0, 255);
+}

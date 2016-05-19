@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>theme/theme1.qss</file>
+        <file>theme/theme2.qss</file>
+    </qresource>
+</RCC>

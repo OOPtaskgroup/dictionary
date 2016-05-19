@@ -94,6 +94,7 @@ DISTFILES += \
 
 RESOURCES += \
     image.qrc \
-    buttons.qrc
+    buttons.qrc \
+    theme.qrc
 
 CONFIG += C++11
