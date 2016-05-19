@@ -33,7 +33,7 @@ private slots:
 
 private:
     bool doRecite();
-    std::vector<std::pair<WordData *, int>>& recitingWords;
+    std::vector<std::pair<WordData *, int> >& recitingWords;
     std::pair<WordData*, int>& findNextWord();
     bool showWord(std::pair<WordData*, int>& word);
     Ui::ReciteWindow *ui;

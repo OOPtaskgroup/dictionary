@@ -58,7 +58,7 @@ void RegDlg::on_regBtn_clicked()
 {
     try
     {
-        controller->userRegister(ui->usrEdit->text().toStdString(), ui->pwdEdit->text().toStdString());
+        controller->Login(controller->userRegister(ui->usrEdit->text().toStdString(), ui->pwdEdit->text().toStdString()));
         ConfigDlg configDlg(controller, this);
         configDlg.exec();
         accept();
