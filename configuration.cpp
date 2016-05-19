@@ -9,11 +9,15 @@ Configuration :: Configuration(const std::string& fileName)
         int dif,num;
         input >> dif >> num;
         modify(dif,num);
+        std::string tm;
+        input >> tm;
+        modifyTheme(tm);
     }
     else
     {
         input.close();
         modify(1,50);
+        modifyTheme();
         save();
     }
 }
@@ -48,4 +52,14 @@ const int Configuration :: DailyNumber()const
 const int Configuration :: Difficulty()const
 {
     return difficulty;
+}
+
+std::string Configuration :: getTheme()const
+{
+    return theme;
+}
+
+void Configuration :: modifyTheme(std::string nowTheme)
+{
+    theme=nowTheme;
 }

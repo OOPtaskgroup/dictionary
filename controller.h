@@ -48,6 +48,8 @@ public:
     void modifyConfig(const Configuration& newConfig);
     void modifyConfig(const int& dif, const int&num);
     std::vector<std::string> getSearchHistory(UserData* user);
+    void modifyTheme(std::string nowTheme);
+    void setTheme();
 
 public:
     Controller (const std::string defaultUserFile="EMPTY");

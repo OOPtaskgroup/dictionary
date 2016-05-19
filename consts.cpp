@@ -6,3 +6,4 @@ const int __legalDailyNumberCount = 11;
 const std::set<int> __legalDailyNumbers(__legalDailyNumberList,__legalDailyNumberList+__legalDailyNumberCount);
 const double __newPart = 0.27;
 const int __timesContiniouslyLimit = 4;
+const std::string __defaultTheme = "2233";

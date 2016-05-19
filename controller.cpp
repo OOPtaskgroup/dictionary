@@ -248,3 +248,12 @@ std::vector<std::string> Controller :: getSearchHistory(UserData* user)
     return toReturn;
 }
 
+void Controller :: modifyTheme(std::string nowTheme)
+{
+    config->modifyTheme(nowTheme);
+}
+
+void Controller :: setTheme()
+{
+    auto theme = config->getTheme();
+}

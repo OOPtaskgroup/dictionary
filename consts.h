@@ -8,5 +8,6 @@ extern const int __legalDailyNumberCount;
 extern const std::set<int> __legalDailyNumbers;
 extern const double __newPart;
 extern const int __timesContiniouslyLimit;
+extern const std::string __defaultTheme;
 
 #endif
