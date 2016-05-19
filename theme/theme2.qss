@@ -11,5 +11,5 @@ QLineEdit {
 }
 
 QLabel {
-    color: rgb(255, 0, 127);
+color: rgb(255, 0, 127);
 }

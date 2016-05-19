@@ -11,14 +11,25 @@ LoginDlg::LoginDlg(QWidget *parent) :
     ui(new Ui::LoginDlg)
 {
     ui->setupUi(this);
-    ui->loginBtn->setDefault(true);
-    ui->usrEdit->setFocus();
 }
 
 LoginDlg::LoginDlg(Controller *controller, QWidget *parent) :
     LoginDlg(parent)
 {
     this->controller = controller;
+    ui->loginBtn->setDefault(true);
+    auto defaultUser = controller->getDefaultUser();
+    ui->usrEdit->setText(QString::fromStdString(defaultUser.first));
+    ui->pwdEdit->setText(QString::fromStdString(defaultUser.second));
+    if (defaultUser.first == "")
+    {
+        ui->usrEdit->setFocus();
+    }
+    else if (defaultUser.second == "")
+    {
+        ui->pwdEdit->setFocus();
+        ui->remCheck->setChecked(false);
+    }
 }
 
 LoginDlg::~LoginDlg()
@@ -30,12 +41,12 @@ void LoginDlg::on_loginBtn_clicked()
 {
     try
     {
-        controller->Login(ui->usrEdit->text().toStdString(), ui->pwdEdit->text().toStdString());
+        controller->Login(ui->usrEdit->text().toStdString(), ui->pwdEdit->text().toStdString(), ui->remCheck->isChecked());
         accept();
     }
     catch(PasswordNotCorrectException exce)
     {
-        QMessageBox warningBox(QMessageBox::Warning, "出错啦！", "用户名或密码错误！");
+        QMessageBox warningBox(QMessageBox::Warning, "出错啦！", "密码错误！");
         warningBox.setStandardButtons(QMessageBox::Retry);
         warningBox.setButtonText(QMessageBox::Retry, "重试");
         warningBox.exec();
@@ -67,4 +78,9 @@ void LoginDlg::on_regBtn_clicked()
         ui->pwdEdit->clear();
         ui->usrEdit->setFocus();
     }
+}
+
+void LoginDlg::on_usrEdit_textChanged(const QString &arg1)
+{
+    ui->pwdEdit->clear();
 }
