@@ -28,6 +28,7 @@ public:
 
     void userLogout();
     void userLogin(UserData* toLogin);
+    UserData* findUser(std::string ID);
     UserData* checkIn(std::string ID, std::string passwd);
     UserData* userRegister(std::string ID, std::string passwd);
     UserData* getActiveUser();

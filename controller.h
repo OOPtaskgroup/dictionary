@@ -14,12 +14,13 @@ class Controller
 private:
     UserController* userController;
 public:
-    void Login(std::string ID, std::string passwd);
-    void Login(UserData* user);
+    void Login(std::string ID, std::string passwd, bool remPasswd = false);
+    void Login(UserData* user, bool remPasswd = false);
     void Logout();
     UserData* userRegister(std::string ID, std::string passwd);
     UserData* getActiveUser();
     void userModifyPassword(UserData* user, std::string passwd, std::string newPasswd);
+    std::pair<std::string,std::string> getDefaultUser();
 private:
     WordController* wordController;
     std::vector< std::pair<WordData*,int> > nowRecitingWords;
@@ -53,6 +54,7 @@ public:
     ~Controller ();
 
 private:
+    void reWriteDefault(UserData* user, bool remPasswd);
     void reWriteTodayWords();
     void getTodayWords();
 };

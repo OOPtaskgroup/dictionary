@@ -35,19 +35,27 @@ void UserController :: userLogin(UserData* toLogin)
     }
 }
 
+UserData* UserController :: findUser(std::string ID)
+{
+    Logging log("UserController :: findUser",true);
+    for(auto i = dataBase->begin(); i != dataBase->end(); ++i)
+        if( (*i)->Name() == ID)
+            return *i;
+    return nullptr;
+}
+
 UserData* UserController :: checkIn(std::string ID, std::string passwd)
 {
     Logging log("UserController :: checkIn",true);
-    for(auto i = dataBase->begin(); i != dataBase->end(); ++i)
-        if( (*i)->Name() == ID)
-        {
-            log << "INFO catch user " << ID << "." <<std::endl;
-            if( (*i)->Password() == passwd)
-                return *i;
-            else
-                throw PasswordNotCorrectException((std::string)"password wrong!");
-        }
-    throw ItemNotFoundException((std::string)"user not exist!");
+    UserData* toReturn = findUser(ID);
+    if(toReturn)
+    {
+        if(toReturn->Password() == passwd)
+            return toReturn;
+        else
+            throw PasswordNotCorrectException((std::string)"password wrong!");
+    }
+    else throw ItemNotFoundException((std::string)"user not exist!");
 }
 
 UserData* UserController :: userRegister(std::string ID, std::string passwd)

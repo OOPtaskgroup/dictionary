@@ -21,20 +21,19 @@ Controller :: ~Controller ()
     if(userController) delete userController;
 }
 
-void Controller :: Login (std::string ID, std::string passwd)
+void Controller :: Login (std::string ID, std::string passwd, bool remPasswd)
 {
     Logging log("Controller :: Login",true);
     UserData* toLogin = userController->checkIn(ID,passwd);
-    userController->userLogin(toLogin);
-    wordController = new WordController("userdatas"+_SLASH+ID+_SLASH+"words");
-    config = new Configuration("userdatas"+_SLASH+ID+_SLASH+"config");
+    Login(toLogin,remPasswd);
 }
 
-void Controller :: Login (UserData* user)
+void Controller :: Login (UserData* user, bool remPasswd)
 {
     userController->userLogin(user);
     wordController = new WordController("userdatas" + _SLASH+user->Name()+_SLASH+"words");
     config = new Configuration("userdatas"+_SLASH+user->Name()+_SLASH+"config");
+    reWriteDefault(user,remPasswd);
 }
 
 void Controller :: Logout()
@@ -54,6 +53,26 @@ UserData* Controller :: userRegister(std::string ID, std::string passwd)
 UserData* Controller :: getActiveUser()
 {
     return userController->getActiveUser();
+}
+
+std::pair<std::string,std::string> Controller :: getDefaultUser()
+{
+    std::ifstream input("default.txt");
+    std::string ID,passwd;
+    if(input)
+    {
+        input>>ID;
+        int rem;
+        input>>rem;
+        if(rem)
+        {
+            UserData* defaultUser = userController->findUser(ID);
+            if(defaultUser)
+                passwd = defaultUser->Password();
+            else ID="";
+        }
+    }
+    return std::make_pair(ID,passwd);
 }
 
 void Controller :: userModifyPassword(UserData* user, std::string passwd, std::string newPasswd)
@@ -170,6 +189,12 @@ void Controller :: modifyConfig(const int& dif, const int& num)
 void Controller :: modifyConfig(const Configuration& newConfig)
 {
     modifyConfig(newConfig.Difficulty(), newConfig.DailyNumber());
+}
+
+void Controller :: reWriteDefault(UserData* user, bool remPasswd)
+{
+    std::ofstream output("default.txt");
+    output << user->Name() << std::endl << (remPasswd?1:0);
 }
 
 void Controller :: reWriteTodayWords()
