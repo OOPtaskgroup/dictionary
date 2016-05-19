@@ -103,9 +103,9 @@ std::vector< std::pair<WordData*,int> >& Controller :: getRecitingWords()
     return nowRecitingWords;
 }
 
-std::vector<WordData*>getTestWords(int num)
+std::vector<WordData*> Controller :: getTestWords(int num)
 {
-
+    return wordController->getTestWords(num);
 }
 
 void Controller :: answerAccepted( std::pair<WordData*,int> &item)

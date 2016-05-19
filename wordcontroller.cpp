@@ -17,7 +17,7 @@ WordController :: WordController(std::string ContentFile)
         dataBase = new WordDataBase();
         dataBase->reWrite(contentFile);
     }
-    dataBase->select(0,100);
+    dataBase->select(_RANGE(0,100));
     log << "INFO " << dataBase->size() << std::endl;
 }
 
@@ -36,7 +36,7 @@ std::vector<WordData*> WordController :: randomWordCollect(int num)
 
     std::vector<WordData*> toReturn;
 
-    dataBase->select(10,19);
+    dataBase->select(_RANGE(10,19));
     for(int i = 1 ; i <= noLearned ; i++)
     {
         if(dataBase->isEmpty())
@@ -49,7 +49,7 @@ std::vector<WordData*> WordController :: randomWordCollect(int num)
         log << "INFO added word " << now->Name() << "." <<std::endl;
     }
 
-    dataBase->select(20,29);
+    dataBase->select(_RANGE(20,29));
     for(int i = 1 ; i <= Learned ; i++)
     {
         if(dataBase->isEmpty())
@@ -59,7 +59,7 @@ std::vector<WordData*> WordController :: randomWordCollect(int num)
         }
         WordData* now = dataBase->getrandom();
         toReturn.push_back( now );
-        log << "INFO added word " << now->Name() <<" , have answered correctly " 
+        log << "INFO added word " << now->Name() <<" , have answered correctly "
             << now->Times() << " times continiously." << std::endl;
     }
 
@@ -108,7 +108,7 @@ bool WordController :: isMastered (WordData* item)
 std::vector<WordData*> WordController :: getWord(int typel,int typer)
 {
     Logging log("WordController :: getWord",true);
-    dataBase->select(typel,typer);
+    dataBase->select(_RANGE(typel,typer));
     std::vector<WordData*> toReturn = dataBase->getAll();
     log << "INFO get " << toReturn.size() << " words." << std::endl;
     return toReturn;
@@ -133,7 +133,7 @@ WordData* WordController :: findWord(std::string prefix)
 {
     Logging log("WordController :: findWord",true);
     log << "INFO looking for word " << prefix << std::endl;
-    dataBase->select(0,100);
+    dataBase->select(_RANGE(0,100));
     for(auto i = dataBase->begin(); i != dataBase->end(); i++)
     if ((*i)->Name() == prefix)
     {
@@ -145,13 +145,13 @@ WordData* WordController :: findWord(std::string prefix)
 
 int WordController :: getMasteredWordCount()
 {
-    dataBase->select(30,39);
+    dataBase->select(_RANGE(30,39));
     return dataBase->size();
 }
 
 int WordController :: getLearningWordCount()
 {
-    dataBase->select(20,29);
+    dataBase->select(_RANGE(20,29));
     return dataBase->size();
 }
 
@@ -159,10 +159,10 @@ void WordController :: modifyLearningDifficulty(const int dif)
 {
     Logging log("WordController :: modifyLearningDifficulty",true);
     log << "INFO change difficulty to " << dif << std::endl;
-    dataBase->select(10,19);
+    dataBase->select(_RANGE(10,19));
     for(auto i = dataBase->begin();i!=dataBase->end();++i)
         (*i)->setType((*i)->Type()%10);
-    dataBase->select(dif);
+    dataBase->select(_RANGE(dif,dif));
     for(auto i = dataBase->begin();i!=dataBase->end();++i)
         (*i)->setType(dif+10);
     log << "INFO now " << dataBase->size() << " words waiting." << std::endl;
@@ -175,6 +175,8 @@ std::vector<std::string> WordController :: readDetail(std::string fileName)
    std::string tmp;
    while(std::getline(input,tmp))
        toReturn.push_back(tmp);
+   while(toReturn.size()<4)
+       toReturn.insert(toReturn.begin(),"\n");
    return toReturn;
 }
 
@@ -184,10 +186,6 @@ std::vector<std::string> WordController :: getDetail(WordData* item)
     log << "INFO getting word " << item->Name() << " detail" << std::endl;
     std::vector<std::string> toReturn = readDetail(item->ContentFile());
     log << "INFO get " << toReturn.size() << " lines of Detail." << std::endl;
-    while(toReturn.size()<4)
-    {
-        toReturn.insert(toReturn.begin(),"\n");
-    }
     if(toReturn.size()>4)
     {
         std::random_shuffle(toReturn.begin(),toReturn.begin()+toReturn.size()-2);
@@ -224,8 +222,23 @@ void WordController :: delExample(WordData *word, std::string item)
         output << i << std::endl;
 }
 
-std::vector<std::string> WordController::getExample(WordData *word)
+std::vector<std::string> WordController :: getExample(WordData *word)
 {
     auto toReturn = readDetail(word->ContentFile());
     return std::vector<std::string>(toReturn.begin(),toReturn.begin()+toReturn.size()-2);
+}
+
+std::vector<WordData*> WordController :: getTestWords(int num)
+{
+    Logging log("WordController :: getTestWords",true);
+    std::vector<WordData*> toReturn;
+    for(int i=1;i<=5;i++)
+    {
+        dataBase->select(_MOD(i));
+        for(int j=1;j<=num/5;j++)
+        {
+            toReturn.push_back(dataBase->getrandom());
+            log <<"INFO test word " << (*toReturn.rbegin())->Name() << std::endl;
+        }
+    }
 }

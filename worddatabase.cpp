@@ -89,9 +89,10 @@ WordData* WordDataBase::getrandom()
     worddatas.erase(worddatas.begin()+i);
     return toReturn;;
 }
-
+/*
 void WordDataBase::select(int typel, int typer)
 {
+
     worddatas.clear();
     for(std::vector<WordData*>::iterator iter=worddatal.begin();iter!=worddatal.end();++iter)
     {
@@ -100,14 +101,27 @@ void WordDataBase::select(int typel, int typer)
             worddatas.push_back(*iter);
         }
     }
+
+    select(_RANGE(typel,typer));
 }
 
 void WordDataBase :: select(int type)
 {
     select(type,type);
 }
-
+*/
 int WordDataBase :: size()
 {
     return worddatas.size();
 }
+
+template <typename T>
+void WordDataBase :: select(T chooser)
+{
+    worddatas.clear();
+    for(auto iter = worddatal.begin();iter != worddatal.end();++iter)
+        if(chooser((*iter)->Type()))
+            worddatas.push_back(*iter);
+}
+template void WordDataBase :: select(_RANGE chooser);
+template void WordDataBase :: select(_MOD chooser);

@@ -33,6 +33,7 @@ public:
     void addExample(WordData* word, std::string item);
     void delExample(WordData* word, std::string item);
     std::vector<std::string> getExample(WordData* word);
+    std::vector<WordData*> getTestWords(int num);
 private:
     std::vector<WordData*> getWord(int type);
     std::vector<WordData*> getWord(int typel,int typer);
