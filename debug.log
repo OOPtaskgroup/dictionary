@@ -20,3 +20,181 @@ Part "Controller :: Login" begin.
   INFO 13679
   Part "WordController :: WordController" end.
 Part "Controller :: Login" end.
+Part "UserController :: userLogout" begin.
+INFO user victorywys loged out.
+Part "UserController :: userLogout" end.
+Part "Controller :: Login" begin.
+  Part "UserController :: checkIn" begin.
+    Part "UserController :: findUser" begin.
+    Part "UserController :: findUser" end.
+  Part "UserController :: checkIn" end.
+  Part "UserController :: userLogin" begin.
+  INFO login keavil ok.
+  Part "UserController :: userLogin" end.
+  Part "WordController :: WordController" begin.
+  INFO find file
+  INFO 13679
+  Part "WordController :: WordController" end.
+Part "Controller :: Login" end.
+Part "UserController :: userLogout" begin.
+INFO user keavil loged out.
+Part "UserController :: userLogout" end.
+Part "Controller :: Login" begin.
+  Part "UserController :: checkIn" begin.
+    Part "UserController :: findUser" begin.
+    Part "UserController :: findUser" end.
+  Part "UserController :: checkIn" end.
+  Part "UserController :: userLogin" begin.
+  INFO login yjy ok.
+  Part "UserController :: userLogin" end.
+  Part "WordController :: WordController" begin.
+  INFO find file
+  INFO 15329
+  Part "WordController :: WordController" end.
+Part "Controller :: Login" end.
+Part "UserController :: userLogout" begin.
+INFO user yjy loged out.
+Part "UserController :: userLogout" end.
+Part "UserController :: findUser" begin.
+Part "UserController :: findUser" end.
+Part "Controller :: Login" begin.
+  Part "UserController :: checkIn" begin.
+    Part "UserController :: findUser" begin.
+    Part "UserController :: findUser" end.
+  Part "UserController :: checkIn" end.
+  Part "UserController :: userLogin" begin.
+  INFO login yjy ok.
+  Part "UserController :: userLogin" end.
+  Part "WordController :: WordController" begin.
+  INFO find file
+  INFO 15329
+  Part "WordController :: WordController" end.
+Part "Controller :: Login" end.
+Part "UserController :: userLogout" begin.
+INFO user yjy loged out.
+Part "UserController :: userLogout" end.
+Part "UserController :: findUser" begin.
+Part "UserController :: findUser" end.
+Part "Controller :: Login" begin.
+  Part "UserController :: checkIn" begin.
+    Part "UserController :: findUser" begin.
+    Part "UserController :: findUser" end.
+  Part "UserController :: checkIn" end.
+  Part "UserController :: userLogin" begin.
+  INFO login yjy ok.
+  Part "UserController :: userLogin" end.
+  Part "WordController :: WordController" begin.
+  INFO find file
+  INFO 15329
+  Part "WordController :: WordController" end.
+Part "Controller :: Login" end.
+Part "UserController :: userLogout" begin.
+INFO user yjy loged out.
+Part "UserController :: userLogout" end.
+Part "UserController :: findUser" begin.
+Part "UserController :: findUser" end.
+Part "Controller :: Login" begin.
+  Part "UserController :: checkIn" begin.
+    Part "UserController :: findUser" begin.
+    Part "UserController :: findUser" end.
+  Part "UserController :: checkIn" end.
+  Part "UserController :: userLogin" begin.
+  INFO login yjy ok.
+  Part "UserController :: userLogin" end.
+  Part "WordController :: WordController" begin.
+  INFO find file
+  INFO 15329
+  Part "WordController :: WordController" end.
+Part "Controller :: Login" end.
+Part "UserController :: userLogout" begin.
+INFO user yjy loged out.
+Part "UserController :: userLogout" end.
+Part "UserController :: findUser" begin.
+Part "UserController :: findUser" end.
+Part "Controller :: Login" begin.
+  Part "UserController :: checkIn" begin.
+    Part "UserController :: findUser" begin.
+    Part "UserController :: findUser" end.
+  Part "UserController :: checkIn" end.
+  Part "UserController :: userLogin" begin.
+  INFO login keavil ok.
+  Part "UserController :: userLogin" end.
+  Part "WordController :: WordController" begin.
+  INFO find file
+  INFO 13679
+  Part "WordController :: WordController" end.
+Part "Controller :: Login" end.
+Part "UserController :: userLogout" begin.
+INFO user keavil loged out.
+Part "UserController :: userLogout" end.
+Part "UserController :: findUser" begin.
+Part "UserController :: findUser" end.
+Part "Controller :: Login" begin.
+  Part "UserController :: checkIn" begin.
+    Part "UserController :: findUser" begin.
+    Part "UserController :: findUser" end.
+  Part "UserController :: checkIn" end.
+  Part "UserController :: userLogin" begin.
+  INFO login keavil ok.
+  Part "UserController :: userLogin" end.
+  Part "WordController :: WordController" begin.
+  INFO find file
+  INFO 13679
+  Part "WordController :: WordController" end.
+Part "Controller :: Login" end.
+Part "UserController :: userModifyPassword" begin.
+INFO 123456 -> qqqqqqqqq
+  Part "UserDataBase :: save" begin.
+  INFO 5
+  INFO keavil
+  INFO victorywys
+  INFO liucy15
+  INFO rrrrr
+  INFO yjy
+  Part "UserDataBase :: save" end.
+Part "UserController :: userModifyPassword" end.
+Part "WordController :: modifyLearningDifficulty" begin.
+INFO change difficulty to 5
+INFO now 7607 words waiting.
+Part "WordController :: modifyLearningDifficulty" end.
+Part "UserController :: userLogout" begin.
+INFO user keavil loged out.
+Part "UserController :: userLogout" end.
+Part "UserController :: findUser" begin.
+Part "UserController :: findUser" end.
+Part "Controller :: Login" begin.
+  Part "UserController :: checkIn" begin.
+    Part "UserController :: findUser" begin.
+    Part "UserController :: findUser" end.
+  Part "UserController :: checkIn" end.
+  Part "UserController :: userLogin" begin.
+  INFO login keavil ok.
+  Part "UserController :: userLogin" end.
+  Part "WordController :: WordController" begin.
+  INFO find file
+  INFO 13679
+  Part "WordController :: WordController" end.
+Part "Controller :: Login" end.
+Part "UserController :: userLogout" begin.
+INFO user keavil loged out.
+Part "UserController :: userLogout" end.
+Part "UserController :: findUser" begin.
+Part "UserController :: findUser" end.
+Part "Controller :: Login" begin.
+  Part "UserController :: checkIn" begin.
+    Part "UserController :: findUser" begin.
+    Part "UserController :: findUser" end.
+  Part "UserController :: checkIn" end.
+  Part "UserController :: userLogin" begin.
+  INFO login keavil ok.
+  Part "UserController :: userLogin" end.
+  Part "WordController :: WordController" begin.
+  INFO find file
+  INFO 13679
+  Part "WordController :: WordController" end.
+Part "Controller :: Login" end.
+Part "UserController :: userLogout" begin.
+INFO user keavil loged out.
+Part "UserController :: userLogout" end.
+Part "UserController :: findUser" begin.
+Part "UserController :: findUser" end.
