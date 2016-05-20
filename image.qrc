@@ -10,6 +10,8 @@
         <file>img/manage_background.jpg</file>
         <file>img/main_background_TH.jpg</file>
         <file>buttons/2-0btn_14.png</file>
+        <file>img/addex.jpg</file>
+        <file>buttons/2-0btn_19.png</file>
     </qresource>
     <qresource prefix="/buttons">
         <file>buttons/2-0btn_07.png</file>

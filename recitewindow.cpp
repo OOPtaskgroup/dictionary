@@ -17,8 +17,6 @@ std::pair<WordData*, int>& ReciteWindow::findNextWord()
 
 bool ReciteWindow::showWord(std::pair<WordData *, int> &word)
 {
-    Logging log("ReciteWindow :: showWord",true);
-    log << "INFO show word " << word.first->Name() << std::endl;
     if (word.second == 1)
         return false;
     auto wordDetail = controller->getDetail(word.first);
@@ -27,13 +25,19 @@ bool ReciteWindow::showWord(std::pair<WordData *, int> &word)
     ui->cantRecBtn->setVisible(true);
     ui->wordLabel->setText(QString::fromStdString(word.first->Name()));
     ui->exampleBrowser->setVisible(false);
-    ui->exampleBrowser->setText(QString::fromStdString(*wordDetail.begin()) + "\n" + QString::fromStdString(*(wordDetail.begin() + 1)));
+    auto example = controller->getExample(word.first);
+    QString exampleText("");
+    for (auto i : example)
+    {
+        exampleText += QString::fromStdString(i) + "\n";
+    }
+    ui->exampleBrowser->setText(exampleText);
     ui->exampleLabel->setVisible(false);
     ui->engBrowser->setVisible(false);
-    ui->engBrowser->setText(QString::fromStdString(*(wordDetail.begin() + 2)));
+    ui->engBrowser->setText(QString::fromStdString(*(wordDetail.begin() + wordDetail.size() - 2)));
     ui->engLabel->setVisible(false);
     ui->chnBrowser->setVisible(false);
-    ui->chnBrowser->setText(QString::fromStdString(*(wordDetail.begin() + 3)));
+    ui->chnBrowser->setText(QString::fromStdString(*(wordDetail.begin() + wordDetail.size() - 1)));
     ui->chnLabel->setVisible(false);
     status = Vocabulary;
     return true;

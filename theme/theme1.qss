@@ -10,6 +10,6 @@ QLineEdit {
     background-color: rgba(201, 246, 255, 120);
 }
 
-QLabel {
+QLabel#username {
     color: rgb(170, 0, 255);
 }

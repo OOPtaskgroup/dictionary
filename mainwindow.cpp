@@ -79,7 +79,7 @@ void MainWindow::on_logoutBtn_clicked()
 
 void MainWindow::showEvent(QShowEvent *)
 {
-    ui->username->setText(tr("欢迎您！%1").arg(QString::fromStdString(controller->getActiveUser()->Name())));
+    ui->username->setText(tr("欢迎您！%1!").arg(QString::fromStdString(controller->getActiveUser()->Name())));
 }
 
 void MainWindow::on_wordEdit_returnPressed()
@@ -113,4 +113,12 @@ void MainWindow::setTheme(QString themeFile)
         this->setStyleSheet(qss);
         qssFile.close();
     }
+}
+
+void MainWindow::on_testBtn_clicked()
+{
+    TestWindow *testWindow = new TestWindow(controller, this);
+    testWindow->setAttribute(Qt::WA_DeleteOnClose);
+    this->hide();
+    testWindow->show();
 }

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>添加例句</string>
   </property>
   <widget class="QTextEdit" name="exEdit">
    <property name="geometry">
@@ -26,6 +26,9 @@
     <font>
      <pointsize>8</pointsize>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 180);</string>
    </property>
    <property name="html">
     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -48,6 +51,9 @@ p, li { white-space: pre-wrap; }
     <font>
      <pointsize>8</pointsize>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 180);</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
@@ -85,6 +91,9 @@ p, li { white-space: pre-wrap; }
      <height>28</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/image/buttons/2-0btn_19.png);</string>
+   </property>
    <property name="text">
     <string>完   成</string>
    </property>
@@ -98,10 +107,39 @@ p, li { white-space: pre-wrap; }
      <height>28</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/image/buttons/2-0btn_19.png);</string>
+   </property>
    <property name="text">
     <string>取   消</string>
    </property>
   </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>-60</x>
+     <y>0</y>
+     <width>511</width>
+     <height>301</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/image/img/addex.jpg);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <zorder>frame</zorder>
+  <zorder>exEdit</zorder>
+  <zorder>transEdit</zorder>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
+  <zorder>confirmBtn</zorder>
+  <zorder>exitBtn</zorder>
  </widget>
  <resources/>
  <connections>

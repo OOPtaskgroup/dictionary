@@ -118,38 +118,6 @@ p, li { white-space: pre-wrap; }
      <string>登 出</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="reciteBtn">
-    <property name="geometry">
-     <rect>
-      <x>71</x>
-      <y>171</y>
-      <width>181</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true"/>
-    </property>
-    <property name="text">
-     <string>背  单  词</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="configBtn">
-    <property name="geometry">
-     <rect>
-      <x>71</x>
-      <y>236</y>
-      <width>181</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true"/>
-    </property>
-    <property name="text">
-     <string>设  置</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="exitBtn">
     <property name="geometry">
      <rect>
@@ -214,9 +182,52 @@ p, li { white-space: pre-wrap; }
      <string>换  肤</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="configBtn">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>250</y>
+      <width>181</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>设  置</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="testBtn">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>200</y>
+      <width>181</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>测 试 单 词 量</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="reciteBtn">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>150</y>
+      <width>181</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>背  单  词</string>
+    </property>
+   </widget>
    <zorder>bgImg</zorder>
-   <zorder>reciteBtn</zorder>
-   <zorder>configBtn</zorder>
    <zorder>exitBtn</zorder>
    <zorder>wordEdit</zorder>
    <zorder>lookUpBtn</zorder>
@@ -224,6 +235,9 @@ p, li { white-space: pre-wrap; }
    <zorder>username</zorder>
    <zorder>textBrowser</zorder>
    <zorder>themeBtn</zorder>
+   <zorder>configBtn</zorder>
+   <zorder>testBtn</zorder>
+   <zorder>reciteBtn</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

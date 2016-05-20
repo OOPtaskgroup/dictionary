@@ -27,7 +27,7 @@ private:
 public:
     WordData* findWord(std::string word);
     std::vector< std::pair<WordData*,int> >& getRecitingWords();
-    std::vector< WordData* > getTestWords(int num);
+    std::vector< WordData* > getTestWords(int num = 50);
     void answerAccepted( std::pair<WordData*,int> &item);
     void answerWrong( std::pair<WordData*,int> &item);
     void setLearn(WordData* item);

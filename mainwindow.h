@@ -9,6 +9,7 @@
 #include "lookupwindow.h"
 #include <qmessagebox.h>
 #include "logindlg.h"
+#include "testwindow.h"
 
 namespace Ui {
 class MainWindow;
@@ -35,6 +36,8 @@ private slots:
     void on_wordEdit_returnPressed();
 
     void on_themeBtn_clicked();
+
+    void on_testBtn_clicked();
 
 private:
     Ui::MainWindow *ui;
