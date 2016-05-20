@@ -170,14 +170,15 @@ void WordController :: modifyLearningDifficulty(const int dif)
 
 std::vector<std::string> WordController :: readDetail(std::string fileName)
 {
-   std::ifstream input(fileName);
-   std::vector<std::string> toReturn;
-   std::string tmp;
-   while(std::getline(input,tmp))
-       toReturn.push_back(tmp);
-   while(toReturn.size()<4)
-       toReturn.insert(toReturn.begin(),"\n");
-   return toReturn;
+    Logging log("WordController :: readDetail",true);
+    std::ifstream input(fileName);
+    std::vector<std::string> toReturn;
+    std::string tmp;
+    while(std::getline(input,tmp))
+        toReturn.push_back(tmp);
+    while(toReturn.size()<4)
+        toReturn.insert(toReturn.begin(),"\n");
+    return toReturn;
 }
 
 std::vector<std::string> WordController :: getDetail(WordData* item)

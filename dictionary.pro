@@ -35,7 +35,7 @@ SOURCES += main.cpp\
     lookupwindow.cpp \
     pwdchangedlg.cpp \
     exmanagedlg.cpp \
-    addexdlg.cpp
+    addexdlg.cpp 
 
 HEADERS  += mainwindow.h \
     consts.h \

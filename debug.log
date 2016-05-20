@@ -7,203 +7,19 @@ Part "Controller :: Controller" begin.
   INFO yjy
   Part "UserDataBase :: UserDataBase" end.
 Part "Controller :: Controller" end.
-Part "UserController :: findUser" begin.
-Part "UserController :: findUser" end.
+Part "Controller :: getDefaultUser" begin.
+  Part "UserController :: findUser" begin.
+  Part "UserController :: findUser" end.
+INFO now default user victorywys
+INFO remember password.
+Part "Controller :: getDefaultUser" end.
 Part "Controller :: Login" begin.
   Part "UserController :: checkIn" begin.
     Part "UserController :: findUser" begin.
     Part "UserController :: findUser" end.
   Part "UserController :: checkIn" end.
   Part "UserController :: userLogin" begin.
-  INFO login keavil ok.
-  Part "UserController :: userLogin" end.
-  Part "WordController :: WordController" begin.
-  INFO find file
-  INFO 13679
-  Part "WordController :: WordController" end.
-Part "Controller :: Login" end.
-Part "Controller :: getTodayWords" begin.
-INFO file was written on 2016/5/19
-  Part "WordController :: findWord" begin.
-  INFO looking for word prerequisite
-  INFO find word prerequisite
-  Part "WordController :: findWord" end.
-  Part "WordController :: findWord" begin.
-  INFO looking for word inception
-  INFO find word inception
-  Part "WordController :: findWord" end.
-  Part "WordController :: findWord" begin.
-  INFO looking for word heavyduty
-  INFO find word heavyduty
-  Part "WordController :: findWord" end.
-  Part "WordController :: findWord" begin.
-  INFO looking for word sarcastic
-  INFO find word sarcastic
-  Part "WordController :: findWord" end.
-  Part "WordController :: findWord" begin.
-  INFO looking for word unrealistic
-  INFO find word unrealistic
-  Part "WordController :: findWord" end.
-  Part "WordController :: findWord" begin.
-  INFO looking for word forfeit
-  INFO find word forfeit
-  Part "WordController :: findWord" end.
-  Part "WordController :: findWord" begin.
-  INFO looking for word trample
-  INFO find word trample
-  Part "WordController :: findWord" end.
-  Part "WordController :: findWord" begin.
-  INFO looking for word muck
-  INFO find word muck
-  Part "WordController :: findWord" end.
-  Part "WordController :: findWord" begin.
-  INFO looking for word gent
-  INFO find word gent
-  Part "WordController :: findWord" end.
-  Part "WordController :: findWord" begin.
-  INFO looking for word deterrent
-  INFO find word deterrent
-  Part "WordController :: findWord" end.
-  Part "WordController :: findWord" begin.
-  INFO looking for word aussie
-  INFO find word aussie
-  Part "WordController :: findWord" end.
-  Part "WordController :: findWord" begin.
-  INFO looking for word aircraft carrier
-  INFO find word aircraft carrier
-  Part "WordController :: findWord" end.
-  Part "WordController :: findWord" begin.
-  INFO looking for word pathway
-  INFO find word pathway
-  Part "WordController :: findWord" end.
-Part "Controller :: getTodayWords" end.
-Part "Controller :: reWriteTodayWords" begin.
-INFO print today words to userdatas/keavil/today
-Part "Controller :: reWriteTodayWords" end.
-Part "ReciteWindow :: showWord" begin.
-INFO show word unrealistic
-  Part "WordController :: getDetail" begin.
-  INFO getting word unrealistic detail
-  INFO get 4 lines of Detail.
-  Part "WordController :: getDetail" end.
-Part "ReciteWindow :: showWord" end.
-Part "WordController :: answerWrong" begin.
-INFO word unrealisticanswered wrong.
-Part "WordController :: answerWrong" end.
-Part "Controller :: reWriteTodayWords" begin.
-INFO print today words to userdatas/keavil/today
-Part "Controller :: reWriteTodayWords" end.
-Part "ReciteWindow :: showWord" begin.
-INFO show word deterrent
-  Part "WordController :: getDetail" begin.
-  INFO getting word deterrent detail
-  INFO get 4 lines of Detail.
-  Part "WordController :: getDetail" end.
-Part "ReciteWindow :: showWord" end.
-Part "Controller :: reWriteTodayWords" begin.
-INFO print today words to userdatas/keavil/today
-Part "Controller :: reWriteTodayWords" end.
-Part "ReciteWindow :: showWord" begin.
-INFO show word muck
-  Part "WordController :: getDetail" begin.
-  INFO getting word muck detail
-  INFO get 4 lines of Detail.
-  Part "WordController :: getDetail" end.
-Part "ReciteWindow :: showWord" end.
-Part "Controller :: reWriteTodayWords" begin.
-INFO print today words to userdatas/keavil/today
-Part "Controller :: reWriteTodayWords" end.
-Part "ReciteWindow :: showWord" begin.
-INFO show word forfeit
-  Part "WordController :: getDetail" begin.
-  INFO getting word forfeit detail
-  INFO get 4 lines of Detail.
-  Part "WordController :: getDetail" end.
-Part "ReciteWindow :: showWord" end.
-Part "WordController :: answerAccepted" begin.
-INFO word forfeitanswered correctly, for 1 times now.
-Part "WordController :: answerAccepted" end.
-Part "Controller :: reWriteTodayWords" begin.
-INFO print today words to userdatas/keavil/today
-Part "Controller :: reWriteTodayWords" end.
-Part "ReciteWindow :: showWord" begin.
-INFO show word muck
-  Part "WordController :: getDetail" begin.
-  INFO getting word muck detail
-  INFO get 4 lines of Detail.
-  Part "WordController :: getDetail" end.
-Part "ReciteWindow :: showWord" end.
-Part "WordController :: answerAccepted" begin.
-INFO word muckanswered correctly, for 1 times now.
-Part "WordController :: answerAccepted" end.
-Part "Controller :: reWriteTodayWords" begin.
-INFO print today words to userdatas/keavil/today
-Part "Controller :: reWriteTodayWords" end.
-Part "ReciteWindow :: showWord" begin.
-INFO show word aircraft carrier
-  Part "WordController :: getDetail" begin.
-  INFO getting word aircraft carrier detail
-  INFO get 4 lines of Detail.
-  Part "WordController :: getDetail" end.
-Part "ReciteWindow :: showWord" end.
-Part "WordController :: modifyLearningDifficulty" begin.
-INFO change difficulty to 2
-INFO now 1020 words waiting.
-Part "WordController :: modifyLearningDifficulty" end.
-Part "WordController :: findWord" begin.
-INFO looking for word wicket
-INFO find word wicket
-Part "WordController :: findWord" end.
-Part "WordController :: findWord" begin.
-INFO looking for word wicket
-INFO find word wicket
-Part "WordController :: findWord" end.
-Part "WordController :: getDetail" begin.
-INFO getting word wicket detail
-INFO get 4 lines of Detail.
-Part "WordController :: getDetail" end.
-Part "WordController :: findWord" begin.
-INFO looking for word dir
-Part "WordController :: findWord" end.
-Part "WordController :: findWord" begin.
-INFO looking for word direct
-INFO find word direct
-Part "WordController :: findWord" end.
-Part "WordController :: findWord" begin.
-INFO looking for word direct
-INFO find word direct
-Part "WordController :: findWord" end.
-Part "WordController :: getDetail" begin.
-INFO getting word direct detail
-INFO get 4 lines of Detail.
-Part "WordController :: getDetail" end.
-Part "WordController :: findWord" begin.
-INFO looking for word ok
-Part "WordController :: findWord" end.
-Part "WordController :: findWord" begin.
-INFO looking for word prepare
-INFO find word prepare
-Part "WordController :: findWord" end.
-Part "WordController :: findWord" begin.
-INFO looking for word prepare
-INFO find word prepare
-Part "WordController :: findWord" end.
-Part "WordController :: getDetail" begin.
-INFO getting word prepare detail
-INFO get 4 lines of Detail.
-Part "WordController :: getDetail" end.
-Part "UserController :: userLogout" begin.
-INFO user keavil loged out.
-Part "UserController :: userLogout" end.
-Part "UserController :: findUser" begin.
-Part "UserController :: findUser" end.
-Part "Controller :: Login" begin.
-  Part "UserController :: checkIn" begin.
-    Part "UserController :: findUser" begin.
-    Part "UserController :: findUser" end.
-  Part "UserController :: checkIn" end.
-  Part "UserController :: userLogin" begin.
-  INFO login keavil ok.
+  INFO login victorywys ok.
   Part "UserController :: userLogin" end.
   Part "WordController :: WordController" begin.
   INFO find file
@@ -211,17 +27,21 @@ Part "Controller :: Login" begin.
   Part "WordController :: WordController" end.
 Part "Controller :: Login" end.
 Part "UserController :: userLogout" begin.
-INFO user keavil loged out.
+INFO user victorywys loged out.
 Part "UserController :: userLogout" end.
-Part "UserController :: findUser" begin.
-Part "UserController :: findUser" end.
+Part "Controller :: getDefaultUser" begin.
+  Part "UserController :: findUser" begin.
+  Part "UserController :: findUser" end.
+INFO now default user victorywys
+INFO remember password.
+Part "Controller :: getDefaultUser" end.
 Part "Controller :: Login" begin.
   Part "UserController :: checkIn" begin.
     Part "UserController :: findUser" begin.
     Part "UserController :: findUser" end.
   Part "UserController :: checkIn" end.
   Part "UserController :: userLogin" begin.
-  INFO login keavil ok.
+  INFO login victorywys ok.
   Part "UserController :: userLogin" end.
   Part "WordController :: WordController" begin.
   INFO find file
@@ -229,20 +49,79 @@ Part "Controller :: Login" begin.
   Part "WordController :: WordController" end.
 Part "Controller :: Login" end.
 Part "UserController :: userLogout" begin.
-INFO user keavil loged out.
+INFO user victorywys loged out.
 Part "UserController :: userLogout" end.
-Part "UserController :: findUser" begin.
-Part "UserController :: findUser" end.
+Part "Controller :: getDefaultUser" begin.
+  Part "UserController :: findUser" begin.
+  Part "UserController :: findUser" end.
+INFO now default user victorywys
+Part "Controller :: getDefaultUser" end.
+Part "Controller :: Login" begin.
+  Part "UserController :: checkIn" begin.
+    Part "UserController :: findUser" begin.
+    Part "UserController :: findUser" end.
+    Part "Exception :: Exception" begin.
+    INFO get Exception password wrong!
+    Part "Exception :: Exception" end.
+  Part "UserController :: checkIn" end.
+Part "Controller :: Login" end.
 Part "Controller :: Login" begin.
   Part "UserController :: checkIn" begin.
     Part "UserController :: findUser" begin.
     Part "UserController :: findUser" end.
   Part "UserController :: checkIn" end.
   Part "UserController :: userLogin" begin.
-  INFO login keavil ok.
+  INFO login victorywys ok.
   Part "UserController :: userLogin" end.
   Part "WordController :: WordController" begin.
   INFO find file
   INFO 13679
   Part "WordController :: WordController" end.
 Part "Controller :: Login" end.
+Part "UserController :: userLogout" begin.
+INFO user victorywys loged out.
+Part "UserController :: userLogout" end.
+Part "Controller :: getDefaultUser" begin.
+  Part "UserController :: findUser" begin.
+  Part "UserController :: findUser" end.
+INFO now default user victorywys
+INFO remember password.
+Part "Controller :: getDefaultUser" end.
+Part "Controller :: Login" begin.
+  Part "UserController :: checkIn" begin.
+    Part "UserController :: findUser" begin.
+    Part "UserController :: findUser" end.
+  Part "UserController :: checkIn" end.
+  Part "UserController :: userLogin" begin.
+  INFO login victorywys ok.
+  Part "UserController :: userLogin" end.
+  Part "WordController :: WordController" begin.
+  INFO find file
+  INFO 13679
+  Part "WordController :: WordController" end.
+Part "Controller :: Login" end.
+Part "UserController :: userLogout" begin.
+INFO user victorywys loged out.
+Part "UserController :: userLogout" end.
+Part "Controller :: getDefaultUser" begin.
+  Part "UserController :: findUser" begin.
+  Part "UserController :: findUser" end.
+INFO now default user victorywys
+INFO remember password.
+Part "Controller :: getDefaultUser" end.
+Part "Controller :: Login" begin.
+  Part "UserController :: checkIn" begin.
+    Part "UserController :: findUser" begin.
+    Part "UserController :: findUser" end.
+  Part "UserController :: checkIn" end.
+  Part "UserController :: userLogin" begin.
+  INFO login victorywys ok.
+  Part "UserController :: userLogin" end.
+  Part "WordController :: WordController" begin.
+  INFO find file
+  INFO 13679
+  Part "WordController :: WordController" end.
+Part "Controller :: Login" end.
+Part "WordController :: findWord" begin.
+INFO looking for word 
+Part "WordController :: findWord" end.

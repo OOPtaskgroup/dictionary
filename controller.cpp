@@ -57,20 +57,24 @@ UserData* Controller :: getActiveUser()
 
 std::pair<std::string,std::string> Controller :: getDefaultUser()
 {
+    Logging log("Controller :: getDefaultUser",true);
     std::ifstream input("default.txt");
     std::string ID,passwd;
+    int rem;
     if(input)
     {
-        input>>ID;
-        int rem;
-        input>>rem;
-        if(rem)
+        input >> ID >> rem;
+        UserData* defaultUser = userController->findUser(ID);
+        if(defaultUser)
         {
-            UserData* defaultUser = userController->findUser(ID);
-            if(defaultUser)
+            log << "INFO now default user " << defaultUser->Name() << std::endl;
+            if(rem)
+            {
+                log << "INFO remember password." << std::endl;
                 passwd = defaultUser->Password();
-            else ID="";
+            }
         }
+        else ID="";
     }
     return std::make_pair(ID,passwd);
 }
@@ -82,21 +86,28 @@ void Controller :: userModifyPassword(UserData* user, std::string passwd, std::s
 
 WordData* Controller :: findWord(std::string word)
 {
-    std::ofstream output("userdatas" + _SLASH + getActiveUser()->Name() + _SLASH + "history.lis",std::ios::app);
-    output<<word<<std::endl;
-    return wordController->findWord(word);
+    WordData* toReturn = wordController->findWord(word);
+    if(toReturn)
+    {
+        std::ofstream output("userdatas" + _SLASH + getActiveUser()->Name() + _SLASH + "history.lis",std::ios::app);
+        output<<word<<std::endl;
+    }
+    return toReturn;;
 }
 
 std::vector< std::pair<WordData*,int> >& Controller :: getRecitingWords()
 {
+    Logging log("Controller :: getRecitingWords",true);
     if(nowRecitingWords.size() == 0)getTodayWords();
     if(nowRecitingWords.size() == 0)
     {
+        log << "INFO get new words..." << std::endl;
         auto gotWords = wordController->randomWordCollect(config->DailyNumber());
         for(auto i : gotWords)
         {
             nowRecitingWords.push_back( std::make_pair( i, 0 ) );
             i->setType(i->Type()%10 + 20);
+            log << "INFO get word " << i->Name() << " for today." << std::endl;
         }
     }
     reWriteTodayWords();
@@ -240,6 +251,7 @@ std::vector<std::string> Controller :: getDetail(WordData* item)
 
 std::vector<std::string> Controller :: getSearchHistory(UserData* user)
 {
+    Logging log("Controller :: getSearchHistory",true);
     std::vector<std::string> toReturn;
     std::ifstream input("userdatas" + _SLASH + user->Name() + _SLASH + "history.lis");
     std::string line;
