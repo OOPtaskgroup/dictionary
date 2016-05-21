@@ -1,15 +1,39 @@
 QFrame#bgImg {
-    border-image: url(:/image/img/main_background_TH.jpg);
+    border-image: url(:/img/THproject/main.jpg);
 }
 
-QPushButton {
-    border-image: url(:/image/buttons/2-0btn_14.png);
+QPushButton#configBtn {
+    border-image: url(:/image/buttons/btn_14.png);
+}
+
+QPushButton#exitBtn {
+    border-image: url(:/image/buttons/btn_14.png);
+}
+
+QPushButton#logoutBtn {
+    border-image: url(:/image/buttons/btn_14.png);
+}
+
+QPushButton#lookUpBtn {
+    border-image: url(:/image/buttons/btn_14.png);
+}
+
+QPushButton#testBtn {
+    border-image: url(:/image/buttons/btn_14.png);
+}
+
+QPushButton#themeBtn {
+    border-image: url(:/image/buttons/btn_14.png);
+}
+
+QPushButton#reciteBtn {
+    border-image: url(:/image/buttons/btn_14.png);
 }
 
 QLineEdit {
     background-color: rgba(203, 215, 223, 120);
 }
 
-QLabel {
+QLabel#username {
 color: rgb(255, 0, 127);
 }

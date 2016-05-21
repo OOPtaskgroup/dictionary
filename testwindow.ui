@@ -47,7 +47,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/image/img/recite_background.jpg);</string>
+     <string notr="true">border-image: url(:/image/2233/img/2233/recite.jpg);</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -247,5 +247,22 @@ p, li { white-space: pre-wrap; }
   </widget>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>returnBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>TestWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>712</x>
+     <y>537</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>781</x>
+     <y>533</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

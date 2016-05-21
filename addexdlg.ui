@@ -124,7 +124,7 @@ p, li { white-space: pre-wrap; }
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/image/img/addex.jpg);</string>
+    <string notr="true">border-image: url(:/image/2233/img/2233/add.jpg);</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>

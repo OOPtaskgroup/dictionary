@@ -1,17 +1,11 @@
 <RCC>
     <qresource prefix="/image">
-        <file>img/login_background.jpeg</file>
-        <file>img/main_background.png</file>
-        <file>img/recite_background.jpg</file>
         <file>buttons/btn_08.png</file>
         <file>buttons/2-0btn_33.png</file>
         <file>buttons/2-0btn_34.png</file>
         <file>buttons/2-0btn_26.png</file>
-        <file>img/manage_background.jpg</file>
-        <file>img/main_background_TH.jpg</file>
-        <file>buttons/2-0btn_14.png</file>
-        <file>img/addex.jpg</file>
         <file>buttons/2-0btn_19.png</file>
+        <file>buttons/btn_14.png</file>
     </qresource>
     <qresource prefix="/buttons">
         <file>buttons/2-0btn_07.png</file>
@@ -20,7 +14,6 @@
         <file>buttons/2-0btn_11.png</file>
         <file>buttons/2-0btn_12.png</file>
         <file>buttons/2-0btn_13.png</file>
-        <file>buttons/2-0btn_14.png</file>
         <file>buttons/2-0btn_15.png</file>
         <file>buttons/2-0btn_16.png</file>
         <file>buttons/2-0btn_17.png</file>
@@ -43,5 +36,24 @@
         <file>buttons/2-0btn_34.png</file>
         <file>buttons/2-0btn_35.png</file>
         <file>buttons/2-0btn_36.png</file>
+        <file>buttons/btn_14.png</file>
+    </qresource>
+    <qresource prefix="/image/2233">
+        <file>img/2233/add.jpg</file>
+        <file>img/2233/login.jpeg</file>
+        <file>img/2233/main.png</file>
+        <file>img/2233/manage.jpg</file>
+        <file>img/2233/recite.jpg</file>
+    </qresource>
+    <qresource prefix="/image/THproject">
+        <file>img/THproject/main.jpg</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>img/2233/add.jpg</file>
+        <file>img/2233/login.jpeg</file>
+        <file>img/2233/main.png</file>
+        <file>img/2233/manage.jpg</file>
+        <file>img/2233/recite.jpg</file>
+        <file>img/THproject/main.jpg</file>
     </qresource>
 </RCC>

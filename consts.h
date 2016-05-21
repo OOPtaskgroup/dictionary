@@ -9,5 +9,6 @@ extern const std::set<int> __legalDailyNumbers;
 extern const double __newPart;
 extern const int __timesContiniouslyLimit;
 extern const std::string __defaultTheme;
+extern const std::string __themeList[];
 
 #endif
