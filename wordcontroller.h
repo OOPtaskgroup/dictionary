@@ -16,7 +16,7 @@ public:
     WordController(std::string ContentFile);
     ~WordController();
 
-    std::vector<WordData*> randomWordCollect(int num);
+    std::vector<WordData*> randomWordCollect(int noLearned,int Learned);
     void answerAccepted(WordData* item);
     void answerWrong(WordData* item);
     void setLearn(WordData* item);
@@ -34,6 +34,7 @@ public:
     void delExample(WordData* word, std::string item);
     std::vector<std::string> getExample(WordData* word);
     std::vector<WordData*> getTestWords(int num);
+    int getDifficultyWords(int dif);
 private:
     std::vector<WordData*> getWord(int type);
     std::vector<WordData*> getWord(int typel,int typer);

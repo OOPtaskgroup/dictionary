@@ -1,6 +1,9 @@
 #ifndef CONTROLLER_H
 #define CONTROLLER_H
 
+#include <QMainWindow>
+#include <QShowEvent>
+
 #include <bits/stdc++.h>
 #include "logging.h"
 #include "wordcontroller.h"
@@ -27,7 +30,9 @@ private:
 public:
     WordData* findWord(std::string word);
     std::vector< std::pair<WordData*,int> >& getRecitingWords();
+    void setAdditionWords(int num = 20);
     std::vector< WordData* > getTestWords(int num = 50);
+    int getVocabulary(std::vector<std::pair<WordData*,bool>> list);
     void answerAccepted( std::pair<WordData*,int> &item);
     void answerWrong( std::pair<WordData*,int> &item);
     void setLearn(WordData* item);
@@ -48,6 +53,7 @@ public:
     void modifyConfig(const Configuration& newConfig);
     void modifyConfig(const int& dif, const int&num);
     std::vector<std::string> getSearchHistory(UserData* user);
+    std::string getNowTheme();
     void modifyTheme(std::string nowTheme);
     void setTheme();
 

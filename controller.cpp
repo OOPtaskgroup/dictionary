@@ -102,7 +102,9 @@ std::vector< std::pair<WordData*,int> >& Controller :: getRecitingWords()
     if(nowRecitingWords.size() == 0)
     {
         log << "INFO get new words..." << std::endl;
-        auto gotWords = wordController->randomWordCollect(config->DailyNumber());
+        auto newWordCount = config->DailyNumber() * __newPart;
+        auto oldWordCount = config->DailyNumber() - newWordCount;
+        auto gotWords = wordController->randomWordCollect(newWordCount,oldWordCount);
         for(auto i : gotWords)
         {
             nowRecitingWords.push_back( std::make_pair( i, 0 ) );
@@ -114,9 +116,34 @@ std::vector< std::pair<WordData*,int> >& Controller :: getRecitingWords()
     return nowRecitingWords;
 }
 
+void Controller :: setAdditionWords(int num)
+{
+    Logging log("Controller :: setAdditionWords",true);
+    auto gotWords = wordController->randomWordCollect(num,0);
+    if(gotWords.empty())throw ItemNotFoundException("no new words to be recited now");
+    for(auto i:gotWords)
+    {
+        nowRecitingWords.push_back(std::make_pair(i,0));
+        i->setType(i->Type()%10+20);
+        log << "INFO get word " << i->Name() << " for today." << std::endl;
+    }
+    reWriteTodayWords();
+}
+
 std::vector<WordData*> Controller :: getTestWords(int num)
 {
     return wordController->getTestWords(num);
+}
+
+int Controller :: getVocabulary( std::vector< std::pair<WordData*,bool> > list)
+{
+    double toReturn=0;
+    Logging log("Controller :: getVocabulary",true);
+    for(auto i : list)
+    if(i.second)
+        toReturn+=wordController->getDifficultyWords(i.first->Type()%10) 
+                    / (double)(list.size()/5);
+    return (int)toReturn;
 }
 
 void Controller :: answerAccepted( std::pair<WordData*,int> &item)
@@ -260,12 +287,26 @@ std::vector<std::string> Controller :: getSearchHistory(UserData* user)
     return toReturn;
 }
 
+std::string Controller :: getNowTheme()
+{
+    return config->getTheme();
+}
+
 void Controller :: modifyTheme(std::string nowTheme)
 {
     config->modifyTheme(nowTheme);
 }
 
-void Controller :: setTheme()
+void Controller :: setTheme(QWidgt *toModify, std::string name)
 {
     auto theme = config->getTheme();
+    auto fileName = ":/theme/" + theme + "/" + name + ".qss";
+    QFile qssFile(fileName);
+    qssFile.open(QFile :: ReadOnly);
+    if (qssFile.isOpen())
+    {
+        qss = QLatin1String(qssFile.readAll());
+        toModify->setStyleSheet(qss);
+        qssFile.close();
+    }
 }

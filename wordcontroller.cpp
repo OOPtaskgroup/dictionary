@@ -28,11 +28,9 @@ WordController :: ~WordController()
     delete dataBase;
 
 }
-std::vector<WordData*> WordController :: randomWordCollect(int num)
+std::vector<WordData*> WordController :: randomWordCollect(int noLearned,int Learned)
 {
     Logging log("WordController :: wordCollect",true);
-    int noLearned = (int)(num * __newPart);
-    int Learned = num -noLearned;
 
     std::vector<WordData*> toReturn;
 
@@ -242,4 +240,10 @@ std::vector<WordData*> WordController :: getTestWords(int num)
             log <<"INFO test word " << (*toReturn.rbegin())->Name() << std::endl;
         }
     }
+}
+
+int WordController :: getDifficultyWords(int dif)
+{
+    dataBase->select(_MOD(dif));
+    return dataBase->size();
 }
