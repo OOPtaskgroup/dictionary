@@ -162,7 +162,7 @@ p, li { white-space: pre-wrap; }
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/image/img/recite_background.jpg);</string>
+     <string notr="true">border-image: url(:/image/2233/img/2233/recite.jpg);</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>

@@ -44,6 +44,9 @@ private:
     Controller* controller;
     void setTheme(QString themeFile);
     int theme;
+    void refresh();
+    bool checkReciteWords();
+
 protected:
     void showEvent(QShowEvent *);
 };

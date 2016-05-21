@@ -31,6 +31,7 @@ void ConfigDlg::on_pwdChangeBtn_clicked()
 void ConfigDlg::on_confirmBtn_clicked()
 {
     controller->modifyConfig(ui->diffBox->currentText().toInt(), ui->wordsBox->currentText().toInt());
+    controller->modifyTheme(__themeList[ui->themeBox->currentIndex()]);
     accept();
 }
 

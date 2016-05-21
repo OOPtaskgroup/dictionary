@@ -55,7 +55,7 @@ public:
     std::vector<std::string> getSearchHistory(UserData* user);
     std::string getNowTheme();
     void modifyTheme(std::string nowTheme);
-    void setTheme();
+ //   void setTheme();
 
 public:
     Controller (const std::string defaultUserFile="EMPTY");

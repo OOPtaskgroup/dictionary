@@ -124,7 +124,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/image/img/login_background.jpeg);</string>
+    <string notr="true">border-image: url(:/image/2233/img/2233/login.jpeg);</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>

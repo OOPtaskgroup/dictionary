@@ -29,16 +29,13 @@ void MainWindow::on_configBtn_clicked()
 
 void MainWindow::on_reciteBtn_clicked()
 {
+    if (!checkReciteWords())
+    {
+        controller->setAdditionWords();
+    }
     ReciteWindow *reciteWindow = new ReciteWindow(controller, this);
-    try
-    {
-        reciteWindow->show();
-        this->hide();
-    }
-    catch (WordsHaveBeenRecitedException exce)
-    {
-        reciteWindow->close();
-    }
+    reciteWindow->show();
+    this->hide();
 }
 
 void MainWindow::on_lookUpBtn_clicked()
@@ -79,7 +76,7 @@ void MainWindow::on_logoutBtn_clicked()
 
 void MainWindow::showEvent(QShowEvent *)
 {
-    ui->username->setText(tr("欢迎您！%1!").arg(QString::fromStdString(controller->getActiveUser()->Name())));
+    refresh();
 }
 
 void MainWindow::on_wordEdit_returnPressed()
@@ -112,6 +109,34 @@ void MainWindow::setTheme(QString themeFile)
         qss = QLatin1String(qssFile.readAll());
         this->setStyleSheet(qss);
         qssFile.close();
+    }
+}
+
+bool MainWindow::checkReciteWords()
+{
+    auto recitingWords = controller->getRecitingWords();
+    bool hasRecited = true;
+    for (auto i : recitingWords)
+    {
+        if (i.second != 1)
+        {
+            hasRecited = false;
+            break;
+        }
+    }
+    return !hasRecited;
+}
+
+void MainWindow::refresh()
+{
+    ui->username->setText(tr("欢迎您！%1!").arg(QString::fromStdString(controller->getActiveUser()->Name())));
+    if (checkReciteWords())
+    {
+        ui->reciteBtn->setText("背  单  词");
+    }
+    else
+    {
+        ui->reciteBtn->setText("再  来  一  组");
     }
 }
 

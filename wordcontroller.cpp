@@ -240,6 +240,7 @@ std::vector<WordData*> WordController :: getTestWords(int num)
             log <<"INFO test word " << (*toReturn.rbegin())->Name() << std::endl;
         }
     }
+    return toReturn;
 }
 
 int WordController :: getDifficultyWords(int dif)

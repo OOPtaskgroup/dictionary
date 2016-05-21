@@ -1,8 +1,32 @@
 QFrame#bgImg {
-    border-image: url(:/image/img/main_background.png);
+    border-image: url(:/img/2233/main.png);
 }
 
-QPushButton {
+QPushButton#configBtn {
+    border-image: url(:/image/buttons/btn_08.png);
+}
+
+QPushButton#exitBtn {
+    border-image: url(:/image/buttons/btn_08.png);
+}
+
+QPushButton#logoutBtn {
+    border-image: url(:/image/buttons/btn_08.png);
+}
+
+QPushButton#lookUpBtn {
+    border-image: url(:/image/buttons/btn_08.png);
+}
+
+QPushButton#testBtn {
+    border-image: url(:/image/buttons/btn_08.png);
+}
+
+QPushButton#themeBtn {
+    border-image: url(:/image/buttons/btn_08.png);
+}
+
+QPushButton#reciteBtn {
     border-image: url(:/image/buttons/btn_08.png);
 }
 

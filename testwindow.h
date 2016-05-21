@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QMessageBox>
 #include "controller.h"
+#include <QCloseEvent>
 
 namespace Ui {
 class TestWindow;
@@ -35,6 +36,10 @@ private:
     bool testOver();
     WordData* findNextWord();
     TestStatus status;
+    std::vector<std::pair<WordData*, bool>> result;
+
+protected:
+    void closeEvent(QCloseEvent *event);
 };
 
 #endif // TESTWINDOW_H

@@ -297,7 +297,7 @@ void Controller :: modifyTheme(std::string nowTheme)
     config->modifyTheme(nowTheme);
 }
 
-void Controller :: setTheme(QWidgt *toModify, std::string name)
+/*void Controller :: setTheme(QWidgt *toModify, std::string name)
 {
     auto theme = config->getTheme();
     auto fileName = ":/theme/" + theme + "/" + name + ".qss";
@@ -309,4 +309,4 @@ void Controller :: setTheme(QWidgt *toModify, std::string name)
         toModify->setStyleSheet(qss);
         qssFile.close();
     }
-}
+}*/
