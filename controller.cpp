@@ -88,10 +88,7 @@ WordData* Controller :: findWord(std::string word)
 {
     WordData* toReturn = wordController->findWord(word);
     if(toReturn)
-    {
-        std::ofstream output("userdatas" + _SLASH + getActiveUser()->Name() + _SLASH + "history.lis",std::ios::app);
-        output<<word<<std::endl;
-    }
+        setHistoryLog(toReturn);
     return toReturn;;
 }
 
@@ -271,6 +268,34 @@ void Controller :: getTodayWords()
     }
 }
 
+std::vector<WordData*> Controller :: getTextNewWords(std::string text)
+{
+    Logging log("Controller :: getTextNewWords",true);
+    for(auto& i : text)
+    if(i >='A' && i <= 'Z')
+    {
+        i +='a' - 'A';
+    }
+    else if(i<'a' || i>'z')
+        i = ' ';
+    std::string now = "";
+    std::vector <WordData*> toReturn;
+    for(auto i : text)
+    if(i >='a' && i <='z')
+    now+=i;
+    else if(now != "")
+    {
+        WordData* word = findWord(now);
+        if(word)
+        {
+            log << "INFO get word " << now << " from text. " << std::endl;
+            toReturn.push_back(word);
+        }
+        now = "";
+    }
+    return toReturn;
+}
+
 std::vector<std::string> Controller :: getDetail(WordData* item)
 {
     return wordController->getDetail(item);
@@ -285,6 +310,24 @@ std::vector<std::string> Controller :: getSearchHistory(UserData* user)
     while(std::getline(input,line))
         toReturn.push_back(line);
     return toReturn;
+}
+
+void Controller :: setHistoryLog(WordData* word)
+{
+    Logging log("Controller :: setHistoryLog",true);
+    UserData* user = getActiveUser();
+    auto history = getSearchHistory(user);
+    for(auto i = history.begin(); i!=history.end(); ++i)
+        if(*i == word->Name())
+        {
+            history.erase(i);
+            log << "INFO word " << word->Name() << " already in search history." << std::endl;
+            break;
+        }
+    history.push_back(word->Name());
+    std::ofstream output("userdatas" + _SLASH + user->Name() +_SLASH +"history.lis");
+    for(auto i:history)
+        output << i << std::endl;
 }
 
 std::string Controller :: getNowTheme()

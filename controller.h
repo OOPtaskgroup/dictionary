@@ -43,6 +43,7 @@ public:
     void addExample(WordData* word, std::string item);
     void delExample(WordData* word, std::string item);
     std::vector<std::string> getExample(WordData* word);
+    std::vector<WordData*> getTextNewWords(std::string text);
 private:
     Configuration* config;
 public:
@@ -50,6 +51,7 @@ public:
     void modifyConfig(const Configuration& newConfig);
     void modifyConfig(const int& dif, const int&num);
     std::vector<std::string> getSearchHistory(UserData* user);
+    void setHistoryLog(WordData* word);
     std::string getNowTheme();
     void modifyTheme(std::string nowTheme);
     std::string setTheme(std::string name);
