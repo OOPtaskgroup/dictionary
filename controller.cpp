@@ -297,16 +297,12 @@ void Controller :: modifyTheme(std::string nowTheme)
     config->modifyTheme(nowTheme);
 }
 
-void Controller :: setTheme(QWidgt *toModify, std::string name)
+std::string Controller :: setTheme(std::string name)
 {
     auto theme = config->getTheme();
     auto fileName = ":/theme/" + theme + "/" + name + ".qss";
-    QFile qssFile(fileName);
-    qssFile.open(QFile :: ReadOnly);
-    if (qssFile.isOpen())
-    {
-        qss = QLatin1String(qssFile.readAll());
-        toModify->setStyleSheet(qss);
-        qssFile.close();
-    }
+    std::ifstream input(fileName);
+    std::stringstream buffer;
+    buffer << input.rdbuf();
+    return std::string(buffer.str());
 }

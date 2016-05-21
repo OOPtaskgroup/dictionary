@@ -1,9 +1,6 @@
 #ifndef CONTROLLER_H
 #define CONTROLLER_H
 
-#include <QMainWindow>
-#include <QShowEvent>
-
 #include <bits/stdc++.h>
 #include "logging.h"
 #include "wordcontroller.h"
@@ -55,7 +52,7 @@ public:
     std::vector<std::string> getSearchHistory(UserData* user);
     std::string getNowTheme();
     void modifyTheme(std::string nowTheme);
-    void setTheme();
+    std::string setTheme(std::string name);
 
 public:
     Controller (const std::string defaultUserFile="EMPTY");
