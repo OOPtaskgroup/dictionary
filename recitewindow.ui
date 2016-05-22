@@ -36,13 +36,13 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/image/buttons/2-0btn_34.png);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>返  回</string>
     </property>
    </widget>
-   <widget class="QFrame" name="frame">
+   <widget class="QFrame" name="bgimg">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -52,7 +52,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/image/2233/img/2233/recite.jpg);</string>
+     <string notr="true"/>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -78,7 +78,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>翻  译：</string>
@@ -101,7 +101,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>TextLabel</string>
@@ -117,7 +117,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(255, 255, 255, 180);</string>
+     <string notr="true"/>
     </property>
     <property name="html">
      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -144,7 +144,7 @@ p, li { white-space: pre-wrap; }
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>例  句：</string>
@@ -167,7 +167,7 @@ p, li { white-space: pre-wrap; }
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>英 文 解 释：</string>
@@ -183,7 +183,7 @@ p, li { white-space: pre-wrap; }
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(255, 255, 255, 170);</string>
+     <string notr="true"/>
     </property>
     <property name="html">
      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -203,7 +203,7 @@ p, li { white-space: pre-wrap; }
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(255, 255, 255, 180);</string>
+     <string notr="true"/>
     </property>
     <property name="html">
      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -223,7 +223,7 @@ p, li { white-space: pre-wrap; }
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/image/buttons/2-0btn_34.png);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>没 印 象</string>
@@ -239,13 +239,13 @@ p, li { white-space: pre-wrap; }
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/image/buttons/2-0btn_34.png);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>我 知 道 了</string>
     </property>
    </widget>
-   <zorder>frame</zorder>
+   <zorder>bgimg</zorder>
    <zorder>returnBtn</zorder>
    <zorder>chnLabel</zorder>
    <zorder>wordLabel</zorder>

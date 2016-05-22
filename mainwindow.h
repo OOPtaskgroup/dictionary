@@ -35,15 +35,11 @@ private slots:
 
     void on_wordEdit_returnPressed();
 
-    void on_themeBtn_clicked();
-
     void on_testBtn_clicked();
 
 private:
     Ui::MainWindow *ui;
     Controller* controller;
-    void setTheme(QString themeFile);
-    int theme;
     void refresh();
     bool checkReciteWords();
 

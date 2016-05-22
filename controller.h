@@ -2,6 +2,7 @@
 #define CONTROLLER_H
 
 #include <bits/stdc++.h>
+#include <QFile>
 #include "logging.h"
 #include "wordcontroller.h"
 #include "usercontroller.h"
@@ -54,7 +55,7 @@ public:
     void setHistoryLog(WordData* word);
     std::string getNowTheme();
     void modifyTheme(std::string nowTheme);
-    std::string setTheme(std::string name);
+    QString setTheme(std::string name);
 
 public:
     Controller (const std::string defaultUserFile="EMPTY");

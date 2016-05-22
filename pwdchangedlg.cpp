@@ -7,6 +7,7 @@ PwdChangeDlg::PwdChangeDlg(Controller *controller, QWidget *parent) :
 {
     ui->setupUi(this);
     this->controller = controller;
+    this->setStyleSheet(controller->setTheme("pwdchange"));
 }
 
 PwdChangeDlg::~PwdChangeDlg()
@@ -58,7 +59,6 @@ void PwdChangeDlg::on_confirmBtn_clicked()
 
     }
 }
-
 
 void PwdChangeDlg::on_oldPwdEdit_textChanged(const QString &arg1)
 {

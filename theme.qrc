@@ -1,6 +1,20 @@
 <RCC>
     <qresource prefix="/">
-        <file>theme/theme1.qss</file>
-        <file>theme/theme2.qss</file>
+        <file>theme/2233/main.qss</file>
+        <file>theme/THproject/main.qss</file>
+        <file>theme/2233/lookup.qss</file>
+        <file>theme/2233/recite.qss</file>
+        <file>theme/2233/test.qss</file>
+        <file>theme/2233/example.qss</file>
+        <file>theme/2233/add.qss</file>
+        <file>theme/THproject/add.qss</file>
+        <file>theme/THproject/example.qss</file>
+        <file>theme/THproject/lookup.qss</file>
+        <file>theme/THproject/recite.qss</file>
+        <file>theme/THproject/test.qss</file>
+        <file>theme/2233/config.qss</file>
+        <file>theme/2233/pwdchange.qss</file>
+        <file>theme/THproject/config.qss</file>
+        <file>theme/THproject/pwdchange.qss</file>
     </qresource>
 </RCC>

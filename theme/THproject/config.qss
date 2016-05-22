@@ -1,0 +1,12 @@
+QPushButton#confirmBtn {
+    border-image: url(:/image/buttons/btn_15.png);
+}
+
+QPushButton#pwdChangeBtn {
+    border-image: url(:/image/buttons/btn_15.png);
+}
+
+QFrame#configimg {
+    border-image: url(:/img/THproject/config.jpg);
+}
+

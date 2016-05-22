@@ -340,12 +340,16 @@ void Controller :: modifyTheme(std::string nowTheme)
     config->modifyTheme(nowTheme);
 }
 
-std::string Controller :: setTheme(std::string name)
+QString Controller :: setTheme(std::string name)
 {
     auto theme = config->getTheme();
-    auto fileName = ":/theme/" + theme + "/" + name + ".qss";
-    std::ifstream input(fileName);
-    std::stringstream buffer;
-    buffer << input.rdbuf();
-    return std::string(buffer.str());
+    QString fileName = QString::fromStdString(":/theme/" + theme + "/" + name + ".qss");
+    QFile input(fileName);
+    input.open(QFile::ReadOnly);
+    if (input.isOpen())
+    {
+        QString content = QLatin1String(input.readAll());
+        return content;
+    }
+    return "";
 }

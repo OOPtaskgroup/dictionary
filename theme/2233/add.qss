@@ -1,0 +1,27 @@
+QLabel#label {
+    color: rgb(255, 255, 255);
+}
+
+QLabel#label_2 {
+    color: rgb(255, 255, 255);
+}
+
+QTextEdit#exEdit {
+    background-color: rgba(255, 255, 255, 180);
+}
+
+QTextEdit#transEdit {
+    background-color: rgba(255, 255, 255, 180);
+}
+
+QPushButton#confirmBtn {
+    border-image: url(:/image/buttons/2-0btn_19.png);
+}
+
+QPushButton#exitBtn {
+    border-image: url(:/image/buttons/2-0btn_19.png);
+}
+
+QFrame#addimg {
+    border-image: url(:/img/2233/add.jpg);
+}

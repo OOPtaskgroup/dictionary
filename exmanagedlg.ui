@@ -40,7 +40,7 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgba(255, 255, 255, 180);</string>
+    <string notr="true"/>
    </property>
   </widget>
   <widget class="QTextBrowser" name="detailBrowser">
@@ -58,7 +58,7 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgba(255, 255, 255, 180);</string>
+    <string notr="true"/>
    </property>
   </widget>
   <widget class="QPushButton" name="addBtn">
@@ -71,7 +71,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/image/buttons/2-0btn_26.png);</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>添  加</string>
@@ -87,7 +87,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/image/buttons/2-0btn_26.png);</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>删  除</string>
@@ -102,14 +102,11 @@
      <height>28</height>
     </rect>
    </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/image/buttons/2-0btn_26.png);</string>
-   </property>
    <property name="text">
     <string>返  回</string>
    </property>
   </widget>
-  <widget class="QFrame" name="frame">
+  <widget class="QFrame" name="eximg">
    <property name="geometry">
     <rect>
      <x>-40</x>
@@ -119,7 +116,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/image/2233/img/2233/manage.jpg);</string>
+    <string notr="true"/>
    </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>
@@ -128,7 +125,7 @@
     <enum>QFrame::Raised</enum>
    </property>
   </widget>
-  <zorder>frame</zorder>
+  <zorder>eximg</zorder>
   <zorder>exList</zorder>
   <zorder>detailBrowser</zorder>
   <zorder>addBtn</zorder>

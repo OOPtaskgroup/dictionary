@@ -28,7 +28,7 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgba(255, 255, 255, 180);</string>
+    <string notr="true"/>
    </property>
    <property name="html">
     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -53,7 +53,7 @@ p, li { white-space: pre-wrap; }
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgba(255, 255, 255, 180);</string>
+    <string notr="true"/>
    </property>
   </widget>
   <widget class="QLabel" name="label">
@@ -64,6 +64,9 @@ p, li { white-space: pre-wrap; }
      <width>72</width>
      <height>15</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>例句：</string>
@@ -92,7 +95,7 @@ p, li { white-space: pre-wrap; }
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/image/buttons/2-0btn_19.png);</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>完   成</string>
@@ -108,13 +111,13 @@ p, li { white-space: pre-wrap; }
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/image/buttons/2-0btn_19.png);</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>取   消</string>
    </property>
   </widget>
-  <widget class="QFrame" name="frame">
+  <widget class="QFrame" name="addimg">
    <property name="geometry">
     <rect>
      <x>-60</x>
@@ -124,7 +127,7 @@ p, li { white-space: pre-wrap; }
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/image/2233/img/2233/add.jpg);</string>
+    <string notr="true"/>
    </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>
@@ -133,7 +136,7 @@ p, li { white-space: pre-wrap; }
     <enum>QFrame::Raised</enum>
    </property>
   </widget>
-  <zorder>frame</zorder>
+  <zorder>addimg</zorder>
   <zorder>exEdit</zorder>
   <zorder>transEdit</zorder>
   <zorder>label</zorder>

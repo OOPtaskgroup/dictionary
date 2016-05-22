@@ -169,19 +169,6 @@ p, li { white-space: pre-wrap; }
      <string>查  单  词</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="themeBtn">
-    <property name="geometry">
-     <rect>
-      <x>120</x>
-      <y>440</y>
-      <width>93</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>换  肤</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="configBtn">
     <property name="geometry">
      <rect>
@@ -234,20 +221,9 @@ p, li { white-space: pre-wrap; }
    <zorder>logoutBtn</zorder>
    <zorder>username</zorder>
    <zorder>textBrowser</zorder>
-   <zorder>themeBtn</zorder>
    <zorder>configBtn</zorder>
    <zorder>testBtn</zorder>
    <zorder>reciteBtn</zorder>
-  </widget>
-  <widget class="QMenuBar" name="menuBar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>820</width>
-     <height>26</height>
-    </rect>
-   </property>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

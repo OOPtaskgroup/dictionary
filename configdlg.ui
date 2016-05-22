@@ -18,7 +18,7 @@
     <rect>
      <x>80</x>
      <y>50</y>
-     <width>251</width>
+     <width>261</width>
      <height>105</height>
     </rect>
    </property>
@@ -162,13 +162,13 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/image/buttons/2-0btn_33.png);</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>确  定</string>
    </property>
   </widget>
-  <widget class="QFrame" name="frame">
+  <widget class="QFrame" name="configimg">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -178,7 +178,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/image/img/login_background.jpeg);</string>
+    <string notr="true"/>
    </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>
@@ -197,13 +197,13 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/image/buttons/2-0btn_33.png);</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>修 改 密 码</string>
    </property>
   </widget>
-  <zorder>frame</zorder>
+  <zorder>configimg</zorder>
   <zorder>formLayoutWidget</zorder>
   <zorder>confirmBtn</zorder>
   <zorder>pwdChangeBtn</zorder>

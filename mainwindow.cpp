@@ -12,8 +12,6 @@ MainWindow::MainWindow(Controller *controller, QWidget *parent) :
     MainWindow(parent)
 {
     this->controller = controller;
-    setTheme(":/theme/theme1.qss");
-    theme = 1;
 }
 
 MainWindow::~MainWindow()
@@ -24,7 +22,10 @@ MainWindow::~MainWindow()
 void MainWindow::on_configBtn_clicked()
 {
     ConfigDlg configDlg(controller, this);
-    configDlg.exec();
+    if (configDlg.exec() == QDialog::Accepted)
+    {
+        refresh();
+    }
 }
 
 void MainWindow::on_reciteBtn_clicked()
@@ -71,7 +72,6 @@ void MainWindow::on_logoutBtn_clicked()
     }
     else
         this->close();
-
 }
 
 void MainWindow::showEvent(QShowEvent *)
@@ -82,34 +82,6 @@ void MainWindow::showEvent(QShowEvent *)
 void MainWindow::on_wordEdit_returnPressed()
 {
     ui->lookUpBtn->click();
-}
-
-void MainWindow::on_themeBtn_clicked()
-{
-    if (theme == 1)
-    {
-        setTheme(":/theme/theme2.qss");
-        theme = 2;
-    }
-    else
-    {
-        setTheme(":/theme/theme1.qss");
-        theme = 1;
-    }
-
-}
-
-void MainWindow::setTheme(QString themeFile)
-{
-    QString qss;
-    QFile qssFile(themeFile);
-    qssFile.open(QFile::ReadOnly);
-    if (qssFile.isOpen())
-    {
-        qss = QLatin1String(qssFile.readAll());
-        this->setStyleSheet(qss);
-        qssFile.close();
-    }
 }
 
 bool MainWindow::checkReciteWords()
@@ -138,6 +110,7 @@ void MainWindow::refresh()
     {
         ui->reciteBtn->setText("再  来  一  组");
     }
+    this->setStyleSheet(this->controller->setTheme("main"));
 }
 
 void MainWindow::on_testBtn_clicked()

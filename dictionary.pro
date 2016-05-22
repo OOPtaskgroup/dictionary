@@ -96,7 +96,7 @@ DISTFILES += \
     userdatas.txt
 
 RESOURCES += \
-    image.qrc \
-    theme.qrc
+    theme.qrc \
+    image.qrc
 
 CONFIG += C++11

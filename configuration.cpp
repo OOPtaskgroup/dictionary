@@ -31,7 +31,7 @@ void Configuration :: save()
 {
     std::ofstream output;
     output.open(contentFile,std::ios_base::trunc);
-    output << difficulty << std::endl << dailyNumber << std::endl;
+    output << difficulty << std::endl << dailyNumber << std::endl << theme << std::endl;
 }
 
 void Configuration :: modify(const int& dif, const int& num)
@@ -61,5 +61,6 @@ std::string Configuration :: getTheme()const
 
 void Configuration :: modifyTheme(std::string nowTheme)
 {
-    theme=nowTheme;
+    theme = nowTheme;
+    save();
 }
