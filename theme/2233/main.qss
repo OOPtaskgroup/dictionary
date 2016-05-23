@@ -37,3 +37,11 @@ QLineEdit {
 QLabel#username {
     color: rgb(170, 0, 255);
 }
+
+QListWidget#historyList {
+    background-color: rgba(201, 246, 255, 180);
+}
+
+QTextBrowser#textBrowser {
+    background-color: rgba(255, 255, 255, 120);
+}

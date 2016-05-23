@@ -39,7 +39,7 @@
      <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(255, 255, 255, 120);</string>
+     <string notr="true"/>
     </property>
     <property name="html">
      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -138,8 +138,8 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>384</y>
-      <width>169</width>
+      <y>360</y>
+      <width>171</width>
       <height>21</height>
      </rect>
     </property>
@@ -157,7 +157,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>380</y>
+      <y>356</y>
       <width>93</width>
       <height>28</height>
      </rect>
@@ -214,6 +214,29 @@ p, li { white-space: pre-wrap; }
      <string>背  单  词</string>
     </property>
    </widget>
+   <widget class="QListWidget" name="historyList">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>380</y>
+      <width>171</width>
+      <height>121</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="textBtn">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>400</y>
+      <width>181</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>文  本  分  析</string>
+    </property>
+   </widget>
    <zorder>bgImg</zorder>
    <zorder>exitBtn</zorder>
    <zorder>wordEdit</zorder>
@@ -224,6 +247,8 @@ p, li { white-space: pre-wrap; }
    <zorder>configBtn</zorder>
    <zorder>testBtn</zorder>
    <zorder>reciteBtn</zorder>
+   <zorder>textBtn</zorder>
+   <zorder>historyList</zorder>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

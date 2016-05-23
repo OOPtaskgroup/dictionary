@@ -71,6 +71,9 @@
    <property name="text">
     <string>I Wanna Recite the Words!</string>
    </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
   </widget>
   <widget class="QPushButton" name="loginBtn">
    <property name="geometry">

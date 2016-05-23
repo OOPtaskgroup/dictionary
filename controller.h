@@ -26,7 +26,7 @@ private:
     WordController* wordController;
     std::vector< std::pair<WordData*,int> > nowRecitingWords;
 public:
-    WordData* findWord(std::string word);
+    WordData* findWord(std::string word, bool toAddHistory = false);
     std::vector< std::pair<WordData*,int> >& getRecitingWords();
     void setAdditionWords(int num = 20);
     std::vector< WordData* > getTestWords(int num = 50);

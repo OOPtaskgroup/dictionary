@@ -84,10 +84,10 @@ void Controller :: userModifyPassword(UserData* user, std::string passwd, std::s
     userController->userModifyPassword(user,passwd,newPasswd);
 }
 
-WordData* Controller :: findWord(std::string word)
+WordData* Controller :: findWord(std::string word, bool toAddHistory)
 {
     WordData* toReturn = wordController->findWord(word);
-    if(toReturn)
+    if(toAddHistory && toReturn)
         setHistoryLog(toReturn);
     return toReturn;;
 }
