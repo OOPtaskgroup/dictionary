@@ -39,7 +39,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/image/2233/img/2233/login.jpeg);</string>
+    <string notr="true">border-image: url(:/img/2233/config.jpeg);</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>
@@ -70,6 +70,9 @@
    </property>
    <property name="text">
     <string>I Wanna Recite the Words!</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QPushButton" name="loginBtn">

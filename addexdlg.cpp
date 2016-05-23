@@ -8,6 +8,7 @@ AddExDlg::AddExDlg(Controller *controller, WordData *word, QWidget *parent) :
     ui(new Ui::AddExDlg)
 {
     ui->setupUi(this);
+    this->setStyleSheet(controller->setTheme("add"));
 }
 
 AddExDlg::~AddExDlg()

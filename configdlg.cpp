@@ -12,8 +12,17 @@ ConfigDlg::ConfigDlg(Controller *controller, QWidget *parent) :
     ConfigDlg(parent)
 {
     this->controller = controller;
+    this->setStyleSheet(controller->setTheme("config"));
     ui->diffBox->setCurrentText(QString::number(controller->getConfig().Difficulty()));
     ui->wordsBox->setCurrentText(QString::number(controller->getConfig().DailyNumber()));
+    for (int i = 0; i < __themeNumber; ++i)
+    {
+        if (__themeList[i] == controller->getNowTheme())
+        {
+            ui->themeBox->setCurrentIndex(i);
+            break;
+        }
+    }
 }
 
 ConfigDlg::~ConfigDlg()

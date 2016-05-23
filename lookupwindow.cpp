@@ -60,6 +60,7 @@ LookUpWindow::LookUpWindow(Controller *controller, QString word, QWidget *parent
     controller(controller)
 {
     ui->setupUi(this);
+    this->setStyleSheet(controller->setTheme("lookup"));
     lookUpWord = word;
     lookUpData = this->controller->findWord(word.toStdString());
     setWindowTitle(tr("查单词:%1").arg(lookUpWord));

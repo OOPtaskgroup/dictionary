@@ -26,7 +26,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/image/buttons/2-0btn_33.png);</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>确  认</string>
@@ -58,7 +58,7 @@
     <item row="0" column="1">
      <widget class="QLineEdit" name="oldPwdEdit">
       <property name="styleSheet">
-       <string notr="true">background-color: rgba(255, 255, 255, 120);</string>
+       <string notr="true"/>
       </property>
       <property name="echoMode">
        <enum>QLineEdit::Password</enum>
@@ -75,7 +75,7 @@
     <item row="1" column="1">
      <widget class="QLineEdit" name="newPwdEdit">
       <property name="styleSheet">
-       <string notr="true">background-color: rgba(255, 255, 255, 120);</string>
+       <string notr="true"/>
       </property>
       <property name="echoMode">
        <enum>QLineEdit::Password</enum>
@@ -92,7 +92,7 @@
     <item row="2" column="1">
      <widget class="QLineEdit" name="confirmNewPwdEdit">
       <property name="styleSheet">
-       <string notr="true">background-color: rgba(255, 255, 255, 120);</string>
+       <string notr="true"/>
       </property>
       <property name="echoMode">
        <enum>QLineEdit::Password</enum>
@@ -101,7 +101,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QPushButton" name="canceBtn">
+  <widget class="QPushButton" name="cancelBtn">
    <property name="geometry">
     <rect>
      <x>220</x>
@@ -111,13 +111,13 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/image/buttons/2-0btn_33.png);</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>取  消</string>
    </property>
   </widget>
-  <widget class="QFrame" name="frame">
+  <widget class="QFrame" name="pwdimg">
    <property name="geometry">
     <rect>
      <x>-1</x>
@@ -127,7 +127,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/image/2233/img/2233/login.jpeg);</string>
+    <string notr="true"/>
    </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>
@@ -136,15 +136,15 @@
     <enum>QFrame::Raised</enum>
    </property>
   </widget>
-  <zorder>frame</zorder>
+  <zorder>pwdimg</zorder>
   <zorder>confirmBtn</zorder>
   <zorder>formLayoutWidget</zorder>
-  <zorder>canceBtn</zorder>
+  <zorder>cancelBtn</zorder>
  </widget>
  <resources/>
  <connections>
   <connection>
-   <sender>canceBtn</sender>
+   <sender>cancelBtn</sender>
    <signal>clicked()</signal>
    <receiver>PwdChangeDlg</receiver>
    <slot>close()</slot>

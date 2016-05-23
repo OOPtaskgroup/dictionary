@@ -10,6 +10,7 @@
 #include <qmessagebox.h>
 #include "logindlg.h"
 #include "testwindow.h"
+#include "textwindow.h"
 
 namespace Ui {
 class MainWindow;
@@ -35,16 +36,21 @@ private slots:
 
     void on_wordEdit_returnPressed();
 
-    void on_themeBtn_clicked();
-
     void on_testBtn_clicked();
+
+    bool eventFilter(QObject *watched, QEvent *event);
+
+    void on_historyList_clicked(const QModelIndex &index);
+
+    void on_wordEdit_textChanged(const QString &arg1);
+
+   // void on_textBtn_clicked();
 
 private:
     Ui::MainWindow *ui;
     Controller* controller;
-    void setTheme(QString themeFile);
-    int theme;
     void refresh();
+    void setHistoryList();
     bool checkReciteWords();
 
 protected:

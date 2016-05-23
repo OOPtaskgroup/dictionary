@@ -1,0 +1,15 @@
+QLineEdit {
+    background-color: rgba(255, 255, 255, 120);
+}
+
+QPushButton#cancelBtn {
+    border-image: url(:/image/buttons/2-0btn_33.png);
+}
+
+QPushButton#confirmBtn {
+    border-image: url(:/image/buttons/2-0btn_33.png);
+}
+
+QFrame#pwdimg {
+    border-image: url(:/img/2233/config.jpeg);
+}

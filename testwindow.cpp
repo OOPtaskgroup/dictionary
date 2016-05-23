@@ -29,6 +29,7 @@ TestWindow::TestWindow(Controller *controller, QWidget *parent) :
 {
     ui->setupUi(this);
     this->controller = controller;
+    this->setStyleSheet(controller->setTheme("test"));
     testWords = controller->getTestWords();
     result.clear();
     doTest();
@@ -56,7 +57,7 @@ void TestWindow::closeEvent(QCloseEvent *event)
         QMessageBox infoBox(QMessageBox::Warning, "提示", tr("您还未完成测试，确认要退出吗？"),
                             QMessageBox::NoButton, this);
         QPushButton *yesBtn = infoBox.addButton("是 的", QMessageBox::YesRole);
-        QPushButton *cancelBtn = infoBox.addButton("取 消", QMessageBox::RejectRole);
+        infoBox.addButton("取 消", QMessageBox::RejectRole);
         infoBox.exec();
         if (infoBox.clickedButton() == yesBtn)
         {

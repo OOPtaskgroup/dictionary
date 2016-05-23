@@ -84,10 +84,10 @@ void Controller :: userModifyPassword(UserData* user, std::string passwd, std::s
     userController->userModifyPassword(user,passwd,newPasswd);
 }
 
-WordData* Controller :: findWord(std::string word)
+WordData* Controller :: findWord(std::string word, bool toAddHistory)
 {
     WordData* toReturn = wordController->findWord(word);
-    if(toReturn)
+    if(toAddHistory && toReturn)
         setHistoryLog(toReturn);
     return toReturn;;
 }
@@ -286,10 +286,15 @@ std::vector<WordData*> Controller :: getTextNewWords(std::string text)
     else if(now != "")
     {
         WordData* word = findWord(now);
-        if(word)
+        if(word && word->Type() < 30)
         {
             log << "INFO get word " << now << " from text. " << std::endl;
-            toReturn.push_back(word);
+            bool add = true;
+            for(auto i:toReturn)
+                if(i == word)
+                    add=false;
+            if(add)
+                toReturn.push_back(word);
         }
         now = "";
     }
@@ -340,12 +345,16 @@ void Controller :: modifyTheme(std::string nowTheme)
     config->modifyTheme(nowTheme);
 }
 
-std::string Controller :: setTheme(std::string name)
+QString Controller :: setTheme(std::string name)
 {
     auto theme = config->getTheme();
-    auto fileName = ":/theme/" + theme + "/" + name + ".qss";
-    std::ifstream input(fileName);
-    std::stringstream buffer;
-    buffer << input.rdbuf();
-    return std::string(buffer.str());
+    QString fileName = QString::fromStdString(":/theme/" + theme + "/" + name + ".qss");
+    QFile input(fileName);
+    input.open(QFile::ReadOnly);
+    if (input.isOpen())
+    {
+        QString content = QLatin1String(input.readAll());
+        return content;
+    }
+    return "";
 }

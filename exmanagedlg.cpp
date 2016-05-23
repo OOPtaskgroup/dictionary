@@ -7,6 +7,7 @@ ExManageDlg::ExManageDlg(Controller* controller, WordData *word, QWidget *parent
 {
     ui->setupUi(this);
     this->controller = controller;
+    this->setStyleSheet(controller->setTheme("example"));
     this->srcWord = word;
     setItem();
 }

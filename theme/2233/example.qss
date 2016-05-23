@@ -1,0 +1,23 @@
+QFrame#eximg {
+    border-image: url(:/img/2233/manage.jpg);
+}
+
+QPushButton#addBtn {
+    border-image: url(:/image/buttons/2-0btn_26.png);
+}
+
+QPushButton#delBtn {
+    border-image: url(:/image/buttons/2-0btn_26.png);
+}
+
+QPushButton#exitBtn {
+    border-image: url(:/image/buttons/2-0btn_26.png);
+}
+
+QListWidget#exList {
+    background-color: rgba(255, 255, 255, 180);
+}
+
+QTextBrowser#detailBrowser {
+    background-color: rgba(255, 255, 255, 180);
+}

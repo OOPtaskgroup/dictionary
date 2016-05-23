@@ -41,7 +41,9 @@ void LoginDlg::on_loginBtn_clicked()
 {
     try
     {
+        QApplication::setOverrideCursor(Qt::WaitCursor);
         controller->Login(ui->usrEdit->text().toStdString(), ui->pwdEdit->text().toStdString(), ui->remCheck->isChecked());
+        QApplication::restoreOverrideCursor();
         accept();
     }
     catch(PasswordNotCorrectException exce)

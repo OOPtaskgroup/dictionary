@@ -36,7 +36,8 @@ SOURCES += main.cpp\
     pwdchangedlg.cpp \
     exmanagedlg.cpp \
     addexdlg.cpp \ 
-    testwindow.cpp
+    testwindow.cpp \
+    textwindow.cpp
 
 HEADERS  += mainwindow.h \
     consts.h \
@@ -68,7 +69,8 @@ HEADERS  += mainwindow.h \
     wordshavebeenrecitedexception.h \
     exmanagedlg.h \
     addexdlg.h \
-    testwindow.h
+    testwindow.h \
+    textwindow.h
 
 FORMS    += mainwindow.ui \
     logindlg.ui \
@@ -79,7 +81,8 @@ FORMS    += mainwindow.ui \
     pwdchangedlg.ui \
     exmanagedlg.ui \
     addexdlg.ui \
-    testwindow.ui
+    testwindow.ui \
+    textwindow.ui
 
 DISTFILES += \
     .gitignore \
@@ -96,7 +99,7 @@ DISTFILES += \
     userdatas.txt
 
 RESOURCES += \
-    image.qrc \
-    theme.qrc
+    theme.qrc \
+    image.qrc
 
 CONFIG += C++11

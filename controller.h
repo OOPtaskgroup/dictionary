@@ -2,6 +2,7 @@
 #define CONTROLLER_H
 
 #include <bits/stdc++.h>
+#include <QFile>
 #include "logging.h"
 #include "wordcontroller.h"
 #include "usercontroller.h"
@@ -25,7 +26,7 @@ private:
     WordController* wordController;
     std::vector< std::pair<WordData*,int> > nowRecitingWords;
 public:
-    WordData* findWord(std::string word);
+    WordData* findWord(std::string word, bool toAddHistory = false);
     std::vector< std::pair<WordData*,int> >& getRecitingWords();
     void setAdditionWords(int num = 20);
     std::vector< WordData* > getTestWords(int num = 50);
@@ -54,7 +55,7 @@ public:
     void setHistoryLog(WordData* word);
     std::string getNowTheme();
     void modifyTheme(std::string nowTheme);
-    std::string setTheme(std::string name);
+    QString setTheme(std::string name);
 
 public:
     Controller (const std::string defaultUserFile="EMPTY");

@@ -80,6 +80,7 @@ ReciteWindow::ReciteWindow(Controller *controller, QWidget *parent) :
 {
     ui->setupUi(this);
     setWindowTitle("背单词");
+    this->setStyleSheet(controller->setTheme("recite"));
 }
 
 ReciteWindow::~ReciteWindow()

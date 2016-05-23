@@ -8,3 +8,4 @@ const double __newPart = 0.27;
 const int __timesContiniouslyLimit = 4;
 const std::string __defaultTheme = "2233";
 const std::string __themeList[] = {"2233", "THproject"};
+const int __themeNumber = 2;

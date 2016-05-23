@@ -6,7 +6,7 @@
 class DataBase
 {
 	public:
-		~DataBase();
+        ~DataBase();
 };
 
 #endif
