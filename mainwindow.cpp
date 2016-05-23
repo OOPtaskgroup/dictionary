@@ -186,8 +186,11 @@ void MainWindow::on_wordEdit_textChanged(const QString &arg1)
         ui->historyList->hide();
     }
 }
-/*
+
 void MainWindow::on_textBtn_clicked()
 {
     TextWindow *textWindow = new TextWindow(controller, this);
-}*/
+    textWindow->setAttribute(Qt::WA_DeleteOnClose);
+    this->hide();
+    textWindow->show();
+}

@@ -7,6 +7,8 @@
         <file>buttons/2-0btn_19.png</file>
         <file>buttons/btn_14.png</file>
         <file>buttons/btn_15.png</file>
+        <file>buttons/2-0btn_25.png</file>
+        <file>buttons/2-0btn_28.png</file>
     </qresource>
     <qresource prefix="/buttons">
         <file>buttons/2-0btn_07.png</file>
@@ -58,5 +60,7 @@
         <file>img/THproject/config.jpg</file>
         <file>img/THproject/manage.jpg</file>
         <file>img/THproject/recite.jpg</file>
+        <file>img/2233/text.jpg</file>
+        <file>img/THproject/text.jpg</file>
     </qresource>
 </RCC>

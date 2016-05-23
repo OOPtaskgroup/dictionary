@@ -60,12 +60,14 @@ bool ReciteWindow::doRecite()
 
 void ReciteWindow::closeEvent(QCloseEvent *event)
 {
+    this->parentWidget()->move(this->pos());
     this->parentWidget()->show();
     event->accept();
 }
 
 void ReciteWindow::showEvent(QShowEvent *event)
 {
+    this->move(this->parentWidget()->pos());
     if (!doRecite())
     {
         throw WordsHaveBeenRecitedException("you have recited all the words");

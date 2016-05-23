@@ -28,6 +28,7 @@ QPushButton#manageBtn {
 
 QPushButton#returnBtn {
     border-image: url(:/image/buttons/2-0btn_34.png);
+    color: rgb(0, 0, 0)
 }
 
 QFrame#bgimg {

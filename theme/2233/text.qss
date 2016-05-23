@@ -1,0 +1,35 @@
+QFrame#bgimg {
+    border-image: url(:/img/2233/text.jpg);
+}
+
+QTextEdit#articleEdit {
+    background-color: rgba(255, 255, 255, 180);
+}
+
+QListWidget#wordList {
+    background-color: rgba(255, 255, 255, 180);
+}
+
+QTextBrowser#transBrowser {
+    background-color: rgba(255, 255, 255, 180);
+}
+
+QPushButton#analyseBtn {
+    border-image: url(:/image/buttons/2-0btn_25.png);
+    color: rgb(255, 255, 255);
+}
+
+QPushButton#returnBtn {
+    border-image: url(:/image/buttons/2-0btn_25.png);
+    color: rgb(255, 255, 255);
+}
+
+QPushButton#detailBtn {
+    border-image: url(:/image/buttons/2-0btn_25.png);
+    color: rgb(255, 255, 255);
+}
+
+QPushButton#importBtn {
+    border-image: url(:/image/buttons/2-0btn_25.png);
+    color: rgb(255, 255, 255);
+}

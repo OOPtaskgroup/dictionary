@@ -80,6 +80,19 @@ p, li { white-space: pre-wrap; }
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
+    <widget class="QPushButton" name="textBtn">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>410</y>
+       <width>181</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>文  本  分  析</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QLabel" name="username">
     <property name="geometry">
@@ -224,19 +237,6 @@ p, li { white-space: pre-wrap; }
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="textBtn">
-    <property name="geometry">
-     <rect>
-      <x>70</x>
-      <y>400</y>
-      <width>181</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>文  本  分  析</string>
-    </property>
-   </widget>
    <zorder>bgImg</zorder>
    <zorder>exitBtn</zorder>
    <zorder>wordEdit</zorder>
@@ -247,7 +247,6 @@ p, li { white-space: pre-wrap; }
    <zorder>configBtn</zorder>
    <zorder>testBtn</zorder>
    <zorder>reciteBtn</zorder>
-   <zorder>textBtn</zorder>
    <zorder>historyList</zorder>
   </widget>
  </widget>

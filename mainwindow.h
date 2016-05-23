@@ -44,7 +44,7 @@ private slots:
 
     void on_wordEdit_textChanged(const QString &arg1);
 
-   // void on_textBtn_clicked();
+    void on_textBtn_clicked();
 
 private:
     Ui::MainWindow *ui;

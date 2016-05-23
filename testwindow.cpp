@@ -29,6 +29,7 @@ TestWindow::TestWindow(Controller *controller, QWidget *parent) :
 {
     ui->setupUi(this);
     this->controller = controller;
+    this->move(this->parentWidget()->pos());
     this->setStyleSheet(controller->setTheme("test"));
     testWords = controller->getTestWords();
     result.clear();
@@ -47,6 +48,7 @@ WordData *TestWindow::findNextWord()
 
 void TestWindow::closeEvent(QCloseEvent *event)
 {
+    this->parentWidget()->move(this->pos());
     if (testOver())
     {
         this->parentWidget()->show();

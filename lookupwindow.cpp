@@ -50,7 +50,8 @@ void LookUpWindow::refresh()
 
 void LookUpWindow::closeEvent(QCloseEvent *event)
 {
-    parentWidget()->setVisible(true);
+    this->parentWidget()->move(this->pos());
+    this->parentWidget()->show();
     event->accept();
 }
 
@@ -60,6 +61,7 @@ LookUpWindow::LookUpWindow(Controller *controller, QString word, QWidget *parent
     controller(controller)
 {
     ui->setupUi(this);
+    this->move(this->parentWidget()->pos());
     this->setStyleSheet(controller->setTheme("lookup"));
     lookUpWord = word;
     lookUpData = this->controller->findWord(word.toStdString());

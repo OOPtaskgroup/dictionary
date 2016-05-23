@@ -11,10 +11,10 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>文本分析</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="detailBtn">
     <property name="geometry">
      <rect>
       <x>570</x>
@@ -27,17 +27,7 @@
      <string>详  细  解  释</string>
     </property>
    </widget>
-   <widget class="QTextBrowser" name="textBrowser">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>40</y>
-      <width>471</width>
-      <height>391</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QTextBrowser" name="textBrowser_2">
+   <widget class="QTextBrowser" name="transBrowser">
     <property name="geometry">
      <rect>
       <x>530</x>
@@ -47,7 +37,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="importBtn">
     <property name="geometry">
      <rect>
       <x>280</x>
@@ -60,7 +50,7 @@
      <string>从文件导入...</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="returnBtn">
     <property name="geometry">
      <rect>
       <x>570</x>
@@ -73,17 +63,7 @@
      <string>返    回</string>
     </property>
    </widget>
-   <widget class="QListView" name="listView">
-    <property name="geometry">
-     <rect>
-      <x>530</x>
-      <y>40</y>
-      <width>261</width>
-      <height>192</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="analyseBtn">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -96,8 +76,69 @@
      <string>分  析</string>
     </property>
    </widget>
+   <widget class="QTextEdit" name="articleEdit">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>30</y>
+      <width>461</width>
+      <height>391</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="wordList">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>30</y>
+      <width>261</width>
+      <height>201</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QFrame" name="bgimg">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>821</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <zorder>bgimg</zorder>
+   <zorder>detailBtn</zorder>
+   <zorder>transBrowser</zorder>
+   <zorder>importBtn</zorder>
+   <zorder>returnBtn</zorder>
+   <zorder>analyseBtn</zorder>
+   <zorder>articleEdit</zorder>
+   <zorder>wordList</zorder>
   </widget>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>returnBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>TextWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>738</x>
+     <y>468</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>792</x>
+     <y>457</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

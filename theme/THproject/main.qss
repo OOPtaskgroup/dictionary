@@ -30,6 +30,10 @@ QPushButton#reciteBtn {
     border-image: url(:/image/buttons/btn_14.png);
 }
 
+QPushButton#textBtn {
+    border-image: url(:/image/buttons/btn_14.png);
+}
+
 QLineEdit {
     background-color: rgba(203, 215, 223, 120);
 }
