@@ -48,6 +48,7 @@ void LoginDlg::on_loginBtn_clicked()
     }
     catch(PasswordNotCorrectException exce)
     {
+        QApplication::restoreOverrideCursor();
         QMessageBox warningBox(QMessageBox::Warning, "出错啦！", "密码错误！");
         warningBox.setStandardButtons(QMessageBox::Retry);
         warningBox.setButtonText(QMessageBox::Retry, "重试");
@@ -57,6 +58,7 @@ void LoginDlg::on_loginBtn_clicked()
     }
     catch(ItemNotFoundException exce)
     {
+        QApplication::restoreOverrideCursor();
         QMessageBox warningBox(QMessageBox::Warning, "出错啦！", "该用户不存在！");
         warningBox.setStandardButtons(QMessageBox::Retry);
         warningBox.setButtonText(QMessageBox::Retry, "重试");

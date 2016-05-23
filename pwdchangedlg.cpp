@@ -54,9 +54,16 @@ void PwdChangeDlg::on_confirmBtn_clicked()
         controller->userModifyPassword(controller->getActiveUser(), ui->oldPwdEdit->text().toStdString(), ui->newPwdEdit->text().toStdString());
         accept();
     }
-    catch(int exec)
+    catch(PasswordNotCorrectException exec)
     {
-
+        QMessageBox warningBox(QMessageBox::Warning, "出错啦！", "原密码错误！");
+        warningBox.setStandardButtons(QMessageBox::Retry);
+        warningBox.setButtonText(QMessageBox::Retry, "重试");
+        warningBox.exec();
+        ui->oldPwdEdit->clear();
+        ui->oldPwdEdit->setFocus();
+        ui->newPwdEdit->clear();
+        ui->confirmNewPwdEdit->clear();
     }
 }
 

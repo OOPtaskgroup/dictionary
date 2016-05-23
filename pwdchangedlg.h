@@ -3,6 +3,8 @@
 
 #include <QDialog>
 #include "controller.h"
+#include "exceptions.h"
+#include <QMessageBox>
 
 namespace Ui {
 class PwdChangeDlg;
