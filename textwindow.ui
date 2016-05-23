@@ -10,6 +10,18 @@
     <height>520</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>820</width>
+    <height>520</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>820</width>
+    <height>520</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>文本分析</string>
   </property>
