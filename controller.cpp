@@ -289,7 +289,12 @@ std::vector<WordData*> Controller :: getTextNewWords(std::string text)
         if(word && word->Type() < 30)
         {
             log << "INFO get word " << now << " from text. " << std::endl;
-            toReturn.push_back(word);
+            bool add = true;
+            for(auto i:toReturn)
+                if(i == word)
+                    add=false;
+            if(add)
+                toReturn.push_back(word);
         }
         now = "";
     }
