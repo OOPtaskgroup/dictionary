@@ -9,9 +9,16 @@ WordDataBase::WordDataBase()
         std::string str;
         while (std::getline(fin[i],str))
         {
-        WordData *pt = new WordData(str,i+1);
-        worddatal.push_back(pt);
+            WordData *pt = new WordData(str,i+1);
+            worddatal.push_back(pt);
         }
+    }
+    std::ifstream rest("Rest.txt");
+    std::string str;
+    while(std::getline(rest,str))
+    {
+        WordData* pt = new WordData(str,-1);
+        worddatal.push_back(pt);
     }
 }
 
