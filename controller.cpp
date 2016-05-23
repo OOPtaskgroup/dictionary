@@ -286,7 +286,7 @@ std::vector<WordData*> Controller :: getTextNewWords(std::string text)
     else if(now != "")
     {
         WordData* word = findWord(now);
-        if(word)
+        if(word && word->Type() < 30)
         {
             log << "INFO get word " << now << " from text. " << std::endl;
             toReturn.push_back(word);
