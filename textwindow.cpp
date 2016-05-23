@@ -63,6 +63,10 @@ void TextWindow::on_wordList_clicked(const QModelIndex &index)
 
 void TextWindow::on_detailBtn_clicked()
 {
+    if (ui->wordList->currentRow() == -1)
+    {
+        return;
+    }
     LookUpWindow *lookUpWindow = new LookUpWindow(controller, ui->wordList->currentItem()->text(), this);
     lookUpWindow->setAttribute(Qt::WA_DeleteOnClose);
     this->hide();

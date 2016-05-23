@@ -24,6 +24,10 @@ void ExManageDlg::on_exList_clicked(const QModelIndex &index)
 
 void ExManageDlg::on_delBtn_clicked()
 {
+    if (ui->exList->currentRow() == -1)
+    {
+        return;
+    }
     controller->delExample(srcWord, ui->exList->currentItem()->text().toStdString());
     setItem();
 }
