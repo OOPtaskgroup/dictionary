@@ -96,7 +96,11 @@ DISTFILES += \
     Normal.txt \
     makefile \
     debug.log \
-    userdatas.txt
+    userdatas.txt \
+    myRc.rc
+
+RC_FILE = \
+    myRc.rc
 
 RESOURCES += \
     theme.qrc \

@@ -10,45 +10,6 @@
         <file>buttons/2-0btn_25.png</file>
         <file>buttons/2-0btn_28.png</file>
     </qresource>
-    <qresource prefix="/buttons">
-        <file>buttons/2-0btn_07.png</file>
-        <file>buttons/2-0btn_09.png</file>
-        <file>buttons/2-0btn_10.png</file>
-        <file>buttons/2-0btn_11.png</file>
-        <file>buttons/2-0btn_12.png</file>
-        <file>buttons/2-0btn_13.png</file>
-        <file>buttons/2-0btn_16.png</file>
-        <file>buttons/2-0btn_17.png</file>
-        <file>buttons/2-0btn_18.png</file>
-        <file>buttons/2-0btn_19.png</file>
-        <file>buttons/2-0btn_20.png</file>
-        <file>buttons/2-0btn_21.png</file>
-        <file>buttons/2-0btn_22.png</file>
-        <file>buttons/2-0btn_23.png</file>
-        <file>buttons/2-0btn_24.png</file>
-        <file>buttons/2-0btn_25.png</file>
-        <file>buttons/2-0btn_26.png</file>
-        <file>buttons/2-0btn_27.png</file>
-        <file>buttons/2-0btn_28.png</file>
-        <file>buttons/2-0btn_29.png</file>
-        <file>buttons/2-0btn_30.png</file>
-        <file>buttons/2-0btn_31.png</file>
-        <file>buttons/2-0btn_32.png</file>
-        <file>buttons/2-0btn_33.png</file>
-        <file>buttons/2-0btn_34.png</file>
-        <file>buttons/2-0btn_35.png</file>
-        <file>buttons/2-0btn_36.png</file>
-        <file>buttons/btn_14.png</file>
-    </qresource>
-    <qresource prefix="/image/2233">
-        <file>img/2233/add.jpg</file>
-        <file>img/2233/main.png</file>
-        <file>img/2233/manage.jpg</file>
-        <file>img/2233/recite.jpg</file>
-    </qresource>
-    <qresource prefix="/image/THproject">
-        <file>img/THproject/main.jpg</file>
-    </qresource>
     <qresource prefix="/">
         <file>img/2233/add.jpg</file>
         <file>img/2233/config.jpeg</file>

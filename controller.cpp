@@ -271,6 +271,7 @@ void Controller :: getTodayWords()
 std::vector<WordData*> Controller :: getTextNewWords(std::string text)
 {
     Logging log("Controller :: getTextNewWords",true);
+    text += " ";
     for(auto& i : text)
     if(i >='A' && i <= 'Z')
     {

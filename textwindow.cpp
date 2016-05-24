@@ -19,13 +19,16 @@ TextWindow::~TextWindow()
 
 void TextWindow::loadFile(const QString &fileName)
 {
+    QApplication::setOverrideCursor(Qt::WaitCursor);
     QFile file(fileName);
     if (!file.open(QFile::ReadOnly | QFile::Text))
     {
+        QApplication::restoreOverrideCursor();
         QMessageBox::warning(this, tr("警告"), tr("无法读取文件 %1").arg(fileName));
         return;
     }
     ui->articleEdit->setText(QLatin1String(file.readAll()));
+    QApplication::restoreOverrideCursor();
 }
 
 void TextWindow::closeEvent(QCloseEvent *event)
@@ -46,19 +49,27 @@ void TextWindow::on_importBtn_clicked()
 
 void TextWindow::on_analyseBtn_clicked()
 {
+    QApplication::setOverrideCursor(Qt::WaitCursor);
     ui->wordList->clear();
     auto word = controller->getTextNewWords(ui->articleEdit->toPlainText().toStdString());
     for (auto i = word.begin(); i != word.end(); ++i)
     {
         ui->wordList->addItem(QString::fromStdString((*i)->Name()));
     }
+    QApplication::restoreOverrideCursor();
 }
 
 void TextWindow::on_wordList_clicked(const QModelIndex &index)
 {
     auto wordDetail = controller->getDetail(controller->findWord(ui->wordList->currentItem()->text().toStdString()));
     ui->transBrowser->setText(QString::fromStdString(*(wordDetail.begin() + wordDetail.size() - 1)));
-    ui->articleEdit->find(ui->wordList->currentItem()->text(), QTextDocument::FindWholeWords);
+    if (!ui->articleEdit->find(ui->wordList->currentItem()->text(), QTextDocument::FindWholeWords))
+    {
+        QTextCursor cursor = ui->articleEdit->textCursor();
+        cursor.movePosition(QTextCursor::Start);
+        ui->articleEdit->setTextCursor(cursor);
+        ui->articleEdit->find(ui->wordList->currentItem()->text(), QTextDocument::FindWholeWords);
+    }
 }
 
 void TextWindow::on_detailBtn_clicked()
