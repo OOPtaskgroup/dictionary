@@ -10,6 +10,18 @@
     <height>301</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>401</width>
+    <height>301</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>401</width>
+    <height>301</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>修改密码</string>
   </property>
