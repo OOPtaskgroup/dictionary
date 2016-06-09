@@ -11,4 +11,7 @@ extern const int __timesContiniouslyLimit;
 extern const std::string __defaultTheme;
 extern const std::string __themeList[];
 extern const int __themeNumber;
+extern const std::string __wordFiles[];
+extern const std::string __restWordFile;
+extern const std::string __defaultUserFile;
 #endif

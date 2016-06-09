@@ -1,18 +1,10 @@
 #include "controller.h"
 
-Controller :: Controller (const std::string defaultUserFile)
+Controller :: Controller ()
 {
     Logging log("Controller :: Controller",true);
     srand(time(NULL));
     userController = new UserController();
-    std::ifstream input(defaultUserFile);
-    if(input.is_open())
-    {
-        std::string ID,passwd;
-        input >> ID >> passwd;
-        Login(ID,passwd);
-        log << "INFO from file " << defaultUserFile << " find user " << ID << "." << std::endl;
-    }
 }
 
 Controller :: ~Controller ()
@@ -23,17 +15,17 @@ Controller :: ~Controller ()
 
 void Controller :: Login (std::string ID, std::string passwd, bool remPasswd)
 {
-    Logging log("Controller :: Login",true);
-    UserData* toLogin = userController->checkIn(ID,passwd);
-    Login(toLogin,remPasswd);
+    auto toLogin = userController->checkIn(ID,passwd);
+    Login(toLogin);
+    userController->reWriteDefaultUser(toLogin,remPasswd);
 }
 
-void Controller :: Login (UserData* user, bool remPasswd)
+void Controller :: Login (UserData* user)
 {
+    Logging log("Controller :: Login",true);
     userController->userLogin(user);
-    wordController = new WordController("userdatas" + _SLASH+user->Name()+_SLASH+"words");
-    config = new Configuration("userdatas"+_SLASH+user->Name()+_SLASH+"config");
-    reWriteDefault(user,remPasswd);
+    wordController = new WordController("userdatas" + _SLASH + user->Name() + _SLASH + "words");
+    config = new Configuration("userdatas" + _SLASH + user->Name() + _SLASH + "config");
 }
 
 void Controller :: Logout()
@@ -57,26 +49,7 @@ UserData* Controller :: getActiveUser()
 
 std::pair<std::string,std::string> Controller :: getDefaultUser()
 {
-    Logging log("Controller :: getDefaultUser",true);
-    std::ifstream input("default.txt");
-    std::string ID,passwd;
-    int rem;
-    if(input)
-    {
-        input >> ID >> rem;
-        UserData* defaultUser = userController->findUser(ID);
-        if(defaultUser)
-        {
-            log << "INFO now default user " << defaultUser->Name() << std::endl;
-            if(rem)
-            {
-                log << "INFO remember password." << std::endl;
-                passwd = defaultUser->Password();
-            }
-        }
-        else ID="";
-    }
-    return std::make_pair(ID,passwd);
+    return userController->getDefaultUser();
 }
 
 void Controller :: userModifyPassword(UserData* user, std::string passwd, std::string newPasswd)
@@ -89,13 +62,13 @@ WordData* Controller :: findWord(std::string word, bool toAddHistory)
     WordData* toReturn = wordController->findWord(word);
     if(toAddHistory && toReturn)
         setHistoryLog(toReturn);
-    return toReturn;;
+    return toReturn;
 }
 
 std::vector< std::pair<WordData*,int> >& Controller :: getRecitingWords()
 {
     Logging log("Controller :: getRecitingWords",true);
-    if(nowRecitingWords.size() == 0)getTodayWords();
+    getTodayWords();
     if(nowRecitingWords.size() == 0)
     {
         log << "INFO get new words..." << std::endl;
@@ -138,7 +111,7 @@ int Controller :: getVocabulary( std::vector< std::pair<WordData*,bool> > list)
     Logging log("Controller :: getVocabulary",true);
     for(auto i : list)
     if(i.second)
-        toReturn+=wordController->getDifficultyWords(i.first->Type()%10) 
+        toReturn += wordController->getDifficultyWords(i.first->Type()%10)
                     / (double)(list.size()/5);
     return (int)toReturn;
 }
@@ -226,16 +199,10 @@ void Controller :: modifyConfig(const Configuration& newConfig)
     modifyConfig(newConfig.Difficulty(), newConfig.DailyNumber());
 }
 
-void Controller :: reWriteDefault(UserData* user, bool remPasswd)
-{
-    std::ofstream output("default.txt");
-    output << user->Name() << std::endl << (remPasswd?1:0);
-}
-
 void Controller :: reWriteTodayWords()
 {
     Logging log("Controller :: reWriteTodayWords",true);
-    std::string fileName("userdatas" + _SLASH+userController->getActiveUser()->Name() +_SLASH+ "today");
+    std::string fileName("userdatas" + _SLASH + userController->getActiveUser()->Name() + _SLASH + "today");
     std::ofstream output(fileName, std::ios_base::trunc);
     std::time_t t = std::time(nullptr);
     std::tm* now = std::localtime(&t);
@@ -248,15 +215,16 @@ void Controller :: reWriteTodayWords()
 void Controller :: getTodayWords()
 {
     Logging log("Controller :: getTodayWords",true);
+    nowRecitingWords.clear();
     std::time_t t = std::time(nullptr);
     std::tm* now = std::localtime(&t);
-    std::string fileName("userdatas" +_SLASH+ userController->getActiveUser()->Name() +_SLASH +"today");
+    std::string fileName("userdatas" + _SLASH + userController->getActiveUser()->Name() + _SLASH + "today");
     std::ifstream input(fileName);
     if(!input)return;
     int year,month,day;
     input >> year >> month >> day;
     log << "INFO file was written on " << year << "/" << month << "/" << day << std::endl;
-    if(year != now->tm_year+1900 || month != now->tm_mon+1 || day != now->tm_mday)return;
+    if(year != now->tm_year + 1900 || month != now->tm_mon + 1 || day != now->tm_mday)return;
     std::string name;
     int type;
     std::getline(input,name);
@@ -270,36 +238,7 @@ void Controller :: getTodayWords()
 
 std::vector<WordData*> Controller :: getTextNewWords(std::string text)
 {
-    Logging log("Controller :: getTextNewWords",true);
-    text += " ";
-    for(auto& i : text)
-    if(i >='A' && i <= 'Z')
-    {
-        i +='a' - 'A';
-    }
-    else if(i<'a' || i>'z')
-        i = ' ';
-    std::string now = "";
-    std::vector <WordData*> toReturn;
-    for(auto i : text)
-    if(i >='a' && i <='z')
-    now+=i;
-    else if(now != "")
-    {
-        WordData* word = findWord(now);
-        if(word && word->Type() < 30)
-        {
-            log << "INFO get word " << now << " from text. " << std::endl;
-            bool add = true;
-            for(auto i:toReturn)
-                if(i == word)
-                    add=false;
-            if(add)
-                toReturn.push_back(word);
-        }
-        now = "";
-    }
-    return toReturn;
+	return wordController->getTextNewWords(text);
 }
 
 std::vector<std::string> Controller :: getDetail(WordData* item)
@@ -323,7 +262,7 @@ void Controller :: setHistoryLog(WordData* word)
     Logging log("Controller :: setHistoryLog",true);
     UserData* user = getActiveUser();
     auto history = getSearchHistory(user);
-    for(auto i = history.begin(); i!=history.end(); ++i)
+    for(auto i = history.begin(); i != history.end(); ++i)
         if(*i == word->Name())
         {
             history.erase(i);
@@ -331,7 +270,7 @@ void Controller :: setHistoryLog(WordData* word)
             break;
         }
     history.push_back(word->Name());
-    std::ofstream output("userdatas" + _SLASH + user->Name() +_SLASH +"history.lis");
+    std::ofstream output("userdatas" + _SLASH + user->Name() + _SLASH + "history.lis");
     for(auto i:history)
         output << i << std::endl;
 }
@@ -352,7 +291,7 @@ QString Controller :: setTheme(std::string name)
     QString fileName = QString::fromStdString(":/theme/" + theme + "/" + name + ".qss");
     QFile input(fileName);
     input.open(QFile::ReadOnly);
-    if (input.isOpen())
+    if(input.isOpen())
     {
         QString content = QLatin1String(input.readAll());
         return content;

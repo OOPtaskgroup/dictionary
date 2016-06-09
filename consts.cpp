@@ -9,3 +9,6 @@ const int __timesContiniouslyLimit = 4;
 const std::string __defaultTheme = "2233";
 const std::string __themeList[] = {"2233", "THproject"};
 const int __themeNumber = 2;
+const std::string __wordFiles[] = {"Easy.txt","Normal.txt","Hard.txt","Lunatic.txt","Extra.txt"};
+const std::string __restWordFile = "Rest.txt";
+const std::string __defaultUserFile = "default.txt";

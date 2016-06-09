@@ -1,9 +1,11 @@
 #include "usercontroller.h"
 UserController :: UserController ()
 {
+    std::system("mkdir userdatas");
     dataBase = new UserDataBase();
     nowActiveUser = nullptr;
 }
+
 UserController :: ~UserController()
 {
 
@@ -38,10 +40,7 @@ void UserController :: userLogin(UserData* toLogin)
 UserData* UserController :: findUser(std::string ID)
 {
     Logging log("UserController :: findUser",true);
-    for(auto i = dataBase->begin(); i != dataBase->end(); ++i)
-        if( (*i)->Name() == ID)
-            return *i;
-    return nullptr;
+    return dataBase->findUser(ID);
 }
 
 UserData* UserController :: checkIn(std::string ID, std::string passwd)
@@ -86,4 +85,34 @@ void UserController :: userModifyPassword(UserData* user, std::string passwd, st
     user->setPassword(newPasswd);
     log << "INFO " <<passwd << " -> " << newPasswd <<std::endl;
     dataBase->save();
+}
+
+std::pair<std::string,std::string> UserController :: getDefaultUser()
+{
+    Logging log("UserController :: getDefaultUser",true);
+    std::ifstream input(__defaultUserFile);
+    std::string ID,passwd;
+    int rem;
+    if(input)
+    {
+        input >> ID >> rem;
+        UserData* defaultUser = findUser(ID);
+        if(defaultUser)
+        {
+            log << "INFO now default user " << defaultUser->Name() << std::endl;
+            if(rem)
+            {
+                log << "INFO remember password." << std::endl;
+                passwd = defaultUser->Password();
+            }
+        }
+        else ID="";
+    }
+    return std::make_pair(ID,passwd);
+}
+
+void UserController :: reWriteDefaultUser(UserData* user, bool remPasswd)
+{
+    std::ofstream output(__defaultUserFile);
+    output << user->Name() << std::endl << (remPasswd?1:0);
 }

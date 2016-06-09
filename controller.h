@@ -15,8 +15,8 @@ class Controller
 private:
     UserController* userController;
 public:
+    void Login(UserData* user);
     void Login(std::string ID, std::string passwd, bool remPasswd = false);
-    void Login(UserData* user, bool remPasswd = false);
     void Logout();
     UserData* userRegister(std::string ID, std::string passwd);
     UserData* getActiveUser();
@@ -58,11 +58,10 @@ public:
     QString setTheme(std::string name);
 
 public:
-    Controller (const std::string defaultUserFile="EMPTY");
+    Controller ();
     ~Controller ();
 
 private:
-    void reWriteDefault(UserData* user, bool remPasswd);
     void reWriteTodayWords();
     void getTodayWords();
 };

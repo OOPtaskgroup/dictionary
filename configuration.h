@@ -17,8 +17,8 @@ public:
     void save();
     void modify(const int& dif, const int&num);
     std::string getTheme()const;
-    const int DailyNumber()const;
-    const int Difficulty()const;
+    int DailyNumber()const;
+    int Difficulty()const;
     void modifyTheme(std::string nowTheme=__defaultTheme);
 };
 

@@ -1,31 +1,28 @@
 #ifndef WORDDATABASE_H
 #define WORDDATABASE_H
-#include<bits/stdc++.h>
-#include"database.h"
-#include"worddata.h"
+#include <bits/stdc++.h>
+#include "database.h"
+#include "worddata.h"
+#include "consts.h"
 
 class WordDataBase : public DataBase
 {
-	std :: vector <WordData*> worddatas,worddatal;
+    std :: vector <WordData*> worddatas,worddatal;
 public:
-	WordDataBase();
-        WordDataBase(std::string fileName);
-	~WordDataBase();
-	std::vector<WordData*> getAll();
-	WordData* FindWord(std::string str);
-	bool isEmpty();
-	//WordData* findword();
-	void reWrite(const std::string& fileName);
-	void insert(WordData* wd);
-        std::vector<WordData*>::iterator begin();
-        std::vector<WordData*>::iterator end();
-	WordData* getrandom();
-//	void select(int type);
-//        void select(int typel,int typer);
-        
-        template <typename T>
-        void select(T chooser);
-        int size();
+    WordDataBase();
+    WordDataBase(std::string fileName);
+    ~WordDataBase();
+    std::vector<WordData*> getAll();
+    WordData* findWord(std::string str);
+    bool empty();
+    void save(const std::string fileName);
+    void insert(WordData* wd);
+    std::vector<WordData*>::iterator begin();
+    std::vector<WordData*>::iterator end();
+    WordData* getRandom();
+    template <typename T>
+    void select(T chooser);
+    int size();
 };
 
 

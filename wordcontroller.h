@@ -34,6 +34,7 @@ public:
     void delExample(WordData* word, std::string item);
     std::vector<std::string> getExample(WordData* word);
     std::vector<WordData*> getTestWords(int num);
+    std::vector<WordData*> getTextNewWords(std::string text);
     int getDifficultyWords(int dif);
 private:
     std::vector<WordData*> getWord(int type);

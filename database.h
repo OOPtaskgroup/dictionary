@@ -5,8 +5,11 @@
 
 class DataBase
 {
-	public:
-        ~DataBase();
+public:
+    ~DataBase();
+    virtual bool empty() = 0;
+    virtual int size() = 0;
+    virtual void save(const std::string fileName) = 0;
 };
 
 #endif

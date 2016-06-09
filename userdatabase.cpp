@@ -1,4 +1,4 @@
-#include"userdatabase.h"
+#include "userdatabase.h"
 
 UserDataBase::UserDataBase()
 {
@@ -14,16 +14,14 @@ UserDataBase::UserDataBase()
     fin.close();
 }
 
-bool UserDataBase::findUser(std::string str)
+UserData* UserDataBase::findUser(std::string str)
 {
-    for (std::vector<UserData*>::iterator iter=userdatas.begin();iter!=userdatas.end();++iter)
-    {
-        if((*iter)->Name()==str)
+    for (auto iter : userdatas)
+        if(iter->Name()==str)
         {
-            return true;
+            return iter;
         }
-    }
-    return false;
+    return nullptr;
 }
 
 bool UserDataBase::empty()
@@ -31,20 +29,20 @@ bool UserDataBase::empty()
     return userdatas.empty();
 }
 
-int UserDataBase::userNumber()
+int UserDataBase::size()
 {
     return userdatas.size();
 }
 
-void UserDataBase::save()
+void UserDataBase::save(const std::string fileName)
 {
     Logging log("UserDataBase :: save",true);
-    std::ofstream fout("userdatas.txt");
+    std::ofstream fout(fileName);
     log << "INFO " << userdatas.size() << std::endl;
-    for(std::vector<UserData*>::iterator iter=userdatas.begin();iter!=userdatas.end();++iter)
+    for(auto iter : userdatas)
     {
-        fout<<(*iter)->Name()<<" "<<(*iter)->Password()<< std::endl;
-        log<<"INFO "<<(*iter)->Name() << std::endl;
+        fout<<iter->Name()<<" "<<iter->Password()<< std::endl;
+        log<<"INFO "<<iter->Name() << std::endl;
     }
     fout.close();
 }
