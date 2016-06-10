@@ -11,6 +11,7 @@
 #include "logindlg.h"
 #include "testwindow.h"
 #include "textwindow.h"
+#include "userwindow.h"
 
 namespace Ui {
 class MainWindow;
@@ -45,6 +46,8 @@ private slots:
     void on_wordEdit_textChanged(const QString &arg1);
 
     void on_textBtn_clicked();
+
+    void on_userBtn_clicked();
 
 private:
     Ui::MainWindow *ui;

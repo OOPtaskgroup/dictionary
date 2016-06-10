@@ -34,6 +34,10 @@ QPushButton#textBtn {
     border-image: url(:/image/buttons/btn_08.png);
 }
 
+QPushButton#userBtn {
+    border-image: url(:/image/buttons/btn_08.png);
+}
+
 QLineEdit {
     background-color: rgba(201, 246, 255, 120);
 }

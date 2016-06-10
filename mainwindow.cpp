@@ -56,13 +56,23 @@ void MainWindow::on_configBtn_clicked()
 
 void MainWindow::on_reciteBtn_clicked()
 {
-    if (!checkReciteWords())
+    try
     {
-        controller->setAdditionWords();
+        if (!checkReciteWords())
+        {
+           controller->setAdditionWords();
+        }
+        ReciteWindow *reciteWindow = new ReciteWindow(controller, this);
+        reciteWindow->show();
+        this->hide();
     }
-    ReciteWindow *reciteWindow = new ReciteWindow(controller, this);
-    reciteWindow->show();
-    this->hide();
+    catch (ItemNotFoundException exec)
+    {
+        QMessageBox infoBox(QMessageBox::Information, "提示", "你已经背完了当前难度的所有单词！");
+        infoBox.setStandardButtons(QMessageBox::Ok);
+        infoBox.setButtonText(QMessageBox::Ok, "返回");
+        infoBox.exec();
+    }
 }
 
 void MainWindow::on_lookUpBtn_clicked()
@@ -193,4 +203,12 @@ void MainWindow::on_textBtn_clicked()
     textWindow->setAttribute(Qt::WA_DeleteOnClose);
     this->hide();
     textWindow->show();
+}
+
+void MainWindow::on_userBtn_clicked()
+{
+    UserWindow *userWindow = new UserWindow(controller, this);
+    userWindow->setAttribute(Qt::WA_DeleteOnClose);
+    this->hide();
+    userWindow->show();
 }
