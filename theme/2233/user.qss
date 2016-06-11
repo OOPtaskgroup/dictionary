@@ -1,17 +1,17 @@
 QFrame#bgImg {
-    border-image: url(:/img/THproject/user.jpg);
+    border-image: url(:/img/2233/user.jpg);
 }
 
 QPushButton#detailBtn {
-    border-image: url(:/image/buttons/2-0btn_29.png);
+    border-image: url(:/image/buttons/btn_08.png);
 }
 
 QPushButton#exitBtn {
-    border-image: url(:/image/buttons/2-0btn_29.png);
+    border-image: url(:/image/buttons/btn_08.png);
 }
 
 QPushButton#relearnBtn {
-    border-image: url(:/image/buttons/2-0btn_29.png);
+    border-image: url(:/image/buttons/btn_08.png);
 }
 
 QListWidget#learningList {

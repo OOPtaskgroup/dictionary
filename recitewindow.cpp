@@ -65,7 +65,7 @@ void ReciteWindow::closeEvent(QCloseEvent *event)
     event->accept();
 }
 
-void ReciteWindow::showEvent(QShowEvent *event)
+void ReciteWindow::showEvent(QShowEvent *)
 {
     this->move(this->parentWidget()->pos());
     if (!doRecite())
@@ -169,4 +169,11 @@ void ReciteWindow::on_knownBtn_clicked()
 void ReciteWindow::on_returnBtn_clicked()
 {
     this->close();
+}
+
+
+void ReciteWindow::keyPressEvent(QKeyEvent *event)
+{
+    if (event->key() == Qt::Key_Escape)
+        ui->returnBtn->click();
 }

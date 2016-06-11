@@ -6,7 +6,7 @@
 class DataBase
 {
 public:
-    ~DataBase();
+    virtual ~DataBase() = 0;
     virtual bool empty() = 0;
     virtual int size() = 0;
     virtual void save(const std::string fileName) = 0;

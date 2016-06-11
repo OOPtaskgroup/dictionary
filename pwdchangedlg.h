@@ -21,11 +21,11 @@ public:
 private slots:
     void on_confirmBtn_clicked();
 
-    void on_oldPwdEdit_textChanged(const QString &arg1);
+    void on_oldPwdEdit_textChanged(const QString &);
 
-    void on_newPwdEdit_textChanged(const QString &arg1);
+    void on_newPwdEdit_textChanged(const QString &);
 
-    void on_confirmNewPwdEdit_textChanged(const QString &arg1);
+    void on_confirmNewPwdEdit_textChanged(const QString &);
 
 private:
     Ui::PwdChangeDlg *ui;

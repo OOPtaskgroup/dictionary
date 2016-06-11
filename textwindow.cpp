@@ -59,7 +59,7 @@ void TextWindow::on_analyseBtn_clicked()
     QApplication::restoreOverrideCursor();
 }
 
-void TextWindow::on_wordList_clicked(const QModelIndex &index)
+void TextWindow::on_wordList_clicked(const QModelIndex &)
 {
     auto wordDetail = controller->getDetail(controller->findWord(ui->wordList->currentItem()->text().toStdString()));
     ui->transBrowser->setText(QString::fromStdString(*(wordDetail.begin() + wordDetail.size() - 1)));
@@ -84,7 +84,14 @@ void TextWindow::on_detailBtn_clicked()
     lookUpWindow->show();
 }
 
-void TextWindow::on_wordList_doubleClicked(const QModelIndex &index)
+void TextWindow::on_wordList_doubleClicked(const QModelIndex &)
 {
     ui->detailBtn->click();
+}
+
+
+void TextWindow::keyPressEvent(QKeyEvent *event)
+{
+    if (event->key() == Qt::Key_Escape)
+        ui->returnBtn->click();
 }

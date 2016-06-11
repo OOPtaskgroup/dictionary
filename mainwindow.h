@@ -41,9 +41,9 @@ private slots:
 
     bool eventFilter(QObject *watched, QEvent *event);
 
-    void on_historyList_clicked(const QModelIndex &index);
+    void on_historyList_clicked(const QModelIndex &);
 
-    void on_wordEdit_textChanged(const QString &arg1);
+    void on_wordEdit_textChanged(const QString &);
 
     void on_textBtn_clicked();
 

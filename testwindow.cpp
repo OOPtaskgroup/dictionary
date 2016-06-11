@@ -149,3 +149,9 @@ void TestWindow::on_knownBtn_clicked()
         doTest();
     }
 }
+
+void TestWindow::keyPressEvent(QKeyEvent *event)
+{
+    if (event->key() == Qt::Key_Escape)
+        ui->returnBtn->click();
+}

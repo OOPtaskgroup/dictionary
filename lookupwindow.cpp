@@ -55,6 +55,12 @@ void LookUpWindow::closeEvent(QCloseEvent *event)
     event->accept();
 }
 
+void LookUpWindow::keyPressEvent(QKeyEvent *event)
+{
+    if (event->key() == Qt::Key_Escape)
+        ui->returnBtn->click();
+}
+
 LookUpWindow::LookUpWindow(Controller *controller, QString word, QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::LookUpWindow),

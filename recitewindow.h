@@ -5,6 +5,7 @@
 #include "controller.h"
 #include <QCloseEvent>
 #include <QShowEvent>
+#include <QKeyEvent>
 
 namespace Ui {
 class ReciteWindow;
@@ -33,16 +34,17 @@ private slots:
 
 private:
     bool doRecite();
+    Ui::ReciteWindow *ui;
+    Controller *controller;
     std::vector<std::pair<WordData *, int> >& recitingWords;
     std::pair<WordData*, int>& findNextWord();
     bool showWord(std::pair<WordData*, int>& word);
-    Ui::ReciteWindow *ui;
-    Controller *controller;
     ReciteStatus status;
 
 protected:
     void closeEvent(QCloseEvent *event);
-    void showEvent(QShowEvent *event);
+    void showEvent(QShowEvent *);
+    void keyPressEvent(QKeyEvent *event);
 };
 
 #endif // RECITEWINDOW_H

@@ -36,28 +36,30 @@ void UserWindow::closeEvent(QCloseEvent *event)
     event->accept();
 }
 
-void UserWindow::on_masteredList_doubleClicked(const QModelIndex &index)
+void UserWindow::on_masteredList_doubleClicked(const QModelIndex &)
 {
     ui->detailBtn->click();
 }
 
-void UserWindow::on_learningList_doubleClicked(const QModelIndex &index)
+void UserWindow::on_learningList_doubleClicked(const QModelIndex &)
 {
     ui->detailBtn->click();
 }
 
-void UserWindow::on_masteredList_clicked(const QModelIndex &index)
+void UserWindow::on_masteredList_clicked(const QModelIndex &)
 {
     activeList = ui->masteredList;
+    ui->learningList->clearSelection();
     auto wordDetail = controller->getDetail(controller->findWord(ui->masteredList->currentItem()->text().toStdString()));
     ui->transBrowser->setText(QString::fromStdString(*(wordDetail.begin() + wordDetail.size() - 1)));
     ui->relearnBtn->setEnabled(true);
     ui->relearnBtn->show();
 }
 
-void UserWindow::on_learningList_clicked(const QModelIndex &index)
+void UserWindow::on_learningList_clicked(const QModelIndex &)
 {
     activeList = ui->learningList;
+    ui->masteredList->clearSelection();
     auto wordDetail = controller->getDetail(controller->findWord(ui->learningList->currentItem()->text().toStdString()));
     ui->transBrowser->setText(QString::fromStdString(*(wordDetail.begin() + wordDetail.size() - 1)));
     ui->relearnBtn->setEnabled(false);
@@ -89,3 +91,10 @@ void UserWindow::loadData()
     ui->relearnBtn->setEnabled(false);
     ui->relearnBtn->hide();
 }
+
+void UserWindow::keyPressEvent(QKeyEvent *event)
+{
+    if (event->key() == Qt::Key_Escape)
+        ui->exitBtn->click();
+}
+

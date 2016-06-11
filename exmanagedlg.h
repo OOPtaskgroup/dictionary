@@ -18,7 +18,7 @@ public:
     ~ExManageDlg();
 
 private slots:
-    void on_exList_clicked(const QModelIndex &index);
+    void on_exList_clicked(const QModelIndex &);
 
     void on_delBtn_clicked();
 

@@ -143,7 +143,7 @@ void MainWindow::setHistoryList()
     if (historyWords.size() <= 4)
     {
         ui->historyList->setGeometry(20, 380, 171, historyWords.size() * 24);
-        for (auto i = 1; i <= historyWords.size(); ++i)
+        for (decltype(historyWords.size()) i = 1; i <= historyWords.size(); ++i)
         {
             ui->historyList->addItem(QString::fromStdString(*(historyWords.end() - i)));
         }
@@ -181,13 +181,13 @@ void MainWindow::on_testBtn_clicked()
     testWindow->show();
 }
 
-void MainWindow::on_historyList_clicked(const QModelIndex &index)
+void MainWindow::on_historyList_clicked(const QModelIndex &)
 {
     ui->wordEdit->setText(ui->historyList->currentItem()->text());
     ui->wordEdit->setFocus();
 }
 
-void MainWindow::on_wordEdit_textChanged(const QString &arg1)
+void MainWindow::on_wordEdit_textChanged(const QString &)
 {
     if (ui->wordEdit->text() == "")
     {

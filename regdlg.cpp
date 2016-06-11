@@ -73,17 +73,17 @@ void RegDlg::on_regBtn_clicked()
     }
 }
 
-void RegDlg::on_pwdConfirmEdit_textChanged(const QString &arg1)
+void RegDlg::on_pwdConfirmEdit_textChanged(const QString &)
 {
     setBtnStat();
 }
 
-void RegDlg::on_pwdEdit_textChanged(const QString &arg1)
+void RegDlg::on_pwdEdit_textChanged(const QString &)
 {
     setBtnStat();
 }
 
-void RegDlg::on_usrEdit_textChanged(const QString &arg1)
+void RegDlg::on_usrEdit_textChanged(const QString &)
 {
     setBtnStat();
 }

@@ -5,6 +5,7 @@
 #include "controller.h"
 #include <QCloseEvent>
 #include <QMessageBox>
+#include <QKeyEvent>
 
 namespace Ui {
 class LookUpWindow;
@@ -37,6 +38,7 @@ private:
 
 protected:
     void closeEvent(QCloseEvent *event);
+    void keyPressEvent(QKeyEvent *event);
 };
 
 #endif // LOOKUPWINDOW_H

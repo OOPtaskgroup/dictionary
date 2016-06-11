@@ -7,6 +7,7 @@
 #include "controller.h"
 #include <QCloseEvent>
 #include "lookupwindow.h"
+#include <QKeyEvent>
 
 namespace Ui {
 class TextWindow;
@@ -25,11 +26,11 @@ private slots:
 
     void on_analyseBtn_clicked();
 
-    void on_wordList_clicked(const QModelIndex &index);
+    void on_wordList_clicked(const QModelIndex &);
 
     void on_detailBtn_clicked();
 
-    void on_wordList_doubleClicked(const QModelIndex &index);
+    void on_wordList_doubleClicked(const QModelIndex &);
 
 private:
     Ui::TextWindow *ui;
@@ -38,6 +39,7 @@ private:
 
 protected:
     void closeEvent(QCloseEvent *event);
+    void keyPressEvent(QKeyEvent *event);
 };
 
 #endif // TEXTWINDOW_H

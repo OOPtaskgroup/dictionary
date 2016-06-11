@@ -6,6 +6,7 @@
 #include "controller.h"
 #include "lookupwindow.h"
 #include <QCloseEvent>
+#include <QKeyEvent>
 
 namespace Ui {
 class UserWindow;
@@ -22,13 +23,13 @@ public:
 private slots:
     void on_detailBtn_clicked();
 
-    void on_masteredList_doubleClicked(const QModelIndex &index);
+    void on_masteredList_doubleClicked(const QModelIndex &);
 
-    void on_learningList_doubleClicked(const QModelIndex &index);
+    void on_learningList_doubleClicked(const QModelIndex &);
 
-    void on_masteredList_clicked(const QModelIndex &index);
+    void on_masteredList_clicked(const QModelIndex &);
 
-    void on_learningList_clicked(const QModelIndex &index);
+    void on_learningList_clicked(const QModelIndex &);
 
     void on_relearnBtn_clicked();
 
@@ -40,6 +41,7 @@ private:
 
 protected:
     void closeEvent(QCloseEvent *event);
+    void keyPressEvent(QKeyEvent *event);
 };
 
 #endif // USERWINDOW_H

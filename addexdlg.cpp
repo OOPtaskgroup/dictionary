@@ -3,9 +3,9 @@
 
 AddExDlg::AddExDlg(Controller *controller, WordData *word, QWidget *parent) :
     QDialog(parent),
+    ui(new Ui::AddExDlg),
     controller(controller),
-    srcWord(word),
-    ui(new Ui::AddExDlg)
+    srcWord(word)
 {
     ui->setupUi(this);
     this->setStyleSheet(controller->setTheme("add"));

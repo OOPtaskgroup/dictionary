@@ -5,6 +5,7 @@
 #include <QMessageBox>
 #include "controller.h"
 #include <QCloseEvent>
+#include <QKeyEvent>
 
 namespace Ui {
 class TestWindow;
@@ -40,6 +41,7 @@ private:
 
 protected:
     void closeEvent(QCloseEvent *event);
+    void keyPressEvent(QKeyEvent *event);
 };
 
 #endif // TESTWINDOW_H

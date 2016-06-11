@@ -9,6 +9,7 @@
         <file>buttons/btn_15.png</file>
         <file>buttons/2-0btn_25.png</file>
         <file>buttons/2-0btn_28.png</file>
+        <file>buttons/2-0btn_29.png</file>
     </qresource>
     <qresource prefix="/">
         <file>img/2233/add.jpg</file>
@@ -23,5 +24,7 @@
         <file>img/THproject/recite.jpg</file>
         <file>img/2233/text.jpg</file>
         <file>img/THproject/text.jpg</file>
+        <file>img/2233/user.jpg</file>
+        <file>img/THproject/user.jpg</file>
     </qresource>
 </RCC>

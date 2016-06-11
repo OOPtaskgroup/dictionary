@@ -18,5 +18,7 @@
         <file>theme/THproject/pwdchange.qss</file>
         <file>theme/2233/text.qss</file>
         <file>theme/THproject/text.qss</file>
+        <file>theme/2233/user.qss</file>
+        <file>theme/THproject/user.qss</file>
     </qresource>
 </RCC>

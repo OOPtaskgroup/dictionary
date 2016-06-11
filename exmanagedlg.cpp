@@ -17,7 +17,7 @@ ExManageDlg::~ExManageDlg()
     delete ui;
 }
 
-void ExManageDlg::on_exList_clicked(const QModelIndex &index)
+void ExManageDlg::on_exList_clicked(const QModelIndex &)
 {
     ui->detailBrowser->setText(ui->exList->currentItem()->text());
 }

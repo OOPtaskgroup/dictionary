@@ -67,17 +67,17 @@ void PwdChangeDlg::on_confirmBtn_clicked()
     }
 }
 
-void PwdChangeDlg::on_oldPwdEdit_textChanged(const QString &arg1)
+void PwdChangeDlg::on_oldPwdEdit_textChanged(const QString &)
 {
     setBtnStat();
 }
 
-void PwdChangeDlg::on_newPwdEdit_textChanged(const QString &arg1)
+void PwdChangeDlg::on_newPwdEdit_textChanged(const QString &)
 {
     setBtnStat();
 }
 
-void PwdChangeDlg::on_confirmNewPwdEdit_textChanged(const QString &arg1)
+void PwdChangeDlg::on_confirmNewPwdEdit_textChanged(const QString &)
 {
     setBtnStat();
 }

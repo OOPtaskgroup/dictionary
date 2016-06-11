@@ -84,7 +84,7 @@ void LoginDlg::on_regBtn_clicked()
     }
 }
 
-void LoginDlg::on_usrEdit_textChanged(const QString &arg1)
+void LoginDlg::on_usrEdit_textChanged(const QString &)
 {
     ui->pwdEdit->clear();
 }

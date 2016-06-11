@@ -27,9 +27,9 @@ private:
 
 private slots:
     void on_regBtn_clicked();
-    void on_pwdConfirmEdit_textChanged(const QString &arg1);
-    void on_pwdEdit_textChanged(const QString &arg1);
-    void on_usrEdit_textChanged(const QString &arg1);
+    void on_pwdConfirmEdit_textChanged(const QString &);
+    void on_pwdEdit_textChanged(const QString &);
+    void on_usrEdit_textChanged(const QString &);
 };
 
 #endif // REGDLG_H

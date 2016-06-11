@@ -23,7 +23,7 @@ private slots:
 
     void on_regBtn_clicked();
 
-    void on_usrEdit_textChanged(const QString &arg1);
+    void on_usrEdit_textChanged(const QString &);
 
 private:
     Ui::LoginDlg *ui;
