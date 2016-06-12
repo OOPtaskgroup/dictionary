@@ -9,6 +9,7 @@ Controller :: Controller ()
 
 Controller :: ~Controller ()
 {
+    Logging log("Controller :: ~Controller",true);
     if(getActiveUser())Logout();
     if(userController) delete userController;
 }
@@ -16,21 +17,26 @@ Controller :: ~Controller ()
 void Controller :: Login (std::string ID, std::string passwd, bool remPasswd)
 {
     auto toLogin = userController->checkIn(ID,passwd);
-    Login(toLogin);
-    userController->reWriteDefaultUser(toLogin,remPasswd);
+    Login(toLogin,remPasswd);
 }
 
-void Controller :: Login (UserData* user)
+void Controller :: Login (UserData* user, bool remPasswd)
 {
     Logging log("Controller :: Login",true);
     userController->userLogin(user);
     wordController = new WordController("userdatas" + _SLASH + user->Name() + _SLASH + "words");
     config = new Configuration("userdatas" + _SLASH + user->Name() + _SLASH + "config");
+    userController->reWriteDefaultUser(user,remPasswd);
 }
 
 void Controller :: Logout()
 {
-    if(!getActiveUser())throw ItemNotFoundException((std::string)"no user now.");
+    Logging log("Controller :: Logout",true);
+    if(!getActiveUser())
+    {
+        log << "INFO error no active user" << std::endl;
+        throw ItemNotFoundException((std::string)"no user now.");
+    }
     if(config)delete config;
     if(wordController)delete wordController;
     userController->userLogout();

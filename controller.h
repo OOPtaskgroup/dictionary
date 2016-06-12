@@ -15,7 +15,7 @@ class Controller
 private:
     UserController* userController;
 public:
-    void Login(UserData* user);
+    void Login(UserData* user, bool remPasswd = false);
     void Login(std::string ID, std::string passwd, bool remPasswd = false);
     void Logout();
     UserData* userRegister(std::string ID, std::string passwd);

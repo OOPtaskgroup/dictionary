@@ -73,6 +73,8 @@ std::vector<WordData*>::iterator WordDataBase::end()
 
 void WordDataBase::save(const std::string fileName)
 {
+    Logging log("WordDataBase :: save",true);
+    log << "INFO saving to file " << fileName << std::endl;
     std::ofstream fout(fileName);
     for(auto iter=worddatal.begin();iter!=worddatal.end();++iter)
     {

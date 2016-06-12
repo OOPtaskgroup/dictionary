@@ -19,6 +19,8 @@ MainWindow::MainWindow(Controller *controller, QWidget *parent) :
 
 MainWindow::~MainWindow()
 {
+    Logging log("MainWindow :: ~MainWindow",true);
+    delete controller;
     delete ui;
 }
 

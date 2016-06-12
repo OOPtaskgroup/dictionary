@@ -1,5 +1,6 @@
 #include "configdlg.h"
 #include "ui_configdlg.h"
+#include "logging.h"
 
 ConfigDlg::ConfigDlg(QWidget *parent) :
     QDialog(parent),
@@ -39,6 +40,8 @@ void ConfigDlg::on_pwdChangeBtn_clicked()
 
 void ConfigDlg::on_confirmBtn_clicked()
 {
+    Logging log("Config :: on_confirmBtn_clicked",true);
+    log << "INFO modify config" << (ui->diffBox->currentText().toInt()) << " " << (ui->wordsBox->currentText().toInt()) << std::endl;
     controller->modifyConfig(ui->diffBox->currentText().toInt(), ui->wordsBox->currentText().toInt());
     controller->modifyTheme(__themeList[ui->themeBox->currentIndex()]);
     accept();

@@ -30,7 +30,7 @@ WordController :: ~WordController()
 }
 std::vector<WordData*> WordController :: randomWordCollect(int noLearned,int Learned)
 {
-    Logging log("WordController :: wordCollect",true);
+    Logging log("WordController :: randomWordCollect",true);
 
     std::vector<WordData*> toReturn;
 
