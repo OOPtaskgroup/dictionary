@@ -37,7 +37,8 @@ SOURCES += main.cpp\
     exmanagedlg.cpp \
     addexdlg.cpp \ 
     testwindow.cpp \
-    textwindow.cpp
+    textwindow.cpp \
+    userwindow.cpp
 
 HEADERS  += mainwindow.h \
     consts.h \
@@ -70,7 +71,8 @@ HEADERS  += mainwindow.h \
     exmanagedlg.h \
     addexdlg.h \
     testwindow.h \
-    textwindow.h
+    textwindow.h \
+    userwindow.h
 
 FORMS    += mainwindow.ui \
     logindlg.ui \
@@ -82,7 +84,8 @@ FORMS    += mainwindow.ui \
     exmanagedlg.ui \
     addexdlg.ui \
     testwindow.ui \
-    textwindow.ui
+    textwindow.ui \
+    userwindow.ui
 
 DISTFILES += \
     .gitignore \
