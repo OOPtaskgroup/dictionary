@@ -84,11 +84,6 @@
       <height>28</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>9</pointsize>
-     </font>
-    </property>
     <property name="toolTipDuration">
      <number>-1</number>
     </property>
@@ -160,7 +155,6 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <zorder>learningLabel</zorder>
    </widget>
    <zorder>bgImg</zorder>
    <zorder>learningList</zorder>

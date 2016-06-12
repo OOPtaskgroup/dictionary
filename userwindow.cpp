@@ -6,6 +6,7 @@ UserWindow::UserWindow(Controller *controller, QWidget *parent) :
     ui(new Ui::UserWindow)
 {
     ui->setupUi(this);
+    this->move(this->parentWidget()->pos());
     activeList = ui->masteredList;
     this->controller = controller;
     this->setStyleSheet(controller->setTheme("user"));
