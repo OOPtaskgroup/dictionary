@@ -38,10 +38,8 @@ Makefile*
 
 # other files
 test
-worddata
-userdatas
-userdatas.txt
-dictionary
-default.txt
-debug.log
+*.info
+*.lis
+*.txt
+*.log
 *~
