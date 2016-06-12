@@ -72,6 +72,8 @@ void UserWindow::on_relearnBtn_clicked()
 
 void UserWindow::loadData()
 {
+    ui->masteredList->clear();
+    ui->learningList->clear();
     auto masteredWord = controller->getMasteredWord();
     ui->masteredLabel->setText(tr("已掌握（%1词）:").arg(masteredWord.size()));
     for (auto i = masteredWord.begin(); i != masteredWord.end(); ++i)
